@@ -6,6 +6,9 @@ const tools = [
     items: [
       { title: "PDF Birleştir", description: "Birden fazla PDF dosyasını tek belgede birleştir.", href: "/pdf/merge", icon: "📄", badge: "Popüler" },
       { title: "PDF Böl", description: "PDF sayfalarını ayrı dosyalara böl.", href: "/pdf/split", icon: "✂️" },
+      { title: "PDF Düzenle", description: "Sayfa sil, yeniden sırala, sürükle-bırak ile düzenle.", href: "/pdf/edit", icon: "🖊️" },
+      { title: "PDF Filigran", description: "Sayfalarına GİZLİ, TASLAK gibi metin filigranı ekle.", href: "/pdf/watermark", icon: "🔏", badge: "Yeni" },
+      { title: "PDF İmzala", description: "İmzanı çiz ve PDF sayfasına göm.", href: "/pdf/sign", icon: "✍️", badge: "Yeni" },
       { title: "PDF → Word", description: "PDF dosyasını Word formatına çevir.", href: "/pdf/to-word", icon: "📝" },
     ],
   },
