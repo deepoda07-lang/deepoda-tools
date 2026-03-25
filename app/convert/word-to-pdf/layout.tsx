@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Word PDF'e Çevir – DOCX PDF Dönüştür | Ücretsiz Online",
@@ -14,5 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <div className="max-w-4xl mx-auto px-4 pt-6">
+      <Breadcrumb crumbs={[{ label: "Dönüştürme Araçları", href: "/convert" }, { label: "Word → PDF" }]} />
+      {children}
+    </div>
+  );
 }
