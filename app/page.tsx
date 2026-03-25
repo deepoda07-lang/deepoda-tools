@@ -1,4 +1,19 @@
+import type { Metadata } from "next";
 import ToolCard from "@/components/ToolCard";
+
+export const metadata: Metadata = {
+  title: "Deepoda Tools – Ücretsiz Online PDF ve Görsel Araçları",
+  description:
+    "PDF birleştir, böl, imzala, filigran ekle. Görsel sıkıştır, arka plan sil, format dönüştür. Tüm araçlar ücretsiz, tarayıcıda, dosyalar sunucuya gitmez.",
+  keywords: [
+    "ücretsiz online araçlar",
+    "pdf araçları türkçe",
+    "görsel araçları ücretsiz",
+    "pdf birleştir",
+    "arka plan sil",
+    "görsel sıkıştır",
+  ],
+};
 
 const tools = [
   {
