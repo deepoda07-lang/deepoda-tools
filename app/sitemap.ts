@@ -101,5 +101,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    { url: `${BASE_URL}/convert/excel-to-pdf`,    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/convert/html-to-pdf`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/convert/markdown-to-pdf`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 }

@@ -10,7 +10,10 @@ export const metadata: Metadata = {
 };
 
 const tools = [
-  { title: "Word → PDF", description: "Word belgelerini PDF formatına dönüştür. DOCX dosyasını yükle, anında indir.", href: "/convert/word-to-pdf", icon: "📋" },
+  { title: "Word → PDF",     description: "Word belgelerini PDF formatına dönüştür. DOCX dosyasını yükle, anında indir.", href: "/convert/word-to-pdf",    icon: "📋" },
+  { title: "Excel → PDF",    description: "Excel (XLSX/XLS) dosyalarını PDF'e dönüştür.",                                 href: "/convert/excel-to-pdf",  icon: "📊", badge: "Yeni" },
+  { title: "HTML → PDF",     description: "HTML kodunu veya dosyasını PDF'e dönüştür.",                                  href: "/convert/html-to-pdf",   icon: "🌐", badge: "Yeni" },
+  { title: "Markdown → PDF", description: "Markdown metnini veya .md dosyasını PDF'e dönüştür.",                         href: "/convert/markdown-to-pdf",icon: "📝", badge: "Yeni" },
 ];
 
 export default function ConvertPage() {

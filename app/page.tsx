@@ -19,7 +19,10 @@ const tools = [
   { title: "Format Dönüştür", description: "JPG ↔ PNG ↔ WEBP dönüşümü anında.",                     href: "/image/convert",      icon: "🔄", cat: "Görsel" },
   { title: "Arka Plan Sil",   description: "Görsellerden arka planı AI ile otomatik sil.",             href: "/image/remove-bg",    icon: "🪄", badge: "AI", cat: "Görsel" },
   // Dönüştür
-  { title: "Word → PDF",     description: "Word belgelerini PDF formatına dönüştür.",                  href: "/convert/word-to-pdf", icon: "📋", cat: "Dönüştür" },
+  { title: "Word → PDF",     description: "Word belgelerini PDF formatına dönüştür.",         href: "/convert/word-to-pdf",     icon: "📋", cat: "Dönüştür" },
+  { title: "Excel → PDF",    description: "Excel (XLSX/XLS) dosyalarını PDF'e dönüştür.",    href: "/convert/excel-to-pdf",    icon: "📊", badge: "Yeni", cat: "Dönüştür" },
+  { title: "HTML → PDF",     description: "HTML kodunu veya dosyasını PDF'e dönüştür.",      href: "/convert/html-to-pdf",     icon: "🌐", badge: "Yeni", cat: "Dönüştür" },
+  { title: "Markdown → PDF", description: "Markdown metnini veya .md dosyasını PDF'e çevir.",href: "/convert/markdown-to-pdf",  icon: "📝", badge: "Yeni", cat: "Dönüştür" },
 ];
 
 export default function Home() {
