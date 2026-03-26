@@ -59,6 +59,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     // Görsel araçları
+    { url: `${BASE_URL}/image/resize`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/image/crop`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/image/rotate`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/image/to-pdf`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/image/heic-to-jpg`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     {
       url: `${BASE_URL}/image`,
       lastModified: new Date(),

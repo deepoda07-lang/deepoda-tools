@@ -5,14 +5,18 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Görsel Araçları – Ücretsiz Online Görsel İşlemleri",
-  description:
-    "Görsel sıkıştır, format dönüştür, arka plan sil. 3 ücretsiz araç, AI destekli, tarayıcıda çalışır.",
+  description: "Görsel sıkıştır, kırp, döndür, boyutlandır, arka plan sil ve daha fazlası. 8 ücretsiz araç, tarayıcıda.",
 };
 
 const tools = [
-  { title: "Görsel Sıkıştır",  description: "JPG, PNG ve WEBP dosyalarını kalite kaybetmeden küçült. Toplu işlem.", href: "/image/compress",  icon: "🗜️", badge: "Popüler" },
-  { title: "Format Dönüştür",  description: "JPG ↔ PNG ↔ WEBP arasında anında format dönüşümü.",                  href: "/image/convert",   icon: "🔄" },
-  { title: "Arka Plan Sil",    description: "Yapay zeka ile görseldeki arka planı otomatik kaldır. Şeffaf PNG.",   href: "/image/remove-bg", icon: "🪄", badge: "AI" },
+  { title: "Görsel Sıkıştır",   description: "JPG, PNG ve WEBP dosyalarını kalite kaybetmeden küçült.",   href: "/image/compress",   icon: "🗜️", badge: "Popüler" },
+  { title: "Arka Plan Sil",     description: "Yapay zeka ile görsel arka planını otomatik kaldır.",        href: "/image/remove-bg",  icon: "🪄",  badge: "AI" },
+  { title: "Format Dönüştür",   description: "JPG ↔ PNG ↔ WEBP arasında anında dönüşüm.",               href: "/image/convert",    icon: "🔄" },
+  { title: "Görsel Boyutlandır",description: "Genişlik/yükseklik gir, orantı kilidi ile boyutlandır.",    href: "/image/resize",     icon: "📐", badge: "Yeni" },
+  { title: "Görsel Kırp",       description: "Görselin istediğin bölümünü kırp ve indir.",               href: "/image/crop",       icon: "✂️", badge: "Yeni" },
+  { title: "Görsel Döndür",     description: "90°/180° döndür veya yatay/dikey çevir.",                  href: "/image/rotate",     icon: "🔃", badge: "Yeni" },
+  { title: "Görsel → PDF",      description: "Görselleri tek bir PDF dosyasına dönüştür.",               href: "/image/to-pdf",     icon: "📋", badge: "Yeni" },
+  { title: "HEIC → JPG",        description: "iPhone HEIC fotoğraflarını JPG'ye dönüştür.",             href: "/image/heic-to-jpg",icon: "📱", badge: "Yeni" },
 ];
 
 export default function ImagePage() {
@@ -20,7 +24,6 @@ export default function ImagePage() {
     <div className="max-w-5xl mx-auto px-4 py-10">
       <Breadcrumb crumbs={[{ label: "Görsel Araçları" }]} />
 
-      {/* Başlık */}
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-3">
           <span className="text-4xl">🖼️</span>
@@ -30,17 +33,15 @@ export default function ImagePage() {
           </span>
         </div>
         <p className="text-gray-500 max-w-xl">
-          Görsellerinizi sıkıştırın, format dönüştürün veya arka planı AI ile kaldırın.
+          Görsellerinizi düzenleyin, dönüştürün ve optimize edin.
           Tüm işlemler tarayıcınızda, dosyalar sunucuya gitmez.
         </p>
       </div>
 
-      {/* Araçlar */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
         {tools.map((t) => <ToolCard key={t.href} {...t} />)}
       </div>
 
-      {/* Diğer kategoriler */}
       <div className="border-t pt-8">
         <p className="text-sm text-gray-500 mb-4 font-medium">Diğer kategoriler</p>
         <div className="flex flex-wrap gap-3">
