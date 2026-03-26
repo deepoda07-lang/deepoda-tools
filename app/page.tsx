@@ -4,7 +4,7 @@ import { useState } from "react";
 import ToolCard from "@/components/ToolCard";
 import { Search } from "lucide-react";
 
-const CATS = ["Tümü", "PDF", "Görsel", "Dönüştür"] as const;
+const CATS = ["Tümü", "PDF", "Görsel", "Dönüştür", "Video"] as const;
 
 const tools = [
   // PDF
@@ -23,6 +23,15 @@ const tools = [
   { title: "Excel → PDF",    description: "Excel (XLSX/XLS) dosyalarını PDF'e dönüştür.",    href: "/convert/excel-to-pdf",    icon: "📊", badge: "Yeni", cat: "Dönüştür" },
   { title: "HTML → PDF",     description: "HTML kodunu veya dosyasını PDF'e dönüştür.",      href: "/convert/html-to-pdf",     icon: "🌐", badge: "Yeni", cat: "Dönüştür" },
   { title: "Markdown → PDF", description: "Markdown metnini veya .md dosyasını PDF'e çevir.",href: "/convert/markdown-to-pdf",  icon: "📝", badge: "Yeni", cat: "Dönüştür" },
+  // Video
+  { title: "Video Sıkıştır",   description: "Video dosyalarını kalite kaybetmeden küçült.",         href: "/video/compress", icon: "🗜️", badge: "Yeni", cat: "Video" },
+  { title: "Video Kes",        description: "Videonun istediğin bölümünü kes ve indir.",            href: "/video/trim",     icon: "✂️", badge: "Yeni", cat: "Video" },
+  { title: "Video → MP3",      description: "Videodan ses çıkar, MP3 formatında indir.",            href: "/video/to-mp3",   icon: "🎵", badge: "Yeni", cat: "Video" },
+  { title: "Video Dönüştür",   description: "MP4, WEBM, AVI, MOV arasında format dönüşümü.",      href: "/video/convert",  icon: "🔄", badge: "Yeni", cat: "Video" },
+  { title: "Video → GIF",      description: "Videoyu animasyonlu GIF'e dönüştür.",                 href: "/video/to-gif",   icon: "🎞️", badge: "Yeni", cat: "Video" },
+  { title: "Video Birleştir",  description: "Birden fazla videoyu tek videoda birleştir.",          href: "/video/merge",    icon: "🔗", badge: "Yeni", cat: "Video" },
+  { title: "Video Sessiz Et",  description: "Videodan sesi tamamen kaldır.",                       href: "/video/mute",     icon: "🔇", badge: "Yeni", cat: "Video" },
+  { title: "Video Döndür",     description: "Videoyu döndür veya yatay/dikey çevir.",              href: "/video/rotate",   icon: "🔃", badge: "Yeni", cat: "Video" },
 ];
 
 export default function Home() {

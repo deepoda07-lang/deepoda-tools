@@ -104,5 +104,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/convert/excel-to-pdf`,    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/convert/html-to-pdf`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/convert/markdown-to-pdf`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    // Video araçları
+    { url: `${BASE_URL}/video`,          lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${BASE_URL}/video/compress`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/video/trim`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/video/to-mp3`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/video/convert`,  lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/video/to-gif`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/video/merge`,    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/video/mute`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/video/rotate`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 }
