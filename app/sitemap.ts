@@ -11,6 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     // PDF araçları
+    { url: `${BASE_URL}/pdf/rotate`,       lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/pdf/compress`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/pdf/page-number`,  lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/pdf/to-jpg`,       lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/pdf/from-jpg`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     {
       url: `${BASE_URL}/pdf`,
       lastModified: new Date(),
