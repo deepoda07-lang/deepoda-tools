@@ -125,6 +125,25 @@ export function downloadBlob(data: Uint8Array, filename: string) {
   URL.revokeObjectURL(url);
 }
 
+export async function cropPDF(
+  file: File,
+  margins: { top: number; right: number; bottom: number; left: number }
+): Promise<Uint8Array> {
+  const bytes = await file.arrayBuffer();
+  const doc = await PDFDocument.load(bytes);
+  for (const page of doc.getPages()) {
+    const { width, height } = page.getSize();
+    const { top, right, bottom, left } = margins;
+    const x = left;
+    const y = bottom;
+    const w = Math.max(1, width - left - right);
+    const h = Math.max(1, height - top - bottom);
+    page.setMediaBox(x, y, w, h);
+    page.setCropBox(x, y, w, h);
+  }
+  return doc.save();
+}
+
 export async function lockPDF(file: File, password: string): Promise<Uint8Array> {
   const bytes = await file.arrayBuffer();
   const doc = await PDFDocument.load(bytes);
