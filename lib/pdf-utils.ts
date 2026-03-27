@@ -125,6 +125,32 @@ export function downloadBlob(data: Uint8Array, filename: string) {
   URL.revokeObjectURL(url);
 }
 
+export async function lockPDF(file: File, password: string): Promise<Uint8Array> {
+  const bytes = await file.arrayBuffer();
+  const doc = await PDFDocument.load(bytes);
+  return doc.save({
+    encrypt: {
+      ownerPassword: password,
+      userPassword: password,
+      permissions: {
+        printing: "highResolution",
+        modifying: false,
+        copying: false,
+        annotating: false,
+        fillingForms: false,
+        contentAccessibility: true,
+        documentAssembly: false,
+      },
+    },
+  });
+}
+
+export async function unlockPDF(file: File, password: string): Promise<Uint8Array> {
+  const bytes = await file.arrayBuffer();
+  const doc = await PDFDocument.load(bytes, { password });
+  return doc.save();
+}
+
 export function downloadDataUrl(dataUrl: string, filename: string) {
   const a = document.createElement("a");
   a.href = dataUrl;

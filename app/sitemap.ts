@@ -58,6 +58,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    { url: `${BASE_URL}/pdf/lock`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/pdf/unlock`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     // Görsel araçları
     { url: `${BASE_URL}/image/resize`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/image/crop`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
