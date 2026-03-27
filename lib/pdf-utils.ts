@@ -128,7 +128,8 @@ export function downloadBlob(data: Uint8Array, filename: string) {
 export async function lockPDF(file: File, password: string): Promise<Uint8Array> {
   const bytes = await file.arrayBuffer();
   const doc = await PDFDocument.load(bytes);
-  return doc.save({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (doc as any).save({
     encrypt: {
       ownerPassword: password,
       userPassword: password,
@@ -147,7 +148,8 @@ export async function lockPDF(file: File, password: string): Promise<Uint8Array>
 
 export async function unlockPDF(file: File, password: string): Promise<Uint8Array> {
   const bytes = await file.arrayBuffer();
-  const doc = await PDFDocument.load(bytes, { password });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const doc = await PDFDocument.load(bytes, { password } as any);
   return doc.save();
 }
 
