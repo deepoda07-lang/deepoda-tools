@@ -67,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/image/to-pdf`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/image/heic-to-jpg`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/image/watermark`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/image/add-text`,    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     {
       url: `${BASE_URL}/image`,
       lastModified: new Date(),

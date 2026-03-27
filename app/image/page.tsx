@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Image Tools – Free Online Image Operations",
-  description: "Compress, crop, rotate, resize images, add watermark and more. 9 free tools, runs in your browser.",
+  description: "Compress, crop, rotate, resize, add text and watermark to images. 10 free tools, runs in your browser.",
 };
 
 const tools = [
@@ -18,6 +18,7 @@ const tools = [
   { title: "Image → PDF",       description: "Convert images into a single PDF file.",                href: "/image/to-pdf",      icon: "📋", badge: "New" },
   { title: "HEIC → JPG",        description: "Convert iPhone HEIC photos to JPG.",                   href: "/image/heic-to-jpg", icon: "📱", badge: "New" },
   { title: "Add Watermark",     description: "Stamp text watermark on your image. Custom position, opacity, color.", href: "/image/watermark", icon: "💧", badge: "New" },
+  { title: "Add Text",          description: "Click anywhere on the image to place custom text.",                   href: "/image/add-text",  icon: "✍️",  badge: "New" },
 ];
 
 export default function ImagePage() {
