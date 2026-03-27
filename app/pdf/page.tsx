@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "PDF Tools – Free Online PDF Operations",
   description:
-    "Merge, split, edit, rotate, compress, sign, lock, unlock and crop PDFs. 14 free tools, runs in your browser.",
+    "Merge, split, edit, annotate, fill forms, rotate, compress, sign, lock and crop PDFs. 16 free tools, runs in your browser.",
 };
 
 const tools = [
@@ -24,6 +24,8 @@ const tools = [
   { title: "Lock PDF",         description: "Password-protect a PDF with encryption.",               href: "/pdf/lock",        icon: "🔒", badge: "New" },
   { title: "Unlock PDF",       description: "Remove password protection from a PDF file.",           href: "/pdf/unlock",      icon: "🔓", badge: "New" },
   { title: "Crop PDF",         description: "Trim the margins of every page in your PDF.",            href: "/pdf/crop",        icon: "✂️", badge: "New" },
+  { title: "Fill PDF Form",   description: "Fill in text fields, checkboxes and dropdowns in a PDF.", href: "/pdf/form-fill",   icon: "📝", badge: "New" },
+  { title: "Annotate PDF",    description: "Draw, highlight and add text notes to your PDF.",          href: "/pdf/annotate",    icon: "🖊️", badge: "New" },
 ];
 
 export default function PDFPage() {
