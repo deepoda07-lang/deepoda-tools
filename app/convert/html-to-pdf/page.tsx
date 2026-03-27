@@ -87,9 +87,9 @@ export default function HtmlToPdfPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">HTML → PDF</h1>
-      <p className="text-gray-500 mb-2">HTML kodunu veya dosyasını PDF'e dönüştür.</p>
+      <p className="text-gray-500 mb-2">Convert HTML code or a file to PDF.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your files are never sent to a server.
       </p>
 
       {/* Mode tabs */}
@@ -100,7 +100,7 @@ export default function HtmlToPdfPage() {
             onClick={() => { setMode(m); setStatus("idle"); }}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${mode === m ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
           >
-            {m === "paste" ? "Kod Yapıştır" : "Dosya Yükle"}
+            {m === "paste" ? "Paste Code" : "Upload File"}
           </button>
         ))}
       </div>
@@ -109,14 +109,14 @@ export default function HtmlToPdfPage() {
         <textarea
           value={htmlCode}
           onChange={(e) => { setHtmlCode(e.target.value); setStatus("idle"); }}
-          placeholder="<h1>Merhaba!</h1><p>HTML kodunu buraya yapıştır...</p>"
+          placeholder="<h1>Hello!</h1><p>Paste your HTML code here...</p>"
           className="w-full h-52 p-3 border border-gray-200 rounded-xl text-sm font-mono bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-300 resize-none"
         />
       ) : (
         <FileDropzone
           onFiles={handleFiles}
           accept={{ "text/html": [".html", ".htm"] }}
-          label="HTML dosyasını buraya sürükle (.html, .htm)"
+          label="Drag HTML file here (.html, .htm)"
         />
       )}
 
@@ -130,12 +130,12 @@ export default function HtmlToPdfPage() {
 
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          PDF oluşturuldu ve indirildi!
+          PDF created and downloaded!
         </div>
       )}
       {status === "error" && (
         <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-          Dönüştürme sırasında hata oluştu. Lütfen tekrar deneyin.
+          An error occurred during conversion. Please try again.
         </div>
       )}
 
@@ -144,7 +144,7 @@ export default function HtmlToPdfPage() {
         disabled={(mode === "paste" ? !htmlCode.trim() : !file) || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "Dönüştürülüyor..." : "PDF'e Dönüştür"}
+        {status === "processing" ? "Converting..." : "Convert to PDF"}
       </button>
     </div>
   );

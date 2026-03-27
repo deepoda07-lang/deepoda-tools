@@ -51,7 +51,7 @@ export default function PDFToJpgPage() {
       setPreviews(jpgs);
       jpgs.forEach((dataUrl, i) => {
         const baseName = file.name.replace(".pdf", "");
-        downloadDataUrl(dataUrl, `${baseName}-sayfa-${i + 1}.jpg`);
+        downloadDataUrl(dataUrl, `${baseName}-page-${i + 1}.jpg`);
       });
       setProgress(100);
       setStatus("done");
@@ -63,24 +63,24 @@ export default function PDFToJpgPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">PDF → JPG</h1>
-      <p className="text-gray-500 mb-8">PDF sayfalarını JPG görsellerine dönüştür. Her sayfa ayrı dosya olarak indirilir.</p>
+      <p className="text-gray-500 mb-8">Convert PDF pages to JPG images. Each page is downloaded as a separate file.</p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "application/pdf": [".pdf"] }}
         multiple={false}
-        label="PDF dosyasını buraya sürükle"
+        label="Drag PDF file here"
       />
 
       {file && (
         <div className="mt-4 p-3 bg-white border rounded-lg text-sm text-gray-700">
-          Seçilen: <span className="font-medium">{file.name}</span>
+          Selected: <span className="font-medium">{file.name}</span>
         </div>
       )}
 
       <div className="mt-6">
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Kalite: <span className="text-blue-600 font-bold">{quality}%</span>
+          Quality: <span className="text-blue-600 font-bold">{quality}%</span>
         </label>
         <input
           type="range"
@@ -91,23 +91,23 @@ export default function PDFToJpgPage() {
           className="w-full accent-blue-600"
         />
         <div className="flex justify-between text-xs text-gray-400 mt-1">
-          <span>Küçük dosya</span>
-          <span>Yüksek kalite</span>
+          <span>Smaller file</span>
+          <span>Higher quality</span>
         </div>
       </div>
 
       {status === "processing" && (
-        <div className="mt-4"><ProgressBar value={progress} label="Dönüştürülüyor..." /></div>
+        <div className="mt-4"><ProgressBar value={progress} label="Converting..." /></div>
       )}
 
       {status === "done" && previews.length > 0 && (
         <div className="mt-4">
           <p className="text-green-700 text-sm font-semibold mb-3">
-            {previews.length} sayfa JPG olarak indirildi!
+            {previews.length} page(s) downloaded as JPG!
           </p>
           <div className="grid grid-cols-3 gap-2">
             {previews.slice(0, 6).map((src, i) => (
-              <img key={i} src={src} alt={`Sayfa ${i + 1}`} className="rounded-lg border w-full" />
+              <img key={i} src={src} alt={`Page ${i + 1}`} className="rounded-lg border w-full" />
             ))}
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function PDFToJpgPage() {
 
       {status === "error" && (
         <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-          Hata oluştu. Lütfen tekrar deneyin.
+          An error occurred. Please try again.
         </div>
       )}
 
@@ -124,7 +124,7 @@ export default function PDFToJpgPage() {
         disabled={!file || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "Dönüştürülüyor..." : "JPG'ye Dönüştür"}
+        {status === "processing" ? "Converting..." : "Convert to JPG"}
       </button>
     </div>
   );

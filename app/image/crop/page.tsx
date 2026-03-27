@@ -48,7 +48,7 @@ export default function ImageCropPage() {
       canvas.getContext("2d")!.drawImage(img, px.x, px.y, px.w, px.h, 0, 0, px.w, px.h);
       canvas.toBlob((blob) => {
         if (!blob) { setStatus("error"); return; }
-        downloadBlob(blob, file.name.replace(/\.[^.]+$/, "") + "-kırpıldı.jpg");
+        downloadBlob(blob, file.name.replace(/\.[^.]+$/, "") + "-cropped.jpg");
         setStatus("done");
       }, "image/jpeg", 0.92);
     } catch { setStatus("error"); }
@@ -68,14 +68,14 @@ export default function ImageCropPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Görsel Kırp</h1>
-      <p className="text-gray-500 mb-8">Görselinden istediğin bölümü kırp ve indir.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Crop Image</h1>
+      <p className="text-gray-500 mb-8">Crop any area from your image and download it.</p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "image/jpeg": [".jpg",".jpeg"], "image/png": [".png"], "image/webp": [".webp"] }}
         multiple={false}
-        label="Görsel buraya sürükle (JPG, PNG, WEBP)"
+        label="Drag image here (JPG, PNG, WEBP)"
       />
 
       {imgSrc && (
@@ -87,23 +87,23 @@ export default function ImageCropPage() {
           </div>
 
           <p className="mt-2 text-xs text-gray-400">
-            Kırpma alanı: {px.x}, {px.y} — {px.w}×{px.h} px
+            Crop area: {px.x}, {px.y} — {px.w}×{px.h} px
           </p>
 
-          {/* Slider kontrolleri */}
+          {/* Slider controls */}
           <div className="mt-5 grid grid-cols-2 gap-4">
-            <Field label="Soldan başla (X)" key2="x" max={90} />
-            <Field label="Üstten başla (Y)" key2="y" max={90} />
-            <Field label="Genişlik" key2="w" max={100} />
-            <Field label="Yükseklik" key2="h" max={100} />
+            <Field label="Start from left (X)" key2="x" max={90} />
+            <Field label="Start from top (Y)" key2="y" max={90} />
+            <Field label="Width" key2="w" max={100} />
+            <Field label="Height" key2="h" max={100} />
           </div>
 
-          {status === "done" && <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">Görsel kırpıldı ve indirildi!</div>}
-          {status === "error" && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">Hata oluştu. Lütfen tekrar deneyin.</div>}
+          {status === "done" && <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">Image cropped and downloaded!</div>}
+          {status === "error" && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">An error occurred. Please try again.</div>}
 
           <button onClick={handleCrop}
             className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors">
-            Kırp ve İndir
+            Crop & Download
           </button>
         </>
       )}

@@ -64,17 +64,17 @@ export default function VideoMergePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Video Birleştir</h1>
-      <p className="text-gray-500 mb-2">Birden fazla videoyu sırayla birleştir.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Merge Videos</h1>
+      <p className="text-gray-500 mb-2">Combine multiple videos in sequence.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "video/*": [".mp4", ".mov", ".webm"] }}
         multiple
-        label="Video dosyalarını buraya sürükle (en az 2)"
+        label="Drag video files here (at least 2)"
       />
 
       {files.length > 0 && (
@@ -90,15 +90,15 @@ export default function VideoMergePage() {
               <button onClick={() => removeFile(i)} className="text-gray-400 hover:text-red-500"><X className="w-4 h-4" /></button>
             </div>
           ))}
-          <p className="text-xs text-gray-400">{files.length} dosya — sıralamayı değiştirmek için ↑ simgesine tıkla</p>
+          <p className="text-xs text-gray-400">{files.length} file(s) — click ↑ to reorder</p>
         </div>
       )}
 
-      <FfmpegStatus status={status} progress={progress} loadingLabel="ffmpeg yükleniyor..." processingLabel="Videolar birleştiriliyor..." doneLabel="Videolar birleştirildi ve indirildi!" />
+      <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg..." processingLabel="Merging videos..." doneLabel="Videos merged and downloaded!" />
 
       <button onClick={handleMerge} disabled={files.length < 2 || status === "loading" || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "loading" || status === "processing" ? "İşleniyor..." : `${files.length} Videoyu Birleştir`}
+        {status === "loading" || status === "processing" ? "Processing..." : `Merge ${files.length} Video${files.length > 1 ? "s" : ""}`}
       </button>
     </div>
   );

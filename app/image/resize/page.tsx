@@ -71,14 +71,14 @@ export default function ImageResizePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Görsel Boyutlandır</h1>
-      <p className="text-gray-500 mb-8">Görselin genişlik ve yüksekliğini ayarla. Orantı kilidi ile boyutu koru.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Resize Image</h1>
+      <p className="text-gray-500 mb-8">Set the width and height of an image. Use the aspect ratio lock to preserve proportions.</p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "image/jpeg": [".jpg",".jpeg"], "image/png": [".png"], "image/webp": [".webp"] }}
         multiple={false}
-        label="Görsel buraya sürükle (JPG, PNG, WEBP)"
+        label="Drag image here (JPG, PNG, WEBP)"
       />
 
       {preview && (
@@ -89,20 +89,20 @@ export default function ImageResizePage() {
 
       {origW > 0 && (
         <>
-          <p className="mt-3 text-xs text-gray-400">Orijinal: {origW} × {origH} px — {formatBytes(file!.size)}</p>
+          <p className="mt-3 text-xs text-gray-400">Original: {origW} × {origH} px — {formatBytes(file!.size)}</p>
           <div className="mt-4 flex items-end gap-3">
             <div className="flex-1">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Genişlik (px)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Width (px)</label>
               <input type="number" min={1} value={width} onChange={(e) => onWidthChange(e.target.value)}
                 className="w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
             <button onClick={() => setLocked(!locked)}
               className="mb-0.5 p-2.5 rounded-xl border hover:bg-gray-50 transition-colors"
-              title={locked ? "Orantı kilitli" : "Orantı serbest"}>
+              title={locked ? "Aspect ratio locked" : "Aspect ratio unlocked"}>
               {locked ? <Lock className="w-4 h-4 text-blue-600" /> : <Unlock className="w-4 h-4 text-gray-400" />}
             </button>
             <div className="flex-1">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Yükseklik (px)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Height (px)</label>
               <input type="number" min={1} value={height} onChange={(e) => onHeightChange(e.target.value)}
                 className="w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
@@ -110,12 +110,12 @@ export default function ImageResizePage() {
         </>
       )}
 
-      {status === "done" && <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">Görsel boyutlandırıldı ve indirildi!</div>}
-      {status === "error" && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">Hata oluştu. Lütfen tekrar deneyin.</div>}
+      {status === "done" && <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">Image resized and downloaded!</div>}
+      {status === "error" && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">An error occurred. Please try again.</div>}
 
       <button onClick={handleResize} disabled={!file || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "processing" ? "İşleniyor..." : "Boyutlandır ve İndir"}
+        {status === "processing" ? "Processing..." : "Resize & Download"}
       </button>
     </div>
   );

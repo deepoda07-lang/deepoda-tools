@@ -5,9 +5,9 @@ import ProgressBar from "@/components/ProgressBar";
 import { addPageNumbers, downloadBlob } from "@/lib/pdf-utils";
 
 const POSITIONS = [
-  { label: "Alt Orta",  value: "bottom-center" as const },
-  { label: "Alt Sağ",   value: "bottom-right"  as const },
-  { label: "Alt Sol",   value: "bottom-left"   as const },
+  { label: "Bottom Center", value: "bottom-center" as const },
+  { label: "Bottom Right",  value: "bottom-right"  as const },
+  { label: "Bottom Left",   value: "bottom-left"   as const },
 ];
 
 export default function PDFPageNumberPage() {
@@ -28,7 +28,7 @@ export default function PDFPageNumberPage() {
     try {
       const result = await addPageNumbers(file, position);
       setProgress(100);
-      downloadBlob(result, file.name.replace(".pdf", "") + "-numaralı.pdf");
+      downloadBlob(result, file.name.replace(".pdf", "") + "-numbered.pdf");
       setStatus("done");
     } catch {
       setStatus("error");
@@ -37,24 +37,24 @@ export default function PDFPageNumberPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">PDF Sayfa Numarası Ekle</h1>
-      <p className="text-gray-500 mb-8">Her sayfaya otomatik numara bas. Konum seçebilirsin.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Add Page Numbers to PDF</h1>
+      <p className="text-gray-500 mb-8">Automatically stamp page numbers on every page. Choose position.</p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "application/pdf": [".pdf"] }}
         multiple={false}
-        label="PDF dosyasını buraya sürükle"
+        label="Drag PDF file here"
       />
 
       {file && (
         <div className="mt-4 p-3 bg-white border rounded-lg text-sm text-gray-700">
-          Seçilen: <span className="font-medium">{file.name}</span>
+          Selected: <span className="font-medium">{file.name}</span>
         </div>
       )}
 
       <div className="mt-6">
-        <label className="block text-sm font-medium text-gray-700 mb-3">Numara konumu</label>
+        <label className="block text-sm font-medium text-gray-700 mb-3">Number position</label>
         <div className="grid grid-cols-3 gap-3">
           {POSITIONS.map(({ label, value }) => (
             <button
@@ -73,16 +73,16 @@ export default function PDFPageNumberPage() {
       </div>
 
       {status === "processing" && (
-        <div className="mt-4"><ProgressBar value={progress} label="Numaralar ekleniyor..." /></div>
+        <div className="mt-4"><ProgressBar value={progress} label="Adding numbers..." /></div>
       )}
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          Sayfa numaraları eklendi ve indirildi!
+          Page numbers added and downloaded!
         </div>
       )}
       {status === "error" && (
         <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-          Hata oluştu. Lütfen tekrar deneyin.
+          An error occurred. Please try again.
         </div>
       )}
 
@@ -91,7 +91,7 @@ export default function PDFPageNumberPage() {
         disabled={!file || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "İşleniyor..." : "Numara Ekle"}
+        {status === "processing" ? "Processing..." : "Add Numbers"}
       </button>
     </div>
   );

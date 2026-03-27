@@ -8,14 +8,14 @@ import { downloadBlob } from "@/lib/pdf-utils";
 type Position = "center" | "top-left" | "top-right" | "bottom-left" | "bottom-right";
 
 const POSITIONS: { value: Position; label: string }[] = [
-  { value: "center", label: "Ortada (çapraz)" },
-  { value: "top-left", label: "Sol Üst" },
-  { value: "top-right", label: "Sağ Üst" },
-  { value: "bottom-left", label: "Sol Alt" },
-  { value: "bottom-right", label: "Sağ Alt" },
+  { value: "center",       label: "Center (diagonal)" },
+  { value: "top-left",     label: "Top Left" },
+  { value: "top-right",    label: "Top Right" },
+  { value: "bottom-left",  label: "Bottom Left" },
+  { value: "bottom-right", label: "Bottom Right" },
 ];
 
-const PRESETS = ["GİZLİ", "TASLAK", "ÖNEMLİ", "ONAYLANDI", "İPTAL EDİLDİ"];
+const PRESETS = ["CONFIDENTIAL", "DRAFT", "IMPORTANT", "APPROVED", "CANCELLED"];
 
 function hexToRgb(hex: string) {
   const r = parseInt(hex.slice(1, 3), 16) / 255;
@@ -26,7 +26,7 @@ function hexToRgb(hex: string) {
 
 export default function WatermarkPage() {
   const [file, setFile] = useState<File | null>(null);
-  const [text, setText] = useState("GİZLİ");
+  const [text, setText] = useState("CONFIDENTIAL");
   const [fontSize, setFontSize] = useState(60);
   const [opacity, setOpacity] = useState(25);
   const [color, setColor] = useState("#cc0000");
@@ -103,41 +103,41 @@ export default function WatermarkPage() {
 
       setProgress(90);
       const out = await doc.save();
-      downloadBlob(out, `filigranli_${file.name}`);
+      downloadBlob(out, `watermarked_${file.name}`);
       setProgress(100);
       setStatus("done");
     } catch (e) {
       console.error(e);
-      setError("Filigran eklenirken hata oluştu.");
+      setError("An error occurred while adding the watermark.");
       setStatus("error");
     }
   };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">PDF Filigran Ekle</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">PDF Watermark</h1>
       <p className="text-gray-500 mb-8">
-        PDF sayfalarına metin filigranı ekle. Tarayıcıda çalışır.
+        Add text watermarks to PDF pages. Runs in your browser.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "application/pdf": [".pdf"] }}
         multiple={false}
-        label="PDF dosyasını buraya sürükle"
+        label="Drag PDF file here"
       />
 
       {file && (
         <div className="mt-3 p-3 bg-white border rounded-lg text-sm text-gray-700">
-          Seçilen: <span className="font-medium">{file.name}</span>
+          Selected: <span className="font-medium">{file.name}</span>
         </div>
       )}
 
       <div className="mt-6 space-y-5">
-        {/* Metin */}
+        {/* Text */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1.5">
-            Filigran metni
+            Watermark text
           </label>
           <div className="flex flex-wrap gap-2 mb-2">
             {PRESETS.map((p) => (
@@ -159,14 +159,14 @@ export default function WatermarkPage() {
             value={text}
             onChange={(e) => setText(e.target.value)}
             className="w-full border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Özel metin gir…"
+            placeholder="Enter custom text…"
           />
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          {/* Renk */}
+          {/* Color */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Renk</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">Color</label>
             <div className="flex items-center gap-3">
               <input
                 type="color"
@@ -178,9 +178,9 @@ export default function WatermarkPage() {
             </div>
           </div>
 
-          {/* Konum */}
+          {/* Position */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Konum</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">Position</label>
             <select
               value={position}
               onChange={(e) => setPosition(e.target.value as Position)}
@@ -193,10 +193,10 @@ export default function WatermarkPage() {
           </div>
         </div>
 
-        {/* Font boyutu */}
+        {/* Font size */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1.5">
-            Yazı boyutu: {fontSize}pt
+            Font size: {fontSize}pt
           </label>
           <input
             type="range" min={20} max={120} value={fontSize}
@@ -205,10 +205,10 @@ export default function WatermarkPage() {
           />
         </div>
 
-        {/* Opaklık */}
+        {/* Opacity */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1.5">
-            Opaklık: {opacity}%
+            Opacity: {opacity}%
           </label>
           <input
             type="range" min={5} max={80} value={opacity}
@@ -217,9 +217,9 @@ export default function WatermarkPage() {
           />
         </div>
 
-        {/* Sayfa seçimi */}
+        {/* Page selection */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Hangi sayfalar?</label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Which pages?</label>
           <div className="flex gap-4">
             <label className="flex items-center gap-2 text-sm cursor-pointer">
               <input
@@ -227,7 +227,7 @@ export default function WatermarkPage() {
                 onChange={() => setAllPages(true)}
                 className="accent-blue-600"
               />
-              Tüm sayfalar
+              All pages
             </label>
             <label className="flex items-center gap-2 text-sm cursor-pointer">
               <input
@@ -235,7 +235,7 @@ export default function WatermarkPage() {
                 onChange={() => setAllPages(false)}
                 className="accent-blue-600"
               />
-              Sadece sayfa:
+              Only page:
               <input
                 type="number" min={1} value={targetPage}
                 onChange={(e) => { setAllPages(false); setTargetPage(e.target.value); }}
@@ -245,11 +245,9 @@ export default function WatermarkPage() {
           </div>
         </div>
 
-        {/* Önizleme */}
-        <div
-          className="w-full h-28 rounded-xl border-2 border-dashed border-gray-200 flex items-center justify-center relative overflow-hidden bg-white"
-        >
-          <span className="text-xs text-gray-300 absolute top-2 left-3">Önizleme</span>
+        {/* Preview */}
+        <div className="w-full h-28 rounded-xl border-2 border-dashed border-gray-200 flex items-center justify-center relative overflow-hidden bg-white">
+          <span className="text-xs text-gray-300 absolute top-2 left-3">Preview</span>
           <span
             style={{
               fontSize: Math.min(fontSize * 0.4, 48),
@@ -261,7 +259,7 @@ export default function WatermarkPage() {
               userSelect: "none",
             }}
           >
-            {text || "FİLİGRAN"}
+            {text || "WATERMARK"}
           </span>
         </div>
       </div>
@@ -270,13 +268,13 @@ export default function WatermarkPage() {
 
       {status === "processing" && (
         <div className="mt-4">
-          <ProgressBar value={progress} label="Filigran ekleniyor…" />
+          <ProgressBar value={progress} label="Adding watermark…" />
         </div>
       )}
 
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm">
-          Filigran eklendi ve PDF indirildi!
+          Watermark added and PDF downloaded!
         </div>
       )}
 
@@ -285,7 +283,7 @@ export default function WatermarkPage() {
         disabled={!file || !text.trim() || status === "processing"}
         className="mt-6 w-full py-3.5 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "Ekleniyor…" : "Filigran Ekle ve İndir"}
+        {status === "processing" ? "Adding…" : "Add Watermark & Download"}
       </button>
     </div>
   );

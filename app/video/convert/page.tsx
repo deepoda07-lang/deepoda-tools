@@ -58,16 +58,16 @@ export default function VideoConvertPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Video Dönüştür</h1>
-      <p className="text-gray-500 mb-2">Video formatları arasında dönüşüm yap.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Convert Video</h1>
+      <p className="text-gray-500 mb-2">Convert between video formats.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "video/*": [".mp4", ".mov", ".webm", ".avi", ".mkv"] }}
-        label="Video dosyasını buraya sürükle"
+        label="Drag video file here"
       />
 
       {file && (
@@ -78,7 +78,7 @@ export default function VideoConvertPage() {
           </div>
 
           <div className="mt-4">
-            <p className="text-sm font-medium text-gray-700 mb-2">Hedef Format</p>
+            <p className="text-sm font-medium text-gray-700 mb-2">Target Format</p>
             <div className="flex flex-wrap gap-2">
               {FORMATS.map((f, i) => (
                 <button key={i} onClick={() => setTargetFormat(i)}
@@ -91,11 +91,11 @@ export default function VideoConvertPage() {
         </>
       )}
 
-      <FfmpegStatus status={status} progress={progress} loadingLabel="ffmpeg yükleniyor..." processingLabel="Video dönüştürülüyor..." doneLabel="Video dönüştürüldü ve indirildi!" />
+      <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg..." processingLabel="Converting video..." doneLabel="Video converted and downloaded!" />
 
       <button onClick={handleConvert} disabled={!file || status === "loading" || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "loading" || status === "processing" ? "İşleniyor..." : `${FORMATS[targetFormat].label}'e Dönüştür`}
+        {status === "loading" || status === "processing" ? "Processing..." : `Convert to ${FORMATS[targetFormat].label}`}
       </button>
     </div>
   );

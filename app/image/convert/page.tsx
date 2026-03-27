@@ -32,11 +32,11 @@ export default function ImageConvertPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Format Dönüştür</h1>
-      <p className="text-gray-500 mb-8">JPG ↔ PNG ↔ WEBP dönüşümü anında.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Convert Format</h1>
+      <p className="text-gray-500 mb-8">Instantly convert JPG ↔ PNG ↔ WEBP.</p>
 
       <div className="mb-6">
-        <label className="block text-sm font-medium text-gray-700 mb-2">Hedef format</label>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Target format</label>
         <div className="flex gap-3">
           {(["image/jpeg", "image/png", "image/webp"] as Format[]).map((f) => (
             <button
@@ -57,18 +57,18 @@ export default function ImageConvertPage() {
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "image/*": [".jpg", ".jpeg", ".png", ".webp"] }}
-        label="Görselleri buraya sürükle"
+        label="Drag images here"
       />
 
       {files.length > 0 && (
         <div className="mt-4 text-sm text-gray-600">
-          {files.length} dosya seçildi
+          {files.length} file(s) selected
         </div>
       )}
 
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          Dönüştürme tamamlandı!
+          Conversion complete!
         </div>
       )}
 
@@ -77,7 +77,7 @@ export default function ImageConvertPage() {
         disabled={files.length === 0 || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "Dönüştürülüyor..." : `${EXT[targetFormat].toUpperCase()}'e Dönüştür`}
+        {status === "processing" ? "Converting..." : `Convert to ${EXT[targetFormat].toUpperCase()}`}
       </button>
     </div>
   );

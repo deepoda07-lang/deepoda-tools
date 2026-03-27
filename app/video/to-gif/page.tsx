@@ -80,15 +80,15 @@ export default function VideoToGifPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Video → GIF</h1>
-      <p className="text-gray-500 mb-2">Videodan animasyonlu GIF oluştur.</p>
+      <p className="text-gray-500 mb-2">Create an animated GIF from a video.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "video/*": [".mp4", ".mov", ".webm", ".avi"] }}
-        label="Video dosyasını buraya sürükle"
+        label="Drag video file here"
       />
 
       {file && (
@@ -101,7 +101,7 @@ export default function VideoToGifPage() {
           <div className="mt-5 space-y-4">
             <div>
               <label className="text-sm font-medium text-gray-700 flex justify-between">
-                <span>Başlangıç zamanı</span>
+                <span>Start time</span>
                 <span className="text-blue-600 font-mono">{formatTime(startSec)}</span>
               </label>
               <input type="range" min={0} max={Math.max(0, duration - 1)} step={0.1} value={startSec}
@@ -110,7 +110,7 @@ export default function VideoToGifPage() {
             </div>
             <div>
               <label className="text-sm font-medium text-gray-700 flex justify-between">
-                <span>GIF süresi</span>
+                <span>GIF duration</span>
                 <span className="text-blue-600 font-mono">{gifDuration}s</span>
               </label>
               <input type="range" min={1} max={Math.min(15, duration)} step={0.5} value={gifDuration}
@@ -128,7 +128,7 @@ export default function VideoToGifPage() {
               </div>
               <div>
                 <label className="text-sm font-medium text-gray-700 flex justify-between">
-                  <span>Genişlik</span><span className="text-blue-600">{width}px</span>
+                  <span>Width</span><span className="text-blue-600">{width}px</span>
                 </label>
                 <input type="range" min={240} max={720} step={80} value={width}
                   onChange={(e) => setWidth(Number(e.target.value))}
@@ -139,11 +139,11 @@ export default function VideoToGifPage() {
         </>
       )}
 
-      <FfmpegStatus status={status} progress={progress} loadingLabel="ffmpeg yükleniyor..." processingLabel="GIF oluşturuluyor..." doneLabel="GIF oluşturuldu ve indirildi!" />
+      <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg..." processingLabel="Creating GIF..." doneLabel="GIF created and downloaded!" />
 
       <button onClick={handleConvert} disabled={!file || status === "loading" || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "loading" || status === "processing" ? "İşleniyor..." : "GIF Oluştur"}
+        {status === "loading" || status === "processing" ? "Processing..." : "Create GIF"}
       </button>
     </div>
   );

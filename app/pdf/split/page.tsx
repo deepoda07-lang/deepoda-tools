@@ -22,7 +22,7 @@ export default function PDFSplitPage() {
     const from = parseInt(fromPage);
     const to = parseInt(toPage);
     if (isNaN(from) || isNaN(to) || from < 1 || to < from) {
-      setError("Geçerli sayfa aralığı girin.");
+      setError("Please enter a valid page range.");
       return;
     }
     setError("");
@@ -32,37 +32,37 @@ export default function PDFSplitPage() {
       const results = await splitPDF(file, [{ from, to }]);
       setProgress(90);
       results.forEach((r, i) =>
-        downloadBlob(r, `bolum-${i + 1}.pdf`)
+        downloadBlob(r, `section-${i + 1}.pdf`)
       );
       setProgress(100);
       setStatus("done");
     } catch {
       setStatus("error");
-      setError("Bölme sırasında hata oluştu.");
+      setError("An error occurred during splitting.");
     }
   };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">PDF Böl</h1>
-      <p className="text-gray-500 mb-8">PDF sayfalarını ayrı dosyalara ayır.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Split PDF</h1>
+      <p className="text-gray-500 mb-8">Split PDF pages into separate files.</p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "application/pdf": [".pdf"] }}
         multiple={false}
-        label="PDF dosyasını buraya sürükle"
+        label="Drag PDF file here"
       />
 
       {file && (
         <div className="mt-4 p-3 bg-white border rounded-lg text-sm text-gray-700">
-          Seçilen: <span className="font-medium">{file.name}</span>
+          Selected: <span className="font-medium">{file.name}</span>
         </div>
       )}
 
       <div className="mt-6 flex gap-4">
         <div className="flex-1">
-          <label className="block text-sm font-medium text-gray-700 mb-1">Başlangıç sayfası</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Start page</label>
           <input
             type="number"
             min={1}
@@ -72,7 +72,7 @@ export default function PDFSplitPage() {
           />
         </div>
         <div className="flex-1">
-          <label className="block text-sm font-medium text-gray-700 mb-1">Bitiş sayfası</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">End page</label>
           <input
             type="number"
             min={1}
@@ -87,13 +87,13 @@ export default function PDFSplitPage() {
 
       {status === "processing" && (
         <div className="mt-4">
-          <ProgressBar value={progress} label="Bölünüyor..." />
+          <ProgressBar value={progress} label="Splitting..." />
         </div>
       )}
 
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          PDF başarıyla bölündü ve indirildi!
+          PDF successfully split and downloaded!
         </div>
       )}
 
@@ -102,7 +102,7 @@ export default function PDFSplitPage() {
         disabled={!file || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "İşleniyor..." : "PDF'i Böl"}
+        {status === "processing" ? "Processing..." : "Split PDF"}
       </button>
     </div>
   );

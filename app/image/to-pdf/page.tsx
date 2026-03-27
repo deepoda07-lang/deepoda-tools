@@ -29,21 +29,21 @@ export default function ImageToPDFPage() {
     try {
       const result = await imagesToPDF(files);
       setProgress(100);
-      downloadBlob(result, "görseller.pdf");
+      downloadBlob(result, "images.pdf");
       setStatus("done");
     } catch { setStatus("error"); }
   };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Görsel → PDF</h1>
-      <p className="text-gray-500 mb-8">JPG, PNG ve WEBP görsellerini tek bir PDF dosyasına dönüştür.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Image → PDF</h1>
+      <p className="text-gray-500 mb-8">Convert JPG, PNG, and WEBP images into a single PDF file.</p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "image/jpeg": [".jpg",".jpeg"], "image/png": [".png"], "image/webp": [".webp"] }}
         multiple
-        label="Görsel dosyalarını buraya sürükle"
+        label="Drag image files here"
       />
 
       {previews.length > 0 && (
@@ -61,13 +61,13 @@ export default function ImageToPDFPage() {
         </div>
       )}
 
-      {status === "processing" && <div className="mt-4"><ProgressBar value={progress} label="PDF oluşturuluyor..." /></div>}
-      {status === "done" && <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">PDF oluşturuldu ve indirildi!</div>}
-      {status === "error" && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">Hata oluştu. Lütfen tekrar deneyin.</div>}
+      {status === "processing" && <div className="mt-4"><ProgressBar value={progress} label="Creating PDF..." /></div>}
+      {status === "done" && <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">PDF created and downloaded!</div>}
+      {status === "error" && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">An error occurred. Please try again.</div>}
 
       <button onClick={handleConvert} disabled={files.length === 0 || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "processing" ? "Oluşturuluyor..." : `PDF Oluştur${files.length > 0 ? ` (${files.length} görsel)` : ""}`}
+        {status === "processing" ? "Creating..." : `Create PDF${files.length > 0 ? ` (${files.length} image${files.length > 1 ? "s" : ""})` : ""}`}
       </button>
     </div>
   );

@@ -13,7 +13,7 @@ export default function FileDropzone({
   onFiles,
   accept,
   multiple = true,
-  label = "Dosyaları buraya sürükle veya tıkla",
+  label = "Drag files here or click to select",
 }: FileDropzoneProps) {
   const onDrop = useCallback(
     (accepted: File[]) => {
@@ -41,7 +41,7 @@ export default function FileDropzone({
       <div className="flex flex-col items-center gap-3">
         <span className="text-4xl">{isDragActive ? "📂" : "📁"}</span>
         <p className="text-gray-600 font-medium">{label}</p>
-        <p className="text-sm text-gray-400">veya dosya seçmek için tıkla</p>
+        <p className="text-sm text-gray-400">or click to browse files</p>
       </div>
     </div>
   );

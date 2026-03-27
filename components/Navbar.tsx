@@ -14,7 +14,7 @@ export default function Navbar() {
         <button
           className="md:hidden p-2"
           onClick={() => setOpen(!open)}
-          aria-label="Menü"
+          aria-label="Menu"
         >
           <span className="block w-5 h-0.5 bg-gray-600 mb-1" />
           <span className="block w-5 h-0.5 bg-gray-600 mb-1" />
@@ -25,9 +25,10 @@ export default function Navbar() {
             open ? "flex" : "hidden"
           } md:flex absolute md:static top-14 left-0 w-full md:w-auto bg-white md:bg-transparent flex-col md:flex-row gap-1 md:gap-4 px-4 md:px-0 pb-4 md:pb-0 border-b md:border-0`}
         >
-          <Link href="/pdf" className="px-3 py-2 rounded hover:bg-gray-100 text-sm font-medium">PDF</Link>
-          <Link href="/image" className="px-3 py-2 rounded hover:bg-gray-100 text-sm font-medium">Görsel</Link>
-          <Link href="/convert" className="px-3 py-2 rounded hover:bg-gray-100 text-sm font-medium">Dönüştür</Link>
+          <Link href="/pdf"     className="px-3 py-2 rounded hover:bg-gray-100 text-sm font-medium">PDF</Link>
+          <Link href="/image"   className="px-3 py-2 rounded hover:bg-gray-100 text-sm font-medium">Image</Link>
+          <Link href="/convert" className="px-3 py-2 rounded hover:bg-gray-100 text-sm font-medium">Convert</Link>
+          <Link href="/video"   className="px-3 py-2 rounded hover:bg-gray-100 text-sm font-medium">Video</Link>
         </div>
       </div>
     </nav>

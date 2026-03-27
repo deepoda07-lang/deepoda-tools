@@ -6,9 +6,9 @@ import { formatBytes } from "@/lib/ffmpeg-utils";
 import { X } from "lucide-react";
 
 const PRESETS = [
-  { label: "Yüksek Kalite", crf: 23, desc: "Minimal kayıp" },
-  { label: "Dengeli",       crf: 28, desc: "Önerilen" },
-  { label: "Küçük Boyut",   crf: 33, desc: "Daha küçük dosya" },
+  { label: "High Quality", crf: 23, desc: "Minimal loss" },
+  { label: "Balanced",     crf: 28, desc: "Recommended" },
+  { label: "Small Size",   crf: 33, desc: "Smaller file" },
 ];
 
 export default function VideoCompressPage() {
@@ -58,16 +58,16 @@ export default function VideoCompressPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Video Sıkıştır</h1>
-      <p className="text-gray-500 mb-2">MP4, MOV ve WEBM videolarını küçült.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Compress Video</h1>
+      <p className="text-gray-500 mb-2">Reduce the size of MP4, MOV, and WEBM videos.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "video/*": [".mp4", ".mov", ".webm", ".avi", ".mkv"] }}
-        label="Video dosyasını buraya sürükle"
+        label="Drag video file here"
       />
 
       {file && (
@@ -79,7 +79,7 @@ export default function VideoCompressPage() {
 
       {file && (
         <div className="mt-4">
-          <p className="text-sm font-medium text-gray-700 mb-2">Kalite Seçimi</p>
+          <p className="text-sm font-medium text-gray-700 mb-2">Quality</p>
           <div className="grid grid-cols-3 gap-2">
             {PRESETS.map((p, i) => (
               <button key={i} onClick={() => setPreset(i)}
@@ -94,16 +94,16 @@ export default function VideoCompressPage() {
 
       {outputSize !== null && (
         <div className="mt-3 text-sm text-gray-600">
-          Orijinal: <span className="font-medium">{formatBytes(file!.size)}</span> → Sıkıştırılmış: <span className="font-medium text-green-600">{formatBytes(outputSize)}</span>
-          <span className="ml-2 text-green-600">({Math.round((1 - outputSize / file!.size) * 100)}% küçüldü)</span>
+          Original: <span className="font-medium">{formatBytes(file!.size)}</span> → Compressed: <span className="font-medium text-green-600">{formatBytes(outputSize)}</span>
+          <span className="ml-2 text-green-600">({Math.round((1 - outputSize / file!.size) * 100)}% smaller)</span>
         </div>
       )}
 
-      <FfmpegStatus status={status} progress={progress} loadingLabel="ffmpeg yükleniyor (ilk kez ~5 saniye)..." processingLabel="Video sıkıştırılıyor..." doneLabel="Video sıkıştırıldı ve indirildi!" />
+      <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg (first time ~5 seconds)..." processingLabel="Compressing video..." doneLabel="Video compressed and downloaded!" />
 
       <button onClick={handleCompress} disabled={!file || status === "loading" || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "loading" || status === "processing" ? "İşleniyor..." : "Videoyu Sıkıştır"}
+        {status === "loading" || status === "processing" ? "Processing..." : "Compress Video"}
       </button>
     </div>
   );

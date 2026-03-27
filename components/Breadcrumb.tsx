@@ -15,7 +15,7 @@ export default function Breadcrumb({ crumbs }: BreadcrumbProps) {
     <nav className="flex items-center gap-1.5 text-sm text-gray-500 mb-6">
       <Link href="/" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
         <Home className="w-3.5 h-3.5" />
-        <span>Ana Sayfa</span>
+        <span>Home</span>
       </Link>
       {crumbs.map((crumb, i) => (
         <span key={i} className="flex items-center gap-1.5">

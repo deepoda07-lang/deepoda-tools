@@ -2,20 +2,20 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import FileDropzone from "@/components/FileDropzone";
 
-const SAMPLE = `# Başlık
+const SAMPLE = `# Title
 
-Bu bir **Markdown** belgesidir.
+This is a **Markdown** document.
 
-## Alt Başlık
+## Subtitle
 
-- Madde 1
-- Madde 2
-- Madde 3
+- Item 1
+- Item 2
+- Item 3
 
-> Alıntı metni buraya gelir.
+> Quote text goes here.
 
 \`\`\`
-kod bloğu
+code block
 \`\`\`
 `;
 
@@ -101,9 +101,9 @@ export default function MarkdownToPdfPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Markdown → PDF</h1>
-      <p className="text-gray-500 mb-2">Markdown metnini veya .md dosyasını PDF'e dönüştür.</p>
+      <p className="text-gray-500 mb-2">Convert Markdown text or a .md file to PDF.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your files are never sent to a server.
       </p>
 
       {/* Mode tabs */}
@@ -114,7 +114,7 @@ export default function MarkdownToPdfPage() {
             onClick={() => { setMode(m); setStatus("idle"); }}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${mode === m ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
           >
-            {m === "paste" ? "Metin Gir" : "Dosya Yükle"}
+            {m === "paste" ? "Enter Text" : "Upload File"}
           </button>
         ))}
       </div>
@@ -127,7 +127,7 @@ export default function MarkdownToPdfPage() {
             <FileDropzone
               onFiles={handleFiles}
               accept={{ "text/markdown": [".md", ".markdown"], "text/plain": [".txt"] }}
-              label=".md dosyasını buraya sürükle"
+              label="Drag .md file here"
             />
           ) : (
             <textarea
@@ -138,14 +138,14 @@ export default function MarkdownToPdfPage() {
           )}
           {mode === "upload" && file && (
             <p className="text-xs text-gray-500 mt-1">📄 {file.name}
-              <button onClick={() => { setFile(null); setStatus("idle"); }} className="ml-2 text-red-400 hover:text-red-600">✕ Kaldır</button>
+              <button onClick={() => { setFile(null); setStatus("idle"); }} className="ml-2 text-red-400 hover:text-red-600">✕ Remove</button>
             </p>
           )}
         </div>
 
         {/* Preview */}
         <div>
-          <p className="text-xs text-gray-400 mb-1 font-medium">ÖNİZLEME</p>
+          <p className="text-xs text-gray-400 mb-1 font-medium">PREVIEW</p>
           <div className="border border-gray-200 rounded-xl bg-white overflow-auto h-80">
             <div
               ref={previewRef}
@@ -159,12 +159,12 @@ export default function MarkdownToPdfPage() {
 
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          PDF oluşturuldu ve indirildi!
+          PDF created and downloaded!
         </div>
       )}
       {status === "error" && (
         <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-          Dönüştürme sırasında hata oluştu. Lütfen tekrar deneyin.
+          An error occurred during conversion. Please try again.
         </div>
       )}
 
@@ -173,7 +173,7 @@ export default function MarkdownToPdfPage() {
         disabled={!mdText.trim() || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "Dönüştürülüyor..." : "PDF'e Dönüştür"}
+        {status === "processing" ? "Converting..." : "Convert to PDF"}
       </button>
     </div>
   );

@@ -30,7 +30,7 @@ export default function PDFCompressPage() {
       const compressed = await compressPDF(file);
       setProgress(100);
       setResult({ original: file.size, compressed: compressed.byteLength });
-      const name = file.name.replace(".pdf", "") + "-sıkıştırıldı.pdf";
+      const name = file.name.replace(".pdf", "") + "-compressed.pdf";
       downloadBlob(compressed, name);
       setStatus("done");
     } catch {
@@ -44,43 +44,43 @@ export default function PDFCompressPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">PDF Sıkıştır</h1>
-      <p className="text-gray-500 mb-8">PDF boyutunu küçült. Tarayıcıda çalışır, dosyan sunucuya gitmez.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Compress PDF</h1>
+      <p className="text-gray-500 mb-8">Reduce PDF file size. Runs in your browser, files never leave your device.</p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "application/pdf": [".pdf"] }}
         multiple={false}
-        label="PDF dosyasını buraya sürükle"
+        label="Drag PDF file here"
       />
 
       {file && (
         <div className="mt-4 p-3 bg-white border rounded-lg text-sm text-gray-700">
-          Seçilen: <span className="font-medium">{file.name}</span>
+          Selected: <span className="font-medium">{file.name}</span>
           <span className="ml-2 text-gray-400">({formatSize(file.size)})</span>
         </div>
       )}
 
       {status === "processing" && (
         <div className="mt-4">
-          <ProgressBar value={progress} label="Sıkıştırılıyor..." />
+          <ProgressBar value={progress} label="Compressing..." />
         </div>
       )}
 
       {status === "done" && result && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl">
-          <p className="text-green-700 font-semibold text-sm mb-3">Sıkıştırma tamamlandı!</p>
+          <p className="text-green-700 font-semibold text-sm mb-3">Compression complete!</p>
           <div className="grid grid-cols-3 gap-3 text-center">
             <div className="bg-white rounded-lg p-3 border">
-              <p className="text-xs text-gray-500 mb-1">Önceki</p>
+              <p className="text-xs text-gray-500 mb-1">Before</p>
               <p className="font-bold text-gray-900">{formatSize(result.original)}</p>
             </div>
             <div className="bg-white rounded-lg p-3 border">
-              <p className="text-xs text-gray-500 mb-1">Sonraki</p>
+              <p className="text-xs text-gray-500 mb-1">After</p>
               <p className="font-bold text-gray-900">{formatSize(result.compressed)}</p>
             </div>
             <div className="bg-blue-600 rounded-lg p-3">
-              <p className="text-xs text-blue-200 mb-1">Tasarruf</p>
+              <p className="text-xs text-blue-200 mb-1">Saved</p>
               <p className="font-bold text-white">{savings > 0 ? `-${savings}%` : "—"}</p>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function PDFCompressPage() {
 
       {status === "error" && (
         <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-          Hata oluştu. Lütfen tekrar deneyin.
+          An error occurred. Please try again.
         </div>
       )}
 
@@ -98,7 +98,7 @@ export default function PDFCompressPage() {
         disabled={!file || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "Sıkıştırılıyor..." : "PDF'i Sıkıştır"}
+        {status === "processing" ? "Compressing..." : "Compress PDF"}
       </button>
     </div>
   );

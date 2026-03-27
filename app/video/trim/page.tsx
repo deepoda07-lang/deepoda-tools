@@ -71,16 +71,16 @@ export default function VideoTrimPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Video Kes</h1>
-      <p className="text-gray-500 mb-2">Videonun istediğin bölümünü kes ve indir.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Trim Video</h1>
+      <p className="text-gray-500 mb-2">Cut any section of a video and download it.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "video/*": [".mp4", ".mov", ".webm", ".avi", ".mkv"] }}
-        label="Video dosyasını buraya sürükle"
+        label="Drag video file here"
       />
 
       {file && (
@@ -93,7 +93,7 @@ export default function VideoTrimPage() {
           <div className="mt-5 space-y-4">
             <div>
               <label className="text-sm font-medium text-gray-700 flex justify-between">
-                <span>Başlangıç</span>
+                <span>Start</span>
                 <span className="text-blue-600 font-mono">{formatTime(startSec)}</span>
               </label>
               <input type="range" min={0} max={duration} step={0.1} value={startSec}
@@ -102,7 +102,7 @@ export default function VideoTrimPage() {
             </div>
             <div>
               <label className="text-sm font-medium text-gray-700 flex justify-between">
-                <span>Bitiş</span>
+                <span>End</span>
                 <span className="text-blue-600 font-mono">{formatTime(endSec)}</span>
               </label>
               <input type="range" min={0} max={duration} step={0.1} value={endSec}
@@ -110,18 +110,18 @@ export default function VideoTrimPage() {
                 className="w-full mt-1 accent-blue-600" />
             </div>
             <p className="text-xs text-gray-500">
-              Kesilen süre: <span className="font-medium text-gray-700">{formatTime(trimDuration)}</span>
-              {" "}/ Toplam: {formatTime(duration)}
+              Trimmed duration: <span className="font-medium text-gray-700">{formatTime(trimDuration)}</span>
+              {" "}/ Total: {formatTime(duration)}
             </p>
           </div>
         </>
       )}
 
-      <FfmpegStatus status={status} progress={progress} loadingLabel="ffmpeg yükleniyor..." processingLabel="Video kesiliyor..." doneLabel="Video kesildi ve indirildi!" />
+      <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg..." processingLabel="Trimming video..." doneLabel="Video trimmed and downloaded!" />
 
       <button onClick={handleTrim} disabled={!file || status === "loading" || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "loading" || status === "processing" ? "İşleniyor..." : "Videoyu Kes"}
+        {status === "loading" || status === "processing" ? "Processing..." : "Trim Video"}
       </button>
     </div>
   );

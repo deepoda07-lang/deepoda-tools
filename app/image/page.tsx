@@ -4,37 +4,37 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Görsel Araçları – Ücretsiz Online Görsel İşlemleri",
-  description: "Görsel sıkıştır, kırp, döndür, boyutlandır, arka plan sil ve daha fazlası. 8 ücretsiz araç, tarayıcıda.",
+  title: "Image Tools – Free Online Image Operations",
+  description: "Compress, crop, rotate, resize images, remove background and more. 8 free tools, runs in your browser.",
 };
 
 const tools = [
-  { title: "Görsel Sıkıştır",   description: "JPG, PNG ve WEBP dosyalarını kalite kaybetmeden küçült.",   href: "/image/compress",   icon: "🗜️", badge: "Popüler" },
-  { title: "Arka Plan Sil",     description: "Yapay zeka ile görsel arka planını otomatik kaldır.",        href: "/image/remove-bg",  icon: "🪄",  badge: "AI" },
-  { title: "Format Dönüştür",   description: "JPG ↔ PNG ↔ WEBP arasında anında dönüşüm.",               href: "/image/convert",    icon: "🔄" },
-  { title: "Görsel Boyutlandır",description: "Genişlik/yükseklik gir, orantı kilidi ile boyutlandır.",    href: "/image/resize",     icon: "📐", badge: "Yeni" },
-  { title: "Görsel Kırp",       description: "Görselin istediğin bölümünü kırp ve indir.",               href: "/image/crop",       icon: "✂️", badge: "Yeni" },
-  { title: "Görsel Döndür",     description: "90°/180° döndür veya yatay/dikey çevir.",                  href: "/image/rotate",     icon: "🔃", badge: "Yeni" },
-  { title: "Görsel → PDF",      description: "Görselleri tek bir PDF dosyasına dönüştür.",               href: "/image/to-pdf",     icon: "📋", badge: "Yeni" },
-  { title: "HEIC → JPG",        description: "iPhone HEIC fotoğraflarını JPG'ye dönüştür.",             href: "/image/heic-to-jpg",icon: "📱", badge: "Yeni" },
+  { title: "Compress Image",    description: "Shrink JPG, PNG, and WEBP files without quality loss.",  href: "/image/compress",    icon: "🗜️", badge: "Popular" },
+  { title: "Remove Background", description: "Automatically remove image backgrounds with AI.",         href: "/image/remove-bg",   icon: "🪄",  badge: "AI" },
+  { title: "Convert Format",    description: "Instantly convert between JPG ↔ PNG ↔ WEBP.",           href: "/image/convert",     icon: "🔄" },
+  { title: "Resize Image",      description: "Set width/height with aspect ratio lock.",               href: "/image/resize",      icon: "📐", badge: "New" },
+  { title: "Crop Image",        description: "Crop any portion of your image and download it.",        href: "/image/crop",        icon: "✂️", badge: "New" },
+  { title: "Rotate Image",      description: "Rotate 90°/180° or flip horizontally/vertically.",      href: "/image/rotate",      icon: "🔃", badge: "New" },
+  { title: "Image → PDF",       description: "Convert images into a single PDF file.",                href: "/image/to-pdf",      icon: "📋", badge: "New" },
+  { title: "HEIC → JPG",        description: "Convert iPhone HEIC photos to JPG.",                   href: "/image/heic-to-jpg", icon: "📱", badge: "New" },
 ];
 
 export default function ImagePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
-      <Breadcrumb crumbs={[{ label: "Görsel Araçları" }]} />
+      <Breadcrumb crumbs={[{ label: "Image Tools" }]} />
 
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-3">
           <span className="text-4xl">🖼️</span>
-          <h1 className="text-3xl font-bold text-gray-900">Görsel Araçları</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Image Tools</h1>
           <span className="text-sm font-semibold px-3 py-1 rounded-full bg-gray-100 text-gray-600">
-            {tools.length} araç
+            {tools.length} tools
           </span>
         </div>
         <p className="text-gray-500 max-w-xl">
-          Görsellerinizi düzenleyin, dönüştürün ve optimize edin.
-          Tüm işlemler tarayıcınızda, dosyalar sunucuya gitmez.
+          Edit, convert, and optimize your images.
+          All processing in your browser — files never leave your device.
         </p>
       </div>
 
@@ -43,13 +43,16 @@ export default function ImagePage() {
       </div>
 
       <div className="border-t pt-8">
-        <p className="text-sm text-gray-500 mb-4 font-medium">Diğer kategoriler</p>
+        <p className="text-sm text-gray-500 mb-4 font-medium">Other categories</p>
         <div className="flex flex-wrap gap-3">
           <a href="/pdf" className="flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 hover:border-blue-300 hover:text-blue-600 text-sm font-medium text-gray-700 transition-all">
-            📄 PDF Araçları <ArrowRight className="w-3.5 h-3.5" />
+            📄 PDF Tools <ArrowRight className="w-3.5 h-3.5" />
           </a>
           <a href="/convert" className="flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 hover:border-blue-300 hover:text-blue-600 text-sm font-medium text-gray-700 transition-all">
-            🔄 Dönüştürme Araçları <ArrowRight className="w-3.5 h-3.5" />
+            🔄 Convert Tools <ArrowRight className="w-3.5 h-3.5" />
+          </a>
+          <a href="/video" className="flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 hover:border-blue-300 hover:text-blue-600 text-sm font-medium text-gray-700 transition-all">
+            🎬 Video Tools <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>

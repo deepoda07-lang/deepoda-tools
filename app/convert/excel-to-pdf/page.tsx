@@ -26,7 +26,7 @@ export default function ExcelToPdfPage() {
       const worksheet = workbook.Sheets[sheetName];
       const data: string[][] = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: "" }) as string[][];
 
-      if (!data || data.length === 0) throw new Error("Boş dosya");
+      if (!data || data.length === 0) throw new Error("Empty file");
 
       const doc = new jsPDF({ orientation: "landscape", unit: "pt", format: "a4" });
       const pageWidth = doc.internal.pageSize.getWidth();
@@ -42,7 +42,7 @@ export default function ExcelToPdfPage() {
       doc.setFontSize(8);
       doc.setFont("helvetica", "normal");
       doc.setTextColor(120, 120, 120);
-      doc.text(`Sayfa: ${sheetName}  •  ${data.length - 1} satır`, margin, margin + 14);
+      doc.text(`Sheet: ${sheetName}  •  ${data.length - 1} rows`, margin, margin + 14);
 
       const colCount = Math.max(...data.map((r) => r.length));
       const colW = Math.max(usableWidth / Math.max(colCount, 1), 40);
@@ -94,7 +94,7 @@ export default function ExcelToPdfPage() {
       doc.save(file.name.replace(/\.(xlsx|xls)$/i, ".pdf"));
       setStatus("done");
     } catch (e) {
-      setErrorMsg(e instanceof Error ? e.message : "Bilinmeyen hata");
+      setErrorMsg(e instanceof Error ? e.message : "Unknown error");
       setStatus("error");
     }
   };
@@ -102,15 +102,15 @@ export default function ExcelToPdfPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Excel → PDF</h1>
-      <p className="text-gray-500 mb-2">Excel dosyasını (XLSX/XLS) PDF'e dönüştür.</p>
+      <p className="text-gray-500 mb-2">Convert Excel files (XLSX/XLS) to PDF.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your files are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"], "application/vnd.ms-excel": [".xls"] }}
-        label="XLSX veya XLS dosyasını buraya sürükle"
+        label="Drag XLSX or XLS file here"
       />
 
       {file && (
@@ -128,12 +128,12 @@ export default function ExcelToPdfPage() {
 
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          PDF oluşturuldu ve indirildi!
+          PDF created and downloaded!
         </div>
       )}
       {status === "error" && (
         <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-          Hata: {errorMsg || "Dosya dönüştürülemedi. Geçerli bir XLSX/XLS dosyası olduğundan emin olun."}
+          Error: {errorMsg || "Could not convert file. Make sure it is a valid XLSX/XLS file."}
         </div>
       )}
 
@@ -142,7 +142,7 @@ export default function ExcelToPdfPage() {
         disabled={!file || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "Dönüştürülüyor..." : "PDF'e Dönüştür"}
+        {status === "processing" ? "Converting..." : "Convert to PDF"}
       </button>
     </div>
   );

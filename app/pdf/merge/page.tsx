@@ -31,7 +31,7 @@ export default function PDFMergePage() {
 
   const handleMerge = async () => {
     if (files.length < 2) {
-      setError("En az 2 PDF dosyası seçmelisiniz.");
+      setError("Please select at least 2 PDF files.");
       return;
     }
     setError("");
@@ -41,31 +41,31 @@ export default function PDFMergePage() {
       setProgress(50);
       const merged = await mergePDFs(files);
       setProgress(90);
-      downloadBlob(merged, "birlestirilmis.pdf");
+      downloadBlob(merged, "merged.pdf");
       setProgress(100);
       setStatus("done");
     } catch {
       setStatus("error");
-      setError("Birleştirme sırasında hata oluştu.");
+      setError("An error occurred during merging.");
     }
   };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">PDF Birleştir</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Merge PDF</h1>
       <p className="text-gray-500 mb-8">
-        PDF dosyalarını seç, sırala ve tek belgede birleştir.
+        Select, reorder, and merge PDF files into a single document.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "application/pdf": [".pdf"] }}
-        label="PDF dosyalarını buraya sürükle"
+        label="Drag PDF files here"
       />
 
       {files.length > 0 && (
         <div className="mt-6 space-y-2">
-          <h2 className="font-semibold text-gray-700">Seçilen dosyalar ({files.length})</h2>
+          <h2 className="font-semibold text-gray-700">Selected files ({files.length})</h2>
           {files.map((f, i) => (
             <div key={i} className="flex items-center gap-2 bg-white border rounded-lg px-4 py-2">
               <span className="text-sm flex-1 truncate text-gray-700">{f.name}</span>
@@ -82,13 +82,13 @@ export default function PDFMergePage() {
 
       {status === "processing" && (
         <div className="mt-4">
-          <ProgressBar value={progress} label="Birleştiriliyor..." />
+          <ProgressBar value={progress} label="Merging..." />
         </div>
       )}
 
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          PDF başarıyla birleştirildi ve indirildi!
+          PDF successfully merged and downloaded!
         </div>
       )}
 
@@ -97,7 +97,7 @@ export default function PDFMergePage() {
         disabled={files.length < 2 || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "İşleniyor..." : "PDF'leri Birleştir"}
+        {status === "processing" ? "Processing..." : "Merge PDFs"}
       </button>
     </div>
   );

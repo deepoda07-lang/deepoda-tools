@@ -7,11 +7,11 @@ import { RotateCw, RotateCcw, FlipHorizontal, FlipVertical } from "lucide-react"
 type Action = { type: "rotate"; deg: number } | { type: "flip"; axis: "h" | "v" };
 
 const ACTIONS: { label: string; icon: React.ElementType; action: Action }[] = [
-  { label: "90° Sağa",    icon: RotateCw,       action: { type: "rotate", deg: 90 } },
-  { label: "90° Sola",    icon: RotateCcw,      action: { type: "rotate", deg: -90 } },
-  { label: "180°",        icon: RotateCw,       action: { type: "rotate", deg: 180 } },
-  { label: "Yatay Çevir", icon: FlipHorizontal, action: { type: "flip", axis: "h" } },
-  { label: "Dikey Çevir", icon: FlipVertical,   action: { type: "flip", axis: "v" } },
+  { label: "90° Right",       icon: RotateCw,       action: { type: "rotate", deg: 90 } },
+  { label: "90° Left",        icon: RotateCcw,      action: { type: "rotate", deg: -90 } },
+  { label: "180°",            icon: RotateCw,       action: { type: "rotate", deg: 180 } },
+  { label: "Flip Horizontal", icon: FlipHorizontal, action: { type: "flip", axis: "h" } },
+  { label: "Flip Vertical",   icon: FlipVertical,   action: { type: "flip", axis: "v" } },
 ];
 
 export default function ImageRotatePage() {
@@ -58,7 +58,7 @@ export default function ImageRotatePage() {
 
       canvas.toBlob((blob) => {
         if (!blob) { setStatus("error"); return; }
-        downloadBlob(blob, file.name.replace(/\.[^.]+$/, "") + "-düzenlendi.jpg");
+        downloadBlob(blob, file.name.replace(/\.[^.]+$/, "") + "-edited.jpg");
         setStatus("done");
       }, "image/jpeg", 0.92);
     } catch { setStatus("error"); }
@@ -66,14 +66,14 @@ export default function ImageRotatePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Görsel Döndür / Çevir</h1>
-      <p className="text-gray-500 mb-8">Görseli döndür veya yatay/dikey olarak çevir.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Rotate / Flip Image</h1>
+      <p className="text-gray-500 mb-8">Rotate or flip an image horizontally or vertically.</p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "image/jpeg": [".jpg",".jpeg"], "image/png": [".png"], "image/webp": [".webp"] }}
         multiple={false}
-        label="Görsel buraya sürükle (JPG, PNG, WEBP)"
+        label="Drag image here (JPG, PNG, WEBP)"
       />
 
       {preview && (
@@ -97,12 +97,12 @@ export default function ImageRotatePage() {
         })}
       </div>
 
-      {status === "done" && <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">Görsel işlendi ve indirildi!</div>}
-      {status === "error" && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">Hata oluştu.</div>}
+      {status === "done" && <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">Image processed and downloaded!</div>}
+      {status === "error" && <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">An error occurred.</div>}
 
       <button onClick={handleProcess} disabled={!file}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        Uygula ve İndir
+        Apply & Download
       </button>
     </div>
   );

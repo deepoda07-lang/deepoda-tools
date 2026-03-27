@@ -5,9 +5,9 @@ import { PDFDocument } from "pdf-lib";
 import { downloadBlob } from "@/lib/pdf-utils";
 
 interface PageItem {
-  id: string;        // benzersiz key (sıra değişse bile sabit)
+  id: string;
   originalIndex: number;
-  thumbnail: string; // data URL
+  thumbnail: string;
 }
 
 async function renderThumbnails(file: File): Promise<PageItem[]> {
@@ -73,7 +73,6 @@ export default function PDFEditPage() {
     });
   };
 
-  /* ── Drag-and-drop ─────────────────────────── */
   const onDragStart = (idx: number) => { dragIdx.current = idx; };
   const onDragOver = (e: React.DragEvent, idx: number) => {
     e.preventDefault();
@@ -88,7 +87,6 @@ export default function PDFEditPage() {
   };
   const onDragEnd = () => { dragIdx.current = null; };
 
-  /* ── PDF oluştur ve indir ──────────────────── */
   const handleSave = async () => {
     if (!file || pages.length === 0) return;
     setSaving(true);
@@ -100,7 +98,7 @@ export default function PDFEditPage() {
       const copied = await newDoc.copyPages(srcDoc, indices);
       copied.forEach((p) => newDoc.addPage(p));
       const out = await newDoc.save();
-      downloadBlob(out, `duzenlenmis_${file.name}`);
+      downloadBlob(out, `edited_${file.name}`);
       setDone(true);
     } finally {
       setSaving(false);
@@ -109,9 +107,9 @@ export default function PDFEditPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">PDF Düzenle</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Edit PDF</h1>
       <p className="text-gray-500 mb-8">
-        Sayfa sil, yeniden sırala (sürükle veya ok tuşları) ve kaydet.
+        Delete pages, reorder (drag or arrow keys), and save.
       </p>
 
       {pages.length === 0 && (
@@ -119,36 +117,35 @@ export default function PDFEditPage() {
           onFiles={handleFiles}
           accept={{ "application/pdf": [".pdf"] }}
           multiple={false}
-          label="PDF dosyasını buraya sürükle"
+          label="Drag PDF file here"
         />
       )}
 
       {loading && (
         <div className="mt-8 text-center">
           <div className="inline-block w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
-          <p className="text-gray-500 mt-3 text-sm">Sayfalar yükleniyor…</p>
+          <p className="text-gray-500 mt-3 text-sm">Loading pages…</p>
         </div>
       )}
 
       {pages.length > 0 && (
         <>
-          {/* Toolbar */}
           <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
             <div className="flex items-center gap-3">
               <span className="text-sm text-gray-500">
-                {pages.length} sayfa
+                {pages.length} pages
               </span>
               <button
                 onClick={() => { setPages([]); setFile(null); setDone(false); }}
                 className="text-xs text-gray-400 hover:text-red-500 underline transition-colors"
               >
-                Yeni dosya seç
+                Select new file
               </button>
             </div>
             <div className="flex items-center gap-2">
               {done && (
                 <span className="text-sm text-green-600 font-medium">
-                  ✓ İndirildi
+                  ✓ Downloaded
                 </span>
               )}
               <button
@@ -156,12 +153,11 @@ export default function PDFEditPage() {
                 disabled={saving || pages.length === 0}
                 className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white text-sm font-semibold rounded-xl transition-colors"
               >
-                {saving ? "Kaydediliyor…" : "PDF İndir"}
+                {saving ? "Saving…" : "Download PDF"}
               </button>
             </div>
           </div>
 
-          {/* Page grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {pages.map((page, idx) => (
               <div
@@ -172,40 +168,35 @@ export default function PDFEditPage() {
                 onDragEnd={onDragEnd}
                 className="group relative bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-blue-300 transition-all cursor-grab active:cursor-grabbing"
               >
-                {/* Thumbnail */}
                 <div className="bg-gray-50">
                   <img
                     src={page.thumbnail}
-                    alt={`Sayfa ${idx + 1}`}
+                    alt={`Page ${idx + 1}`}
                     className="w-full object-contain"
                     draggable={false}
                   />
                 </div>
 
-                {/* Page number */}
                 <div className="px-2 py-1.5 text-center text-xs font-medium text-gray-600">
-                  Sayfa {idx + 1}
+                  Page {idx + 1}
                 </div>
 
-                {/* Hover controls */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors rounded-xl" />
 
-                {/* Delete button */}
                 <button
                   onClick={() => deletePage(idx)}
                   className="absolute top-1.5 right-1.5 w-6 h-6 rounded-full bg-red-500 text-white text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600 shadow"
-                  title="Sayfayı sil"
+                  title="Delete page"
                 >
                   ✕
                 </button>
 
-                {/* Move buttons */}
                 <div className="absolute bottom-7 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button
                     onClick={() => movePage(idx, -1)}
                     disabled={idx === 0}
                     className="w-6 h-6 rounded bg-white/90 border text-gray-600 text-xs flex items-center justify-center disabled:opacity-30 hover:bg-white shadow"
-                    title="Sola taşı"
+                    title="Move left"
                   >
                     ←
                   </button>
@@ -213,7 +204,7 @@ export default function PDFEditPage() {
                     onClick={() => movePage(idx, 1)}
                     disabled={idx === pages.length - 1}
                     className="w-6 h-6 rounded bg-white/90 border text-gray-600 text-xs flex items-center justify-center disabled:opacity-30 hover:bg-white shadow"
-                    title="Sağa taşı"
+                    title="Move right"
                   >
                     →
                   </button>
@@ -224,7 +215,7 @@ export default function PDFEditPage() {
 
           {pages.length === 0 && (
             <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg text-amber-700 text-sm text-center">
-              Tüm sayfaları sildiniz. Yeni dosya seçin.
+              You deleted all pages. Please select a new file.
             </div>
           )}
         </>

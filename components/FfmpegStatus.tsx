@@ -12,10 +12,10 @@ interface Props {
 export default function FfmpegStatus({
   status,
   progress,
-  loadingLabel = "ffmpeg yükleniyor...",
-  processingLabel = "İşleniyor...",
-  doneLabel = "Tamamlandı! Dosya indirildi.",
-  errorLabel = "Hata oluştu. Lütfen tekrar deneyin.",
+  loadingLabel = "Loading ffmpeg...",
+  processingLabel = "Processing...",
+  doneLabel = "Done! File downloaded.",
+  errorLabel = "An error occurred. Please try again.",
 }: Props) {
   if (status === "idle") return null;
 

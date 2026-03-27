@@ -6,9 +6,9 @@ import { formatBytes } from "@/lib/ffmpeg-utils";
 import { X } from "lucide-react";
 
 const QUALITY_OPTIONS = [
-  { label: "320 kbps", bitrate: "320k", desc: "En yüksek kalite" },
-  { label: "192 kbps", bitrate: "192k", desc: "Önerilen" },
-  { label: "128 kbps", bitrate: "128k", desc: "Küçük boyut" },
+  { label: "320 kbps", bitrate: "320k", desc: "Highest quality" },
+  { label: "192 kbps", bitrate: "192k", desc: "Recommended" },
+  { label: "128 kbps", bitrate: "128k", desc: "Smaller size" },
 ];
 
 export default function VideoToMp3Page() {
@@ -54,15 +54,15 @@ export default function VideoToMp3Page() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Video → MP3</h1>
-      <p className="text-gray-500 mb-2">Videodan ses çıkar, MP3 formatında indir.</p>
+      <p className="text-gray-500 mb-2">Extract audio from a video and download it as MP3.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "video/*": [".mp4", ".mov", ".webm", ".avi", ".mkv"] }}
-        label="Video dosyasını buraya sürükle"
+        label="Drag video file here"
       />
 
       {file && (
@@ -73,7 +73,7 @@ export default function VideoToMp3Page() {
           </div>
 
           <div className="mt-4">
-            <p className="text-sm font-medium text-gray-700 mb-2">MP3 Kalitesi</p>
+            <p className="text-sm font-medium text-gray-700 mb-2">MP3 Quality</p>
             <div className="grid grid-cols-3 gap-2">
               {QUALITY_OPTIONS.map((q, i) => (
                 <button key={i} onClick={() => setQuality(i)}
@@ -87,11 +87,11 @@ export default function VideoToMp3Page() {
         </>
       )}
 
-      <FfmpegStatus status={status} progress={progress} loadingLabel="ffmpeg yükleniyor..." processingLabel="Ses çıkarılıyor..." doneLabel="MP3 oluşturuldu ve indirildi!" />
+      <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg..." processingLabel="Extracting audio..." doneLabel="MP3 created and downloaded!" />
 
       <button onClick={handleConvert} disabled={!file || status === "loading" || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "loading" || status === "processing" ? "İşleniyor..." : "MP3'e Dönüştür"}
+        {status === "loading" || status === "processing" ? "Processing..." : "Convert to MP3"}
       </button>
     </div>
   );

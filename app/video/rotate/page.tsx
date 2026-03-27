@@ -6,11 +6,11 @@ import { formatBytes } from "@/lib/ffmpeg-utils";
 import { X } from "lucide-react";
 
 const ROTATIONS = [
-  { label: "90° Sağ",     icon: "↻", vf: "transpose=1" },
-  { label: "90° Sol",     icon: "↺", vf: "transpose=2" },
-  { label: "180°",        icon: "⤸", vf: "transpose=1,transpose=1" },
-  { label: "Yatay Çevir", icon: "↔", vf: "hflip" },
-  { label: "Dikey Çevir", icon: "↕", vf: "vflip" },
+  { label: "90° Right",       icon: "↻", vf: "transpose=1" },
+  { label: "90° Left",        icon: "↺", vf: "transpose=2" },
+  { label: "180°",            icon: "⤸", vf: "transpose=1,transpose=1" },
+  { label: "Flip Horizontal", icon: "↔", vf: "hflip" },
+  { label: "Flip Vertical",   icon: "↕", vf: "vflip" },
 ];
 
 export default function VideoRotatePage() {
@@ -56,16 +56,16 @@ export default function VideoRotatePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Video Döndür</h1>
-      <p className="text-gray-500 mb-2">Videoyu döndür veya yatay/dikey çevir.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Rotate Video</h1>
+      <p className="text-gray-500 mb-2">Rotate or flip a video horizontally or vertically.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "video/*": [".mp4", ".mov", ".webm", ".avi", ".mkv"] }}
-        label="Video dosyasını buraya sürükle"
+        label="Drag video file here"
       />
 
       {file && (
@@ -76,7 +76,7 @@ export default function VideoRotatePage() {
           </div>
 
           <div className="mt-4">
-            <p className="text-sm font-medium text-gray-700 mb-2">Döndürme Seçeneği</p>
+            <p className="text-sm font-medium text-gray-700 mb-2">Rotation Option</p>
             <div className="grid grid-cols-5 gap-2">
               {ROTATIONS.map((r, i) => (
                 <button key={i} onClick={() => setRotation(i)}
@@ -90,11 +90,11 @@ export default function VideoRotatePage() {
         </>
       )}
 
-      <FfmpegStatus status={status} progress={progress} loadingLabel="ffmpeg yükleniyor..." processingLabel="Video döndürülüyor..." doneLabel="Video döndürüldü ve indirildi!" />
+      <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg..." processingLabel="Rotating video..." doneLabel="Video rotated and downloaded!" />
 
       <button onClick={handleRotate} disabled={!file || status === "loading" || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "loading" || status === "processing" ? "İşleniyor..." : "Videoyu Döndür"}
+        {status === "loading" || status === "processing" ? "Processing..." : "Rotate Video"}
       </button>
     </div>
   );

@@ -46,7 +46,7 @@ export default function WordToPDFPage() {
       setStatus("done");
     } catch {
       setStatus("error");
-      setError("Dönüştürme sırasında hata oluştu.");
+      setError("An error occurred during conversion.");
     }
   };
 
@@ -54,7 +54,7 @@ export default function WordToPDFPage() {
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Word → PDF</h1>
       <p className="text-gray-500 mb-8">
-        Word (.docx) belgelerini PDF formatına dönüştür. Tarayıcıda çalışır.
+        Convert Word (.docx) documents to PDF format. Runs in your browser.
       </p>
 
       <FileDropzone
@@ -63,12 +63,12 @@ export default function WordToPDFPage() {
           "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"],
         }}
         multiple={false}
-        label="DOCX dosyasını buraya sürükle"
+        label="Drag DOCX file here"
       />
 
       {file && (
         <div className="mt-4 p-3 bg-white border rounded-lg text-sm text-gray-700">
-          Seçilen: <span className="font-medium">{file.name}</span>
+          Selected: <span className="font-medium">{file.name}</span>
         </div>
       )}
 
@@ -76,13 +76,13 @@ export default function WordToPDFPage() {
 
       {status === "processing" && (
         <div className="mt-4">
-          <ProgressBar value={progress} label="Dönüştürülüyor..." />
+          <ProgressBar value={progress} label="Converting..." />
         </div>
       )}
 
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          PDF başarıyla oluşturuldu ve indirildi!
+          PDF successfully created and downloaded!
         </div>
       )}
 
@@ -91,7 +91,7 @@ export default function WordToPDFPage() {
         disabled={!file || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
       >
-        {status === "processing" ? "Dönüştürülüyor..." : "PDF'e Dönüştür"}
+        {status === "processing" ? "Converting..." : "Convert to PDF"}
       </button>
     </div>
   );

@@ -37,16 +37,16 @@ export default function HeicToJpgPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">HEIC → JPG</h1>
-      <p className="text-gray-500 mb-2">iPhone fotoğraflarını (HEIC/HEIF) JPG formatına dönüştür.</p>
+      <p className="text-gray-500 mb-2">Convert iPhone photos (HEIC/HEIF) to JPG format.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Fotoğraflarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your photos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "image/heic": [".heic", ".heif"] }}
         multiple
-        label="HEIC / HEIF dosyalarını buraya sürükle"
+        label="Drag HEIC / HEIF files here"
       />
 
       {files.length > 0 && (
@@ -59,29 +59,29 @@ export default function HeicToJpgPage() {
               </button>
             </div>
           ))}
-          <p className="text-xs text-gray-400">{files.length} dosya seçildi</p>
+          <p className="text-xs text-gray-400">{files.length} file(s) selected</p>
         </div>
       )}
 
       {status === "processing" && (
         <div className="mt-4">
-          <ProgressBar value={progress} label={`Dönüştürülüyor... (${converted}/${files.length})`} />
+          <ProgressBar value={progress} label={`Converting... (${converted}/${files.length})`} />
         </div>
       )}
       {status === "done" && (
         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          {converted} dosya JPG olarak dönüştürüldü ve indirildi!
+          {converted} file(s) converted to JPG and downloaded!
         </div>
       )}
       {status === "error" && (
         <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-          Hata oluştu. Dosyanın gerçekten HEIC/HEIF formatında olduğundan emin olun.
+          An error occurred. Make sure your file is actually in HEIC/HEIF format.
         </div>
       )}
 
       <button onClick={handleConvert} disabled={files.length === 0 || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "processing" ? "Dönüştürülüyor..." : "JPG'ye Dönüştür"}
+        {status === "processing" ? "Converting..." : "Convert to JPG"}
       </button>
     </div>
   );

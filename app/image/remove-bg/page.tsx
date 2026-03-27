@@ -35,7 +35,7 @@ export default function RemoveBgPage() {
       setStatus("done");
     } catch {
       setStatus("error");
-      setError("Arka plan kaldırma başarısız oldu.");
+      setError("Background removal failed.");
     }
   }, []);
 
@@ -49,25 +49,25 @@ export default function RemoveBgPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Arka Plan Sil</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Remove Background</h1>
       <p className="text-gray-500 mb-2">
-        Görsellerden arka planı otomatik kaldır. Tamamen tarayıcıda çalışır.
+        Automatically remove backgrounds from images. Runs entirely in your browser.
       </p>
       <div className="mb-8 inline-flex items-center gap-1 text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
-        AI destekli · Verileriniz sunucuya gitmez
+        AI-powered · Your data never leaves your device
       </div>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "image/jpeg": [".jpg", ".jpeg"], "image/png": [".png"], "image/webp": [".webp"] }}
         multiple={false}
-        label="Görsel buraya sürükle (JPG, PNG, WEBP)"
+        label="Drag image here (JPG, PNG, WEBP)"
       />
 
       {status === "processing" && (
         <div className="mt-6">
-          <ProgressBar value={progress} label="Model yükleniyor ve işleniyor..." />
-          <p className="text-xs text-gray-400 mt-2">İlk kullanımda model indirilir (~40 MB), sonraki kullanımlar hızlıdır.</p>
+          <ProgressBar value={progress} label="Loading model and processing..." />
+          <p className="text-xs text-gray-400 mt-2">The model is downloaded on first use (~40 MB). Subsequent uses are faster.</p>
         </div>
       )}
 
@@ -76,14 +76,14 @@ export default function RemoveBgPage() {
       {originalUrl && resultUrl && (
         <div className="mt-8 grid grid-cols-2 gap-4">
           <div>
-            <p className="text-sm font-medium text-gray-600 mb-2">Orijinal</p>
-            <img src={originalUrl} alt="Orijinal" className="w-full rounded-lg border" />
+            <p className="text-sm font-medium text-gray-600 mb-2">Original</p>
+            <img src={originalUrl} alt="Original" className="w-full rounded-lg border" />
           </div>
           <div>
-            <p className="text-sm font-medium text-gray-600 mb-2">Arka plan silindi</p>
+            <p className="text-sm font-medium text-gray-600 mb-2">Background removed</p>
             <img
               src={resultUrl}
-              alt="Arka plan silindi"
+              alt="Background removed"
               className="w-full rounded-lg border"
               style={{ backgroundImage: "repeating-conic-gradient(#ccc 0% 25%, white 0% 50%) 0 0 / 16px 16px" }}
             />
@@ -96,7 +96,7 @@ export default function RemoveBgPage() {
           onClick={handleDownload}
           className="mt-6 w-full py-3 px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
         >
-          PNG İndir (şeffaf arka plan)
+          Download PNG (transparent background)
         </button>
       )}
     </div>

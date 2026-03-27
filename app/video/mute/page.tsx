@@ -47,16 +47,16 @@ export default function VideoMutePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Video Sessiz Et</h1>
-      <p className="text-gray-500 mb-2">Video dosyasından sesi tamamen kaldır.</p>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Mute Video</h1>
+      <p className="text-gray-500 mb-2">Completely remove audio from a video file.</p>
       <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
-        Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız sunucuya gönderilmez.
+        All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
       <FileDropzone
         onFiles={handleFiles}
         accept={{ "video/*": [".mp4", ".mov", ".webm", ".avi", ".mkv"] }}
-        label="Video dosyasını buraya sürükle"
+        label="Drag video file here"
       />
 
       {file && (
@@ -67,14 +67,14 @@ export default function VideoMutePage() {
       )}
 
       <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg text-amber-700 text-sm">
-        🔇 Bu işlem videonun ses parçasını tamamen kaldırır. İşlem geri alınamaz.
+        🔇 This operation permanently removes the audio track from the video. This cannot be undone.
       </div>
 
-      <FfmpegStatus status={status} progress={progress} loadingLabel="ffmpeg yükleniyor..." processingLabel="Ses kaldırılıyor..." doneLabel="Ses kaldırıldı, video indirildi!" />
+      <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg..." processingLabel="Removing audio..." doneLabel="Audio removed, video downloaded!" />
 
       <button onClick={handleMute} disabled={!file || status === "loading" || status === "processing"}
         className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
-        {status === "loading" || status === "processing" ? "İşleniyor..." : "Sesi Kaldır"}
+        {status === "loading" || status === "processing" ? "Processing..." : "Remove Audio"}
       </button>
     </div>
   );

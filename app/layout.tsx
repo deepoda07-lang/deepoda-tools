@@ -7,12 +7,12 @@ const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Deepoda Tools – Ücretsiz Online Araçlar",
+    default: "Deepoda Tools – Free Online Tools",
     template: "%s | Deepoda Tools",
   },
   description:
-    "PDF birleştir, görsel sıkıştır, arka plan sil ve daha fazlası. Tamamen ücretsiz, tarayıcıda çalışır, dosyalar sunucuya gitmez.",
-  keywords: ["pdf birleştir", "görsel sıkıştır", "arka plan sil", "online araçlar"],
+    "Merge PDFs, compress images, remove backgrounds and more. Completely free, runs in your browser, files never leave your device.",
+  keywords: ["merge pdf", "compress image", "remove background", "online tools"],
 };
 
 export default function RootLayout({
@@ -21,12 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="tr" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased">
       <body className={`${geist.className} bg-gray-50 min-h-full flex flex-col`}>
         <Navbar />
         <main className="flex-1">{children}</main>
         <footer className="mt-16 border-t py-8 text-center text-sm text-gray-400">
-          <p>© 2025 Deepoda Tools · Tüm işlemler tarayıcınızda gerçekleşir · Verileriniz sunucuya gitmez</p>
+          <p>© 2025 Deepoda Tools · All processing happens in your browser · Your data never leaves your device</p>
         </footer>
       </body>
     </html>
