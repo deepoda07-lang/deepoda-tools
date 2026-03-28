@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ToolCard from "@/components/ToolCard";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import { Search } from "lucide-react";
 import { useDictionary } from "@/components/DictionaryProvider";
 
@@ -47,6 +48,8 @@ export default function Home() {
     return matchCat && matchSearch;
   });
 
+  const stats = dict.home.stats;
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-10">
@@ -85,6 +88,26 @@ export default function Home() {
               )}
             </button>
           ))}
+        </div>
+      </div>
+
+      {/* Stats bar */}
+      <div className="flex flex-wrap justify-center gap-6 mb-10 py-5 border-y border-gray-100">
+        <div className="text-center">
+          <div className="text-2xl font-extrabold text-gray-900"><AnimatedCounter end={50000} suffix="+" /></div>
+          <div className="text-xs text-gray-400 mt-0.5">{stats.files}</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-extrabold text-gray-900">{tools.length}</div>
+          <div className="text-xs text-gray-400 mt-0.5">{stats.tools}</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-extrabold text-gray-900">$0</div>
+          <div className="text-xs text-gray-400 mt-0.5">{stats.free}</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-extrabold text-gray-900">100%</div>
+          <div className="text-xs text-gray-400 mt-0.5">{stats.privacy}</div>
         </div>
       </div>
 

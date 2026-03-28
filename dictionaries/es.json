@@ -50,7 +50,13 @@
   "home": {
     "heading": "Herramientas Online Gratuitas",
     "description": "herramientas — operaciones con PDF, imágenes y archivos. Completamente gratis, se ejecuta en tu navegador, los archivos nunca salen de tu dispositivo.",
-    "searchPlaceholder": "Buscar herramientas — combinar PDF, eliminar fondo…"
+    "searchPlaceholder": "Buscar herramientas — combinar PDF, eliminar fondo…",
+    "stats": {
+      "files": "Archivos Procesados",
+      "tools": "Herramientas Gratuitas",
+      "free": "Siempre Gratis",
+      "privacy": "Privado y Seguro"
+    }
   },
   "cats": {
     "all": "Todas",

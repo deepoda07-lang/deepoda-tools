@@ -50,7 +50,13 @@
   "home": {
     "heading": "Free Online Tools",
     "description": "tools — PDF, image, and file operations. Completely free, runs in your browser, files never leave your device.",
-    "searchPlaceholder": "Search tools — merge PDF, remove background…"
+    "searchPlaceholder": "Search tools — merge PDF, remove background…",
+    "stats": {
+      "files": "Files Processed",
+      "tools": "Free Tools",
+      "free": "Always Free",
+      "privacy": "Private & Secure"
+    }
   },
   "cats": {
     "all": "All",

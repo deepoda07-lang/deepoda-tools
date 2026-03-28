@@ -50,7 +50,13 @@
   "home": {
     "heading": "Ücretsiz Çevrimiçi Araçlar",
     "description": "araç — PDF, görsel ve dosya işlemleri. Tamamen ücretsiz, tarayıcınızda çalışır, dosyalarınız cihazınızdan asla ayrılmaz.",
-    "searchPlaceholder": "Araç ara — PDF birleştir, arka plan kaldır…"
+    "searchPlaceholder": "Araç ara — PDF birleştir, arka plan kaldır…",
+    "stats": {
+      "files": "İşlenen Dosya",
+      "tools": "Ücretsiz Araç",
+      "free": "Tamamen Ücretsiz",
+      "privacy": "Gizli ve Güvenli"
+    }
   },
   "cats": {
     "all": "Tümü",
