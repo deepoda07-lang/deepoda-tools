@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
+import { useDictionary } from "./DictionaryProvider";
 
 interface Crumb {
   label: string;
@@ -11,11 +13,13 @@ interface BreadcrumbProps {
 }
 
 export default function Breadcrumb({ crumbs }: BreadcrumbProps) {
+  const dict = useDictionary();
+
   return (
     <nav className="flex items-center gap-1.5 text-sm text-gray-500 mb-6">
       <Link href="/" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
         <Home className="w-3.5 h-3.5" />
-        <span>Home</span>
+        <span>{dict.common.home}</span>
       </Link>
       {crumbs.map((crumb, i) => (
         <span key={i} className="flex items-center gap-1.5">

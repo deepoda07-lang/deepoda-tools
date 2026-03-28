@@ -1,15 +1,19 @@
+"use client";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useDictionary } from "./DictionaryProvider";
 
 interface ToolCardProps {
   title: string;
   description: string;
   href: string;
   icon: string;
-  badge?: string;
+  badge?: string | null;
 }
 
 export default function ToolCard({ title, description, href, icon, badge }: ToolCardProps) {
+  const dict = useDictionary();
+
   return (
     <Link
       href={href}
@@ -19,10 +23,10 @@ export default function ToolCard({ title, description, href, icon, badge }: Tool
         <span className="text-3xl">{icon}</span>
         {badge && (
           <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
-            badge === "AI"      ? "bg-purple-100 text-purple-700" :
-            badge === "New"     ? "bg-emerald-100 text-emerald-700" :
-            badge === "Popular" ? "bg-blue-100 text-blue-700" :
-                                  "bg-gray-100 text-gray-600"
+            badge === "AI" || badge === "IA" ? "bg-purple-100 text-purple-700" :
+            badge === "New" || badge === "Yeni" || badge === "Nuevo" ? "bg-emerald-100 text-emerald-700" :
+            badge === "Popular" || badge === "Popüler" ? "bg-blue-100 text-blue-700" :
+            "bg-gray-100 text-gray-600"
           }`}>
             {badge}
           </span>
@@ -37,7 +41,7 @@ export default function ToolCard({ title, description, href, icon, badge }: Tool
       </div>
 
       <div className="flex items-center gap-1.5 text-sm font-semibold text-blue-600 pt-3 border-t border-gray-100 opacity-0 group-hover:opacity-100 transition-opacity">
-        Use <ArrowRight className="w-4 h-4" />
+        {dict.common.use} <ArrowRight className="w-4 h-4" />
       </div>
     </Link>
   );

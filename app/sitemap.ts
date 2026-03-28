@@ -1,125 +1,65 @@
 import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://tools.deepoda.com";
+const locales = ["en", "tr", "es"];
+
+const paths = [
+  { path: "",                         freq: "weekly" as const,  prio: 1 },
+  // PDF
+  { path: "/pdf",                     freq: "weekly" as const,  prio: 0.9 },
+  { path: "/pdf/merge",               freq: "monthly" as const, prio: 0.9 },
+  { path: "/pdf/split",               freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/edit",                freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/watermark",           freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/sign",                freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/to-word",             freq: "monthly" as const, prio: 0.7 },
+  { path: "/pdf/rotate",              freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/compress",            freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/page-number",         freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/to-jpg",              freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/from-jpg",            freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/lock",                freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/unlock",              freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/crop",                freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/form-fill",           freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/annotate",            freq: "monthly" as const, prio: 0.8 },
+  // Image
+  { path: "/image",                   freq: "weekly" as const,  prio: 0.9 },
+  { path: "/image/compress",          freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/convert",           freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/remove-bg",         freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/resize",            freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/crop",              freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/rotate",            freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/to-pdf",            freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/heic-to-jpg",       freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/watermark",         freq: "monthly" as const, prio: 0.8 },
+  { path: "/image/add-text",          freq: "monthly" as const, prio: 0.8 },
+  // Convert
+  { path: "/convert",                 freq: "weekly" as const,  prio: 0.9 },
+  { path: "/convert/word-to-pdf",     freq: "monthly" as const, prio: 0.8 },
+  { path: "/convert/excel-to-pdf",    freq: "monthly" as const, prio: 0.8 },
+  { path: "/convert/html-to-pdf",     freq: "monthly" as const, prio: 0.8 },
+  { path: "/convert/markdown-to-pdf", freq: "monthly" as const, prio: 0.8 },
+  // Video
+  { path: "/video",                   freq: "weekly" as const,  prio: 0.9 },
+  { path: "/video/compress",          freq: "monthly" as const, prio: 0.8 },
+  { path: "/video/trim",              freq: "monthly" as const, prio: 0.8 },
+  { path: "/video/to-mp3",            freq: "monthly" as const, prio: 0.8 },
+  { path: "/video/convert",           freq: "monthly" as const, prio: 0.8 },
+  { path: "/video/to-gif",            freq: "monthly" as const, prio: 0.8 },
+  { path: "/video/merge",             freq: "monthly" as const, prio: 0.8 },
+  { path: "/video/mute",              freq: "monthly" as const, prio: 0.8 },
+  { path: "/video/rotate",            freq: "monthly" as const, prio: 0.8 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: BASE_URL,
+  return paths.flatMap(({ path, freq, prio }) =>
+    locales.map((lang) => ({
+      url: lang === "en" ? `${BASE_URL}${path}` : `${BASE_URL}/${lang}${path}`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    // PDF araçları
-    { url: `${BASE_URL}/pdf/rotate`,       lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/pdf/compress`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/pdf/page-number`,  lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/pdf/to-jpg`,       lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/pdf/from-jpg`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    {
-      url: `${BASE_URL}/pdf`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/pdf/merge`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/pdf/split`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/pdf/edit`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/pdf/watermark`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/pdf/sign`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/pdf/to-word`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    { url: `${BASE_URL}/pdf/lock`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/pdf/unlock`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/pdf/crop`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/pdf/form-fill`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/pdf/annotate`,  lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    // Görsel araçları
-    { url: `${BASE_URL}/image/resize`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/image/crop`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/image/rotate`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/image/to-pdf`,      lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/image/heic-to-jpg`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/image/watermark`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/image/add-text`,    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    {
-      url: `${BASE_URL}/image`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/image/compress`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/image/convert`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/image/remove-bg`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    // Dönüştürme araçları
-    {
-      url: `${BASE_URL}/convert`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/convert/word-to-pdf`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    { url: `${BASE_URL}/convert/excel-to-pdf`,    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/convert/html-to-pdf`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/convert/markdown-to-pdf`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    // Video araçları
-    { url: `${BASE_URL}/video`,          lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
-    { url: `${BASE_URL}/video/compress`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/video/trim`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/video/to-mp3`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/video/convert`,  lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/video/to-gif`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/video/merge`,    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/video/mute`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/video/rotate`,   lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-  ];
+      changeFrequency: freq,
+      priority: prio,
+    }))
+  );
 }

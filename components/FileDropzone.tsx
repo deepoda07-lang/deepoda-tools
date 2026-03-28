@@ -1,6 +1,7 @@
 "use client";
 import { useCallback } from "react";
 import { useDropzone, Accept } from "react-dropzone";
+import { useDictionary } from "./DictionaryProvider";
 
 interface FileDropzoneProps {
   onFiles: (files: File[]) => void;
@@ -13,8 +14,11 @@ export default function FileDropzone({
   onFiles,
   accept,
   multiple = true,
-  label = "Drag files here or click to select",
+  label,
 }: FileDropzoneProps) {
+  const dict = useDictionary();
+  const displayLabel = label ?? dict.common.dropDefault;
+
   const onDrop = useCallback(
     (accepted: File[]) => {
       if (accepted.length) onFiles(accepted);
@@ -40,8 +44,8 @@ export default function FileDropzone({
       <input {...getInputProps()} />
       <div className="flex flex-col items-center gap-3">
         <span className="text-4xl">{isDragActive ? "📂" : "📁"}</span>
-        <p className="text-gray-600 font-medium">{label}</p>
-        <p className="text-sm text-gray-400">or click to browse files</p>
+        <p className="text-gray-600 font-medium">{displayLabel}</p>
+        <p className="text-sm text-gray-400">{dict.common.browseFiles}</p>
       </div>
     </div>
   );

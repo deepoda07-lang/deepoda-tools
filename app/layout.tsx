@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const geist = Geist({ subsets: ["latin"] });
 
@@ -12,22 +12,20 @@ export const metadata: Metadata = {
   },
   description:
     "Merge PDFs, compress images, remove backgrounds and more. Completely free, runs in your browser, files never leave your device.",
-  keywords: ["merge pdf", "compress image", "remove background", "online tools"],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const h = await headers();
+  const locale = h.get("x-locale") ?? "en";
+
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang={locale} className="h-full antialiased">
       <body className={`${geist.className} bg-gray-50 min-h-full flex flex-col`}>
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <footer className="mt-16 border-t py-8 text-center text-sm text-gray-400">
-          <p>© 2025 Deepoda Tools · All processing happens in your browser · Your data never leaves your device</p>
-        </footer>
+        {children}
       </body>
     </html>
   );
