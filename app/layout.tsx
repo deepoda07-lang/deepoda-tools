@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { headers } from "next/headers";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"] });
@@ -27,6 +28,7 @@ export default async function RootLayout({
       <body className={`${geist.className} bg-gray-50 min-h-full flex flex-col`}>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-V09GJVW7ZF" />
     </html>
   );
 }
