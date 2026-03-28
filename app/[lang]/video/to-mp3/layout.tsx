@@ -3,6 +3,8 @@ import { getDictionary, hasLocale } from "@/lib/dictionaries";
 import Breadcrumb from "@/components/Breadcrumb";
 import ToolFAQ from "@/components/ToolFAQ";
 import RecordVisit from "@/components/RecordVisit";
+import RelatedTools from "@/components/RelatedTools";
+import { RELATED, TOOL_HREF } from "@/lib/related-tools";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -28,12 +30,19 @@ export default async function Layout({ children, params }: { children: React.Rea
     })),
   };
 
-  return (
+  const relatedItems = (RELATED["vidToMp3"] ?? []).map((k) => ({
+    href: TOOL_HREF[k],
+    title: dict.t[k as keyof typeof dict.t].title,
+    icon: dict.t[k as keyof typeof dict.t].icon,
+  }));
+
+    return (
     <div className="max-w-4xl mx-auto px-4 pt-6">
       <Breadcrumb crumbs={[{ label: dict.catPages.video.title, href: `${prefix}/video` }, { label: dict.t.vidToMp3.title }]} />
       {children}
       <RecordVisit href="/video/to-mp3" title={dict.t.vidToMp3.title} icon={dict.t.vidToMp3.icon} />
       <ToolFAQ items={faq} />
+      <RelatedTools label={dict.home.relatedTools} items={relatedItems} lang={lang} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </div>
   );

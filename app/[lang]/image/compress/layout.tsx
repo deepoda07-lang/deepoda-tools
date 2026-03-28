@@ -3,6 +3,8 @@ import { getDictionary, hasLocale } from "@/lib/dictionaries";
 import Breadcrumb from "@/components/Breadcrumb";
 import ToolFAQ from "@/components/ToolFAQ";
 import RecordVisit from "@/components/RecordVisit";
+import RelatedTools from "@/components/RelatedTools";
+import { RELATED, TOOL_HREF } from "@/lib/related-tools";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -28,12 +30,19 @@ export default async function Layout({ children, params }: { children: React.Rea
     })),
   };
 
-  return (
+  const relatedItems = (RELATED["imgCompress"] ?? []).map((k) => ({
+    href: TOOL_HREF[k],
+    title: dict.t[k as keyof typeof dict.t].title,
+    icon: dict.t[k as keyof typeof dict.t].icon,
+  }));
+
+    return (
     <div className="max-w-4xl mx-auto px-4 pt-6">
       <Breadcrumb crumbs={[{ label: dict.catPages.image.title, href: `${prefix}/image` }, { label: dict.t.imgCompress.title }]} />
       {children}
       <RecordVisit href="/image/compress" title={dict.t.imgCompress.title} icon={dict.t.imgCompress.icon} />
       <ToolFAQ items={faq} />
+      <RelatedTools label={dict.home.relatedTools} items={relatedItems} lang={lang} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </div>
   );
