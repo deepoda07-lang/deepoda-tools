@@ -1,14 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import ToolCard from "@/components/ToolCard";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import RecentTools from "@/components/RecentTools";
 import { Search } from "lucide-react";
 import { useDictionary } from "@/components/DictionaryProvider";
 
 export default function Home() {
   const dict = useDictionary();
   const d = dict.home;
+  const pathname = usePathname();
+  const pathLang = pathname.split("/")[1];
+  const lang = ["tr", "es"].includes(pathLang) ? pathLang : "en";
   const t = dict.t;
   const cats = dict.cats;
 
@@ -90,6 +95,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <RecentTools label={d.recentTools} lang={lang} />
 
       {/* Stats bar */}
       <div className="flex flex-wrap justify-center gap-6 mb-10 py-5 border-y border-gray-100">

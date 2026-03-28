@@ -56,7 +56,8 @@
       "tools": "Ücretsiz Araç",
       "free": "Tamamen Ücretsiz",
       "privacy": "Gizli ve Güvenli"
-    }
+    },
+    "recentTools": "Son Kullanılanlar"
   },
   "cats": {
     "all": "Tümü",

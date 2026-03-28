@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getDictionary, hasLocale } from "@/lib/dictionaries";
 import Breadcrumb from "@/components/Breadcrumb";
 import ToolFAQ from "@/components/ToolFAQ";
+import RecordVisit from "@/components/RecordVisit";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -31,6 +32,7 @@ export default async function Layout({ children, params }: { children: React.Rea
     <div className="max-w-4xl mx-auto px-4 pt-6">
       <Breadcrumb crumbs={[{ label: dict.catPages.video.title, href: `${prefix}/video` }, { label: dict.t.vidToMp3.title }]} />
       {children}
+      <RecordVisit href="/video/to-mp3" title={dict.t.vidToMp3.title} icon={dict.t.vidToMp3.icon} />
       <ToolFAQ items={faq} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </div>

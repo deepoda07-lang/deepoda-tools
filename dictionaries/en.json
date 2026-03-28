@@ -56,7 +56,8 @@
       "tools": "Free Tools",
       "free": "Always Free",
       "privacy": "Private & Secure"
-    }
+    },
+    "recentTools": "Recently Used"
   },
   "cats": {
     "all": "All",

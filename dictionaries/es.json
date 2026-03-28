@@ -56,7 +56,8 @@
       "tools": "Herramientas Gratuitas",
       "free": "Siempre Gratis",
       "privacy": "Privado y Seguro"
-    }
+    },
+    "recentTools": "Usados Recientemente"
   },
   "cats": {
     "all": "Todas",

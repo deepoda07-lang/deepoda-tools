@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getDictionary, hasLocale } from "@/lib/dictionaries";
 import Breadcrumb from "@/components/Breadcrumb";
 import ToolFAQ from "@/components/ToolFAQ";
+import RecordVisit from "@/components/RecordVisit";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -44,6 +45,7 @@ export default async function Layout({
     <div className="max-w-4xl mx-auto px-4 pt-6">
       <Breadcrumb crumbs={[{ label: catTitle, href: `${prefix}/pdf` }, { label: toolTitle }]} />
       {children}
+      <RecordVisit href="/pdf/merge" title={dict.t.pdfMerge.title} icon={dict.t.pdfMerge.icon} />
       <ToolFAQ items={faq} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </div>
