@@ -1922,6 +1922,273 @@
           "a": "Yes, completely free using FFmpeg.wasm in your browser."
         }
       ]
+    },
+    "convQrCode": {
+      "title": "QR Code Generator",
+      "desc": "Create a QR code from any text, URL, or data. Download as PNG.",
+      "badge": "New",
+      "icon": "📱",
+      "meta": {
+        "title": "QR Code Generator – Free Online QR Creator",
+        "description": "Create QR codes from any URL or text. Free, instant, download as PNG.",
+        "keywords": [
+          "qr code generator free",
+          "create qr code online",
+          "qr code maker"
+        ]
+      },
+      "heading": "QR Code Generator",
+      "sub": "Enter any URL or text to generate a QR code. Download instantly as PNG.",
+      "placeholder": "https://example.com or any text…",
+      "btn": "Generate QR Code",
+      "download": "Download PNG",
+      "faq": [
+        {
+          "q": "What can I encode in a QR code?",
+          "a": "You can encode URLs, plain text, email addresses, phone numbers, Wi-Fi credentials, and more."
+        },
+        {
+          "q": "What format is the QR code downloaded in?",
+          "a": "The QR code is downloaded as a PNG image, which you can print or share digitally."
+        },
+        {
+          "q": "Is the QR code generated on my device?",
+          "a": "Yes, the QR code is generated entirely in your browser. No data is sent to any server."
+        },
+        {
+          "q": "Is there a character limit?",
+          "a": "QR codes support up to 4,296 characters for alphanumeric data. Shorter content produces a simpler, more scannable code."
+        },
+        {
+          "q": "Can I customize the size of the QR code?",
+          "a": "The generated QR code is 512×512 pixels, suitable for both screen display and print."
+        }
+      ]
+    },
+    "convBase64": {
+      "title": "Base64 Encoder / Decoder",
+      "desc": "Encode text or files to Base64, or decode Base64 strings back to text.",
+      "badge": "New",
+      "icon": "🔤",
+      "meta": {
+        "title": "Base64 Encoder Decoder – Free Online Tool",
+        "description": "Encode and decode Base64 strings instantly. Works with text and files. Free, browser-based.",
+        "keywords": [
+          "base64 encoder decoder online",
+          "encode base64 free",
+          "decode base64 string"
+        ]
+      },
+      "heading": "Base64 Encoder / Decoder",
+      "sub": "Encode text to Base64 or decode a Base64 string. Runs entirely in your browser.",
+      "inputPlaceholder": "Enter text to encode, or Base64 to decode…",
+      "btnEncode": "Encode",
+      "btnDecode": "Decode",
+      "btnCopy": "Copy",
+      "btnClear": "Clear",
+      "copied": "Copied!",
+      "errorDecode": "Invalid Base64 string.",
+      "faq": [
+        {
+          "q": "What is Base64 encoding?",
+          "a": "Base64 is an encoding scheme that converts binary data into ASCII text, making it safe to transmit over text-based protocols like email or HTTP headers."
+        },
+        {
+          "q": "When would I need to encode to Base64?",
+          "a": "Common uses include embedding images in HTML/CSS, encoding API payloads, storing binary data in JSON, and passing data through systems that handle text only."
+        },
+        {
+          "q": "Is my data safe?",
+          "a": "Yes. All encoding and decoding happens locally in your browser. Nothing is sent to a server."
+        },
+        {
+          "q": "Can I decode any Base64 string?",
+          "a": "You can decode any valid Base64 string. If the string is not valid Base64, an error will be shown."
+        },
+        {
+          "q": "Does Base64 compress data?",
+          "a": "No. Base64 actually increases data size by about 33%. It is an encoding scheme, not a compression algorithm."
+        }
+      ]
+    },
+    "convJsonFormat": {
+      "title": "JSON Formatter",
+      "desc": "Format, validate, and minify JSON data. Instantly highlights errors.",
+      "badge": "New",
+      "icon": "📋",
+      "meta": {
+        "title": "JSON Formatter & Validator – Free Online Tool",
+        "description": "Format and validate JSON online. Pretty-print or minify JSON, instant error highlighting. Free, browser-based.",
+        "keywords": [
+          "json formatter online free",
+          "json validator",
+          "json prettify",
+          "json minify"
+        ]
+      },
+      "heading": "JSON Formatter & Validator",
+      "sub": "Paste your JSON to format, validate, or minify it. Errors are highlighted instantly.",
+      "inputPlaceholder": "Paste your JSON here…",
+      "btnFormat": "Format",
+      "btnMinify": "Minify",
+      "btnCopy": "Copy",
+      "btnClear": "Clear",
+      "copied": "Copied!",
+      "valid": "Valid JSON",
+      "errorInvalid": "Invalid JSON",
+      "faq": [
+        {
+          "q": "What does the JSON formatter do?",
+          "a": "It takes raw or compact JSON and formats it with proper indentation, making it easy to read and understand the data structure."
+        },
+        {
+          "q": "What is JSON validation?",
+          "a": "Validation checks whether your JSON is syntactically correct. The formatter highlights any errors and shows the line where the problem is."
+        },
+        {
+          "q": "What is JSON minification?",
+          "a": "Minification removes all whitespace and newlines from JSON, reducing file size. This is useful for API responses and data transfer."
+        },
+        {
+          "q": "Is my JSON data sent to a server?",
+          "a": "No. Everything runs in your browser. Your data never leaves your device."
+        },
+        {
+          "q": "What indentation size is used?",
+          "a": "The formatter uses 2-space indentation by default, which is the most widely used convention."
+        }
+      ]
+    },
+    "imgExif": {
+      "title": "EXIF Data Viewer",
+      "desc": "View hidden metadata and EXIF information from photos and images.",
+      "badge": "New",
+      "icon": "🔍",
+      "meta": {
+        "title": "EXIF Data Viewer – Free Image Metadata Reader",
+        "description": "Read EXIF metadata from JPG, PNG, and HEIC images. View camera settings, GPS, date, and more. Free, browser-based.",
+        "keywords": [
+          "exif viewer online free",
+          "image metadata reader",
+          "photo exif data",
+          "image exif viewer"
+        ]
+      },
+      "heading": "EXIF Data Viewer",
+      "sub": "Upload an image to see its hidden metadata: camera info, GPS location, date taken, and more.",
+      "drop": "Drag an image here",
+      "noExif": "No EXIF data found in this image.",
+      "faq": [
+        {
+          "q": "What is EXIF data?",
+          "a": "EXIF (Exchangeable Image File Format) is metadata embedded in image files by cameras and phones. It includes camera model, aperture, shutter speed, ISO, GPS coordinates, and date/time."
+        },
+        {
+          "q": "Which image formats contain EXIF data?",
+          "a": "EXIF data is most common in JPEG/JPG files. Some PNG and HEIC files may also contain metadata."
+        },
+        {
+          "q": "Why might some images have no EXIF data?",
+          "a": "Screenshots, images downloaded from the web, or images processed by certain tools may have their EXIF data stripped. Social media platforms often remove EXIF data for privacy."
+        },
+        {
+          "q": "Is my image uploaded to a server?",
+          "a": "No. The image is read and analyzed entirely in your browser. No data is sent to any server."
+        },
+        {
+          "q": "Can I see GPS coordinates?",
+          "a": "If the photo was taken with location services enabled, GPS coordinates will be shown in the EXIF data."
+        }
+      ]
+    },
+    "imgColorPalette": {
+      "title": "Color Palette Extractor",
+      "desc": "Extract the dominant colors from any image as a color palette.",
+      "badge": "New",
+      "icon": "🎨",
+      "meta": {
+        "title": "Color Palette Extractor – Extract Colors from Image",
+        "description": "Extract dominant colors from any image. Get hex codes instantly. Free, browser-based, no upload.",
+        "keywords": [
+          "color palette extractor online",
+          "extract colors from image",
+          "dominant color finder",
+          "image color picker"
+        ]
+      },
+      "heading": "Color Palette Extractor",
+      "sub": "Upload an image to extract its dominant colors. Click any color to copy the hex code.",
+      "drop": "Drag an image here",
+      "clickCopy": "Click a color to copy its hex code",
+      "copied": "Copied!",
+      "faq": [
+        {
+          "q": "How does the color extraction work?",
+          "a": "The tool samples pixels across the image using a quantization algorithm to find the most dominant and distinct colors."
+        },
+        {
+          "q": "How many colors are extracted?",
+          "a": "The tool extracts up to 8 dominant colors from the image."
+        },
+        {
+          "q": "Can I copy the color codes?",
+          "a": "Yes. Click any color swatch to copy its hex code to your clipboard."
+        },
+        {
+          "q": "Is my image uploaded to a server?",
+          "a": "No. The image is processed entirely in your browser using the Canvas API. Nothing is sent to any server."
+        },
+        {
+          "q": "Which image formats are supported?",
+          "a": "All common image formats are supported: JPG, PNG, WebP, GIF, BMP, and more."
+        }
+      ]
+    },
+    "imgOcr": {
+      "title": "Image to Text (OCR)",
+      "desc": "Extract text from images using OCR. Supports photos, screenshots, and scanned documents.",
+      "badge": "New",
+      "icon": "📝",
+      "meta": {
+        "title": "Image to Text OCR – Free Online OCR Tool",
+        "description": "Extract text from images, screenshots, and scanned documents using OCR. Free, browser-based, files never uploaded.",
+        "keywords": [
+          "image to text online free",
+          "ocr online free",
+          "extract text from image",
+          "photo to text converter"
+        ]
+      },
+      "heading": "Image to Text (OCR)",
+      "sub": "Upload an image or screenshot to extract the text. Works with photos, scans, and documents.",
+      "drop": "Drag an image here",
+      "processing": "Recognizing text…",
+      "btnCopy": "Copy Text",
+      "btnClear": "Clear",
+      "copied": "Copied!",
+      "noText": "No text detected in this image.",
+      "faq": [
+        {
+          "q": "What is OCR?",
+          "a": "OCR (Optical Character Recognition) is technology that detects and extracts text from images, scanned documents, and photos."
+        },
+        {
+          "q": "Which languages are supported?",
+          "a": "The tool uses Tesseract.js which supports English and many other languages. For best results, use clear, high-contrast images with English text."
+        },
+        {
+          "q": "Is my image uploaded to a server?",
+          "a": "No. OCR processing runs entirely in your browser using Tesseract.js (WebAssembly). Your images never leave your device."
+        },
+        {
+          "q": "What image types give the best results?",
+          "a": "Clear, high-resolution images with good contrast between text and background produce the best OCR results. Blurry or low-contrast images may produce errors."
+        },
+        {
+          "q": "Can I extract text from PDFs?",
+          "a": "This tool works with images. For PDF text extraction, use our PDF Edit tool which can work with text-based PDFs directly."
+        }
+      ]
     }
   }
 }

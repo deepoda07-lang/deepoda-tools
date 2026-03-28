@@ -42,6 +42,13 @@ export const RELATED: Record<string, [string, string, string]> = {
   vidToGif:      ["vidConvert",   "vidTrim",      "vidCompress"],
   vidToMp3:      ["vidMute",      "vidTrim",      "vidCompress"],
   vidTrim:       ["vidCompress",  "vidMerge",     "vidToMp3"],
+  // New tools
+  convQrCode:        ["convBase64",       "convJsonFormat",    "imgColorPalette"],
+  convBase64:        ["convJsonFormat",   "convQrCode",        "convWordToPdf"],
+  convJsonFormat:    ["convBase64",       "convQrCode",        "convWordToPdf"],
+  imgExif:           ["imgCompress",      "imgColorPalette",   "imgOcr"],
+  imgColorPalette:   ["imgExif",          "imgCompress",       "imgRemoveBg"],
+  imgOcr:            ["imgExif",          "imgCompress",       "pdfToJpg"],
 };
 
 /** href for each tool dict-key */
@@ -84,4 +91,10 @@ export const TOOL_HREF: Record<string, string> = {
   vidToGif:      "/video/to-gif",
   vidToMp3:      "/video/to-mp3",
   vidTrim:       "/video/trim",
+  convQrCode:        "/convert/qr-code",
+  convBase64:        "/convert/base64",
+  convJsonFormat:    "/convert/json-format",
+  imgExif:           "/image/exif",
+  imgColorPalette:   "/image/color-palette",
+  imgOcr:            "/image/ocr",
 };

@@ -1922,6 +1922,269 @@
           "a": "Evet, tarayıcınızda FFmpeg.wasm kullanılarak tamamen ücretsizdir."
         }
       ]
+    },
+    "convQrCode": {
+      "title": "QR Kod Oluşturucu",
+      "desc": "Herhangi bir metin, URL veya veriden QR kod oluşturun. PNG olarak indirin.",
+      "badge": "Yeni",
+      "icon": "📱",
+      "meta": {
+        "title": "QR Kod Oluşturucu – Ücretsiz Online QR Oluşturucu",
+        "description": "Herhangi bir URL veya metinden QR kod oluşturun. Ücretsiz, anında, PNG olarak indirin.",
+        "keywords": [
+          "qr kod oluşturucu ücretsiz",
+          "online qr kod yap",
+          "qr kod oluştur"
+        ]
+      },
+      "heading": "QR Kod Oluşturucu",
+      "sub": "Herhangi bir URL veya metin girerek QR kod oluşturun. Anında PNG olarak indirin.",
+      "placeholder": "https://örnek.com veya herhangi bir metin…",
+      "btn": "QR Kod Oluştur",
+      "download": "PNG İndir",
+      "faq": [
+        {
+          "q": "QR koda ne kodlayabilirim?",
+          "a": "URL'ler, düz metin, e-posta adresleri, telefon numaraları, Wi-Fi bilgileri ve daha fazlasını kodlayabilirsiniz."
+        },
+        {
+          "q": "QR kod hangi formatta indirilir?",
+          "a": "QR kod PNG görüntüsü olarak indirilir, yazdırabilir veya dijital olarak paylaşabilirsiniz."
+        },
+        {
+          "q": "QR kod cihazımda mı oluşturuluyor?",
+          "a": "Evet, QR kod tamamen tarayıcınızda oluşturulur. Hiçbir veri sunucuya gönderilmez."
+        },
+        {
+          "q": "Karakter sınırı var mı?",
+          "a": "QR kodlar alfanümerik veriler için 4.296 karaktere kadar destekler. Kısa içerik daha basit ve taranabilir bir kod üretir."
+        },
+        {
+          "q": "QR kodun boyutunu özelleştirebilir miyim?",
+          "a": "Oluşturulan QR kod 512×512 pikseldir, hem ekran görüntüleme hem de baskı için uygundur."
+        }
+      ]
+    },
+    "convBase64": {
+      "title": "Base64 Kodlayıcı / Çözücü",
+      "desc": "Metni veya dosyaları Base64'e kodlayın ya da Base64 dizelerini metne dönüştürün.",
+      "badge": "Yeni",
+      "icon": "🔤",
+      "meta": {
+        "title": "Base64 Kodlayıcı Çözücü – Ücretsiz Online Araç",
+        "description": "Base64 dizelerini anında kodlayın ve çözün. Ücretsiz, tarayıcı tabanlı.",
+        "keywords": [
+          "base64 kodlayıcı çözücü online",
+          "base64 encode ücretsiz",
+          "base64 decode"
+        ]
+      },
+      "heading": "Base64 Kodlayıcı / Çözücü",
+      "sub": "Metni Base64'e kodlayın veya bir Base64 dizesini çözün. Tamamen tarayıcınızda çalışır.",
+      "inputPlaceholder": "Kodlanacak metni veya çözülecek Base64'ü girin…",
+      "btnEncode": "Kodla",
+      "btnDecode": "Çöz",
+      "btnCopy": "Kopyala",
+      "btnClear": "Temizle",
+      "copied": "Kopyalandı!",
+      "errorDecode": "Geçersiz Base64 dizesi.",
+      "faq": [
+        {
+          "q": "Base64 kodlama nedir?",
+          "a": "Base64, ikili verileri ASCII metne dönüştüren bir kodlama şemasıdır; e-posta veya HTTP başlıkları gibi metin tabanlı protokoller üzerinden iletimde güvenli hale getirir."
+        },
+        {
+          "q": "Base64'e ne zaman ihtiyaç duyarım?",
+          "a": "Yaygın kullanım alanları: HTML/CSS'e görsel gömmek, API yüklerini kodlamak, JSON'da ikili veri saklamak."
+        },
+        {
+          "q": "Verilerim güvende mi?",
+          "a": "Evet. Tüm kodlama ve çözme işlemleri tarayıcınızda gerçekleşir. Sunucuya hiçbir şey gönderilmez."
+        },
+        {
+          "q": "Herhangi bir Base64 dizesini çözebilir miyim?",
+          "a": "Geçerli herhangi bir Base64 dizesini çözebilirsiniz. Dize geçerli değilse hata gösterilir."
+        },
+        {
+          "q": "Base64 veriyi sıkıştırır mı?",
+          "a": "Hayır. Base64 veri boyutunu yaklaşık %33 artırır. Sıkıştırma değil, kodlama şemasıdır."
+        }
+      ]
+    },
+    "convJsonFormat": {
+      "title": "JSON Biçimlendirici",
+      "desc": "JSON verilerini biçimlendirin, doğrulayın ve küçültün. Hataları anında vurgular.",
+      "badge": "Yeni",
+      "icon": "📋",
+      "meta": {
+        "title": "JSON Biçimlendirici & Doğrulayıcı – Ücretsiz Online Araç",
+        "description": "JSON'u online biçimlendirin ve doğrulayın. Anında hata vurgulama. Ücretsiz, tarayıcı tabanlı.",
+        "keywords": [
+          "json biçimlendirici online ücretsiz",
+          "json doğrulayıcı",
+          "json formatla"
+        ]
+      },
+      "heading": "JSON Biçimlendirici & Doğrulayıcı",
+      "sub": "JSON'unuzu yapıştırın, biçimlendirin, doğrulayın veya küçültün. Hatalar anında vurgulanır.",
+      "inputPlaceholder": "JSON'unuzu buraya yapıştırın…",
+      "btnFormat": "Biçimlendir",
+      "btnMinify": "Küçült",
+      "btnCopy": "Kopyala",
+      "btnClear": "Temizle",
+      "copied": "Kopyalandı!",
+      "valid": "Geçerli JSON",
+      "errorInvalid": "Geçersiz JSON",
+      "faq": [
+        {
+          "q": "JSON biçimlendirici ne yapar?",
+          "a": "Ham veya sıkıştırılmış JSON'u düzgün girintileme ile biçimlendirir, veri yapısını okunabilir hale getirir."
+        },
+        {
+          "q": "JSON doğrulama nedir?",
+          "a": "Doğrulama, JSON'unuzun sözdizimsel olarak doğru olup olmadığını kontrol eder ve hataları vurgular."
+        },
+        {
+          "q": "JSON küçültme nedir?",
+          "a": "Küçültme, JSON'dan tüm boşlukları ve yeni satırları kaldırarak dosya boyutunu azaltır."
+        },
+        {
+          "q": "JSON verilerim sunucuya gönderiliyor mu?",
+          "a": "Hayır. Her şey tarayıcınızda çalışır. Verileriniz cihazınızdan ayrılmaz."
+        },
+        {
+          "q": "Hangi girinti boyutu kullanılıyor?",
+          "a": "Biçimlendirici varsayılan olarak 2 boşluk girintileme kullanır."
+        }
+      ]
+    },
+    "imgExif": {
+      "title": "EXIF Veri Görüntüleyici",
+      "desc": "Fotoğraf ve görsellerden gizli meta verileri ve EXIF bilgilerini görüntüleyin.",
+      "badge": "Yeni",
+      "icon": "🔍",
+      "meta": {
+        "title": "EXIF Veri Görüntüleyici – Ücretsiz Görsel Meta Veri Okuyucu",
+        "description": "JPG, PNG ve HEIC görsellerden EXIF meta verilerini okuyun. Ücretsiz, tarayıcı tabanlı.",
+        "keywords": [
+          "exif görüntüleyici online ücretsiz",
+          "görsel meta veri okuyucu",
+          "fotoğraf exif verisi"
+        ]
+      },
+      "heading": "EXIF Veri Görüntüleyici",
+      "sub": "Gizli meta verileri görmek için bir görsel yükleyin: kamera bilgisi, GPS konumu, çekim tarihi ve daha fazlası.",
+      "drop": "Görseli buraya sürükleyin",
+      "noExif": "Bu görselde EXIF verisi bulunamadı.",
+      "faq": [
+        {
+          "q": "EXIF verisi nedir?",
+          "a": "EXIF, kameralar ve telefonlar tarafından görüntü dosyalarına gömülen meta verilerdir. Kamera modeli, diyafram, enstantane, ISO, GPS koordinatları ve tarih/saat bilgilerini içerir."
+        },
+        {
+          "q": "Hangi görsel formatları EXIF verisi içerir?",
+          "a": "EXIF verisi en çok JPEG/JPG dosyalarında bulunur. Bazı PNG ve HEIC dosyaları da meta veri içerebilir."
+        },
+        {
+          "q": "Bazı görsellerde neden EXIF verisi yok?",
+          "a": "Ekran görüntüleri, internetten indirilen veya bazı araçlarla işlenen görseller EXIF verilerinden arındırılmış olabilir."
+        },
+        {
+          "q": "Görselim sunucuya yükleniyor mu?",
+          "a": "Hayır. Görsel tamamen tarayıcınızda okunup analiz edilir. Hiçbir veri sunucuya gönderilmez."
+        },
+        {
+          "q": "GPS koordinatlarını görebilir miyim?",
+          "a": "Fotoğraf konum hizmetleri açıkken çekildiyse, GPS koordinatları EXIF verisinde gösterilir."
+        }
+      ]
+    },
+    "imgColorPalette": {
+      "title": "Renk Paleti Çıkarıcı",
+      "desc": "Herhangi bir görselden baskın renkleri renk paleti olarak çıkarın.",
+      "badge": "Yeni",
+      "icon": "🎨",
+      "meta": {
+        "title": "Renk Paleti Çıkarıcı – Görselden Renk Çıkar",
+        "description": "Herhangi bir görselden baskın renkleri çıkarın. Hex kodları anında alın. Ücretsiz, tarayıcı tabanlı.",
+        "keywords": [
+          "renk paleti çıkarıcı online",
+          "görselden renk çıkar",
+          "baskın renk bulucu"
+        ]
+      },
+      "heading": "Renk Paleti Çıkarıcı",
+      "sub": "Baskın renkleri çıkarmak için bir görsel yükleyin. Hex kodunu kopyalamak için herhangi bir renge tıklayın.",
+      "drop": "Görseli buraya sürükleyin",
+      "clickCopy": "Hex kodunu kopyalamak için bir renge tıklayın",
+      "copied": "Kopyalandı!",
+      "faq": [
+        {
+          "q": "Renk çıkarma nasıl çalışır?",
+          "a": "Araç, en baskın ve belirgin renkleri bulmak için bir kuantizasyon algoritması kullanarak görsel genelinde pikselleri örnekler."
+        },
+        {
+          "q": "Kaç renk çıkarılır?",
+          "a": "Araç, görselden en fazla 8 baskın renk çıkarır."
+        },
+        {
+          "q": "Renk kodlarını kopyalayabilir miyim?",
+          "a": "Evet. Hex kodunu panonuza kopyalamak için herhangi bir renk kutucuğuna tıklayın."
+        },
+        {
+          "q": "Görselim sunucuya yükleniyor mu?",
+          "a": "Hayır. Görsel, Canvas API kullanılarak tamamen tarayıcınızda işlenir. Hiçbir şey sunucuya gönderilmez."
+        },
+        {
+          "q": "Hangi görsel formatları desteklenir?",
+          "a": "Tüm yaygın görsel formatları desteklenir: JPG, PNG, WebP, GIF, BMP ve daha fazlası."
+        }
+      ]
+    },
+    "imgOcr": {
+      "title": "Görselden Metin (OCR)",
+      "desc": "OCR kullanarak görsellerden metin çıkarın. Fotoğraf, ekran görüntüsü ve belgeler desteklenir.",
+      "badge": "Yeni",
+      "icon": "📝",
+      "meta": {
+        "title": "Görselden Metin OCR – Ücretsiz Online OCR Aracı",
+        "description": "OCR ile görsellerden, ekran görüntülerinden ve taranmış belgelerden metin çıkarın. Ücretsiz, tarayıcı tabanlı.",
+        "keywords": [
+          "görselden metin çıkar online ücretsiz",
+          "ocr online ücretsiz",
+          "fotoğraftan metin çıkar"
+        ]
+      },
+      "heading": "Görselden Metin (OCR)",
+      "sub": "Metni çıkarmak için bir görsel veya ekran görüntüsü yükleyin. Fotoğraf, tarama ve belgeler desteklenir.",
+      "drop": "Görseli buraya sürükleyin",
+      "processing": "Metin tanınıyor…",
+      "btnCopy": "Metni Kopyala",
+      "btnClear": "Temizle",
+      "copied": "Kopyalandı!",
+      "noText": "Bu görselde metin tespit edilemedi.",
+      "faq": [
+        {
+          "q": "OCR nedir?",
+          "a": "OCR (Optik Karakter Tanıma), görsellerden, taranmış belgelerden ve fotoğraflardan metni algılayıp çıkaran teknolojidir."
+        },
+        {
+          "q": "Hangi diller destekleniyor?",
+          "a": "Araç, İngilizce ve pek çok dili destekleyen Tesseract.js kullanır. En iyi sonuçlar için net, yüksek kontrastlı görseller kullanın."
+        },
+        {
+          "q": "Görselim sunucuya yükleniyor mu?",
+          "a": "Hayır. OCR işlemi tamamen tarayıcınızda Tesseract.js (WebAssembly) ile çalışır. Görselleriniz cihazınızdan ayrılmaz."
+        },
+        {
+          "q": "En iyi sonuçlar için hangi görseller kullanılmalı?",
+          "a": "Metin ve arka plan arasında iyi kontrast olan net, yüksek çözünürlüklü görseller en iyi OCR sonuçlarını verir."
+        },
+        {
+          "q": "PDF'lerden metin çıkarabilir miyim?",
+          "a": "Bu araç görsellerle çalışır. PDF metin çıkarma için doğrudan metin tabanlı PDF'lerle çalışan PDF Düzenle aracımızı kullanın."
+        }
+      ]
     }
   }
 }

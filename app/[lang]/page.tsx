@@ -39,6 +39,12 @@ export default function Home() {
     { ...t.vidMerge, href: "/video/merge", cat: cats.video },
     { ...t.vidMute, href: "/video/mute", cat: cats.video },
     { ...t.vidRotate, href: "/video/rotate", cat: cats.video },
+    { ...t.convQrCode, href: "/convert/qr-code", cat: cats.convert },
+    { ...t.convBase64, href: "/convert/base64", cat: cats.convert },
+    { ...t.convJsonFormat, href: "/convert/json-format", cat: cats.convert },
+    { ...t.imgExif, href: "/image/exif", cat: cats.image },
+    { ...t.imgColorPalette, href: "/image/color-palette", cat: cats.image },
+    { ...t.imgOcr, href: "/image/ocr", cat: cats.image },
   ];
 
   const CATS = [cats.all, cats.pdf, cats.image, cats.convert, cats.video];

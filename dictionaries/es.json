@@ -1922,6 +1922,270 @@
           "a": "Sí, completamente gratuita usando FFmpeg.wasm en tu navegador."
         }
       ]
+    },
+    "convQrCode": {
+      "title": "Generador de Código QR",
+      "desc": "Crea un código QR desde cualquier texto, URL o datos. Descárgalo como PNG.",
+      "badge": "Nuevo",
+      "icon": "📱",
+      "meta": {
+        "title": "Generador de Código QR – Creador de QR Gratis",
+        "description": "Crea códigos QR desde cualquier URL o texto. Gratis, instantáneo, descarga como PNG.",
+        "keywords": [
+          "generador codigo qr gratis",
+          "crear codigo qr online",
+          "hacer codigo qr"
+        ]
+      },
+      "heading": "Generador de Código QR",
+      "sub": "Ingresa cualquier URL o texto para generar un código QR. Descárgalo instantáneamente como PNG.",
+      "placeholder": "https://ejemplo.com o cualquier texto…",
+      "btn": "Generar Código QR",
+      "download": "Descargar PNG",
+      "faq": [
+        {
+          "q": "¿Qué puedo codificar en un código QR?",
+          "a": "Puedes codificar URLs, texto simple, correos electrónicos, números de teléfono, credenciales Wi-Fi y más."
+        },
+        {
+          "q": "¿En qué formato se descarga el código QR?",
+          "a": "El código QR se descarga como imagen PNG, que puedes imprimir o compartir digitalmente."
+        },
+        {
+          "q": "¿El código QR se genera en mi dispositivo?",
+          "a": "Sí, el código QR se genera completamente en tu navegador. No se envían datos a ningún servidor."
+        },
+        {
+          "q": "¿Hay un límite de caracteres?",
+          "a": "Los códigos QR soportan hasta 4.296 caracteres alfanuméricos. El contenido más corto produce un código más simple y escaneable."
+        },
+        {
+          "q": "¿Puedo personalizar el tamaño del código QR?",
+          "a": "El código QR generado es de 512×512 píxeles, adecuado para pantalla e impresión."
+        }
+      ]
+    },
+    "convBase64": {
+      "title": "Codificador / Decodificador Base64",
+      "desc": "Codifica texto o archivos a Base64, o decodifica cadenas Base64 de vuelta a texto.",
+      "badge": "Nuevo",
+      "icon": "🔤",
+      "meta": {
+        "title": "Codificador Decodificador Base64 – Herramienta Gratis",
+        "description": "Codifica y decodifica cadenas Base64 al instante. Gratis, basado en navegador.",
+        "keywords": [
+          "codificador base64 online gratis",
+          "encode base64 gratis",
+          "decode base64"
+        ]
+      },
+      "heading": "Codificador / Decodificador Base64",
+      "sub": "Codifica texto a Base64 o decodifica una cadena Base64. Se ejecuta completamente en tu navegador.",
+      "inputPlaceholder": "Ingresa texto a codificar, o Base64 a decodificar…",
+      "btnEncode": "Codificar",
+      "btnDecode": "Decodificar",
+      "btnCopy": "Copiar",
+      "btnClear": "Limpiar",
+      "copied": "¡Copiado!",
+      "errorDecode": "Cadena Base64 inválida.",
+      "faq": [
+        {
+          "q": "¿Qué es la codificación Base64?",
+          "a": "Base64 es un esquema de codificación que convierte datos binarios en texto ASCII, haciéndolo seguro para transmitir a través de protocolos basados en texto."
+        },
+        {
+          "q": "¿Cuándo necesito codificar en Base64?",
+          "a": "Usos comunes: incrustar imágenes en HTML/CSS, codificar payloads de API, almacenar datos binarios en JSON."
+        },
+        {
+          "q": "¿Están seguros mis datos?",
+          "a": "Sí. Toda la codificación y decodificación ocurre localmente en tu navegador. Nada se envía a un servidor."
+        },
+        {
+          "q": "¿Puedo decodificar cualquier cadena Base64?",
+          "a": "Puedes decodificar cualquier cadena Base64 válida. Si la cadena no es válida, se mostrará un error."
+        },
+        {
+          "q": "¿Base64 comprime datos?",
+          "a": "No. Base64 aumenta el tamaño de los datos en aproximadamente un 33%. Es un esquema de codificación, no de compresión."
+        }
+      ]
+    },
+    "convJsonFormat": {
+      "title": "Formateador JSON",
+      "desc": "Formatea, valida y minifica datos JSON. Resalta errores al instante.",
+      "badge": "Nuevo",
+      "icon": "📋",
+      "meta": {
+        "title": "Formateador JSON & Validador – Herramienta Gratis",
+        "description": "Formatea y valida JSON online. Resaltado de errores instantáneo. Gratis, basado en navegador.",
+        "keywords": [
+          "formateador json online gratis",
+          "validador json",
+          "formatear json",
+          "minificar json"
+        ]
+      },
+      "heading": "Formateador JSON & Validador",
+      "sub": "Pega tu JSON para formatearlo, validarlo o minificarlo. Los errores se resaltan al instante.",
+      "inputPlaceholder": "Pega tu JSON aquí…",
+      "btnFormat": "Formatear",
+      "btnMinify": "Minificar",
+      "btnCopy": "Copiar",
+      "btnClear": "Limpiar",
+      "copied": "¡Copiado!",
+      "valid": "JSON válido",
+      "errorInvalid": "JSON inválido",
+      "faq": [
+        {
+          "q": "¿Qué hace el formateador JSON?",
+          "a": "Toma JSON crudo o compacto y lo formatea con sangría adecuada, facilitando la lectura de la estructura de datos."
+        },
+        {
+          "q": "¿Qué es la validación JSON?",
+          "a": "La validación comprueba si tu JSON es sintácticamente correcto y resalta cualquier error."
+        },
+        {
+          "q": "¿Qué es la minificación JSON?",
+          "a": "La minificación elimina todos los espacios en blanco del JSON, reduciendo el tamaño del archivo."
+        },
+        {
+          "q": "¿Se envían mis datos JSON a un servidor?",
+          "a": "No. Todo se ejecuta en tu navegador. Tus datos nunca abandonan tu dispositivo."
+        },
+        {
+          "q": "¿Qué tamaño de sangría se usa?",
+          "a": "El formateador usa 2 espacios de sangría por defecto, la convención más utilizada."
+        }
+      ]
+    },
+    "imgExif": {
+      "title": "Visor de Datos EXIF",
+      "desc": "Ver metadatos ocultos e información EXIF de fotos e imágenes.",
+      "badge": "Nuevo",
+      "icon": "🔍",
+      "meta": {
+        "title": "Visor de Datos EXIF – Lector de Metadatos de Imágenes Gratis",
+        "description": "Lee metadatos EXIF de imágenes JPG, PNG y HEIC. Ver ajustes de cámara, GPS, fecha y más. Gratis.",
+        "keywords": [
+          "visor exif online gratis",
+          "lector metadatos imagen",
+          "datos exif foto"
+        ]
+      },
+      "heading": "Visor de Datos EXIF",
+      "sub": "Sube una imagen para ver sus metadatos ocultos: info de cámara, ubicación GPS, fecha y más.",
+      "drop": "Arrastra una imagen aquí",
+      "noExif": "No se encontraron datos EXIF en esta imagen.",
+      "faq": [
+        {
+          "q": "¿Qué son los datos EXIF?",
+          "a": "EXIF es metadata incrustada en archivos de imagen por cámaras y teléfonos. Incluye modelo de cámara, apertura, velocidad, ISO, coordenadas GPS y fecha/hora."
+        },
+        {
+          "q": "¿Qué formatos de imagen contienen datos EXIF?",
+          "a": "Los datos EXIF son más comunes en archivos JPEG/JPG. Algunos archivos PNG y HEIC también pueden contener metadata."
+        },
+        {
+          "q": "¿Por qué algunas imágenes no tienen datos EXIF?",
+          "a": "Las capturas de pantalla, imágenes descargadas de la web o procesadas por ciertas herramientas pueden tener sus datos EXIF eliminados."
+        },
+        {
+          "q": "¿Se sube mi imagen a un servidor?",
+          "a": "No. La imagen se lee y analiza completamente en tu navegador. No se envían datos a ningún servidor."
+        },
+        {
+          "q": "¿Puedo ver coordenadas GPS?",
+          "a": "Si la foto fue tomada con servicios de ubicación activados, las coordenadas GPS se mostrarán en los datos EXIF."
+        }
+      ]
+    },
+    "imgColorPalette": {
+      "title": "Extractor de Paleta de Colores",
+      "desc": "Extrae los colores dominantes de cualquier imagen como paleta de colores.",
+      "badge": "Nuevo",
+      "icon": "🎨",
+      "meta": {
+        "title": "Extractor de Paleta de Colores – Extraer Colores de Imagen",
+        "description": "Extrae colores dominantes de cualquier imagen. Obtén códigos hex al instante. Gratis, basado en navegador.",
+        "keywords": [
+          "extractor paleta colores online",
+          "extraer colores de imagen",
+          "encontrar colores dominantes"
+        ]
+      },
+      "heading": "Extractor de Paleta de Colores",
+      "sub": "Sube una imagen para extraer sus colores dominantes. Haz clic en cualquier color para copiar el código hex.",
+      "drop": "Arrastra una imagen aquí",
+      "clickCopy": "Haz clic en un color para copiar su código hex",
+      "copied": "¡Copiado!",
+      "faq": [
+        {
+          "q": "¿Cómo funciona la extracción de colores?",
+          "a": "La herramienta muestrea píxeles de la imagen usando un algoritmo de cuantización para encontrar los colores más dominantes y distintos."
+        },
+        {
+          "q": "¿Cuántos colores se extraen?",
+          "a": "La herramienta extrae hasta 8 colores dominantes de la imagen."
+        },
+        {
+          "q": "¿Puedo copiar los códigos de color?",
+          "a": "Sí. Haz clic en cualquier muestra de color para copiar su código hex al portapapeles."
+        },
+        {
+          "q": "¿Se sube mi imagen a un servidor?",
+          "a": "No. La imagen se procesa completamente en tu navegador usando la Canvas API. Nada se envía a ningún servidor."
+        },
+        {
+          "q": "¿Qué formatos de imagen son compatibles?",
+          "a": "Se soportan todos los formatos comunes: JPG, PNG, WebP, GIF, BMP y más."
+        }
+      ]
+    },
+    "imgOcr": {
+      "title": "Imagen a Texto (OCR)",
+      "desc": "Extrae texto de imágenes usando OCR. Compatible con fotos, capturas y documentos escaneados.",
+      "badge": "Nuevo",
+      "icon": "📝",
+      "meta": {
+        "title": "Imagen a Texto OCR – Herramienta OCR Gratis",
+        "description": "Extrae texto de imágenes, capturas y documentos escaneados con OCR. Gratis, basado en navegador.",
+        "keywords": [
+          "imagen a texto online gratis",
+          "ocr online gratis",
+          "extraer texto de imagen"
+        ]
+      },
+      "heading": "Imagen a Texto (OCR)",
+      "sub": "Sube una imagen o captura de pantalla para extraer el texto. Compatible con fotos, escaneos y documentos.",
+      "drop": "Arrastra una imagen aquí",
+      "processing": "Reconociendo texto…",
+      "btnCopy": "Copiar Texto",
+      "btnClear": "Limpiar",
+      "copied": "¡Copiado!",
+      "noText": "No se detectó texto en esta imagen.",
+      "faq": [
+        {
+          "q": "¿Qué es el OCR?",
+          "a": "OCR (Reconocimiento Óptico de Caracteres) es tecnología que detecta y extrae texto de imágenes, documentos escaneados y fotos."
+        },
+        {
+          "q": "¿Qué idiomas son compatibles?",
+          "a": "La herramienta usa Tesseract.js que soporta inglés y muchos otros idiomas. Para mejores resultados, usa imágenes claras con buen contraste."
+        },
+        {
+          "q": "¿Se sube mi imagen a un servidor?",
+          "a": "No. El procesamiento OCR se ejecuta completamente en tu navegador usando Tesseract.js (WebAssembly). Tus imágenes nunca abandonan tu dispositivo."
+        },
+        {
+          "q": "¿Qué tipo de imágenes dan mejores resultados?",
+          "a": "Imágenes claras y de alta resolución con buen contraste entre texto y fondo producen los mejores resultados de OCR."
+        },
+        {
+          "q": "¿Puedo extraer texto de PDFs?",
+          "a": "Esta herramienta funciona con imágenes. Para extracción de texto de PDF, usa nuestra herramienta Editar PDF."
+        }
+      ]
     }
   }
 }
