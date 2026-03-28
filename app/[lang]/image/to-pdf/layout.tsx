@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getDictionary, hasLocale } from "@/lib/dictionaries";
 import Breadcrumb from "@/components/Breadcrumb";
+import ToolFAQ from "@/components/ToolFAQ";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -15,10 +16,23 @@ export default async function Layout({ children, params }: { children: React.Rea
   if (!hasLocale(lang)) return null;
   const dict = await getDictionary(lang);
   const prefix = lang === "en" ? "" : `/${lang}`;
+    const faq = dict.t.imgToPdf.faq ?? [];
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 pt-6">
       <Breadcrumb crumbs={[{ label: dict.catPages.image.title, href: `${prefix}/image` }, { label: dict.t.imgToPdf.title }]} />
       {children}
+      <ToolFAQ items={faq} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
     </div>
   );
 }

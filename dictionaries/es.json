@@ -2,7 +2,12 @@
   "meta": {
     "siteTitle": "Deepoda Tools – Herramientas Online Gratuitas",
     "siteDescription": "Combina PDFs, comprime imágenes, elimina fondos y más. Completamente gratis, se ejecuta en tu navegador, los archivos nunca salen de tu dispositivo.",
-    "siteKeywords": ["combinar pdf", "comprimir imagen", "eliminar fondo", "herramientas online"]
+    "siteKeywords": [
+      "combinar pdf",
+      "comprimir imagen",
+      "eliminar fondo",
+      "herramientas online"
+    ]
   },
   "navbar": {
     "pdf": "PDF",
@@ -92,8 +97,19 @@
   },
   "t": {
     "pdfMerge": {
-      "title": "Combinar PDF", "desc": "Combina múltiples PDFs en un solo documento.", "badge": "Popular", "icon": "📄",
-      "meta": { "title": "Combinar PDF – Gratis Online", "description": "Combina múltiples archivos PDF en uno. Arrastra y suelta para reordenar, descarga al instante. Gratis, en el navegador.", "keywords": ["combinar pdf gratis", "unir archivos pdf", "fusionar pdf online"] },
+      "title": "Combinar PDF",
+      "desc": "Combina múltiples PDFs en un solo documento.",
+      "badge": "Popular",
+      "icon": "📄",
+      "meta": {
+        "title": "Combinar PDF – Gratis Online",
+        "description": "Combina múltiples archivos PDF en uno. Arrastra y suelta para reordenar, descarga al instante. Gratis, en el navegador.",
+        "keywords": [
+          "combinar pdf gratis",
+          "unir archivos pdf",
+          "fusionar pdf online"
+        ]
+      },
       "heading": "Combinar PDF",
       "sub": "Selecciona, reordena y combina archivos PDF en un solo documento.",
       "drop": "Arrastra archivos PDF aquí",
@@ -102,11 +118,44 @@
       "errGeneric": "Ocurrió un error durante la combinación.",
       "prog": "Combinando...",
       "success": "¡PDF combinado y descargado con éxito!",
-      "btn": "Combinar PDFs"
+      "btn": "Combinar PDFs",
+      "faq": [
+        {
+          "q": "¿Cómo puedo combinar archivos PDF gratis en línea?",
+          "a": "Sube tus archivos PDF, ordénalos con las flechas y haz clic en Combinar PDF. El archivo combinado se descarga al instante, sin registro."
+        },
+        {
+          "q": "¿Hay límite de tamaño para combinar PDFs?",
+          "a": "No hay límite fijo. Los archivos grandes pueden tardar unos segundos, pero todo ocurre en tu navegador."
+        },
+        {
+          "q": "¿Mis archivos PDF se suben a un servidor?",
+          "a": "No. Todo el proceso ocurre en tu navegador usando PDF-lib. Tus archivos nunca abandonan tu dispositivo."
+        },
+        {
+          "q": "¿Cuántos archivos PDF puedo combinar a la vez?",
+          "a": "No hay límite. Agrega tantos PDFs como necesites y ordénalos antes de combinar."
+        },
+        {
+          "q": "¿Puedo combinar PDFs protegidos con contraseña?",
+          "a": "Primero desbloquéalos con la herramienta Desbloquear PDF, luego combina los archivos desbloqueados."
+        }
+      ]
     },
     "pdfSplit": {
-      "title": "Dividir PDF", "desc": "Divide las páginas de un PDF en archivos separados.", "badge": null, "icon": "✂️",
-      "meta": { "title": "Dividir PDF – Gratis Online", "description": "Divide las páginas de un PDF en archivos separados. Introduce el rango de páginas y descarga. Gratis, en el navegador.", "keywords": ["dividir pdf gratis", "separar páginas pdf", "extraer páginas pdf"] },
+      "title": "Dividir PDF",
+      "desc": "Divide las páginas de un PDF en archivos separados.",
+      "badge": null,
+      "icon": "✂️",
+      "meta": {
+        "title": "Dividir PDF – Gratis Online",
+        "description": "Divide las páginas de un PDF en archivos separados. Introduce el rango de páginas y descarga. Gratis, en el navegador.",
+        "keywords": [
+          "dividir pdf gratis",
+          "separar páginas pdf",
+          "extraer páginas pdf"
+        ]
+      },
       "heading": "Dividir PDF",
       "sub": "Divide las páginas de un PDF en archivos separados.",
       "drop": "Arrastra el archivo PDF aquí",
@@ -116,11 +165,44 @@
       "errGeneric": "Ocurrió un error durante la división.",
       "prog": "Dividiendo...",
       "success": "¡PDF dividido y descargado con éxito!",
-      "btn": "Dividir PDF"
+      "btn": "Dividir PDF",
+      "faq": [
+        {
+          "q": "¿Cómo divido un PDF en páginas separadas?",
+          "a": "Sube tu PDF, selecciona el rango de páginas a extraer y haz clic en Dividir. Cada rango se descarga como PDF separado."
+        },
+        {
+          "q": "¿Puedo extraer una página específica de un PDF?",
+          "a": "Sí. Ingresa el número de página en el selector de rango y solo esa página se extraerá."
+        },
+        {
+          "q": "¿Dividir un PDF reduce su calidad?",
+          "a": "No. Las páginas se extraen sin recodificación, por lo que la calidad se preserva exactamente."
+        },
+        {
+          "q": "¿Es seguro dividir mi PDF?",
+          "a": "Sí. El proceso se ejecuta en tu navegador y no se envían datos a ningún servidor."
+        },
+        {
+          "q": "¿Puedo dividir un PDF grande con muchas páginas?",
+          "a": "Sí. La herramienta maneja bien los PDFs grandes, aunque los archivos muy grandes pueden tardar un poco más."
+        }
+      ]
     },
     "pdfEdit": {
-      "title": "Editar PDF", "desc": "Elimina páginas, reordena, arrastra y suelta.", "badge": null, "icon": "🖊️",
-      "meta": { "title": "Editar PDF – Gratis Online", "description": "Elimina páginas, reordena con arrastrar y soltar, y guarda. Gratis, en el navegador.", "keywords": ["editar pdf gratis", "eliminar páginas pdf", "reordenar páginas pdf"] },
+      "title": "Editar PDF",
+      "desc": "Elimina páginas, reordena, arrastra y suelta.",
+      "badge": null,
+      "icon": "🖊️",
+      "meta": {
+        "title": "Editar PDF – Gratis Online",
+        "description": "Elimina páginas, reordena con arrastrar y soltar, y guarda. Gratis, en el navegador.",
+        "keywords": [
+          "editar pdf gratis",
+          "eliminar páginas pdf",
+          "reordenar páginas pdf"
+        ]
+      },
       "heading": "Editar PDF",
       "sub": "Elimina páginas, reordena (arrastra o usa las flechas) y guarda.",
       "drop": "Arrastra el archivo PDF aquí",
@@ -134,85 +216,326 @@
       "deletePage": "Eliminar página",
       "moveLeft": "Mover a la izquierda",
       "moveRight": "Mover a la derecha",
-      "allDeleted": "Eliminaste todas las páginas. Por favor, selecciona un nuevo archivo."
+      "allDeleted": "Eliminaste todas las páginas. Por favor, selecciona un nuevo archivo.",
+      "faq": [
+        {
+          "q": "¿Puedo eliminar páginas de un PDF gratis?",
+          "a": "Sí. Sube tu PDF, selecciona las páginas a eliminar haciendo clic en sus miniaturas y haz clic en Eliminar seleccionados."
+        },
+        {
+          "q": "¿Puedo reordenar páginas en un PDF?",
+          "a": "Sí. Arrastra y suelta las miniaturas de página para reordenarlas y luego guarda el resultado."
+        },
+        {
+          "q": "¿Editar un PDF cambia su calidad?",
+          "a": "No. Las páginas se reorganizan sin volver a renderizarlas, la calidad permanece igual."
+        },
+        {
+          "q": "¿Es gratuito el editor de PDF?",
+          "a": "Sí, completamente gratuito sin necesidad de cuenta."
+        },
+        {
+          "q": "¿Puedo editar el texto dentro de un PDF?",
+          "a": "Esta herramienta se centra en edición a nivel de página. Para agregar notas y resaltados, usa la herramienta Anotar PDF."
+        }
+      ]
     },
     "pdfRotate": {
-      "title": "Rotar PDF", "desc": "Rota páginas 90°, 180° o 270°.", "badge": "Nuevo", "icon": "🔄",
-      "meta": { "title": "Rotar PDF – Gratis Online", "description": "Rota páginas de PDF 90°, 180° o 270°. Gratis, en el navegador.", "keywords": ["rotar pdf gratis", "girar pdf online"] },
+      "title": "Rotar PDF",
+      "desc": "Rota páginas 90°, 180° o 270°.",
+      "badge": "Nuevo",
+      "icon": "🔄",
+      "meta": {
+        "title": "Rotar PDF – Gratis Online",
+        "description": "Rota páginas de PDF 90°, 180° o 270°. Gratis, en el navegador.",
+        "keywords": [
+          "rotar pdf gratis",
+          "girar pdf online"
+        ]
+      },
       "heading": "Rotar PDF",
       "sub": "Rota páginas de PDF 90°, 180° o 270°.",
       "drop": "Arrastra el archivo PDF aquí",
       "angle": "Ángulo de rotación",
-      "r90": "90° Derecha", "r180": "180°", "l90": "90° Izquierda",
+      "r90": "90° Derecha",
+      "r180": "180°",
+      "l90": "90° Izquierda",
       "prog": "Rotando...",
       "success": "¡PDF rotado y descargado con éxito!",
-      "btn": "Rotar PDF"
+      "btn": "Rotar PDF",
+      "faq": [
+        {
+          "q": "¿Cómo roto páginas de PDF en línea?",
+          "a": "Sube tu PDF, selecciona las páginas a rotar, elige el ángulo y descarga."
+        },
+        {
+          "q": "¿Puedo rotar solo páginas específicas de un PDF?",
+          "a": "Sí. Haz clic en las miniaturas individuales para seleccionarlas, luego aplica la rotación a esas páginas."
+        },
+        {
+          "q": "¿Rotar un PDF reduce su calidad?",
+          "a": "No. La rotación se aplica a nivel de estructura del PDF sin volver a renderizar contenido."
+        },
+        {
+          "q": "¿Puedo rotar un PDF escaneado?",
+          "a": "Sí. La herramienta funciona con todos los tipos de PDF, incluidos los escaneados."
+        },
+        {
+          "q": "¿Mi PDF se sube a un servidor al rotarlo?",
+          "a": "No. Todo el procesamiento ocurre en tu navegador."
+        }
+      ]
     },
     "pdfCompress": {
-      "title": "Comprimir PDF", "desc": "Reduce el tamaño del archivo PDF.", "badge": "Nuevo", "icon": "🗜️",
-      "meta": { "title": "Comprimir PDF – Gratis Online", "description": "Reduce el tamaño del archivo PDF. En el navegador, los archivos nunca salen de tu dispositivo.", "keywords": ["comprimir pdf gratis", "reducir tamaño pdf"] },
+      "title": "Comprimir PDF",
+      "desc": "Reduce el tamaño del archivo PDF.",
+      "badge": "Nuevo",
+      "icon": "🗜️",
+      "meta": {
+        "title": "Comprimir PDF – Gratis Online",
+        "description": "Reduce el tamaño del archivo PDF. En el navegador, los archivos nunca salen de tu dispositivo.",
+        "keywords": [
+          "comprimir pdf gratis",
+          "reducir tamaño pdf"
+        ]
+      },
       "heading": "Comprimir PDF",
       "sub": "Reduce el tamaño del archivo PDF. Se ejecuta en tu navegador, los archivos nunca salen de tu dispositivo.",
       "drop": "Arrastra el archivo PDF aquí",
       "prog": "Comprimiendo...",
       "done": "¡Compresión completada!",
-      "btn": "Comprimir PDF"
+      "btn": "Comprimir PDF",
+      "faq": [
+        {
+          "q": "¿Cómo reduzco el tamaño de un archivo PDF gratis?",
+          "a": "Sube tu PDF, elige el nivel de compresión y haz clic en Comprimir."
+        },
+        {
+          "q": "¿Cuánto puede reducir el tamaño la compresión?",
+          "a": "Entre 20 y 80 porciento dependiendo del contenido. Los PDFs con muchas imágenes se comprimen más."
+        },
+        {
+          "q": "¿La compresión afecta la calidad del texto?",
+          "a": "La calidad del texto se preserva. La compresión principalmente afecta las imágenes incrustadas."
+        },
+        {
+          "q": "¿Hay un límite de tamaño para comprimir PDFs?",
+          "a": "No hay límite fijo. Los PDFs grandes pueden tardar más en procesarse."
+        },
+        {
+          "q": "¿Puedo comprimir un PDF sin perder calidad?",
+          "a": "Elige la opción de compresión baja para mínima pérdida de calidad."
+        }
+      ]
     },
     "pdfPageNumber": {
-      "title": "Añadir Números de Página", "desc": "Estampa números de página en cada página.", "badge": "Nuevo", "icon": "🔢",
-      "meta": { "title": "Añadir Números de Página – Gratis Online", "description": "Estampa automáticamente números de página en cada página. Elige la posición.", "keywords": ["añadir números de página pdf", "numerar páginas pdf"] },
+      "title": "Añadir Números de Página",
+      "desc": "Estampa números de página en cada página.",
+      "badge": "Nuevo",
+      "icon": "🔢",
+      "meta": {
+        "title": "Añadir Números de Página – Gratis Online",
+        "description": "Estampa automáticamente números de página en cada página. Elige la posición.",
+        "keywords": [
+          "añadir números de página pdf",
+          "numerar páginas pdf"
+        ]
+      },
       "heading": "Añadir Números de Página al PDF",
       "sub": "Estampa automáticamente números de página en cada página. Elige la posición.",
       "drop": "Arrastra el archivo PDF aquí",
       "numPos": "Posición del número",
-      "botCenter": "Centro inferior", "botRight": "Inferior derecha", "botLeft": "Inferior izquierda",
+      "botCenter": "Centro inferior",
+      "botRight": "Inferior derecha",
+      "botLeft": "Inferior izquierda",
       "prog": "Añadiendo números...",
       "success": "¡Números de página añadidos y descargados!",
-      "btn": "Añadir Números"
+      "btn": "Añadir Números",
+      "faq": [
+        {
+          "q": "¿Cómo agrego números de página a un PDF?",
+          "a": "Sube tu PDF, elige posición, tamaño de fuente y número inicial, luego haz clic en Agregar números de página."
+        },
+        {
+          "q": "¿Puedo personalizar la posición del número de página?",
+          "a": "Sí. Puedes colocarlos en la parte superior o inferior, izquierda, centro o derecha."
+        },
+        {
+          "q": "¿Puedo empezar la numeración desde un número específico?",
+          "a": "Sí. Establece el número inicial, útil cuando el PDF es parte de un documento más grande."
+        },
+        {
+          "q": "¿Agregar números de página cambia el contenido del PDF?",
+          "a": "Solo se agrega el texto del número de página. Todo el contenido original permanece sin cambios."
+        },
+        {
+          "q": "¿Es gratuita la numeración de páginas?",
+          "a": "Sí, completamente gratuita sin necesidad de cuenta."
+        }
+      ]
     },
     "pdfToJpg": {
-      "title": "PDF → JPG", "desc": "Convierte páginas de PDF a imágenes JPG.", "badge": "Nuevo", "icon": "🖼️",
-      "meta": { "title": "PDF a JPG – Gratis Online", "description": "Convierte páginas de PDF a imágenes JPG. Gratis, en el navegador.", "keywords": ["pdf a jpg gratis", "convertir pdf a imagen"] },
+      "title": "PDF → JPG",
+      "desc": "Convierte páginas de PDF a imágenes JPG.",
+      "badge": "Nuevo",
+      "icon": "🖼️",
+      "meta": {
+        "title": "PDF a JPG – Gratis Online",
+        "description": "Convierte páginas de PDF a imágenes JPG. Gratis, en el navegador.",
+        "keywords": [
+          "pdf a jpg gratis",
+          "convertir pdf a imagen"
+        ]
+      },
       "heading": "PDF → JPG",
       "sub": "Convierte páginas de PDF a imágenes JPG. Cada página se descarga como un archivo separado.",
       "drop": "Arrastra el archivo PDF aquí",
       "qualityLbl": "Calidad",
-      "smaller": "Archivo más pequeño", "higher": "Mayor calidad",
+      "smaller": "Archivo más pequeño",
+      "higher": "Mayor calidad",
       "prog": "Convirtiendo...",
       "success": "¡página(s) descargada(s) como JPG!",
-      "btn": "Convertir a JPG"
+      "btn": "Convertir a JPG",
+      "faq": [
+        {
+          "q": "¿Cómo convierto PDF a JPG gratis en línea?",
+          "a": "Sube tu PDF, selecciona las páginas a convertir, elige la calidad y haz clic en Convertir."
+        },
+        {
+          "q": "¿Puedo convertir una página específica del PDF a JPG?",
+          "a": "Sí. Selecciona páginas individuales en lugar de convertir todo el documento."
+        },
+        {
+          "q": "¿Qué calidad tienen las imágenes JPG resultantes?",
+          "a": "Puedes elegir entre calidad estándar, alta o máxima."
+        },
+        {
+          "q": "¿Puedo convertir todas las páginas a la vez?",
+          "a": "Sí. Selecciona Todas las páginas y se descargarán comprimidas en zip."
+        },
+        {
+          "q": "¿Mis archivos PDF están seguros durante la conversión?",
+          "a": "Sí. La conversión ocurre en tu navegador, nada se sube a un servidor."
+        }
+      ]
     },
     "pdfFromJpg": {
-      "title": "JPG → PDF", "desc": "Convierte imágenes en un solo archivo PDF.", "badge": "Nuevo", "icon": "📋",
-      "meta": { "title": "JPG a PDF – Gratis Online", "description": "Convierte imágenes en un solo archivo PDF. Gratis, en el navegador.", "keywords": ["jpg a pdf gratis", "imagen a pdf"] },
+      "title": "JPG → PDF",
+      "desc": "Convierte imágenes en un solo archivo PDF.",
+      "badge": "Nuevo",
+      "icon": "📋",
+      "meta": {
+        "title": "JPG a PDF – Gratis Online",
+        "description": "Convierte imágenes en un solo archivo PDF. Gratis, en el navegador.",
+        "keywords": [
+          "jpg a pdf gratis",
+          "imagen a pdf"
+        ]
+      },
       "heading": "JPG → PDF",
       "sub": "Convierte imágenes en un solo archivo PDF. Puedes añadir múltiples imágenes.",
       "drop": "Arrastra archivos de imagen aquí (JPG, PNG, WEBP)",
       "imgsSelected": "imagen(es) seleccionada(s)",
       "prog": "Creando PDF...",
       "success": "¡PDF creado y descargado!",
-      "btn": "Crear PDF"
+      "btn": "Crear PDF",
+      "faq": [
+        {
+          "q": "¿Cómo convierto imágenes JPG a PDF?",
+          "a": "Sube una o más imágenes JPG, ordénalas si es necesario y haz clic en Convertir a PDF."
+        },
+        {
+          "q": "¿Puedo combinar varias imágenes en un solo PDF?",
+          "a": "Sí. Agrega múltiples imágenes y cada una se convertirá en una página separada del PDF."
+        },
+        {
+          "q": "¿Qué formatos de imagen son compatibles?",
+          "a": "Se admiten imágenes JPG/JPEG y PNG."
+        },
+        {
+          "q": "¿Se reducirá la calidad de imagen en el PDF?",
+          "a": "No. Las imágenes se incrustan con su resolución original."
+        },
+        {
+          "q": "¿Hay límite en el número de imágenes que puedo combinar?",
+          "a": "Sin límite. Agrega tantas imágenes como necesites."
+        }
+      ]
     },
     "pdfWatermark": {
-      "title": "Marca de Agua PDF", "desc": "Añade sellos de CONFIDENCIAL, BORRADOR a las páginas.", "badge": null, "icon": "🔏",
-      "meta": { "title": "Marca de Agua PDF – Gratis Online", "description": "Añade marcas de agua de texto a páginas PDF. Gratis, en el navegador.", "keywords": ["marca de agua pdf gratis", "añadir marca de agua a pdf"] },
+      "title": "Marca de Agua PDF",
+      "desc": "Añade sellos de CONFIDENCIAL, BORRADOR a las páginas.",
+      "badge": null,
+      "icon": "🔏",
+      "meta": {
+        "title": "Marca de Agua PDF – Gratis Online",
+        "description": "Añade marcas de agua de texto a páginas PDF. Gratis, en el navegador.",
+        "keywords": [
+          "marca de agua pdf gratis",
+          "añadir marca de agua a pdf"
+        ]
+      },
       "heading": "Marca de Agua PDF",
       "sub": "Añade marcas de agua de texto a páginas PDF. Se ejecuta en tu navegador.",
       "drop": "Arrastra el archivo PDF aquí",
       "wmText": "Texto de marca de agua",
-      "presets": ["CONFIDENCIAL", "BORRADOR", "IMPORTANTE", "APROBADO", "CANCELADO"],
+      "presets": [
+        "CONFIDENCIAL",
+        "BORRADOR",
+        "IMPORTANTE",
+        "APROBADO",
+        "CANCELADO"
+      ],
       "custom": "Introduce texto personalizado…",
       "centerDiag": "Centro (diagonal)",
-      "topLeft": "Superior izquierda", "topRight": "Superior derecha", "botLeft": "Inferior izquierda", "botRight": "Inferior derecha",
-      "fontSizeLbl": "Tamaño de fuente", "opacityLbl": "Opacidad",
-      "whichPages": "¿Qué páginas?", "allPages": "Todas las páginas", "onlyPage": "Solo la página",
+      "topLeft": "Superior izquierda",
+      "topRight": "Superior derecha",
+      "botLeft": "Inferior izquierda",
+      "botRight": "Inferior derecha",
+      "fontSizeLbl": "Tamaño de fuente",
+      "opacityLbl": "Opacidad",
+      "whichPages": "¿Qué páginas?",
+      "allPages": "Todas las páginas",
+      "onlyPage": "Solo la página",
       "prog": "Añadiendo marca de agua…",
       "success": "¡Marca de agua añadida y PDF descargado!",
-      "btn": "Añadir Marca de Agua y Descargar"
+      "btn": "Añadir Marca de Agua y Descargar",
+      "faq": [
+        {
+          "q": "¿Cómo agrego una marca de agua a un PDF?",
+          "a": "Sube tu PDF, escribe el texto de marca de agua, elige tamaño, opacidad, posición y color, luego haz clic en Agregar marca de agua."
+        },
+        {
+          "q": "¿Puedo hacer la marca de agua transparente?",
+          "a": "Sí. Ajusta el control deslizante de opacidad para hacer la marca de agua más o menos transparente."
+        },
+        {
+          "q": "¿Puedo posicionar la marca de agua en cualquier lugar?",
+          "a": "Elige entre posiciones preestablecidas: centro, esquinas o bordes."
+        },
+        {
+          "q": "¿La marca de agua aparecerá en todas las páginas?",
+          "a": "Sí. La marca de agua se aplica a todas las páginas del PDF."
+        },
+        {
+          "q": "¿Puedo eliminar una marca de agua que agregué?",
+          "a": "Esta herramienta agrega marcas de agua. Eliminar marcas ya incrustadas no está soportado."
+        }
+      ]
     },
     "pdfSign": {
-      "title": "Firmar PDF", "desc": "Dibuja tu firma e incrústala en una página PDF.", "badge": "Nuevo", "icon": "✍️",
-      "meta": { "title": "Firmar PDF – Gratis Online", "description": "Dibuja tu firma, elige una página e incrústala. Gratis, en el navegador.", "keywords": ["firmar pdf gratis", "firma pdf online"] },
+      "title": "Firmar PDF",
+      "desc": "Dibuja tu firma e incrústala en una página PDF.",
+      "badge": "Nuevo",
+      "icon": "✍️",
+      "meta": {
+        "title": "Firmar PDF – Gratis Online",
+        "description": "Dibuja tu firma, elige una página e incrústala. Gratis, en el navegador.",
+        "keywords": [
+          "firmar pdf gratis",
+          "firma pdf online"
+        ]
+      },
       "heading": "Firmar PDF",
       "sub": "Dibuja tu firma, selecciona una página, posiciónala e incrústala en el PDF.",
       "step1": "1 · Selecciona el PDF",
@@ -232,71 +555,237 @@
       "posNote": "* La posición es aproximada; la precisión en píxeles se aplica en el PDF final.",
       "success": "¡PDF firmado descargado!",
       "saving": "Guardando…",
-      "btn": "Añadir Firma al PDF y Descargar"
+      "btn": "Añadir Firma al PDF y Descargar",
+      "faq": [
+        {
+          "q": "¿Cómo firmo un PDF en línea gratis?",
+          "a": "Sube tu PDF, dibuja o escribe tu firma, arrástrala a la posición correcta y haz clic en Guardar y descargar."
+        },
+        {
+          "q": "¿Puedo dibujar mi firma en un PDF?",
+          "a": "Sí. Usa el modo de dibujo para crear una firma manuscrita directamente en tu navegador."
+        },
+        {
+          "q": "¿Es legalmente válida mi firma electrónica?",
+          "a": "Las firmas electrónicas simples son reconocidas en muchas jurisdicciones. Para contratos legalmente vinculantes, consulta las leyes locales."
+        },
+        {
+          "q": "¿Puedo firmar múltiples páginas?",
+          "a": "Sí. Navega entre páginas y coloca tu firma en cada una."
+        },
+        {
+          "q": "¿Mi firma o documento se sube a un servidor?",
+          "a": "No. Tu firma y documento se procesan completamente en tu navegador."
+        }
+      ]
     },
     "pdfToWord": {
-      "title": "PDF → Word", "desc": "Convierte un archivo PDF a formato Word.", "badge": null, "icon": "📝",
-      "meta": { "title": "PDF a Word – Gratis Online", "description": "Convierte PDF a formato Word (.docx). Próximamente.", "keywords": ["pdf a word gratis", "convertir pdf a docx"] },
+      "title": "PDF → Word",
+      "desc": "Convierte un archivo PDF a formato Word.",
+      "badge": null,
+      "icon": "📝",
+      "meta": {
+        "title": "PDF a Word – Gratis Online",
+        "description": "Convierte PDF a formato Word (.docx). Próximamente.",
+        "keywords": [
+          "pdf a word gratis",
+          "convertir pdf a docx"
+        ]
+      },
       "heading": "PDF → Word",
       "sub": "Convierte un archivo PDF a formato Word (.docx).",
       "drop": "Arrastra el archivo PDF aquí",
       "note": "Nota: La conversión de PDF a Word requiere procesamiento en servidor. Esta función estará disponible próximamente.",
-      "btn": "Próximamente"
+      "btn": "Próximamente",
+      "faq": [
+        {
+          "q": "¿Puedo convertir PDF a Word en línea?",
+          "a": "Esta función estará disponible próximamente. La conversión requiere procesamiento OCR en el servidor, actualmente en desarrollo."
+        },
+        {
+          "q": "¿Por qué es difícil la conversión de PDF a Word?",
+          "a": "Los PDFs almacenan contenido como elementos visuales, no texto editable. La conversión precisa requiere reconocimiento óptico de caracteres."
+        },
+        {
+          "q": "¿Qué alternativa existe a la conversión PDF a Word?",
+          "a": "Usa Editar PDF para eliminar o reordenar páginas, o Anotar PDF para agregar notas sin cambiar el formato."
+        },
+        {
+          "q": "¿Cuándo estará disponible PDF a Word?",
+          "a": "Estamos trabajando en ello. Estará disponible como función Pro."
+        },
+        {
+          "q": "¿Será gratuito PDF a Word?",
+          "a": "Una versión básica será gratuita. Mayor precisión estará en el plan Pro."
+        }
+      ]
     },
     "pdfLock": {
-      "title": "Bloquear PDF", "desc": "Protege un PDF con contraseña y cifrado.", "badge": "Nuevo", "icon": "🔒",
-      "meta": { "title": "Bloquear PDF – Gratis Online", "description": "Protege tu PDF con contraseña y cifrado. Gratis, en el navegador.", "keywords": ["bloquear pdf gratis", "proteger pdf con contraseña"] },
+      "title": "Bloquear PDF",
+      "desc": "Protege un PDF con contraseña y cifrado.",
+      "badge": "Nuevo",
+      "icon": "🔒",
+      "meta": {
+        "title": "Bloquear PDF – Gratis Online",
+        "description": "Protege tu PDF con contraseña y cifrado. Gratis, en el navegador.",
+        "keywords": [
+          "bloquear pdf gratis",
+          "proteger pdf con contraseña"
+        ]
+      },
       "heading": "Bloquear PDF",
       "sub": "Protege tu archivo PDF con contraseña y cifrado.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca se envían a un servidor.",
       "drop": "Arrastra el archivo PDF aquí",
       "pwLabel": "Contraseña (mín. 4 caracteres)",
       "pwPlaceholder": "Introduce la contraseña",
-      "hide": "Ocultar", "show": "Mostrar",
+      "hide": "Ocultar",
+      "show": "Mostrar",
       "confirmLabel": "Confirmar contraseña",
       "confirmPlaceholder": "Reintroduce la contraseña",
       "mismatch": "Las contraseñas no coinciden.",
       "warning": "El PDF requerirá esta contraseña para abrirse. Guárdala en un lugar seguro — no se puede recuperar.",
       "prog": "Cifrando...",
       "success": "¡PDF bloqueado y descargado!",
-      "btn": "Cifrar PDF"
+      "btn": "Cifrar PDF",
+      "faq": [
+        {
+          "q": "¿Cómo protejo un PDF con contraseña gratis?",
+          "a": "Sube tu PDF, ingresa una contraseña y haz clic en Bloquear PDF. El PDF cifrado se descarga a tu dispositivo."
+        },
+        {
+          "q": "¿Qué cifrado se usa para proteger el PDF?",
+          "a": "Cifrado RC4 de 128 bits, compatible con todos los principales lectores de PDF."
+        },
+        {
+          "q": "¿Perderé contenido al bloquear el PDF?",
+          "a": "No. Solo se aplica el cifrado, todo el contenido permanece exactamente igual."
+        },
+        {
+          "q": "¿Mis archivos se suben al agregar contraseña?",
+          "a": "No. El cifrado se aplica completamente en tu navegador usando PDF-lib."
+        },
+        {
+          "q": "¿Puedo establecer contraseñas diferentes para abrir y editar?",
+          "a": "La herramienta establece una única contraseña de apertura. Las contraseñas de permisos avanzados no están soportadas aún."
+        }
+      ]
     },
     "pdfUnlock": {
-      "title": "Desbloquear PDF", "desc": "Elimina la protección con contraseña de un archivo PDF.", "badge": "Nuevo", "icon": "🔓",
-      "meta": { "title": "Desbloquear PDF – Gratis Online", "description": "Elimina la protección con contraseña de un PDF. Gratis, en el navegador.", "keywords": ["desbloquear pdf gratis", "quitar contraseña pdf"] },
+      "title": "Desbloquear PDF",
+      "desc": "Elimina la protección con contraseña de un archivo PDF.",
+      "badge": "Nuevo",
+      "icon": "🔓",
+      "meta": {
+        "title": "Desbloquear PDF – Gratis Online",
+        "description": "Elimina la protección con contraseña de un PDF. Gratis, en el navegador.",
+        "keywords": [
+          "desbloquear pdf gratis",
+          "quitar contraseña pdf"
+        ]
+      },
       "heading": "Desbloquear PDF",
       "sub": "Elimina la protección con contraseña de un archivo PDF.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca se envían a un servidor.",
       "drop": "Arrastra el PDF protegido con contraseña aquí",
       "pwLabel": "Contraseña del PDF",
       "pwPlaceholder": "Introduce la contraseña del PDF",
-      "hide": "Ocultar", "show": "Mostrar",
+      "hide": "Ocultar",
+      "show": "Mostrar",
       "note": "Debes conocer la contraseña actual para desbloquear el PDF. Esta herramienta no evita las contraseñas.",
       "prog": "Desbloqueando...",
       "success": "¡PDF desbloqueado y descargado!",
       "errPw": "Contraseña incorrecta. Por favor, inténtalo de nuevo.",
       "errGeneric": "Ocurrió un error. Asegúrate de que el archivo sea un PDF protegido con contraseña válido.",
-      "btn": "Desbloquear PDF"
+      "btn": "Desbloquear PDF",
+      "faq": [
+        {
+          "q": "¿Cómo elimino la contraseña de un PDF?",
+          "a": "Sube el PDF protegido, ingresa la contraseña actual y haz clic en Desbloquear PDF."
+        },
+        {
+          "q": "¿Puedo desbloquear un PDF sin saber la contraseña?",
+          "a": "No. Por razones de seguridad, se requiere la contraseña para descifrar el archivo."
+        },
+        {
+          "q": "¿Es legal desbloquear un PDF?",
+          "a": "Sí, si eres el propietario del documento o tienes permiso del propietario."
+        },
+        {
+          "q": "¿Desbloquear un PDF afecta su contenido?",
+          "a": "No. Solo se elimina la capa de cifrado. Todo el contenido permanece igual."
+        },
+        {
+          "q": "¿El PDF se sube a un servidor durante el desbloqueo?",
+          "a": "No. El proceso de descifrado se ejecuta completamente en tu navegador."
+        }
+      ]
     },
     "pdfCrop": {
-      "title": "Recortar PDF", "desc": "Recorta los márgenes de cada página de tu PDF.", "badge": "Nuevo", "icon": "✂️",
-      "meta": { "title": "Recortar PDF – Gratis Online", "description": "Recorta los márgenes de cada página de tu PDF. Gratis, en el navegador.", "keywords": ["recortar pdf gratis", "cortar márgenes pdf"] },
+      "title": "Recortar PDF",
+      "desc": "Recorta los márgenes de cada página de tu PDF.",
+      "badge": "Nuevo",
+      "icon": "✂️",
+      "meta": {
+        "title": "Recortar PDF – Gratis Online",
+        "description": "Recorta los márgenes de cada página de tu PDF. Gratis, en el navegador.",
+        "keywords": [
+          "recortar pdf gratis",
+          "cortar márgenes pdf"
+        ]
+      },
       "heading": "Recortar PDF",
       "sub": "Recorta los márgenes de cada página de tu PDF.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca se envían a un servidor.",
       "drop": "Arrastra el archivo PDF aquí",
       "cropMargins": "Márgenes de recorte",
-      "linked": "Vinculados", "unlinked": "Desvinculados",
-      "top": "Superior", "left": "Izquierda", "right": "Derecha", "bottom": "Inferior",
+      "linked": "Vinculados",
+      "unlinked": "Desvinculados",
+      "top": "Superior",
+      "left": "Izquierda",
+      "right": "Derecha",
+      "bottom": "Inferior",
       "removingDesc": "Eliminando {top}mm superior · {right}mm derecha · {bottom}mm inferior · {left}mm izquierda de cada página",
       "prog": "Recortando...",
       "success": "¡PDF recortado y descargado!",
       "setMargins": "Establece los márgenes arriba",
-      "btn": "Recortar PDF"
+      "btn": "Recortar PDF",
+      "faq": [
+        {
+          "q": "¿Cómo recorto una página de PDF?",
+          "a": "Sube tu PDF, selecciona el área de recorte usando los controles y haz clic en Recortar."
+        },
+        {
+          "q": "¿Puedo recortar todas las páginas de un PDF a la vez?",
+          "a": "Sí. Aplica el mismo área de recorte a todas las páginas con la opción Aplicar a todas."
+        },
+        {
+          "q": "¿El recorte reduce el tamaño del archivo PDF?",
+          "a": "Ligeramente. Para reducción significativa de tamaño, usa la herramienta Comprimir PDF después."
+        },
+        {
+          "q": "¿Puedo deshacer el recorte antes de descargar?",
+          "a": "Sí. Ajusta el área de recorte tantas veces como necesites antes de descargar."
+        },
+        {
+          "q": "¿Es gratuito recortar PDF?",
+          "a": "Sí. Completamente gratuito, sin necesidad de registro."
+        }
+      ]
     },
     "pdfFormFill": {
-      "title": "Rellenar Formulario PDF", "desc": "Rellena campos de texto, casillas de verificación y menús desplegables en un PDF.", "badge": "Nuevo", "icon": "📝",
-      "meta": { "title": "Rellenar Formulario PDF – Gratis Online", "description": "Rellena campos de texto, casillas de verificación y menús desplegables en un formulario PDF. Gratis, en el navegador.", "keywords": ["rellenar formulario pdf gratis", "completar formulario pdf"] },
+      "title": "Rellenar Formulario PDF",
+      "desc": "Rellena campos de texto, casillas de verificación y menús desplegables en un PDF.",
+      "badge": "Nuevo",
+      "icon": "📝",
+      "meta": {
+        "title": "Rellenar Formulario PDF – Gratis Online",
+        "description": "Rellena campos de texto, casillas de verificación y menús desplegables en un formulario PDF. Gratis, en el navegador.",
+        "keywords": [
+          "rellenar formulario pdf gratis",
+          "completar formulario pdf"
+        ]
+      },
       "heading": "Rellenar Formulario PDF",
       "sub": "Rellena campos de texto, casillas de verificación y menús desplegables en un formulario PDF.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca se envían a un servidor.",
@@ -308,17 +797,52 @@
       "changeFile": "Cambiar archivo",
       "saved": "✓ Guardado",
       "savePdf": "Guardar PDF Rellenado",
-      "clickHint": "Haz clic en los campos resaltados arriba para escribir. Usa los botones de navegación para cambiar de página."
+      "clickHint": "Haz clic en los campos resaltados arriba para escribir. Usa los botones de navegación para cambiar de página.",
+      "faq": [
+        {
+          "q": "¿Cómo relleno un formulario PDF en línea?",
+          "a": "Sube tu formulario PDF, haz clic en cada campo, escribe tu información y haz clic en Guardar y descargar."
+        },
+        {
+          "q": "¿Funciona con formularios PDF interactivos?",
+          "a": "Sí. La herramienta detecta campos interactivos como cuadros de texto, casillas de verificación y listas desplegables."
+        },
+        {
+          "q": "¿Puedo rellenar un PDF que no tiene campos de formulario?",
+          "a": "Para PDFs sin campos, usa la herramienta Anotar PDF para agregar texto sobre el documento."
+        },
+        {
+          "q": "¿El PDF rellenado será compatible con los lectores?",
+          "a": "Sí. La salida es un PDF estándar legible por Adobe Acrobat y todos los principales lectores."
+        },
+        {
+          "q": "¿Mis datos del formulario se suben a un servidor?",
+          "a": "No. Todo ocurre en tu navegador, tus datos nunca se envían a ningún lugar."
+        }
+      ]
     },
     "pdfAnnotate": {
-      "title": "Anotar PDF", "desc": "Dibuja, resalta y añade notas de texto a tu PDF.", "badge": "Nuevo", "icon": "🖊️",
-      "meta": { "title": "Anotar PDF – Gratis Online", "description": "Dibuja, resalta y añade notas de texto a tu PDF. Gratis, en el navegador.", "keywords": ["anotar pdf gratis", "herramienta de anotación pdf"] },
+      "title": "Anotar PDF",
+      "desc": "Dibuja, resalta y añade notas de texto a tu PDF.",
+      "badge": "Nuevo",
+      "icon": "🖊️",
+      "meta": {
+        "title": "Anotar PDF – Gratis Online",
+        "description": "Dibuja, resalta y añade notas de texto a tu PDF. Gratis, en el navegador.",
+        "keywords": [
+          "anotar pdf gratis",
+          "herramienta de anotación pdf"
+        ]
+      },
       "heading": "Anotar PDF",
       "sub": "Dibuja, resalta y añade notas de texto a tu PDF.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca se envían a un servidor.",
       "drop": "Arrastra el archivo PDF aquí",
       "loadingPdf": "Cargando PDF…",
-      "pen": "Bolígrafo", "highlight": "Resaltador", "text": "Texto", "eraser": "Borrador",
+      "pen": "Bolígrafo",
+      "highlight": "Resaltador",
+      "text": "Texto",
+      "eraser": "Borrador",
       "size": "Tamaño",
       "saved": "✓ Guardado",
       "savePdf": "Guardar PDF",
@@ -327,34 +851,131 @@
       "highlightHint": "Haz clic y arrastra para resaltar una región.",
       "eraserHint": "Dibuja sobre las anotaciones para borrarlas.",
       "penHint": "Dibuja libremente sobre el PDF.",
-      "annotations": "anotación(es) en todas las páginas"
+      "annotations": "anotación(es) en todas las páginas",
+      "faq": [
+        {
+          "q": "¿Cómo anoto un PDF en línea?",
+          "a": "Sube tu PDF, usa la barra de herramientas para agregar texto, dibujar o resaltar contenido, luego haz clic en Guardar y descargar."
+        },
+        {
+          "q": "¿Qué tipos de anotaciones son compatibles?",
+          "a": "Puedes agregar etiquetas de texto, dibujos a mano alzada y rectángulos de resaltado."
+        },
+        {
+          "q": "¿Puedo eliminar las anotaciones que agregué?",
+          "a": "Las anotaciones se integran en la página al guardar. Para eliminarlas, vuelve a subir el archivo original."
+        },
+        {
+          "q": "¿Las anotaciones funcionan en PDFs escaneados?",
+          "a": "Sí. Las anotaciones se dibujan como capa superpuesta y funcionan en cualquier PDF."
+        },
+        {
+          "q": "¿Es gratuito anotar un PDF?",
+          "a": "Sí, completamente gratuito sin necesidad de cuenta."
+        }
+      ]
     },
     "imgCompress": {
-      "title": "Comprimir Imagen", "desc": "Reduce el tamaño de archivos JPG, PNG y WEBP sin perder calidad.", "badge": "Popular", "icon": "🗜️",
-      "meta": { "title": "Comprimir Imagen – Gratis Online", "description": "Reduce el tamaño de archivos JPG, PNG, WEBP. Gratis, en el navegador.", "keywords": ["comprimir imagen gratis", "reducir tamaño de imagen"] },
+      "title": "Comprimir Imagen",
+      "desc": "Reduce el tamaño de archivos JPG, PNG y WEBP sin perder calidad.",
+      "badge": "Popular",
+      "icon": "🗜️",
+      "meta": {
+        "title": "Comprimir Imagen – Gratis Online",
+        "description": "Reduce el tamaño de archivos JPG, PNG, WEBP. Gratis, en el navegador.",
+        "keywords": [
+          "comprimir imagen gratis",
+          "reducir tamaño de imagen"
+        ]
+      },
       "heading": "Comprimir Imagen",
       "sub": "Reduce el tamaño de archivos JPG, PNG, WEBP.",
       "qualityLbl": "Calidad",
-      "smaller": "Archivo más pequeño", "higher": "Mayor calidad",
+      "smaller": "Archivo más pequeño",
+      "higher": "Mayor calidad",
       "drop": "Arrastra imágenes aquí (JPG, PNG, WEBP)",
       "prog": "Comprimiendo...",
       "results": "Resultados",
-      "pctSmaller": "más pequeño"
+      "pctSmaller": "más pequeño",
+      "faq": [
+        {
+          "q": "¿Cómo comprimo una imagen en línea gratis?",
+          "a": "Sube tu imagen, ajusta el control deslizante de calidad y haz clic en Comprimir imagen."
+        },
+        {
+          "q": "¿Qué formatos de imagen puedo comprimir?",
+          "a": "Se admiten los formatos JPG, PNG y WebP."
+        },
+        {
+          "q": "¿Cuánto puede reducir el tamaño la compresión?",
+          "a": "Normalmente entre 40 y 80 porciento dependiendo del original."
+        },
+        {
+          "q": "¿Se verá diferente mi imagen después de comprimirla?",
+          "a": "Con calidad 80 o superior, la diferencia es invisible a simple vista."
+        },
+        {
+          "q": "¿Mi imagen se sube a un servidor?",
+          "a": "No. La compresión usa browser-image-compression y se ejecuta completamente en tu navegador."
+        }
+      ]
     },
     "imgConvert": {
-      "title": "Convertir Formato", "desc": "Convierte instantáneamente entre JPG ↔ PNG ↔ WEBP.", "badge": null, "icon": "🔄",
-      "meta": { "title": "Convertir Formato de Imagen – Gratis Online", "description": "Convierte instantáneamente entre JPG, PNG, WEBP. Gratis, en el navegador.", "keywords": ["convertir formato de imagen", "jpg a png gratis"] },
+      "title": "Convertir Formato",
+      "desc": "Convierte instantáneamente entre JPG ↔ PNG ↔ WEBP.",
+      "badge": null,
+      "icon": "🔄",
+      "meta": {
+        "title": "Convertir Formato de Imagen – Gratis Online",
+        "description": "Convierte instantáneamente entre JPG, PNG, WEBP. Gratis, en el navegador.",
+        "keywords": [
+          "convertir formato de imagen",
+          "jpg a png gratis"
+        ]
+      },
       "heading": "Convertir Formato",
       "sub": "Convierte instantáneamente JPG ↔ PNG ↔ WEBP.",
       "target": "Formato de destino",
       "drop": "Arrastra imágenes aquí",
       "done": "¡Conversión completada!",
       "prog": "Convirtiendo...",
-      "btn": "Convertir a"
+      "btn": "Convertir a",
+      "faq": [
+        {
+          "q": "¿Cómo convierto el formato de una imagen en línea?",
+          "a": "Sube tu imagen, elige el formato de salida y haz clic en Convertir."
+        },
+        {
+          "q": "¿Qué formatos de imagen son compatibles?",
+          "a": "Puedes convertir entre JPG, PNG y WebP."
+        },
+        {
+          "q": "¿Convertir PNG a JPG pierde calidad?",
+          "a": "La conversión elimina la transparencia, las áreas transparentes se vuelven blancas. La calidad de imagen se preserva."
+        },
+        {
+          "q": "¿Puedo convertir múltiples imágenes a la vez?",
+          "a": "Sube múltiples imágenes y cada una se convertirá individualmente."
+        },
+        {
+          "q": "¿Es gratuita la conversión de imágenes?",
+          "a": "Sí, completamente gratuita sin necesidad de cuenta."
+        }
+      ]
     },
     "imgRemoveBg": {
-      "title": "Eliminar Fondo", "desc": "Elimina automáticamente fondos de imágenes con IA.", "badge": "IA", "icon": "🪄",
-      "meta": { "title": "Eliminar Fondo – Gratis Online con IA", "description": "Elimina automáticamente fondos de imágenes. Se ejecuta completamente en tu navegador.", "keywords": ["eliminar fondo gratis", "quitar fondo de imagen online"] },
+      "title": "Eliminar Fondo",
+      "desc": "Elimina automáticamente fondos de imágenes con IA.",
+      "badge": "IA",
+      "icon": "🪄",
+      "meta": {
+        "title": "Eliminar Fondo – Gratis Online con IA",
+        "description": "Elimina automáticamente fondos de imágenes. Se ejecuta completamente en tu navegador.",
+        "keywords": [
+          "eliminar fondo gratis",
+          "quitar fondo de imagen online"
+        ]
+      },
       "heading": "Eliminar Fondo",
       "sub": "Elimina automáticamente fondos de imágenes. Se ejecuta completamente en tu navegador.",
       "aiBadge": "Impulsado por IA · Tus datos nunca salen de tu dispositivo",
@@ -364,56 +985,223 @@
       "failed": "Error al eliminar el fondo.",
       "original": "Original",
       "removed": "Fondo eliminado",
-      "downloadPng": "Descargar PNG (fondo transparente)"
+      "downloadPng": "Descargar PNG (fondo transparente)",
+      "faq": [
+        {
+          "q": "¿Cómo elimino el fondo de una imagen gratis?",
+          "a": "Sube tu imagen y el modelo de IA detecta y elimina automáticamente el fondo. El resultado se descarga como PNG transparente."
+        },
+        {
+          "q": "¿Funciona la eliminación de fondo en fotos de personas?",
+          "a": "Sí. La IA está optimizada para retratos y funciona bien con personas, mascotas y objetos con bordes claros."
+        },
+        {
+          "q": "¿Cuál es el formato de salida tras eliminar el fondo?",
+          "a": "Siempre PNG, porque PNG admite fondos transparentes. JPG no admite transparencia."
+        },
+        {
+          "q": "¿Qué tan precisa es la eliminación de fondo?",
+          "a": "Para fotos con separación clara del sujeto, la precisión es muy alta. Fondos complejos pueden tener pequeñas imperfecciones."
+        },
+        {
+          "q": "¿Mi foto se sube a un servidor para la IA?",
+          "a": "No. El modelo de IA se ejecuta completamente en tu navegador. Tus fotos nunca abandonan tu dispositivo."
+        }
+      ]
     },
     "imgResize": {
-      "title": "Redimensionar Imagen", "desc": "Redimensiona imágenes a cualquier dimensión.", "badge": null, "icon": "📐",
-      "meta": { "title": "Redimensionar Imagen – Gratis Online", "description": "Establece el ancho y alto de una imagen. Gratis, en el navegador.", "keywords": ["redimensionar imagen gratis", "cambiar tamaño de imagen online"] },
+      "title": "Redimensionar Imagen",
+      "desc": "Redimensiona imágenes a cualquier dimensión.",
+      "badge": null,
+      "icon": "📐",
+      "meta": {
+        "title": "Redimensionar Imagen – Gratis Online",
+        "description": "Establece el ancho y alto de una imagen. Gratis, en el navegador.",
+        "keywords": [
+          "redimensionar imagen gratis",
+          "cambiar tamaño de imagen online"
+        ]
+      },
       "heading": "Redimensionar Imagen",
       "sub": "Establece el ancho y alto de una imagen. Usa el bloqueo de relación de aspecto para mantener las proporciones.",
       "drop": "Arrastra imagen aquí (JPG, PNG, WEBP)",
       "original": "Original",
-      "width": "Ancho (px)", "height": "Alto (px)",
-      "locked": "Relación de aspecto bloqueada", "unlocked": "Relación de aspecto desbloqueada",
+      "width": "Ancho (px)",
+      "height": "Alto (px)",
+      "locked": "Relación de aspecto bloqueada",
+      "unlocked": "Relación de aspecto desbloqueada",
       "success": "¡Imagen redimensionada y descargada!",
-      "btn": "Redimensionar y Descargar"
+      "btn": "Redimensionar y Descargar",
+      "faq": [
+        {
+          "q": "¿Cómo cambio el tamaño de una imagen en línea?",
+          "a": "Sube tu imagen, ingresa el ancho y alto objetivo o un porcentaje, y haz clic en Cambiar tamaño."
+        },
+        {
+          "q": "¿Puedo cambiar el tamaño manteniendo la relación de aspecto?",
+          "a": "Sí. Activa Mantener relación de aspecto e ingresa solo una dimensión, la otra se ajusta automáticamente."
+        },
+        {
+          "q": "¿Cambiar el tamaño reduce la calidad?",
+          "a": "Reducir tamaño preserva bien la calidad. Aumentarlo puede introducir cierta borrosidad."
+        },
+        {
+          "q": "¿Qué formatos son compatibles?",
+          "a": "Se admiten imágenes JPG, PNG y WebP."
+        },
+        {
+          "q": "¿Hay un tamaño máximo al que puedo cambiar?",
+          "a": "Sin límite fijo. Puedes ampliar o reducir a cualquier dimensión."
+        }
+      ]
     },
     "imgCrop": {
-      "title": "Recortar Imagen", "desc": "Recorta cualquier área de tu imagen.", "badge": null, "icon": "✂️",
-      "meta": { "title": "Recortar Imagen – Gratis Online", "description": "Recorta cualquier área de tu imagen. Gratis, en el navegador.", "keywords": ["recortar imagen gratis", "cortar foto online"] },
+      "title": "Recortar Imagen",
+      "desc": "Recorta cualquier área de tu imagen.",
+      "badge": null,
+      "icon": "✂️",
+      "meta": {
+        "title": "Recortar Imagen – Gratis Online",
+        "description": "Recorta cualquier área de tu imagen. Gratis, en el navegador.",
+        "keywords": [
+          "recortar imagen gratis",
+          "cortar foto online"
+        ]
+      },
       "heading": "Recortar Imagen",
       "sub": "Recorta cualquier área de tu imagen y descárgala.",
       "drop": "Arrastra imagen aquí (JPG, PNG, WEBP)",
       "cropArea": "Área de recorte",
-      "fromLeft": "Inicio desde la izquierda (X)", "fromTop": "Inicio desde arriba (Y)",
-      "width": "Ancho", "height": "Alto",
+      "fromLeft": "Inicio desde la izquierda (X)",
+      "fromTop": "Inicio desde arriba (Y)",
+      "width": "Ancho",
+      "height": "Alto",
       "success": "¡Imagen recortada y descargada!",
-      "btn": "Recortar y Descargar"
+      "btn": "Recortar y Descargar",
+      "faq": [
+        {
+          "q": "¿Cómo recorto una imagen en línea gratis?",
+          "a": "Sube tu imagen, arrastra los controles de recorte para seleccionar el área y haz clic en Recortar."
+        },
+        {
+          "q": "¿Puedo recortar con una relación de aspecto específica?",
+          "a": "Sí. Elige una relación preestablecida como 1:1, 16:9 o 4:3, o establece una relación personalizada."
+        },
+        {
+          "q": "¿El recorte reduce la calidad de la imagen?",
+          "a": "No. El área seleccionada se extrae con la resolución original completa."
+        },
+        {
+          "q": "¿Puedo ajustar la selección antes de guardar?",
+          "a": "Sí. Ajusta la selección tantas veces como necesites antes de hacer clic en Descargar."
+        },
+        {
+          "q": "¿Qué formatos de imagen admite la herramienta de recorte?",
+          "a": "Se admiten los formatos JPG, PNG y WebP."
+        }
+      ]
     },
     "imgRotate": {
-      "title": "Rotar / Voltear Imagen", "desc": "Rota o voltea una imagen.", "badge": null, "icon": "🔄",
-      "meta": { "title": "Rotar Imagen – Gratis Online", "description": "Rota o voltea una imagen. Gratis, en el navegador.", "keywords": ["rotar imagen gratis", "voltear imagen online"] },
+      "title": "Rotar / Voltear Imagen",
+      "desc": "Rota o voltea una imagen.",
+      "badge": null,
+      "icon": "🔄",
+      "meta": {
+        "title": "Rotar Imagen – Gratis Online",
+        "description": "Rota o voltea una imagen. Gratis, en el navegador.",
+        "keywords": [
+          "rotar imagen gratis",
+          "voltear imagen online"
+        ]
+      },
       "heading": "Rotar / Voltear Imagen",
       "sub": "Rota o voltea una imagen horizontal o verticalmente.",
       "drop": "Arrastra imagen aquí (JPG, PNG, WEBP)",
-      "r90": "90° Derecha", "l90": "90° Izquierda", "r180": "180°",
-      "flipH": "Voltear Horizontal", "flipV": "Voltear Vertical",
+      "r90": "90° Derecha",
+      "l90": "90° Izquierda",
+      "r180": "180°",
+      "flipH": "Voltear Horizontal",
+      "flipV": "Voltear Vertical",
       "success": "¡Imagen procesada y descargada!",
-      "btn": "Aplicar y Descargar"
+      "btn": "Aplicar y Descargar",
+      "faq": [
+        {
+          "q": "¿Cómo roto una imagen en línea?",
+          "a": "Sube tu imagen, haz clic en los botones de rotación o volteo, luego descarga."
+        },
+        {
+          "q": "¿Puedo voltear una imagen horizontal o verticalmente?",
+          "a": "Sí. Usa los botones de volteo para reflejar tu imagen de izquierda a derecha o de arriba a abajo."
+        },
+        {
+          "q": "¿Rotar una imagen reduce su calidad?",
+          "a": "No. La rotación y el volteo son operaciones sin pérdida, no se pierden píxeles."
+        },
+        {
+          "q": "¿Puedo rotar a ángulos personalizados como 45 grados?",
+          "a": "Actualmente solo se admiten rotaciones de 90°, 180° y 270°."
+        },
+        {
+          "q": "¿Es gratuita la rotación de imágenes?",
+          "a": "Sí, completamente gratuita sin necesidad de cuenta."
+        }
+      ]
     },
     "imgToPdf": {
-      "title": "Imagen → PDF", "desc": "Convierte imágenes en un solo PDF.", "badge": null, "icon": "📋",
-      "meta": { "title": "Imagen a PDF – Gratis Online", "description": "Convierte imágenes JPG, PNG, WEBP en un solo archivo PDF. Gratis, en el navegador.", "keywords": ["imagen a pdf gratis", "jpg a pdf convertidor"] },
+      "title": "Imagen → PDF",
+      "desc": "Convierte imágenes en un solo PDF.",
+      "badge": null,
+      "icon": "📋",
+      "meta": {
+        "title": "Imagen a PDF – Gratis Online",
+        "description": "Convierte imágenes JPG, PNG, WEBP en un solo archivo PDF. Gratis, en el navegador.",
+        "keywords": [
+          "imagen a pdf gratis",
+          "jpg a pdf convertidor"
+        ]
+      },
       "heading": "Imagen → PDF",
       "sub": "Convierte imágenes JPG, PNG y WEBP en un solo archivo PDF.",
       "drop": "Arrastra archivos de imagen aquí",
       "success": "¡PDF creado y descargado!",
       "prog": "Creando...",
-      "btn": "Crear PDF"
+      "btn": "Crear PDF",
+      "faq": [
+        {
+          "q": "¿Cómo convierto imágenes a PDF?",
+          "a": "Sube una o más imágenes, ordénalas si es necesario y haz clic en Convertir a PDF."
+        },
+        {
+          "q": "¿Puedo combinar múltiples imágenes en un PDF?",
+          "a": "Sí. Cada imagen se convierte en una página separada en el PDF resultante."
+        },
+        {
+          "q": "¿Qué formatos de imagen puedo convertir a PDF?",
+          "a": "Se admiten imágenes JPG, PNG y WebP."
+        },
+        {
+          "q": "¿Se preservará la calidad de imagen en el PDF?",
+          "a": "Sí. Las imágenes se incrustan a su resolución original."
+        },
+        {
+          "q": "¿Hay límite en cuántas imágenes puedo convertir?",
+          "a": "Sin límite fijo. Agrega tantas imágenes como necesites."
+        }
+      ]
     },
     "imgHeicToJpg": {
-      "title": "HEIC → JPG", "desc": "Convierte fotos de iPhone a JPG.", "badge": null, "icon": "📱",
-      "meta": { "title": "HEIC a JPG – Gratis Online", "description": "Convierte fotos de iPhone (HEIC/HEIF) a formato JPG. Gratis, en el navegador.", "keywords": ["heic a jpg gratis", "convertir fotos de iphone"] },
+      "title": "HEIC → JPG",
+      "desc": "Convierte fotos de iPhone a JPG.",
+      "badge": null,
+      "icon": "📱",
+      "meta": {
+        "title": "HEIC a JPG – Gratis Online",
+        "description": "Convierte fotos de iPhone (HEIC/HEIF) a formato JPG. Gratis, en el navegador.",
+        "keywords": [
+          "heic a jpg gratis",
+          "convertir fotos de iphone"
+        ]
+      },
       "heading": "HEIC → JPG",
       "sub": "Convierte fotos de iPhone (HEIC/HEIF) a formato JPG.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus fotos nunca se envían a un servidor.",
@@ -421,55 +1209,200 @@
       "prog": "Convirtiendo...",
       "success": "¡archivo(s) convertido(s) a JPG y descargado(s)!",
       "errFormat": "Ocurrió un error. Asegúrate de que tu archivo esté realmente en formato HEIC/HEIF.",
-      "btn": "Convertir a JPG"
+      "btn": "Convertir a JPG",
+      "faq": [
+        {
+          "q": "¿Cómo convierto fotos HEIC del iPhone a JPG?",
+          "a": "Sube tu archivo HEIC y haz clic en Convertir. La versión JPG se descarga al instante."
+        },
+        {
+          "q": "¿Por qué las fotos del iPhone están en formato HEIC?",
+          "a": "Apple usa HEIC porque ofrece mejor compresión que JPG manteniendo la calidad."
+        },
+        {
+          "q": "¿La conversión de HEIC a JPG reduce la calidad?",
+          "a": "Puede haber una pequeña pérdida de calidad, pero en la práctica la diferencia apenas se nota."
+        },
+        {
+          "q": "¿Puedo convertir múltiples archivos HEIC a la vez?",
+          "a": "Sí. Sube múltiples archivos HEIC y cada uno se convertirá individualmente."
+        },
+        {
+          "q": "¿Es gratuita la conversión de HEIC a JPG?",
+          "a": "Sí, completamente gratuita sin necesidad de cuenta."
+        }
+      ]
     },
     "imgWatermark": {
-      "title": "Añadir Marca de Agua", "desc": "Estampa una marca de agua de texto personalizada en tu imagen.", "badge": "Nuevo", "icon": "🔏",
-      "meta": { "title": "Marca de Agua en Imagen – Gratis Online", "description": "Añade una marca de agua de texto personalizada a tu imagen. Gratis, en el navegador.", "keywords": ["marca de agua en imagen gratis", "añadir marca de agua a imagen"] },
+      "title": "Añadir Marca de Agua",
+      "desc": "Estampa una marca de agua de texto personalizada en tu imagen.",
+      "badge": "Nuevo",
+      "icon": "🔏",
+      "meta": {
+        "title": "Marca de Agua en Imagen – Gratis Online",
+        "description": "Añade una marca de agua de texto personalizada a tu imagen. Gratis, en el navegador.",
+        "keywords": [
+          "marca de agua en imagen gratis",
+          "añadir marca de agua a imagen"
+        ]
+      },
       "heading": "Añadir Marca de Agua",
       "sub": "Añade una marca de agua de texto personalizada a tu imagen.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus imágenes nunca se envían a un servidor.",
       "drop": "Arrastra imagen aquí (JPG, PNG, WEBP)",
       "wmText": "Texto de marca de agua",
       "wmPlaceholder": "Introduce el texto de la marca de agua",
-      "center": "Centro", "tiled": "Mosaico",
-      "topLeft": "Superior izquierda", "topRight": "Superior derecha", "botLeft": "Inferior izquierda", "botRight": "Inferior derecha",
-      "colors": { "white": "Blanco", "black": "Negro", "gray": "Gris", "red": "Rojo", "yellow": "Amarillo" },
+      "center": "Centro",
+      "tiled": "Mosaico",
+      "topLeft": "Superior izquierda",
+      "topRight": "Superior derecha",
+      "botLeft": "Inferior izquierda",
+      "botRight": "Inferior derecha",
+      "colors": {
+        "white": "Blanco",
+        "black": "Negro",
+        "gray": "Gris",
+        "red": "Rojo",
+        "yellow": "Amarillo"
+      },
       "success": "¡Imagen con marca de agua descargada!",
-      "btn": "Aplicar y Descargar"
+      "btn": "Aplicar y Descargar",
+      "faq": [
+        {
+          "q": "¿Cómo agrego una marca de agua a una imagen?",
+          "a": "Sube tu imagen, escribe el texto, elige tamaño, opacidad, color y posición, luego haz clic en Agregar marca de agua."
+        },
+        {
+          "q": "¿Puedo hacer la marca de agua semitransparente?",
+          "a": "Sí. Ajusta el control deslizante de opacidad para hacer la marca más o menos transparente."
+        },
+        {
+          "q": "¿Puedo posicionar la marca de agua en cualquier lugar?",
+          "a": "Elige entre posiciones preestablecidas: centro, esquinas o bordes de la imagen."
+        },
+        {
+          "q": "¿La marca de agua será permanente?",
+          "a": "Sí. La marca se fusiona en los píxeles de la imagen. Guarda el original si necesitas hacer cambios."
+        },
+        {
+          "q": "¿Funciona la marca de agua en imágenes PNG?",
+          "a": "Sí. Se admiten imágenes JPG, PNG y WebP."
+        }
+      ]
     },
     "imgAddText": {
-      "title": "Añadir Texto a Imagen", "desc": "Haz clic en cualquier lugar de la imagen para colocar texto personalizado.", "badge": "Nuevo", "icon": "✏️",
-      "meta": { "title": "Añadir Texto a Imagen – Gratis Online", "description": "Escribe texto y haz clic para colocarlo en tu imagen. Gratis, en el navegador.", "keywords": ["añadir texto a imagen gratis", "texto en foto online"] },
+      "title": "Añadir Texto a Imagen",
+      "desc": "Haz clic en cualquier lugar de la imagen para colocar texto personalizado.",
+      "badge": "Nuevo",
+      "icon": "✏️",
+      "meta": {
+        "title": "Añadir Texto a Imagen – Gratis Online",
+        "description": "Escribe texto y haz clic para colocarlo en tu imagen. Gratis, en el navegador.",
+        "keywords": [
+          "añadir texto a imagen gratis",
+          "texto en foto online"
+        ]
+      },
       "heading": "Añadir Texto a Imagen",
       "sub": "Escribe tu texto y haz clic en cualquier lugar de la imagen para colocarlo.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus imágenes nunca se envían a un servidor.",
       "drop": "Arrastra imagen aquí (JPG, PNG, WEBP)",
       "textLabel": "Texto a añadir",
       "textPlaceholder": "Escribe tu texto...",
-      "bold": "N", "shadow": "S",
-      "colors": { "white": "Blanco", "black": "Negro", "yellow": "Amarillo", "red": "Rojo", "blue": "Azul" },
+      "bold": "N",
+      "shadow": "S",
+      "colors": {
+        "white": "Blanco",
+        "black": "Negro",
+        "yellow": "Amarillo",
+        "red": "Rojo",
+        "blue": "Azul"
+      },
       "clickToPlace": "Haz clic en la imagen de abajo para colocar el texto",
       "enterFirst": "Introduce el texto arriba y luego haz clic en la imagen para colocarlo",
       "layers": "capa(s) de texto",
       "undoLast": "Deshacer último",
       "success": "¡Imagen descargada con éxito!",
       "addFirst": "Primero añade texto a la imagen",
-      "btn": "Descargar Imagen"
+      "btn": "Descargar Imagen",
+      "faq": [
+        {
+          "q": "¿Cómo agrego texto a una imagen en línea?",
+          "a": "Sube tu imagen, escribe tu texto, elige tamaño de fuente y color, luego haz clic en la imagen para colocar el texto."
+        },
+        {
+          "q": "¿Puedo cambiar el color del texto?",
+          "a": "Sí. Usa el selector de color para elegir cualquier color de texto."
+        },
+        {
+          "q": "¿Puedo agregar múltiples textos a una imagen?",
+          "a": "Sí. Coloca texto en múltiples posiciones haciendo clic en diferentes áreas de la imagen."
+        },
+        {
+          "q": "¿El texto queda permanentemente incrustado en la imagen?",
+          "a": "Sí. El texto se renderiza sobre la imagen. Guarda el original si necesitas editar después."
+        },
+        {
+          "q": "¿Qué formatos de imagen son compatibles?",
+          "a": "Se admiten imágenes JPG, PNG y WebP."
+        }
+      ]
     },
     "convWordToPdf": {
-      "title": "Word → PDF", "desc": "Convierte documentos Word a PDF.", "badge": null, "icon": "📋",
-      "meta": { "title": "Word a PDF – Gratis Online", "description": "Convierte documentos Word (.docx) a PDF. Gratis, en el navegador.", "keywords": ["word a pdf gratis", "docx a pdf online"] },
+      "title": "Word → PDF",
+      "desc": "Convierte documentos Word a PDF.",
+      "badge": null,
+      "icon": "📋",
+      "meta": {
+        "title": "Word a PDF – Gratis Online",
+        "description": "Convierte documentos Word (.docx) a PDF. Gratis, en el navegador.",
+        "keywords": [
+          "word a pdf gratis",
+          "docx a pdf online"
+        ]
+      },
       "heading": "Word → PDF",
       "sub": "Convierte documentos Word (.docx) a formato PDF. Se ejecuta en tu navegador.",
       "drop": "Arrastra el archivo DOCX aquí",
       "errGeneric": "Ocurrió un error durante la conversión.",
       "success": "¡PDF creado y descargado con éxito!",
-      "btn": "Convertir a PDF"
+      "btn": "Convertir a PDF",
+      "faq": [
+        {
+          "q": "¿Cómo convierto Word a PDF en línea gratis?",
+          "a": "Sube tu archivo .docx y haz clic en Convertir a PDF. Tu PDF se descarga al instante con el formato preservado."
+        },
+        {
+          "q": "¿La conversión preserva el formato?",
+          "a": "Se preserva el formato básico como encabezados, negrita, cursiva y estructura de párrafos."
+        },
+        {
+          "q": "¿Qué formatos de Word son compatibles?",
+          "a": "Se admite completamente .docx (Word 2007+). Convierte los archivos .doc más antiguos a .docx primero."
+        },
+        {
+          "q": "¿Mi documento Word se sube a un servidor?",
+          "a": "No. La conversión usa mammoth.js y se ejecuta completamente en tu navegador."
+        },
+        {
+          "q": "¿Es gratuita la conversión de Word a PDF?",
+          "a": "Sí, completamente gratuita sin necesidad de cuenta."
+        }
+      ]
     },
     "convExcelToPdf": {
-      "title": "Excel → PDF", "desc": "Convierte archivos XLSX/XLS a PDF.", "badge": "Nuevo", "icon": "📊",
-      "meta": { "title": "Excel a PDF – Gratis Online", "description": "Convierte archivos Excel a PDF. Gratis, en el navegador.", "keywords": ["excel a pdf gratis", "xlsx a pdf online"] },
+      "title": "Excel → PDF",
+      "desc": "Convierte archivos XLSX/XLS a PDF.",
+      "badge": "Nuevo",
+      "icon": "📊",
+      "meta": {
+        "title": "Excel a PDF – Gratis Online",
+        "description": "Convierte archivos Excel a PDF. Gratis, en el navegador.",
+        "keywords": [
+          "excel a pdf gratis",
+          "xlsx a pdf online"
+        ]
+      },
       "heading": "Excel → PDF",
       "sub": "Convierte archivos Excel (XLSX/XLS) a PDF.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca se envían a un servidor.",
@@ -478,11 +1411,43 @@
       "rows": "filas",
       "success": "¡PDF creado y descargado!",
       "errDefault": "No se pudo convertir el archivo. Asegúrate de que sea un archivo XLSX/XLS válido.",
-      "btn": "Convertir a PDF"
+      "btn": "Convertir a PDF",
+      "faq": [
+        {
+          "q": "¿Cómo convierto Excel a PDF en línea?",
+          "a": "Sube tu archivo .xlsx y haz clic en Convertir a PDF. Cada hoja se convierte en una página del PDF."
+        },
+        {
+          "q": "¿La conversión admite múltiples hojas?",
+          "a": "Sí. Cada hoja de cálculo se convierte en una página separada del PDF."
+        },
+        {
+          "q": "¿La conversión preserva las fórmulas de Excel?",
+          "a": "La herramienta convierte los valores calculados visibles en las celdas, no las fórmulas."
+        },
+        {
+          "q": "¿Mi archivo Excel se sube a un servidor?",
+          "a": "No. La conversión usa xlsx.js y jsPDF completamente en tu navegador."
+        },
+        {
+          "q": "¿Es gratuita la conversión de Excel a PDF?",
+          "a": "Sí, completamente gratuita sin necesidad de cuenta."
+        }
+      ]
     },
     "convHtmlToPdf": {
-      "title": "HTML → PDF", "desc": "Convierte código HTML o un archivo a PDF.", "badge": "Nuevo", "icon": "🌐",
-      "meta": { "title": "HTML a PDF – Gratis Online", "description": "Convierte código HTML o un archivo a PDF. Gratis, en el navegador.", "keywords": ["html a pdf gratis", "página web a pdf online"] },
+      "title": "HTML → PDF",
+      "desc": "Convierte código HTML o un archivo a PDF.",
+      "badge": "Nuevo",
+      "icon": "🌐",
+      "meta": {
+        "title": "HTML a PDF – Gratis Online",
+        "description": "Convierte código HTML o un archivo a PDF. Gratis, en el navegador.",
+        "keywords": [
+          "html a pdf gratis",
+          "página web a pdf online"
+        ]
+      },
       "heading": "HTML → PDF",
       "sub": "Convierte código HTML o un archivo a PDF.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca se envían a un servidor.",
@@ -492,11 +1457,43 @@
       "dropHtml": "Arrastra el archivo HTML aquí (.html, .htm)",
       "success": "¡PDF creado y descargado!",
       "errGeneric": "Ocurrió un error durante la conversión. Por favor, inténtalo de nuevo.",
-      "btn": "Convertir a PDF"
+      "btn": "Convertir a PDF",
+      "faq": [
+        {
+          "q": "¿Cómo convierto HTML a PDF en línea?",
+          "a": "Pega tu código HTML en el editor o sube un archivo HTML, luego haz clic en Convertir a PDF."
+        },
+        {
+          "q": "¿La conversión preserva los estilos CSS?",
+          "a": "Se preservan los estilos CSS básicos en línea e incrustados. Las hojas de estilo externas pueden no renderizarse."
+        },
+        {
+          "q": "¿Puedo convertir una página web a PDF?",
+          "a": "Puedes pegar el código fuente HTML. Para renderización completa con CSS externo, usa la función Imprimir a PDF del navegador."
+        },
+        {
+          "q": "¿Mi contenido HTML se sube a un servidor?",
+          "a": "No. La conversión usa html2canvas y jsPDF en tu navegador."
+        },
+        {
+          "q": "¿Es gratuita la conversión de HTML a PDF?",
+          "a": "Sí, completamente gratuita."
+        }
+      ]
     },
     "convMdToPdf": {
-      "title": "Markdown → PDF", "desc": "Convierte texto Markdown a PDF.", "badge": "Nuevo", "icon": "📝",
-      "meta": { "title": "Markdown a PDF – Gratis Online", "description": "Convierte texto Markdown o un archivo a PDF. Gratis, en el navegador.", "keywords": ["markdown a pdf gratis", "archivo md a pdf"] },
+      "title": "Markdown → PDF",
+      "desc": "Convierte texto Markdown a PDF.",
+      "badge": "Nuevo",
+      "icon": "📝",
+      "meta": {
+        "title": "Markdown a PDF – Gratis Online",
+        "description": "Convierte texto Markdown o un archivo a PDF. Gratis, en el navegador.",
+        "keywords": [
+          "markdown a pdf gratis",
+          "archivo md a pdf"
+        ]
+      },
       "heading": "Markdown → PDF",
       "sub": "Convierte texto Markdown o un archivo .md a PDF.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus archivos nunca se envían a un servidor.",
@@ -508,59 +1505,196 @@
       "remove": "Eliminar",
       "success": "¡PDF creado y descargado!",
       "errGeneric": "Ocurrió un error durante la conversión. Por favor, inténtalo de nuevo.",
-      "btn": "Convertir a PDF"
+      "btn": "Convertir a PDF",
+      "faq": [
+        {
+          "q": "¿Cómo convierto Markdown a PDF?",
+          "a": "Pega tu texto Markdown o sube un archivo .md, luego haz clic en Convertir a PDF."
+        },
+        {
+          "q": "¿La conversión admite toda la sintaxis Markdown?",
+          "a": "Se admite Markdown estándar: encabezados, negrita, cursiva, listas, bloques de código, citas y enlaces."
+        },
+        {
+          "q": "¿El PDF resultante tiene buen formato?",
+          "a": "Sí. El PDF usa tipografía limpia con tamaños de encabezado apropiados y formato de código."
+        },
+        {
+          "q": "¿Puedo convertir archivos Markdown de GitHub?",
+          "a": "Sí. Sube tu archivo .md directamente o pega el contenido."
+        },
+        {
+          "q": "¿Es gratuita la conversión de Markdown a PDF?",
+          "a": "Sí, completamente gratuita."
+        }
+      ]
     },
     "vidCompress": {
-      "title": "Comprimir Vídeo", "desc": "Reduce el tamaño de archivos de vídeo sin perder calidad.", "badge": "Nuevo", "icon": "🗜️",
-      "meta": { "title": "Comprimir Vídeo – Gratis Online", "description": "Reduce el tamaño de archivos de vídeo. Con ffmpeg.wasm, gratis, en el navegador.", "keywords": ["comprimir vídeo gratis", "reducir tamaño de vídeo"] },
+      "title": "Comprimir Vídeo",
+      "desc": "Reduce el tamaño de archivos de vídeo sin perder calidad.",
+      "badge": "Nuevo",
+      "icon": "🗜️",
+      "meta": {
+        "title": "Comprimir Vídeo – Gratis Online",
+        "description": "Reduce el tamaño de archivos de vídeo. Con ffmpeg.wasm, gratis, en el navegador.",
+        "keywords": [
+          "comprimir vídeo gratis",
+          "reducir tamaño de vídeo"
+        ]
+      },
       "heading": "Comprimir Vídeo",
       "sub": "Reduce el tamaño de vídeos MP4, MOV y WEBM.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus vídeos nunca se envían a un servidor.",
       "drop": "Arrastra el archivo de vídeo aquí",
       "qualityLabel": "Calidad",
-      "high": "Alta Calidad", "highSub": "Pérdida mínima",
-      "balanced": "Equilibrado", "balancedSub": "Recomendado",
-      "small": "Tamaño Pequeño", "smallSub": "Archivo más pequeño",
-      "original": "Original", "compressed": "Comprimido",
+      "high": "Alta Calidad",
+      "highSub": "Pérdida mínima",
+      "balanced": "Equilibrado",
+      "balancedSub": "Recomendado",
+      "small": "Tamaño Pequeño",
+      "smallSub": "Archivo más pequeño",
+      "original": "Original",
+      "compressed": "Comprimido",
       "pctSmaller": "más pequeño",
       "loadingFfmpeg": "Cargando ffmpeg (primera vez ~5 segundos)...",
       "prog": "Comprimiendo vídeo...",
       "success": "¡Vídeo comprimido y descargado!",
-      "btn": "Comprimir Vídeo"
+      "btn": "Comprimir Vídeo",
+      "faq": [
+        {
+          "q": "¿Cómo comprimo un video en línea gratis?",
+          "a": "Sube tu video, elige el nivel de compresión y haz clic en Comprimir. FFmpeg se ejecuta en tu navegador."
+        },
+        {
+          "q": "¿Cuánto puede reducir el tamaño la compresión de video?",
+          "a": "Normalmente entre 40 y 70 porciento de reducción."
+        },
+        {
+          "q": "¿La compresión de video reduce la calidad?",
+          "a": "Alguna pérdida de calidad es inevitable. Elige menor compresión para mejor calidad."
+        },
+        {
+          "q": "¿Qué formatos de video son compatibles?",
+          "a": "Se admiten archivos MP4, WebM y MOV."
+        },
+        {
+          "q": "¿Mi video se sube a un servidor?",
+          "a": "No. La compresión usa FFmpeg.wasm y se ejecuta completamente en tu navegador."
+        }
+      ]
     },
     "vidTrim": {
-      "title": "Recortar Vídeo", "desc": "Corta cualquier parte de tu vídeo.", "badge": "Nuevo", "icon": "✂️",
-      "meta": { "title": "Recortar Vídeo – Gratis Online", "description": "Corta cualquier sección de un vídeo. Con ffmpeg.wasm, gratis, en el navegador.", "keywords": ["recortar vídeo gratis", "cortar vídeo online"] },
+      "title": "Recortar Vídeo",
+      "desc": "Corta cualquier parte de tu vídeo.",
+      "badge": "Nuevo",
+      "icon": "✂️",
+      "meta": {
+        "title": "Recortar Vídeo – Gratis Online",
+        "description": "Corta cualquier sección de un vídeo. Con ffmpeg.wasm, gratis, en el navegador.",
+        "keywords": [
+          "recortar vídeo gratis",
+          "cortar vídeo online"
+        ]
+      },
       "heading": "Recortar Vídeo",
       "sub": "Corta cualquier sección de un vídeo y descárgalo.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus vídeos nunca se envían a un servidor.",
       "drop": "Arrastra el archivo de vídeo aquí",
-      "start": "Inicio", "end": "Fin",
-      "trimmed": "Duración recortada", "total": "Total",
+      "start": "Inicio",
+      "end": "Fin",
+      "trimmed": "Duración recortada",
+      "total": "Total",
       "loadingFfmpeg": "Cargando ffmpeg...",
       "prog": "Recortando vídeo...",
       "success": "¡Vídeo recortado y descargado!",
-      "btn": "Recortar Vídeo"
+      "btn": "Recortar Vídeo",
+      "faq": [
+        {
+          "q": "¿Cómo recorto un video en línea?",
+          "a": "Sube tu video, establece el tiempo de inicio y fin usando los controles deslizantes y haz clic en Recortar."
+        },
+        {
+          "q": "¿Recortar un video reduce su calidad?",
+          "a": "No. La herramienta corta en las marcas de tiempo exactas sin recodificar, preservando la calidad original."
+        },
+        {
+          "q": "¿Qué formatos de video son compatibles?",
+          "a": "Se admiten los formatos MP4, WebM y MOV."
+        },
+        {
+          "q": "¿Hay una duración máxima de video que puedo recortar?",
+          "a": "No hay límite de duración, pero los videos más largos requieren más memoria del navegador."
+        },
+        {
+          "q": "¿Mi video se sube a un servidor?",
+          "a": "No. El recorte se ejecuta con FFmpeg.wasm completamente en tu navegador."
+        }
+      ]
     },
     "vidToMp3": {
-      "title": "Vídeo → MP3", "desc": "Extrae audio de un vídeo como MP3.", "badge": "Nuevo", "icon": "🎵",
-      "meta": { "title": "Vídeo a MP3 – Gratis Online", "description": "Extrae audio de un vídeo y descárgalo como MP3. Con ffmpeg.wasm.", "keywords": ["vídeo a mp3 gratis", "extraer audio de vídeo"] },
+      "title": "Vídeo → MP3",
+      "desc": "Extrae audio de un vídeo como MP3.",
+      "badge": "Nuevo",
+      "icon": "🎵",
+      "meta": {
+        "title": "Vídeo a MP3 – Gratis Online",
+        "description": "Extrae audio de un vídeo y descárgalo como MP3. Con ffmpeg.wasm.",
+        "keywords": [
+          "vídeo a mp3 gratis",
+          "extraer audio de vídeo"
+        ]
+      },
       "heading": "Vídeo → MP3",
       "sub": "Extrae audio de un vídeo y descárgalo como MP3.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus vídeos nunca se envían a un servidor.",
       "drop": "Arrastra el archivo de vídeo aquí",
       "mp3Quality": "Calidad MP3",
-      "q320": "320 kbps", "q320Sub": "Máxima calidad",
-      "q192": "192 kbps", "q192Sub": "Recomendado",
-      "q128": "128 kbps", "q128Sub": "Tamaño más pequeño",
+      "q320": "320 kbps",
+      "q320Sub": "Máxima calidad",
+      "q192": "192 kbps",
+      "q192Sub": "Recomendado",
+      "q128": "128 kbps",
+      "q128Sub": "Tamaño más pequeño",
       "loadingFfmpeg": "Cargando ffmpeg...",
       "prog": "Extrayendo audio...",
       "success": "¡MP3 creado y descargado!",
-      "btn": "Convertir a MP3"
+      "btn": "Convertir a MP3",
+      "faq": [
+        {
+          "q": "¿Cómo extraigo el audio de un video?",
+          "a": "Sube tu archivo de video y haz clic en Extraer audio. La pista de audio se descarga como archivo MP3."
+        },
+        {
+          "q": "¿Qué calidad tiene el MP3 extraído?",
+          "a": "El audio se extrae a la tasa de bits original del video, normalmente entre 128 y 192 kbps."
+        },
+        {
+          "q": "¿De qué formatos de video puedo extraer audio?",
+          "a": "Se admiten MP4, WebM, MOV y la mayoría de los formatos de video comunes."
+        },
+        {
+          "q": "¿Es gratuita la extracción de audio?",
+          "a": "Sí, completamente gratuita sin límites."
+        },
+        {
+          "q": "¿Mi video se sube a un servidor?",
+          "a": "No. La extracción se ejecuta con FFmpeg.wasm en tu navegador."
+        }
+      ]
     },
     "vidConvert": {
-      "title": "Convertir Vídeo", "desc": "Cambia el formato entre MP4, WEBM, AVI, MOV.", "badge": "Nuevo", "icon": "🔄",
-      "meta": { "title": "Convertir Vídeo – Gratis Online", "description": "Convierte entre formatos de vídeo. Con ffmpeg.wasm, gratis, en el navegador.", "keywords": ["convertir vídeo gratis", "convertidor de formato de vídeo"] },
+      "title": "Convertir Vídeo",
+      "desc": "Cambia el formato entre MP4, WEBM, AVI, MOV.",
+      "badge": "Nuevo",
+      "icon": "🔄",
+      "meta": {
+        "title": "Convertir Vídeo – Gratis Online",
+        "description": "Convierte entre formatos de vídeo. Con ffmpeg.wasm, gratis, en el navegador.",
+        "keywords": [
+          "convertir vídeo gratis",
+          "convertidor de formato de vídeo"
+        ]
+      },
       "heading": "Convertir Vídeo",
       "sub": "Convierte entre formatos de vídeo.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus vídeos nunca se envían a un servidor.",
@@ -569,24 +1703,91 @@
       "loadingFfmpeg": "Cargando ffmpeg...",
       "prog": "Convirtiendo vídeo...",
       "success": "¡Vídeo convertido y descargado!",
-      "btn": "Convertir a"
+      "btn": "Convertir a",
+      "faq": [
+        {
+          "q": "¿Cómo convierto el formato de video en línea gratis?",
+          "a": "Sube tu video, elige el formato de salida y haz clic en Convertir."
+        },
+        {
+          "q": "¿Entre qué formatos de video puedo convertir?",
+          "a": "Se admiten los formatos MP4, WebM, MOV y AVI tanto para entrada como salida."
+        },
+        {
+          "q": "¿La conversión de video reduce la calidad?",
+          "a": "Recodificar a un formato diferente implica alguna pérdida de calidad mínima."
+        },
+        {
+          "q": "¿Cuánto tarda la conversión de video?",
+          "a": "Depende de la duración del video y tu dispositivo, ya que FFmpeg.wasm se ejecuta en tu navegador."
+        },
+        {
+          "q": "¿Mi video se sube durante la conversión?",
+          "a": "No. Toda la conversión ocurre en tu navegador usando FFmpeg.wasm."
+        }
+      ]
     },
     "vidToGif": {
-      "title": "Vídeo → GIF", "desc": "Crea un GIF animado a partir de un vídeo.", "badge": "Nuevo", "icon": "🎞️",
-      "meta": { "title": "Vídeo a GIF – Gratis Online", "description": "Crea un GIF animado a partir de un vídeo. Con ffmpeg.wasm.", "keywords": ["vídeo a gif gratis", "mp4 a gif online"] },
+      "title": "Vídeo → GIF",
+      "desc": "Crea un GIF animado a partir de un vídeo.",
+      "badge": "Nuevo",
+      "icon": "🎞️",
+      "meta": {
+        "title": "Vídeo a GIF – Gratis Online",
+        "description": "Crea un GIF animado a partir de un vídeo. Con ffmpeg.wasm.",
+        "keywords": [
+          "vídeo a gif gratis",
+          "mp4 a gif online"
+        ]
+      },
       "heading": "Vídeo → GIF",
       "sub": "Crea un GIF animado a partir de un vídeo.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus vídeos nunca se envían a un servidor.",
       "drop": "Arrastra el archivo de vídeo aquí",
-      "startTime": "Tiempo de inicio", "duration": "Duración del GIF", "fps": "FPS", "width": "Ancho",
+      "startTime": "Tiempo de inicio",
+      "duration": "Duración del GIF",
+      "fps": "FPS",
+      "width": "Ancho",
       "loadingFfmpeg": "Cargando ffmpeg...",
       "prog": "Creando GIF...",
       "success": "¡GIF creado y descargado!",
-      "btn": "Crear GIF"
+      "btn": "Crear GIF",
+      "faq": [
+        {
+          "q": "¿Cómo convierto un video a GIF en línea?",
+          "a": "Sube tu video, establece el tiempo de inicio, duración y tamaño, luego haz clic en Convertir a GIF."
+        },
+        {
+          "q": "¿Cuál es la duración recomendada para el GIF?",
+          "a": "Los GIFs crecen muy rápidamente. Recomendamos mantenerlos por debajo de 10 segundos."
+        },
+        {
+          "q": "¿El GIF tendrá sonido?",
+          "a": "No. El formato GIF no admite audio."
+        },
+        {
+          "q": "¿De qué formatos de video puedo crear GIFs?",
+          "a": "Se admiten archivos MP4, WebM y MOV."
+        },
+        {
+          "q": "¿Por qué mi archivo GIF es tan grande?",
+          "a": "GIF es un formato ineficiente para video. Reduce el tamaño, duración o velocidad de fotogramas para obtener un archivo más pequeño."
+        }
+      ]
     },
     "vidMerge": {
-      "title": "Unir Vídeos", "desc": "Une múltiples archivos de vídeo en uno.", "badge": "Nuevo", "icon": "🔗",
-      "meta": { "title": "Unir Vídeos – Gratis Online", "description": "Combina múltiples vídeos en secuencia. Con ffmpeg.wasm.", "keywords": ["unir vídeos gratis", "combinar archivos de vídeo"] },
+      "title": "Unir Vídeos",
+      "desc": "Une múltiples archivos de vídeo en uno.",
+      "badge": "Nuevo",
+      "icon": "🔗",
+      "meta": {
+        "title": "Unir Vídeos – Gratis Online",
+        "description": "Combina múltiples vídeos en secuencia. Con ffmpeg.wasm.",
+        "keywords": [
+          "unir vídeos gratis",
+          "combinar archivos de vídeo"
+        ]
+      },
       "heading": "Unir Vídeos",
       "sub": "Combina múltiples vídeos en secuencia.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus vídeos nunca se envían a un servidor.",
@@ -595,11 +1796,43 @@
       "loadingFfmpeg": "Cargando ffmpeg...",
       "prog": "Uniendo vídeos...",
       "success": "¡Vídeos unidos y descargados!",
-      "btn": "Unir"
+      "btn": "Unir",
+      "faq": [
+        {
+          "q": "¿Cómo combino múltiples videos en línea?",
+          "a": "Sube tus archivos de video, ordénalos si es necesario y haz clic en Combinar."
+        },
+        {
+          "q": "¿Todos los videos deben tener el mismo formato?",
+          "a": "Para mejores resultados, usa videos con el mismo formato y resolución. Los formatos mixtos se recodificarán."
+        },
+        {
+          "q": "¿Combinar videos reduce su calidad?",
+          "a": "Si todos tienen el mismo formato, la pérdida de calidad es mínima. Combinar formatos mixtos requiere recodificación."
+        },
+        {
+          "q": "¿Hay límite en cuántos videos puedo combinar?",
+          "a": "Sin límite fijo, pero los límites de memoria del navegador aplican para archivos muy grandes."
+        },
+        {
+          "q": "¿Es gratuita la combinación de videos?",
+          "a": "Sí, completamente gratuita usando FFmpeg.wasm en tu navegador."
+        }
+      ]
     },
     "vidMute": {
-      "title": "Silenciar Vídeo", "desc": "Elimina todo el audio de un archivo de vídeo.", "badge": "Nuevo", "icon": "🔇",
-      "meta": { "title": "Silenciar Vídeo – Gratis Online", "description": "Elimina el audio de un archivo de vídeo. Con ffmpeg.wasm.", "keywords": ["silenciar vídeo gratis", "quitar audio de vídeo"] },
+      "title": "Silenciar Vídeo",
+      "desc": "Elimina todo el audio de un archivo de vídeo.",
+      "badge": "Nuevo",
+      "icon": "🔇",
+      "meta": {
+        "title": "Silenciar Vídeo – Gratis Online",
+        "description": "Elimina el audio de un archivo de vídeo. Con ffmpeg.wasm.",
+        "keywords": [
+          "silenciar vídeo gratis",
+          "quitar audio de vídeo"
+        ]
+      },
       "heading": "Silenciar Vídeo",
       "sub": "Elimina completamente el audio de un archivo de vídeo.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus vídeos nunca se envían a un servidor.",
@@ -608,22 +1841,79 @@
       "loadingFfmpeg": "Cargando ffmpeg...",
       "prog": "Eliminando audio...",
       "success": "¡Audio eliminado, vídeo descargado!",
-      "btn": "Eliminar Audio"
+      "btn": "Eliminar Audio",
+      "faq": [
+        {
+          "q": "¿Cómo elimino el audio de un video?",
+          "a": "Sube tu video y haz clic en Eliminar audio. El video se descarga sin ninguna pista de sonido."
+        },
+        {
+          "q": "¿Eliminar el audio reduce la calidad del video?",
+          "a": "No. El flujo de video se copia sin recodificar, solo se elimina la pista de audio."
+        },
+        {
+          "q": "¿Qué formatos de video son compatibles?",
+          "a": "Se admiten los formatos MP4, WebM y MOV."
+        },
+        {
+          "q": "¿Puedo agregar una pista de audio diferente después de silenciar?",
+          "a": "Esta herramienta solo elimina audio. Para agregar nueva pista necesitarías un editor de video más avanzado."
+        },
+        {
+          "q": "¿Mi video se sube a un servidor?",
+          "a": "No. Todo se ejecuta con FFmpeg.wasm en tu navegador."
+        }
+      ]
     },
     "vidRotate": {
-      "title": "Rotar Vídeo", "desc": "Rota o voltea tu vídeo.", "badge": "Nuevo", "icon": "🔃",
-      "meta": { "title": "Rotar Vídeo – Gratis Online", "description": "Rota o voltea un vídeo. Con ffmpeg.wasm, gratis, en el navegador.", "keywords": ["rotar vídeo gratis", "voltear vídeo online"] },
+      "title": "Rotar Vídeo",
+      "desc": "Rota o voltea tu vídeo.",
+      "badge": "Nuevo",
+      "icon": "🔃",
+      "meta": {
+        "title": "Rotar Vídeo – Gratis Online",
+        "description": "Rota o voltea un vídeo. Con ffmpeg.wasm, gratis, en el navegador.",
+        "keywords": [
+          "rotar vídeo gratis",
+          "voltear vídeo online"
+        ]
+      },
       "heading": "Rotar Vídeo",
       "sub": "Rota o voltea un vídeo horizontal o verticalmente.",
       "privacy": "Todo el procesamiento ocurre en tu navegador. Tus vídeos nunca se envían a un servidor.",
       "drop": "Arrastra el archivo de vídeo aquí",
       "rotOption": "Opción de Rotación",
-      "r90": "90° Derecha", "l90": "90° Izquierda", "r180": "180°",
-      "flipH": "Voltear Horizontal", "flipV": "Voltear Vertical",
+      "r90": "90° Derecha",
+      "l90": "90° Izquierda",
+      "r180": "180°",
+      "flipH": "Voltear Horizontal",
+      "flipV": "Voltear Vertical",
       "loadingFfmpeg": "Cargando ffmpeg...",
       "prog": "Rotando vídeo...",
       "success": "¡Vídeo rotado y descargado!",
-      "btn": "Rotar Vídeo"
+      "btn": "Rotar Vídeo",
+      "faq": [
+        {
+          "q": "¿Cómo roto un video en línea?",
+          "a": "Sube tu video, elige el ángulo de rotación y haz clic en Rotar. El video rotado se descarga a tu dispositivo."
+        },
+        {
+          "q": "¿Por qué algunos videos aparecen de lado en mi computadora?",
+          "a": "Los videos grabados en teléfonos usan metadatos de rotación. Algunos reproductores los ignoran. Rotar permanentemente soluciona el problema."
+        },
+        {
+          "q": "¿Rotar un video reduce su calidad?",
+          "a": "La rotación requiere recodificación, lo que puede causar mínima pérdida de calidad. La salida usa configuraciones de alta calidad."
+        },
+        {
+          "q": "¿Qué formatos son compatibles para rotar video?",
+          "a": "Se admiten los formatos MP4, WebM y MOV."
+        },
+        {
+          "q": "¿Es gratuita la rotación de video?",
+          "a": "Sí, completamente gratuita usando FFmpeg.wasm en tu navegador."
+        }
+      ]
     }
   }
 }

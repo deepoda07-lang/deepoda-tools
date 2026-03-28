@@ -2,7 +2,12 @@
   "meta": {
     "siteTitle": "Deepoda Tools – Ücretsiz Çevrimiçi Araçlar",
     "siteDescription": "PDF birleştirin, görselleri sıkıştırın, arka planları kaldırın ve daha fazlası. Tamamen ücretsiz, tarayıcınızda çalışır, dosyalarınız cihazınızdan asla ayrılmaz.",
-    "siteKeywords": ["pdf birleştirme", "görsel sıkıştırma", "arka plan kaldırma", "çevrimiçi araçlar"]
+    "siteKeywords": [
+      "pdf birleştirme",
+      "görsel sıkıştırma",
+      "arka plan kaldırma",
+      "çevrimiçi araçlar"
+    ]
   },
   "navbar": {
     "pdf": "PDF",
@@ -92,8 +97,19 @@
   },
   "t": {
     "pdfMerge": {
-      "title": "PDF Birleştir", "desc": "Birden fazla PDF'yi tek bir belgede birleştirin.", "badge": "Popüler", "icon": "📄",
-      "meta": { "title": "PDF Birleştir – Ücretsiz Çevrimiçi PDF Birleştirme", "description": "Birden fazla PDF dosyasını tek bir belgede birleştirin. Sürükleyip bırakarak sıralayın, anında indirin. Ücretsiz, tarayıcı içi.", "keywords": ["pdf birleştirme ücretsiz", "pdf dosyalarını birleştir", "pdf birleştir çevrimiçi"] },
+      "title": "PDF Birleştir",
+      "desc": "Birden fazla PDF'yi tek bir belgede birleştirin.",
+      "badge": "Popüler",
+      "icon": "📄",
+      "meta": {
+        "title": "PDF Birleştir – Ücretsiz Çevrimiçi PDF Birleştirme",
+        "description": "Birden fazla PDF dosyasını tek bir belgede birleştirin. Sürükleyip bırakarak sıralayın, anında indirin. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf birleştirme ücretsiz",
+          "pdf dosyalarını birleştir",
+          "pdf birleştir çevrimiçi"
+        ]
+      },
       "heading": "PDF Birleştir",
       "sub": "PDF dosyalarını seçin, sıralayın ve tek bir belgede birleştirin.",
       "drop": "PDF dosyalarını buraya sürükleyin",
@@ -102,11 +118,44 @@
       "errGeneric": "Birleştirme sırasında bir hata oluştu.",
       "prog": "Birleştiriliyor...",
       "success": "PDF başarıyla birleştirildi ve indirildi!",
-      "btn": "PDF'leri Birleştir"
+      "btn": "PDF'leri Birleştir",
+      "faq": [
+        {
+          "q": "PDF dosyalarını ücretsiz olarak nasıl birleştirebilirim?",
+          "a": "PDF dosyalarınızı yükleyin, oklar ile sıralayın ve PDF Birleştir butonuna tıklayın. Birleştirilmiş dosya anında indirilir, kayıt gerekmez."
+        },
+        {
+          "q": "PDF birleştirmek için dosya boyutu sınırı var mı?",
+          "a": "Sabit bir boyut sınırı yoktur. Büyük dosyalar birkaç saniye sürebilir ancak tüm işlem tarayıcınızda gerçekleşir."
+        },
+        {
+          "q": "PDF dosyalarım sunucuya yükleniyor mu?",
+          "a": "Hayır. Tüm birleştirme işlemi PDF-lib kullanılarak tarayıcınızda gerçekleşir. Dosyalarınız cihazınızı terk etmez."
+        },
+        {
+          "q": "Aynı anda kaç PDF dosyasını birleştirebilirim?",
+          "a": "Herhangi bir sınır yoktur. İstediğiniz kadar PDF ekleyebilir ve birleştirmeden önce sıralayabilirsiniz."
+        },
+        {
+          "q": "Şifre korumalı PDF dosyalarını birleştirebilir miyim?",
+          "a": "Önce PDF Kilidini Kaldır aracını kullanarak kilidi açın, ardından kilidi açılmış dosyaları birleştirin."
+        }
+      ]
     },
     "pdfSplit": {
-      "title": "PDF Böl", "desc": "PDF sayfalarını ayrı dosyalara bölün.", "badge": null, "icon": "✂️",
-      "meta": { "title": "PDF Böl – Ücretsiz Çevrimiçi PDF Bölücü", "description": "PDF sayfalarını ayrı dosyalara bölün. Sayfa aralığını girin ve indirin. Ücretsiz, tarayıcı içi.", "keywords": ["pdf bölme ücretsiz", "pdf bölücü çevrimiçi", "pdf sayfalarını ayır"] },
+      "title": "PDF Böl",
+      "desc": "PDF sayfalarını ayrı dosyalara bölün.",
+      "badge": null,
+      "icon": "✂️",
+      "meta": {
+        "title": "PDF Böl – Ücretsiz Çevrimiçi PDF Bölücü",
+        "description": "PDF sayfalarını ayrı dosyalara bölün. Sayfa aralığını girin ve indirin. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf bölme ücretsiz",
+          "pdf bölücü çevrimiçi",
+          "pdf sayfalarını ayır"
+        ]
+      },
       "heading": "PDF Böl",
       "sub": "PDF sayfalarını ayrı dosyalara bölün.",
       "drop": "PDF dosyasını buraya sürükleyin",
@@ -116,11 +165,44 @@
       "errGeneric": "Bölme sırasında bir hata oluştu.",
       "prog": "Bölünüyor...",
       "success": "PDF başarıyla bölündü ve indirildi!",
-      "btn": "PDF Böl"
+      "btn": "PDF Böl",
+      "faq": [
+        {
+          "q": "PDF'yi ayrı sayfalara nasıl bölebilirim?",
+          "a": "PDF'nizi yükleyin, çıkarmak istediğiniz sayfa aralığını seçin ve Böl'e tıklayın. Her aralık ayrı bir PDF olarak indirilir."
+        },
+        {
+          "q": "PDF'den belirli bir sayfayı çıkarabilir miyim?",
+          "a": "Evet. Sayfa seçiciye sayfa numarasını girin; yalnızca o sayfa yeni bir PDF olarak çıkarılır."
+        },
+        {
+          "q": "PDF bölme kaliteyi düşürür mü?",
+          "a": "Hayır. Sayfalar yeniden kodlanmadan çıkarıldığından kalite tamamen korunur."
+        },
+        {
+          "q": "PDF bölme işlemi güvenli midir?",
+          "a": "Evet. İşlem tamamen tarayıcınızda çalışır, hiçbir veri sunucuya gönderilmez."
+        },
+        {
+          "q": "Çok sayfalı büyük bir PDF'yi bölebilir miyim?",
+          "a": "Evet. Araç büyük PDF dosyalarını iyi işler; çok büyük dosyalar biraz daha zaman alabilir."
+        }
+      ]
     },
     "pdfEdit": {
-      "title": "PDF Düzenle", "desc": "Sayfaları silin, sürükle bırak ile yeniden sıralayın.", "badge": null, "icon": "🖊️",
-      "meta": { "title": "PDF Düzenle – Ücretsiz Çevrimiçi PDF Düzenleyici", "description": "Sayfaları silin, sürükle bırak ile yeniden sıralayın ve kaydedin. Ücretsiz, tarayıcı içi.", "keywords": ["pdf düzenle ücretsiz", "pdf sayfalarını sil", "pdf sayfalarını sırala"] },
+      "title": "PDF Düzenle",
+      "desc": "Sayfaları silin, sürükle bırak ile yeniden sıralayın.",
+      "badge": null,
+      "icon": "🖊️",
+      "meta": {
+        "title": "PDF Düzenle – Ücretsiz Çevrimiçi PDF Düzenleyici",
+        "description": "Sayfaları silin, sürükle bırak ile yeniden sıralayın ve kaydedin. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf düzenle ücretsiz",
+          "pdf sayfalarını sil",
+          "pdf sayfalarını sırala"
+        ]
+      },
       "heading": "PDF Düzenle",
       "sub": "Sayfaları silin, yeniden sıralayın (sürükle veya ok tuşları) ve kaydedin.",
       "drop": "PDF dosyasını buraya sürükleyin",
@@ -134,85 +216,326 @@
       "deletePage": "Sayfayı sil",
       "moveLeft": "Sola taşı",
       "moveRight": "Sağa taşı",
-      "allDeleted": "Tüm sayfaları sildiniz. Lütfen yeni bir dosya seçin."
+      "allDeleted": "Tüm sayfaları sildiniz. Lütfen yeni bir dosya seçin.",
+      "faq": [
+        {
+          "q": "PDF'den ücretsiz olarak sayfa silebilir miyim?",
+          "a": "Evet. PDF'nizi yükleyin, kaldırmak istediğiniz sayfaların üzerine tıklayın ve Seçilenleri Sil'e tıklayın."
+        },
+        {
+          "q": "PDF'deki sayfaları yeniden sıralayabilir miyim?",
+          "a": "Evet. Sayfa küçük resimlerini sürükleyip bırakarak yeniden sıralayın, ardından kaydedin."
+        },
+        {
+          "q": "PDF düzenleme kaliteyi etkiler mi?",
+          "a": "Hayır. Sayfalar yeniden oluşturulmadan düzenlendiğinden görüntü ve metin kalitesi aynı kalır."
+        },
+        {
+          "q": "PDF düzenleyici ücretsiz mi?",
+          "a": "Evet, hesap gerekmeden tamamen ücretsizdir."
+        },
+        {
+          "q": "PDF içindeki metinleri düzenleyebilir miyim?",
+          "a": "Bu araç sayfa düzeyinde düzenlemeye odaklanır. Notlar ve vurgulamalar eklemek için PDF Açıklama aracını kullanabilirsiniz."
+        }
+      ]
     },
     "pdfRotate": {
-      "title": "PDF Döndür", "desc": "Sayfaları 90°, 180° veya 270° döndürün.", "badge": "Yeni", "icon": "🔄",
-      "meta": { "title": "PDF Döndür – Ücretsiz Çevrimiçi", "description": "PDF sayfalarını 90°, 180° veya 270° döndürün. Ücretsiz, tarayıcı içi.", "keywords": ["pdf döndürme ücretsiz", "pdf döndür çevrimiçi"] },
+      "title": "PDF Döndür",
+      "desc": "Sayfaları 90°, 180° veya 270° döndürün.",
+      "badge": "Yeni",
+      "icon": "🔄",
+      "meta": {
+        "title": "PDF Döndür – Ücretsiz Çevrimiçi",
+        "description": "PDF sayfalarını 90°, 180° veya 270° döndürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf döndürme ücretsiz",
+          "pdf döndür çevrimiçi"
+        ]
+      },
       "heading": "PDF Döndür",
       "sub": "PDF sayfalarını 90°, 180° veya 270° döndürün.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "angle": "Döndürme açısı",
-      "r90": "90° Sağa", "r180": "180°", "l90": "90° Sola",
+      "r90": "90° Sağa",
+      "r180": "180°",
+      "l90": "90° Sola",
       "prog": "Döndürülüyor...",
       "success": "PDF başarıyla döndürüldü ve indirildi!",
-      "btn": "PDF Döndür"
+      "btn": "PDF Döndür",
+      "faq": [
+        {
+          "q": "PDF sayfalarını çevrimiçi nasıl döndürebilirim?",
+          "a": "PDF'nizi yükleyin, döndürmek istediğiniz sayfaları seçin, açıyı seçin ve indirin."
+        },
+        {
+          "q": "PDF'de yalnızca belirli sayfaları döndürebilir miyim?",
+          "a": "Evet. Bireysel sayfa küçük resimlerine tıklayarak seçin, ardından yalnızca o sayfalara döndürme uygulayın."
+        },
+        {
+          "q": "PDF döndürme kaliteyi düşürür mü?",
+          "a": "Hayır. Döndürme PDF yapısı düzeyinde uygulanır, içerik yeniden oluşturulmaz."
+        },
+        {
+          "q": "Taranmış bir PDF'yi döndürebilir miyim?",
+          "a": "Evet. Araç, taranmış belgeler dahil tüm PDF türlerinde çalışır."
+        },
+        {
+          "q": "PDF döndürülürken dosyam sunucuya yükleniyor mu?",
+          "a": "Hayır. Tüm işlem tarayıcınızda gerçekleşir, dosyalarınız cihazınızda kalır."
+        }
+      ]
     },
     "pdfCompress": {
-      "title": "PDF Sıkıştır", "desc": "PDF dosya boyutunu küçültün.", "badge": "Yeni", "icon": "🗜️",
-      "meta": { "title": "PDF Sıkıştır – Ücretsiz Çevrimiçi", "description": "PDF dosya boyutunu küçültün. Tarayıcı içi, dosyalar cihazınızdan asla ayrılmaz.", "keywords": ["pdf sıkıştırma ücretsiz", "pdf boyutunu küçült"] },
+      "title": "PDF Sıkıştır",
+      "desc": "PDF dosya boyutunu küçültün.",
+      "badge": "Yeni",
+      "icon": "🗜️",
+      "meta": {
+        "title": "PDF Sıkıştır – Ücretsiz Çevrimiçi",
+        "description": "PDF dosya boyutunu küçültün. Tarayıcı içi, dosyalar cihazınızdan asla ayrılmaz.",
+        "keywords": [
+          "pdf sıkıştırma ücretsiz",
+          "pdf boyutunu küçült"
+        ]
+      },
       "heading": "PDF Sıkıştır",
       "sub": "PDF dosya boyutunu küçültün. Tarayıcınızda çalışır, dosyalar cihazınızdan asla ayrılmaz.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "prog": "Sıkıştırılıyor...",
       "done": "Sıkıştırma tamamlandı!",
-      "btn": "PDF Sıkıştır"
+      "btn": "PDF Sıkıştır",
+      "faq": [
+        {
+          "q": "PDF dosyasını ücretsiz olarak nasıl küçültebilirim?",
+          "a": "PDF'nizi yükleyin, sıkıştırma seviyesini seçin ve Sıkıştır'a tıklayın."
+        },
+        {
+          "q": "PDF sıkıştırma dosya boyutunu ne kadar küçültebilir?",
+          "a": "İçeriğe bağlı olarak yüzde 20 ile 80 arasında küçültme sağlanabilir."
+        },
+        {
+          "q": "PDF sıkıştırma metin kalitesini etkiler mi?",
+          "a": "Metin kalitesi korunur. Sıkıştırma ağırlıklı olarak gömülü görselleri ve gereksiz meta verileri hedefler."
+        },
+        {
+          "q": "PDF sıkıştırma için boyut sınırı var mı?",
+          "a": "Sabit sınır yoktur. Büyük PDF'lerin tarayıcıda işlenmesi daha uzun sürebilir."
+        },
+        {
+          "q": "Kalite kaybı olmadan PDF sıkıştırabilir miyim?",
+          "a": "Minimum kalite kaybı için düşük sıkıştırma seçeneğini seçin."
+        }
+      ]
     },
     "pdfPageNumber": {
-      "title": "Sayfa Numarası Ekle", "desc": "Her sayfaya sayfa numarası damgalayın.", "badge": "Yeni", "icon": "🔢",
-      "meta": { "title": "Sayfa Numarası Ekle – Ücretsiz Çevrimiçi", "description": "Her sayfaya otomatik sayfa numarası damgalayın. Konum seçin.", "keywords": ["pdf sayfa numarası ekle", "pdf sayfa numaralandırma"] },
+      "title": "Sayfa Numarası Ekle",
+      "desc": "Her sayfaya sayfa numarası damgalayın.",
+      "badge": "Yeni",
+      "icon": "🔢",
+      "meta": {
+        "title": "Sayfa Numarası Ekle – Ücretsiz Çevrimiçi",
+        "description": "Her sayfaya otomatik sayfa numarası damgalayın. Konum seçin.",
+        "keywords": [
+          "pdf sayfa numarası ekle",
+          "pdf sayfa numaralandırma"
+        ]
+      },
       "heading": "PDF'ye Sayfa Numarası Ekle",
       "sub": "Her sayfaya otomatik sayfa numarası damgalayın. Konum seçin.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "numPos": "Numara konumu",
-      "botCenter": "Alt Orta", "botRight": "Alt Sağ", "botLeft": "Alt Sol",
+      "botCenter": "Alt Orta",
+      "botRight": "Alt Sağ",
+      "botLeft": "Alt Sol",
       "prog": "Numaralar ekleniyor...",
       "success": "Sayfa numaraları eklendi ve indirildi!",
-      "btn": "Numara Ekle"
+      "btn": "Numara Ekle",
+      "faq": [
+        {
+          "q": "PDF'ye sayfa numarası nasıl eklenir?",
+          "a": "PDF'nizi yükleyin, konum, yazı tipi boyutu ve başlangıç numarasını seçin, ardından Sayfa Numarası Ekle'ye tıklayın."
+        },
+        {
+          "q": "Sayfa numarasının konumunu özelleştirebilir miyim?",
+          "a": "Evet. Üst veya alt, sol, orta veya sağ konumlardan birini seçebilirsiniz."
+        },
+        {
+          "q": "Sayfa numaralandırmayı belirli bir sayıdan başlatabilir miyim?",
+          "a": "Evet. Başlangıç numarasını ayarlayın, PDF daha büyük bir belgenin parçasıysa kullanışlıdır."
+        },
+        {
+          "q": "Sayfa numarası eklemek PDF içeriğini değiştirir mi?",
+          "a": "Yalnızca sayfa numarası metni eklenir. Tüm orijinal içerik değişmeden kalır."
+        },
+        {
+          "q": "Sayfa numaralandırma ücretsiz mi?",
+          "a": "Evet, tamamen ücretsiz, hesap gerekmez."
+        }
+      ]
     },
     "pdfToJpg": {
-      "title": "PDF → JPG", "desc": "PDF sayfalarını JPG görsellerine dönüştürün.", "badge": "Yeni", "icon": "🖼️",
-      "meta": { "title": "PDF'den JPG'ye – Ücretsiz Çevrimiçi", "description": "PDF sayfalarını JPG görsellerine dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["pdf jpg dönüştürme ücretsiz", "pdf görsel dönüştür"] },
+      "title": "PDF → JPG",
+      "desc": "PDF sayfalarını JPG görsellerine dönüştürün.",
+      "badge": "Yeni",
+      "icon": "🖼️",
+      "meta": {
+        "title": "PDF'den JPG'ye – Ücretsiz Çevrimiçi",
+        "description": "PDF sayfalarını JPG görsellerine dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf jpg dönüştürme ücretsiz",
+          "pdf görsel dönüştür"
+        ]
+      },
       "heading": "PDF → JPG",
       "sub": "PDF sayfalarını JPG görsellerine dönüştürün. Her sayfa ayrı bir dosya olarak indirilir.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "qualityLbl": "Kalite",
-      "smaller": "Daha küçük dosya", "higher": "Daha yüksek kalite",
+      "smaller": "Daha küçük dosya",
+      "higher": "Daha yüksek kalite",
       "prog": "Dönüştürülüyor...",
       "success": "sayfa JPG olarak indirildi!",
-      "btn": "JPG'ye Dönüştür"
+      "btn": "JPG'ye Dönüştür",
+      "faq": [
+        {
+          "q": "PDF'yi ücretsiz olarak JPG'ye nasıl dönüştürebilirim?",
+          "a": "PDF'nizi yükleyin, dönüştürmek istediğiniz sayfaları seçin, görüntü kalitesini belirleyin ve Dönüştür'e tıklayın."
+        },
+        {
+          "q": "Belirli bir PDF sayfasını JPG'ye dönüştürebilir miyim?",
+          "a": "Evet. Tüm belgeyi dönüştürmek yerine tek tek sayfaları seçebilirsiniz."
+        },
+        {
+          "q": "Çıktı JPG görüntülerinin kalitesi nasıl?",
+          "a": "Standart, yüksek veya maksimum kalite arasından seçim yapabilirsiniz."
+        },
+        {
+          "q": "Tüm sayfaları aynı anda dönüştürebilir miyim?",
+          "a": "Evet. Tüm Sayfalar'ı seçin; tüm sayfalar dönüştürülerek zip olarak indirilir."
+        },
+        {
+          "q": "PDF dosyalarım dönüştürme sırasında güvende mi?",
+          "a": "Evet. Dönüştürme tamamen tarayıcınızda gerçekleşir, sunucuya hiçbir şey yüklenmez."
+        }
+      ]
     },
     "pdfFromJpg": {
-      "title": "JPG → PDF", "desc": "Görselleri tek bir PDF dosyasına dönüştürün.", "badge": "Yeni", "icon": "📋",
-      "meta": { "title": "JPG'den PDF'ye – Ücretsiz Çevrimiçi", "description": "Görselleri tek bir PDF dosyasına dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["jpg pdf dönüştürme ücretsiz", "görselden pdf oluştur"] },
+      "title": "JPG → PDF",
+      "desc": "Görselleri tek bir PDF dosyasına dönüştürün.",
+      "badge": "Yeni",
+      "icon": "📋",
+      "meta": {
+        "title": "JPG'den PDF'ye – Ücretsiz Çevrimiçi",
+        "description": "Görselleri tek bir PDF dosyasına dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "jpg pdf dönüştürme ücretsiz",
+          "görselden pdf oluştur"
+        ]
+      },
       "heading": "JPG → PDF",
       "sub": "Görselleri tek bir PDF dosyasına dönüştürün. Birden fazla görsel ekleyebilirsiniz.",
       "drop": "Görsel dosyalarını buraya sürükleyin (JPG, PNG, WEBP)",
       "imgsSelected": "görsel seçildi",
       "prog": "PDF oluşturuluyor...",
       "success": "PDF oluşturuldu ve indirildi!",
-      "btn": "PDF Oluştur"
+      "btn": "PDF Oluştur",
+      "faq": [
+        {
+          "q": "JPG görüntülerini PDF'ye nasıl dönüştürebilirim?",
+          "a": "Bir veya daha fazla JPG görüntüsü yükleyin, gerekirse sıralayın ve PDF'ye Dönüştür'e tıklayın."
+        },
+        {
+          "q": "Birden fazla görüntüyü tek bir PDF'de birleştirebilir miyim?",
+          "a": "Evet. Birden fazla görüntü ekleyin; her biri PDF'de ayrı bir sayfa olur."
+        },
+        {
+          "q": "Hangi görüntü formatları destekleniyor?",
+          "a": "JPG/JPEG ve PNG görüntüleri desteklenmektedir."
+        },
+        {
+          "q": "PDF'deki görüntü kalitesi düşer mi?",
+          "a": "Hayır. Görüntüler orijinal çözünürlükleriyle PDF'ye gömülür."
+        },
+        {
+          "q": "Birleştirebileceğim görüntü sayısında sınır var mı?",
+          "a": "Sınır yoktur. İhtiyacınız kadar görüntü ekleyebilirsiniz."
+        }
+      ]
     },
     "pdfWatermark": {
-      "title": "PDF Filigran", "desc": "Sayfalara GİZLİ, TASLAK damgası ekleyin.", "badge": null, "icon": "🔏",
-      "meta": { "title": "PDF Filigran – Ücretsiz Çevrimiçi", "description": "PDF sayfalarına metin filigranı ekleyin. Ücretsiz, tarayıcı içi.", "keywords": ["pdf filigran ücretsiz", "pdf filigran ekle"] },
+      "title": "PDF Filigran",
+      "desc": "Sayfalara GİZLİ, TASLAK damgası ekleyin.",
+      "badge": null,
+      "icon": "🔏",
+      "meta": {
+        "title": "PDF Filigran – Ücretsiz Çevrimiçi",
+        "description": "PDF sayfalarına metin filigranı ekleyin. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf filigran ücretsiz",
+          "pdf filigran ekle"
+        ]
+      },
       "heading": "PDF Filigran",
       "sub": "PDF sayfalarına metin filigranı ekleyin. Tarayıcınızda çalışır.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "wmText": "Filigran metni",
-      "presets": ["GİZLİ", "TASLAK", "ÖNEMLİ", "ONAYLANDI", "İPTAL EDİLDİ"],
+      "presets": [
+        "GİZLİ",
+        "TASLAK",
+        "ÖNEMLİ",
+        "ONAYLANDI",
+        "İPTAL EDİLDİ"
+      ],
       "custom": "Özel metin girin…",
       "centerDiag": "Orta (çapraz)",
-      "topLeft": "Sol Üst", "topRight": "Sağ Üst", "botLeft": "Sol Alt", "botRight": "Sağ Alt",
-      "fontSizeLbl": "Yazı boyutu", "opacityLbl": "Saydamlık",
-      "whichPages": "Hangi sayfalar?", "allPages": "Tüm sayfalar", "onlyPage": "Yalnızca sayfa",
+      "topLeft": "Sol Üst",
+      "topRight": "Sağ Üst",
+      "botLeft": "Sol Alt",
+      "botRight": "Sağ Alt",
+      "fontSizeLbl": "Yazı boyutu",
+      "opacityLbl": "Saydamlık",
+      "whichPages": "Hangi sayfalar?",
+      "allPages": "Tüm sayfalar",
+      "onlyPage": "Yalnızca sayfa",
       "prog": "Filigran ekleniyor…",
       "success": "Filigran eklendi ve PDF indirildi!",
-      "btn": "Filigran Ekle ve İndir"
+      "btn": "Filigran Ekle ve İndir",
+      "faq": [
+        {
+          "q": "PDF'ye filigran nasıl eklenir?",
+          "a": "PDF'nizi yükleyin, filigran metnini yazın, yazı tipi boyutunu, opaklığı, konumu ve rengi seçin ve Filigran Ekle'ye tıklayın."
+        },
+        {
+          "q": "Filigranı şeffaf yapabilir miyim?",
+          "a": "Evet. Opaklık kaydırıcısını ayarlayarak filigranı daha az veya daha fazla şeffaf yapabilirsiniz."
+        },
+        {
+          "q": "Filigranı sayfanın herhangi bir yerine yerleştirebilir miyim?",
+          "a": "Merkez, sol üst, sağ üst, sol alt, sağ alt gibi hazır konumlardan seçim yapabilirsiniz."
+        },
+        {
+          "q": "Filigran her sayfada mı görünür?",
+          "a": "Evet. Filigran PDF'nin tüm sayfalarına uygulanır."
+        },
+        {
+          "q": "Eklediğim filigranı kaldırabilir miyim?",
+          "a": "Bu araç filigran ekler. PDF'ye zaten gömülmüş filigranları kaldırmak desteklenmemektedir."
+        }
+      ]
     },
     "pdfSign": {
-      "title": "PDF İmzala", "desc": "İmzanızı çizin ve bir PDF sayfasına yerleştirin.", "badge": "Yeni", "icon": "✍️",
-      "meta": { "title": "PDF İmzala – Ücretsiz Çevrimiçi", "description": "İmzanızı çizin, sayfa seçin ve yerleştirin. Ücretsiz, tarayıcı içi.", "keywords": ["pdf imzala ücretsiz", "pdf imza çevrimiçi"] },
+      "title": "PDF İmzala",
+      "desc": "İmzanızı çizin ve bir PDF sayfasına yerleştirin.",
+      "badge": "Yeni",
+      "icon": "✍️",
+      "meta": {
+        "title": "PDF İmzala – Ücretsiz Çevrimiçi",
+        "description": "İmzanızı çizin, sayfa seçin ve yerleştirin. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf imzala ücretsiz",
+          "pdf imza çevrimiçi"
+        ]
+      },
       "heading": "PDF İmzala",
       "sub": "İmzanızı çizin, sayfa seçin, konumlandırın ve PDF'ye yerleştirin.",
       "step1": "1 · PDF Seçin",
@@ -232,71 +555,237 @@
       "posNote": "* Konum yaklaşıktır; son PDF'de piksel hassasiyeti uygulanır.",
       "success": "İmzalı PDF indirildi!",
       "saving": "Kaydediliyor…",
-      "btn": "İmzayı PDF'ye Ekle ve İndir"
+      "btn": "İmzayı PDF'ye Ekle ve İndir",
+      "faq": [
+        {
+          "q": "PDF'yi çevrimiçi ücretsiz olarak nasıl imzalayabilirim?",
+          "a": "PDF'nizi yükleyin, imzanızı çizin veya yazın, doğru konuma sürükleyin ve Kaydet ve İndir'e tıklayın."
+        },
+        {
+          "q": "PDF üzerine imza çizebilir miyim?",
+          "a": "Evet. Çizim modunu kullanarak tarayıcınızda el yazısı imzanızı oluşturun."
+        },
+        {
+          "q": "Elektronik imzam yasal olarak geçerli mi?",
+          "a": "Basit elektronik imzalar birçok ülkede kişisel ve ticari kullanım için tanınmaktadır."
+        },
+        {
+          "q": "Birden fazla sayfayı imzalayabilir miyim?",
+          "a": "Evet. Sayfalar arasında gezip her birine imzanızı ekleyebilirsiniz."
+        },
+        {
+          "q": "İmzam veya belge sunucuya yükleniyor mu?",
+          "a": "Hayır. İmzanız ve belgeniz tamamen tarayıcınızda işlenir, hiçbir sunucuya gönderilmez."
+        }
+      ]
     },
     "pdfToWord": {
-      "title": "PDF → Word", "desc": "PDF dosyasını Word formatına dönüştürün.", "badge": null, "icon": "📝",
-      "meta": { "title": "PDF'den Word'e – Ücretsiz Çevrimiçi", "description": "PDF'yi Word (.docx) formatına dönüştürün. Yakında.", "keywords": ["pdf word dönüştürme ücretsiz", "pdf docx dönüştür"] },
+      "title": "PDF → Word",
+      "desc": "PDF dosyasını Word formatına dönüştürün.",
+      "badge": null,
+      "icon": "📝",
+      "meta": {
+        "title": "PDF'den Word'e – Ücretsiz Çevrimiçi",
+        "description": "PDF'yi Word (.docx) formatına dönüştürün. Yakında.",
+        "keywords": [
+          "pdf word dönüştürme ücretsiz",
+          "pdf docx dönüştür"
+        ]
+      },
       "heading": "PDF → Word",
       "sub": "PDF dosyasını Word (.docx) formatına dönüştürün.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "note": "Not: PDF → Word dönüştürme sunucu tarafında işlem gerektirir. Bu özellik yakında kullanıma sunulacaktır.",
-      "btn": "Yakında"
+      "btn": "Yakında",
+      "faq": [
+        {
+          "q": "PDF'yi Word'e dönüştürebilir miyim?",
+          "a": "Bu özellik yakında gelecek. PDF Word dönüştürme sunucu taraflı OCR işlemi gerektirmektedir."
+        },
+        {
+          "q": "PDF Word dönüştürme neden zordur?",
+          "a": "PDF'ler içeriği görsel öğeler olarak saklar. Doğru dönüştürme için optik karakter tanıma gerekir."
+        },
+        {
+          "q": "PDF Word dönüştürmeye alternatif nedir?",
+          "a": "PDF Düzenle aracıyla sayfaları silebilir veya sıralayabilir; PDF Açıklama aracıyla not ekleyebilirsiniz."
+        },
+        {
+          "q": "PDF Word ne zaman kullanılabilir olacak?",
+          "a": "Üzerinde çalışıyoruz. Sunucu taraflı işlem gerektiren Pro özellik olarak sunulacak."
+        },
+        {
+          "q": "PDF Word ücretsiz olacak mı?",
+          "a": "Temel sürüm ücretsiz olacak. Daha yüksek doğruluk Pro planda yer alacak."
+        }
+      ]
     },
     "pdfLock": {
-      "title": "PDF Kilitle", "desc": "PDF'yi şifreleme ile parola korumaya alın.", "badge": "Yeni", "icon": "🔒",
-      "meta": { "title": "PDF Kilitle – Ücretsiz Çevrimiçi", "description": "PDF dosyanızı şifreleme ile parola korumaya alın. Ücretsiz, tarayıcı içi.", "keywords": ["pdf kilitle ücretsiz", "pdf parola koru"] },
+      "title": "PDF Kilitle",
+      "desc": "PDF'yi şifreleme ile parola korumaya alın.",
+      "badge": "Yeni",
+      "icon": "🔒",
+      "meta": {
+        "title": "PDF Kilitle – Ücretsiz Çevrimiçi",
+        "description": "PDF dosyanızı şifreleme ile parola korumaya alın. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf kilitle ücretsiz",
+          "pdf parola koru"
+        ]
+      },
       "heading": "PDF Kilitle",
       "sub": "PDF dosyanızı şifreleme ile parola korumaya alın.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya gönderilmez.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "pwLabel": "Parola (en az 4 karakter)",
       "pwPlaceholder": "Parola girin",
-      "hide": "Gizle", "show": "Göster",
+      "hide": "Gizle",
+      "show": "Göster",
       "confirmLabel": "Parolayı onaylayın",
       "confirmPlaceholder": "Parolayı tekrar girin",
       "mismatch": "Parolalar eşleşmiyor.",
       "warning": "PDF bu parola ile açılacaktır. Güvende tutun — kurtarılamaz.",
       "prog": "Şifreleniyor...",
       "success": "PDF kilitlendi ve indirildi!",
-      "btn": "PDF Şifrele"
+      "btn": "PDF Şifrele",
+      "faq": [
+        {
+          "q": "PDF'yi ücretsiz olarak nasıl şifreleyebilirim?",
+          "a": "PDF'nizi yükleyin, bir şifre girin ve PDF'yi Kilitle'ye tıklayın. Şifrelenmiş PDF cihazınıza indirilir."
+        },
+        {
+          "q": "PDF korumak için hangi şifreleme kullanılıyor?",
+          "a": "128-bit RC4 şifreleme kullanılır, tüm büyük PDF okuyucularıyla uyumludur."
+        },
+        {
+          "q": "PDF'yi kilitlemek içerik kaybına yol açar mı?",
+          "a": "Hayır. Yalnızca şifreleme uygulanır, tüm içerik ve sayfalar olduğu gibi kalır."
+        },
+        {
+          "q": "Şifre eklerken dosyalarım sunucuya yükleniyor mu?",
+          "a": "Hayır. Şifreleme PDF-lib kullanılarak tamamen tarayıcınızda uygulanır."
+        },
+        {
+          "q": "Açma ve düzenleme için farklı şifreler ayarlayabilir miyim?",
+          "a": "Mevcut araç tek bir belge açma şifresi belirler. Gelişmiş izin şifreleri henüz desteklenmemektedir."
+        }
+      ]
     },
     "pdfUnlock": {
-      "title": "PDF Kilidini Aç", "desc": "PDF dosyasından parola korumasını kaldırın.", "badge": "Yeni", "icon": "🔓",
-      "meta": { "title": "PDF Kilidini Aç – Ücretsiz Çevrimiçi", "description": "PDF'den parola korumasını kaldırın. Ücretsiz, tarayıcı içi.", "keywords": ["pdf kilit açma ücretsiz", "pdf parola kaldır"] },
+      "title": "PDF Kilidini Aç",
+      "desc": "PDF dosyasından parola korumasını kaldırın.",
+      "badge": "Yeni",
+      "icon": "🔓",
+      "meta": {
+        "title": "PDF Kilidini Aç – Ücretsiz Çevrimiçi",
+        "description": "PDF'den parola korumasını kaldırın. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf kilit açma ücretsiz",
+          "pdf parola kaldır"
+        ]
+      },
       "heading": "PDF Kilidini Aç",
       "sub": "PDF dosyasından parola korumasını kaldırın.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya gönderilmez.",
       "drop": "Parola korumalı PDF'yi buraya sürükleyin",
       "pwLabel": "PDF Parolası",
       "pwPlaceholder": "PDF parolasını girin",
-      "hide": "Gizle", "show": "Göster",
+      "hide": "Gizle",
+      "show": "Göster",
       "note": "PDF kilidini açmak için mevcut parolayı bilmeniz gerekir. Bu araç parolaları atlamaz.",
       "prog": "Kilit açılıyor...",
       "success": "PDF kilidi açıldı ve indirildi!",
       "errPw": "Yanlış parola. Lütfen tekrar deneyin.",
       "errGeneric": "Bir hata oluştu. Dosyanın geçerli bir parola korumalı PDF olduğundan emin olun.",
-      "btn": "PDF Kilidini Aç"
+      "btn": "PDF Kilidini Aç",
+      "faq": [
+        {
+          "q": "PDF'den şifreyi nasıl kaldırabilirim?",
+          "a": "Şifre korumalı PDF'nizi yükleyin, mevcut şifreyi girin ve PDF Kilidini Kaldır'a tıklayın."
+        },
+        {
+          "q": "Şifre bilmeden PDF kilidini açabilir miyim?",
+          "a": "Hayır. Güvenlik nedeniyle şifre gereklidir. Bu araç doğru şifreyi girince korumayı kaldırır."
+        },
+        {
+          "q": "PDF kilidini açmak yasal mı?",
+          "a": "Evet, belgeye sahipseniz veya sahibinden izin aldıysanız."
+        },
+        {
+          "q": "PDF kilidini açmak içeriğini etkiler mi?",
+          "a": "Hayır. Yalnızca şifreleme katmanı kaldırılır, tüm içerik tamamen aynı kalır."
+        },
+        {
+          "q": "Kilit açma sırasında PDF sunucuya yükleniyor mu?",
+          "a": "Hayır. Şifre çözme işlemi tamamen tarayıcınızda gerçekleşir."
+        }
+      ]
     },
     "pdfCrop": {
-      "title": "PDF Kırp", "desc": "PDF'nizdeki her sayfanın kenar boşluklarını kırpın.", "badge": "Yeni", "icon": "✂️",
-      "meta": { "title": "PDF Kırp – Ücretsiz Çevrimiçi", "description": "PDF'nizdeki her sayfanın kenar boşluklarını kırpın. Ücretsiz, tarayıcı içi.", "keywords": ["pdf kırpma ücretsiz", "pdf kenar boşluklarını kırp"] },
+      "title": "PDF Kırp",
+      "desc": "PDF'nizdeki her sayfanın kenar boşluklarını kırpın.",
+      "badge": "Yeni",
+      "icon": "✂️",
+      "meta": {
+        "title": "PDF Kırp – Ücretsiz Çevrimiçi",
+        "description": "PDF'nizdeki her sayfanın kenar boşluklarını kırpın. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf kırpma ücretsiz",
+          "pdf kenar boşluklarını kırp"
+        ]
+      },
       "heading": "PDF Kırp",
       "sub": "PDF'nizdeki her sayfanın kenar boşluklarını kırpın.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya gönderilmez.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "cropMargins": "Kırpma kenar boşlukları",
-      "linked": "Bağlı", "unlinked": "Bağımsız",
-      "top": "Üst", "left": "Sol", "right": "Sağ", "bottom": "Alt",
+      "linked": "Bağlı",
+      "unlinked": "Bağımsız",
+      "top": "Üst",
+      "left": "Sol",
+      "right": "Sağ",
+      "bottom": "Alt",
       "removingDesc": "Her sayfadan {top}mm üst · {right}mm sağ · {bottom}mm alt · {left}mm sol kırpılıyor",
       "prog": "Kırpılıyor...",
       "success": "PDF kırpıldı ve indirildi!",
       "setMargins": "Yukarıdan kenar boşluklarını ayarlayın",
-      "btn": "PDF Kırp"
+      "btn": "PDF Kırp",
+      "faq": [
+        {
+          "q": "PDF sayfasını nasıl kırpabilirim?",
+          "a": "PDF'nizi yükleyin, tutamaçları kullanarak kırpma alanını seçin ve Kırp'a tıklayın."
+        },
+        {
+          "q": "Tüm PDF sayfalarını aynı anda kırpabilir miyim?",
+          "a": "Evet. Tümüne Uygula seçeneğiyle aynı kırpma alanını tüm sayfalara uygulayın."
+        },
+        {
+          "q": "PDF kırpma dosya boyutunu küçültür mü?",
+          "a": "Biraz küçülür. Önemli boyut azaltımı için ardından PDF Sıkıştır aracını kullanın."
+        },
+        {
+          "q": "İndirmeden önce kırpma işlemini geri alabilir miyim?",
+          "a": "Evet. İndirmeden önce kırpma alanını istediğiniz kadar ayarlayabilirsiniz."
+        },
+        {
+          "q": "PDF kırpma ücretsiz mi?",
+          "a": "Evet. Kayıt gerekmeden tamamen ücretsizdir."
+        }
+      ]
     },
     "pdfFormFill": {
-      "title": "PDF Form Doldur", "desc": "PDF'deki metin alanlarını, onay kutularını ve açılır menüleri doldurun.", "badge": "Yeni", "icon": "📝",
-      "meta": { "title": "PDF Form Doldur – Ücretsiz Çevrimiçi", "description": "PDF formdaki metin alanlarını, onay kutularını ve açılır menüleri doldurun. Ücretsiz, tarayıcı içi.", "keywords": ["pdf form doldurma ücretsiz", "pdf form doldur çevrimiçi"] },
+      "title": "PDF Form Doldur",
+      "desc": "PDF'deki metin alanlarını, onay kutularını ve açılır menüleri doldurun.",
+      "badge": "Yeni",
+      "icon": "📝",
+      "meta": {
+        "title": "PDF Form Doldur – Ücretsiz Çevrimiçi",
+        "description": "PDF formdaki metin alanlarını, onay kutularını ve açılır menüleri doldurun. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf form doldurma ücretsiz",
+          "pdf form doldur çevrimiçi"
+        ]
+      },
       "heading": "PDF Form Doldur",
       "sub": "PDF formdaki metin alanlarını, onay kutularını ve açılır menüleri doldurun.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya gönderilmez.",
@@ -308,17 +797,52 @@
       "changeFile": "Dosyayı değiştir",
       "saved": "✓ Kaydedildi",
       "savePdf": "Doldurulmuş PDF'yi Kaydet",
-      "clickHint": "Yazmak için yukarıdaki vurgulanan alanlara tıklayın. Sayfalar arasında geçiş yapmak için gezinme düğmelerini kullanın."
+      "clickHint": "Yazmak için yukarıdaki vurgulanan alanlara tıklayın. Sayfalar arasında geçiş yapmak için gezinme düğmelerini kullanın.",
+      "faq": [
+        {
+          "q": "PDF formunu çevrimiçi nasıl doldururum?",
+          "a": "PDF formunuzu yükleyin, her form alanına tıklayarak bilgilerinizi yazın ve Kaydet ve İndir'e tıklayın."
+        },
+        {
+          "q": "Bu araç etkileşimli PDF formlarıyla çalışıyor mu?",
+          "a": "Evet. Araç, etkileşimli form alanlarını algılar ve doğrudan doldurmanıza olanak tanır."
+        },
+        {
+          "q": "Form alanı olmayan PDF'yi doldurabilir miyim?",
+          "a": "Form alanı olmayan PDF'ler için PDF Açıklama Ekle aracını kullanarak üzerine metin ekleyebilirsiniz."
+        },
+        {
+          "q": "Doldurulan PDF tüm okuyucularla uyumlu mu?",
+          "a": "Evet. Çıktı, Adobe Acrobat ve tüm büyük PDF okuyucularıyla uyumlu standart bir PDF'dir."
+        },
+        {
+          "q": "Form verilerim sunucuya yükleniyor mu?",
+          "a": "Hayır. Her şey tarayıcınızda gerçekleşir, verileriniz hiçbir yere gönderilmez."
+        }
+      ]
     },
     "pdfAnnotate": {
-      "title": "PDF Not Ekle", "desc": "PDF'nize çizim yapın, vurgulayın ve metin notları ekleyin.", "badge": "Yeni", "icon": "🖊️",
-      "meta": { "title": "PDF Not Ekle – Ücretsiz Çevrimiçi", "description": "PDF'nize çizim yapın, vurgulayın ve metin notları ekleyin. Ücretsiz, tarayıcı içi.", "keywords": ["pdf not ekle ücretsiz", "pdf açıklama aracı"] },
+      "title": "PDF Not Ekle",
+      "desc": "PDF'nize çizim yapın, vurgulayın ve metin notları ekleyin.",
+      "badge": "Yeni",
+      "icon": "🖊️",
+      "meta": {
+        "title": "PDF Not Ekle – Ücretsiz Çevrimiçi",
+        "description": "PDF'nize çizim yapın, vurgulayın ve metin notları ekleyin. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "pdf not ekle ücretsiz",
+          "pdf açıklama aracı"
+        ]
+      },
       "heading": "PDF Not Ekle",
       "sub": "PDF'nize çizim yapın, vurgulayın ve metin notları ekleyin.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya gönderilmez.",
       "drop": "PDF dosyasını buraya sürükleyin",
       "loadingPdf": "PDF yükleniyor…",
-      "pen": "Kalem", "highlight": "Vurgula", "text": "Metin", "eraser": "Silgi",
+      "pen": "Kalem",
+      "highlight": "Vurgula",
+      "text": "Metin",
+      "eraser": "Silgi",
       "size": "Boyut",
       "saved": "✓ Kaydedildi",
       "savePdf": "PDF Kaydet",
@@ -327,34 +851,131 @@
       "highlightHint": "Bir bölgeyi vurgulamak için tıklayıp sürükleyin.",
       "eraserHint": "Açıklamaları silmek için üzerlerinden çizin.",
       "penHint": "PDF üzerinde serbest çizim yapın.",
-      "annotations": "tüm sayfalardaki açıklama"
+      "annotations": "tüm sayfalardaki açıklama",
+      "faq": [
+        {
+          "q": "PDF'ye çevrimiçi nasıl açıklama eklerim?",
+          "a": "PDF'nizi yükleyin, araç çubuğunu kullanarak metin ekleyin, çizin veya vurgulayın, ardından Kaydet ve İndir'e tıklayın."
+        },
+        {
+          "q": "Hangi açıklama türleri destekleniyor?",
+          "a": "Metin etiketleri, serbest çizim ve vurgulama dikdörtgenleri ekleyebilirsiniz."
+        },
+        {
+          "q": "Eklediğim açıklamaları kaldırabilir miyim?",
+          "a": "Açıklamalar kaydedilirken PDF sayfasına düzlenir. Kaldırmak için orijinal dosyayı yeniden yükleyin."
+        },
+        {
+          "q": "Taranmış PDF'lerde açıklama çalışıyor mu?",
+          "a": "Evet. Açıklamalar bir katman olarak çizilir ve tüm PDF türlerinde çalışır."
+        },
+        {
+          "q": "PDF açıklama ekleme ücretsiz mi?",
+          "a": "Evet, tamamen ücretsiz, hesap gerekmez."
+        }
+      ]
     },
     "imgCompress": {
-      "title": "Görsel Sıkıştır", "desc": "JPG, PNG ve WEBP dosyalarını kalite kaybı olmadan küçültün.", "badge": "Popüler", "icon": "🗜️",
-      "meta": { "title": "Görsel Sıkıştır – Ücretsiz Çevrimiçi", "description": "JPG, PNG, WEBP dosyalarının boyutunu küçültün. Ücretsiz, tarayıcı içi.", "keywords": ["görsel sıkıştırma ücretsiz", "resim boyutu küçült"] },
+      "title": "Görsel Sıkıştır",
+      "desc": "JPG, PNG ve WEBP dosyalarını kalite kaybı olmadan küçültün.",
+      "badge": "Popüler",
+      "icon": "🗜️",
+      "meta": {
+        "title": "Görsel Sıkıştır – Ücretsiz Çevrimiçi",
+        "description": "JPG, PNG, WEBP dosyalarının boyutunu küçültün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "görsel sıkıştırma ücretsiz",
+          "resim boyutu küçült"
+        ]
+      },
       "heading": "Görsel Sıkıştır",
       "sub": "JPG, PNG, WEBP dosyalarının boyutunu küçültün.",
       "qualityLbl": "Kalite",
-      "smaller": "Daha küçük dosya", "higher": "Daha yüksek kalite",
+      "smaller": "Daha küçük dosya",
+      "higher": "Daha yüksek kalite",
       "drop": "Görselleri buraya sürükleyin (JPG, PNG, WEBP)",
       "prog": "Sıkıştırılıyor...",
       "results": "Sonuçlar",
-      "pctSmaller": "daha küçük"
+      "pctSmaller": "daha küçük",
+      "faq": [
+        {
+          "q": "Görüntüyü çevrimiçi ücretsiz nasıl sıkıştırabilirim?",
+          "a": "Görüntünüzü yükleyin, kalite kaydırıcısını ayarlayın ve Görüntü Sıkıştır'a tıklayın."
+        },
+        {
+          "q": "Hangi görüntü formatlarını sıkıştırabilirim?",
+          "a": "JPG, PNG ve WebP formatları desteklenmektedir."
+        },
+        {
+          "q": "Görüntü sıkıştırma dosya boyutunu ne kadar küçültebilir?",
+          "a": "Orijinal kaliteye bağlı olarak genellikle yüzde 40 ile 80 arasında küçültme sağlanır."
+        },
+        {
+          "q": "Sıkıştırma sonrası görüntüm bozulur mu?",
+          "a": "80 ve üzeri kalitede fark çıplak gözle görünmez. Önce/sonra önizlemesiyle karşılaştırabilirsiniz."
+        },
+        {
+          "q": "Görüntüm sunucuya yükleniyor mu?",
+          "a": "Hayır. Sıkıştırma, browser-image-compression kullanılarak tamamen tarayıcınızda çalışır."
+        }
+      ]
     },
     "imgConvert": {
-      "title": "Format Dönüştür", "desc": "JPG ↔ PNG ↔ WEBP arasında anında dönüştürün.", "badge": null, "icon": "🔄",
-      "meta": { "title": "Görsel Formatı Dönüştür – Ücretsiz Çevrimiçi", "description": "JPG, PNG, WEBP arasında anında dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["görsel formatı dönüştür", "jpg png dönüştürme ücretsiz"] },
+      "title": "Format Dönüştür",
+      "desc": "JPG ↔ PNG ↔ WEBP arasında anında dönüştürün.",
+      "badge": null,
+      "icon": "🔄",
+      "meta": {
+        "title": "Görsel Formatı Dönüştür – Ücretsiz Çevrimiçi",
+        "description": "JPG, PNG, WEBP arasında anında dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "görsel formatı dönüştür",
+          "jpg png dönüştürme ücretsiz"
+        ]
+      },
       "heading": "Format Dönüştür",
       "sub": "JPG ↔ PNG ↔ WEBP arasında anında dönüştürün.",
       "target": "Hedef format",
       "drop": "Görselleri buraya sürükleyin",
       "done": "Dönüştürme tamamlandı!",
       "prog": "Dönüştürülüyor...",
-      "btn": "Şuna dönüştür:"
+      "btn": "Şuna dönüştür:",
+      "faq": [
+        {
+          "q": "Görüntü formatını çevrimiçi nasıl dönüştürebilirim?",
+          "a": "Görüntünüzü yükleyin, çıktı formatını seçin ve Dönüştür'e tıklayın."
+        },
+        {
+          "q": "Hangi görüntü formatları destekleniyor?",
+          "a": "JPG, PNG ve WebP formatları arasında dönüştürme yapabilirsiniz."
+        },
+        {
+          "q": "PNG'yi JPG'ye dönüştürmek kalite kaybına yol açar mı?",
+          "a": "PNG'den JPG'ye dönüşüm şeffaflık katmanını kaldırır, şeffaf alanlar beyaz olur."
+        },
+        {
+          "q": "Birden fazla görüntüyü aynı anda dönüştürebilir miyim?",
+          "a": "Evet. Birden fazla görüntü yükleyin, her biri ayrı ayrı dönüştürülür."
+        },
+        {
+          "q": "Görüntü dönüştürme ücretsiz mi?",
+          "a": "Evet, hesap gerekmeden tamamen ücretsizdir."
+        }
+      ]
     },
     "imgRemoveBg": {
-      "title": "Arka Plan Kaldır", "desc": "AI ile görsel arka planlarını otomatik kaldırın.", "badge": "AI", "icon": "🪄",
-      "meta": { "title": "Arka Plan Kaldır – Ücretsiz Çevrimiçi AI", "description": "Görsellerden arka planları otomatik kaldırın. Tamamen tarayıcınızda çalışır.", "keywords": ["arka plan kaldırma ücretsiz", "arka plan silici çevrimiçi"] },
+      "title": "Arka Plan Kaldır",
+      "desc": "AI ile görsel arka planlarını otomatik kaldırın.",
+      "badge": "AI",
+      "icon": "🪄",
+      "meta": {
+        "title": "Arka Plan Kaldır – Ücretsiz Çevrimiçi AI",
+        "description": "Görsellerden arka planları otomatik kaldırın. Tamamen tarayıcınızda çalışır.",
+        "keywords": [
+          "arka plan kaldırma ücretsiz",
+          "arka plan silici çevrimiçi"
+        ]
+      },
       "heading": "Arka Plan Kaldır",
       "sub": "Görsellerden arka planları otomatik kaldırın. Tamamen tarayıcınızda çalışır.",
       "aiBadge": "AI destekli · Verileriniz cihazınızdan asla ayrılmaz",
@@ -364,56 +985,223 @@
       "failed": "Arka plan kaldırma başarısız oldu.",
       "original": "Orijinal",
       "removed": "Arka plan kaldırıldı",
-      "downloadPng": "PNG İndir (saydam arka plan)"
+      "downloadPng": "PNG İndir (saydam arka plan)",
+      "faq": [
+        {
+          "q": "Görüntüden arka planı ücretsiz nasıl kaldırabilirim?",
+          "a": "Görüntünüzü yükleyin; yapay zeka modeli arka planı otomatik algılar ve kaldırır. Sonuç şeffaf PNG olarak indirilir."
+        },
+        {
+          "q": "Arka plan kaldırma insan fotoğraflarında çalışıyor mu?",
+          "a": "Evet. Yapay zeka portreler için optimize edilmiştir ve net kenarlara sahip kişiler ile nesnelerde iyi çalışır."
+        },
+        {
+          "q": "Arka plan kaldırıldıktan sonra çıktı formatı nedir?",
+          "a": "Her zaman PNG çünkü PNG şeffaf arka planı destekler, JPG desteklemez."
+        },
+        {
+          "q": "Arka plan kaldırma ne kadar doğru?",
+          "a": "Net özne ayrımı olan fotoğraflarda doğruluk çok yüksektir. Karmaşık arka planlar küçük hatalar içerebilir."
+        },
+        {
+          "q": "Fotoğrafım yapay zeka için sunucuya yükleniyor mu?",
+          "a": "Hayır. Yapay zeka modeli tamamen tarayıcınızda çalışır, fotoğraflarınız cihazınızı terk etmez."
+        }
+      ]
     },
     "imgResize": {
-      "title": "Görsel Boyutlandır", "desc": "Görselleri istediğiniz boyuta getirin.", "badge": null, "icon": "📐",
-      "meta": { "title": "Görsel Boyutlandır – Ücretsiz Çevrimiçi", "description": "Görselin genişliğini ve yüksekliğini ayarlayın. Ücretsiz, tarayıcı içi.", "keywords": ["görsel boyutlandırma ücretsiz", "resim boyutlandırıcı çevrimiçi"] },
+      "title": "Görsel Boyutlandır",
+      "desc": "Görselleri istediğiniz boyuta getirin.",
+      "badge": null,
+      "icon": "📐",
+      "meta": {
+        "title": "Görsel Boyutlandır – Ücretsiz Çevrimiçi",
+        "description": "Görselin genişliğini ve yüksekliğini ayarlayın. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "görsel boyutlandırma ücretsiz",
+          "resim boyutlandırıcı çevrimiçi"
+        ]
+      },
       "heading": "Görsel Boyutlandır",
       "sub": "Görselin genişliğini ve yüksekliğini ayarlayın. Oranları korumak için en-boy oranı kilidini kullanın.",
       "drop": "Görseli buraya sürükleyin (JPG, PNG, WEBP)",
       "original": "Orijinal",
-      "width": "Genişlik (px)", "height": "Yükseklik (px)",
-      "locked": "En-boy oranı kilitli", "unlocked": "En-boy oranı serbest",
+      "width": "Genişlik (px)",
+      "height": "Yükseklik (px)",
+      "locked": "En-boy oranı kilitli",
+      "unlocked": "En-boy oranı serbest",
       "success": "Görsel boyutlandırıldı ve indirildi!",
-      "btn": "Boyutlandır ve İndir"
+      "btn": "Boyutlandır ve İndir",
+      "faq": [
+        {
+          "q": "Görüntüyü çevrimiçi nasıl yeniden boyutlandırabilirim?",
+          "a": "Görüntünüzü yükleyin, hedef genişlik ve yüksekliği veya yüzdeyi girin ve Yeniden Boyutlandır'a tıklayın."
+        },
+        {
+          "q": "En boy oranını koruyarak görüntü boyutlandırabilir miyim?",
+          "a": "Evet. En boy oranını koru'yu etkinleştirin ve yalnızca bir boyutu girin, diğeri otomatik ayarlanır."
+        },
+        {
+          "q": "Yeniden boyutlandırma kaliteyi düşürür mü?",
+          "a": "Küçültme kaliteyi iyi korur. Büyütme bazı bulanıklığa yol açabilir."
+        },
+        {
+          "q": "Hangi formatlar destekleniyor?",
+          "a": "JPG, PNG ve WebP görüntüleri desteklenmektedir."
+        },
+        {
+          "q": "Maksimum boyutlandırma sınırı var mı?",
+          "a": "Sabit sınır yoktur. İstediğiniz boyuta büyütebilir veya küçültebilirsiniz."
+        }
+      ]
     },
     "imgCrop": {
-      "title": "Görsel Kırp", "desc": "Görselinizden istediğiniz alanı kırpın.", "badge": null, "icon": "✂️",
-      "meta": { "title": "Görsel Kırp – Ücretsiz Çevrimiçi", "description": "Görselinizden istediğiniz alanı kırpın. Ücretsiz, tarayıcı içi.", "keywords": ["görsel kırpma ücretsiz", "fotoğraf kırpıcı çevrimiçi"] },
+      "title": "Görsel Kırp",
+      "desc": "Görselinizden istediğiniz alanı kırpın.",
+      "badge": null,
+      "icon": "✂️",
+      "meta": {
+        "title": "Görsel Kırp – Ücretsiz Çevrimiçi",
+        "description": "Görselinizden istediğiniz alanı kırpın. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "görsel kırpma ücretsiz",
+          "fotoğraf kırpıcı çevrimiçi"
+        ]
+      },
       "heading": "Görsel Kırp",
       "sub": "Görselinizden istediğiniz alanı kırpın ve indirin.",
       "drop": "Görseli buraya sürükleyin (JPG, PNG, WEBP)",
       "cropArea": "Kırpma alanı",
-      "fromLeft": "Soldan başla (X)", "fromTop": "Üstten başla (Y)",
-      "width": "Genişlik", "height": "Yükseklik",
+      "fromLeft": "Soldan başla (X)",
+      "fromTop": "Üstten başla (Y)",
+      "width": "Genişlik",
+      "height": "Yükseklik",
       "success": "Görsel kırpıldı ve indirildi!",
-      "btn": "Kırp ve İndir"
+      "btn": "Kırp ve İndir",
+      "faq": [
+        {
+          "q": "Görüntüyü çevrimiçi ücretsiz nasıl kırpabilirim?",
+          "a": "Görüntünüzü yükleyin, kırpma tutamaçlarını sürükleyerek tutmak istediğiniz alanı seçin ve Kırp'a tıklayın."
+        },
+        {
+          "q": "Belirli bir en boy oranında kırpabilir miyim?",
+          "a": "Evet. 1:1, 16:9, 4:3 gibi hazır oranlar veya özel oran seçebilirsiniz."
+        },
+        {
+          "q": "Kırpma işlemi kaliteyi düşürür mü?",
+          "a": "Hayır. Seçilen alan tam orijinal çözünürlükte çıkarılır."
+        },
+        {
+          "q": "Kaydetmeden önce kırpma seçimini değiştirebilir miyim?",
+          "a": "Evet. İndir'e tıklamadan önce seçimi istediğiniz kadar ayarlayabilirsiniz."
+        },
+        {
+          "q": "Hangi görüntü formatları destekleniyor?",
+          "a": "JPG, PNG ve WebP formatları desteklenmektedir."
+        }
+      ]
     },
     "imgRotate": {
-      "title": "Görsel Döndür / Çevir", "desc": "Görseli döndürün veya çevirin.", "badge": null, "icon": "🔄",
-      "meta": { "title": "Görsel Döndür – Ücretsiz Çevrimiçi", "description": "Görseli döndürün veya çevirin. Ücretsiz, tarayıcı içi.", "keywords": ["görsel döndürme ücretsiz", "resim çevirme çevrimiçi"] },
+      "title": "Görsel Döndür / Çevir",
+      "desc": "Görseli döndürün veya çevirin.",
+      "badge": null,
+      "icon": "🔄",
+      "meta": {
+        "title": "Görsel Döndür – Ücretsiz Çevrimiçi",
+        "description": "Görseli döndürün veya çevirin. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "görsel döndürme ücretsiz",
+          "resim çevirme çevrimiçi"
+        ]
+      },
       "heading": "Görsel Döndür / Çevir",
       "sub": "Görseli yatay veya dikey olarak döndürün ya da çevirin.",
       "drop": "Görseli buraya sürükleyin (JPG, PNG, WEBP)",
-      "r90": "90° Sağa", "l90": "90° Sola", "r180": "180°",
-      "flipH": "Yatay Çevir", "flipV": "Dikey Çevir",
+      "r90": "90° Sağa",
+      "l90": "90° Sola",
+      "r180": "180°",
+      "flipH": "Yatay Çevir",
+      "flipV": "Dikey Çevir",
       "success": "Görsel işlendi ve indirildi!",
-      "btn": "Uygula ve İndir"
+      "btn": "Uygula ve İndir",
+      "faq": [
+        {
+          "q": "Görüntüyü çevrimiçi nasıl döndürebilirim?",
+          "a": "Görüntünüzü yükleyin, döndürme düğmelerine tıklayın veya yatay/dikey çevirin ve indirin."
+        },
+        {
+          "q": "Görüntüyü yatay veya dikey çevirebilir miyim?",
+          "a": "Evet. Çevirme düğmelerini kullanarak görüntünüzü soldan sağa veya yukarıdan aşağıya yansıtın."
+        },
+        {
+          "q": "Görüntü döndürme kaliteyi düşürür mü?",
+          "a": "Hayır. Döndürme ve çevirme kayıpsız işlemlerdir, hiçbir piksel kaybolmaz."
+        },
+        {
+          "q": "Özel açılarda döndürebilir miyim?",
+          "a": "Şu anda yalnızca 90°, 180° ve 270° döndürme desteklenmektedir."
+        },
+        {
+          "q": "Görüntü döndürme ücretsiz mi?",
+          "a": "Evet, hesap gerekmeden tamamen ücretsizdir."
+        }
+      ]
     },
     "imgToPdf": {
-      "title": "Görsel → PDF", "desc": "Görselleri tek bir PDF'ye dönüştürün.", "badge": null, "icon": "📋",
-      "meta": { "title": "Görselden PDF'ye – Ücretsiz Çevrimiçi", "description": "JPG, PNG, WEBP görsellerini tek bir PDF dosyasına dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["görselden pdf ücretsiz", "jpg pdf dönüştürücü"] },
+      "title": "Görsel → PDF",
+      "desc": "Görselleri tek bir PDF'ye dönüştürün.",
+      "badge": null,
+      "icon": "📋",
+      "meta": {
+        "title": "Görselden PDF'ye – Ücretsiz Çevrimiçi",
+        "description": "JPG, PNG, WEBP görsellerini tek bir PDF dosyasına dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "görselden pdf ücretsiz",
+          "jpg pdf dönüştürücü"
+        ]
+      },
       "heading": "Görsel → PDF",
       "sub": "JPG, PNG ve WEBP görsellerini tek bir PDF dosyasına dönüştürün.",
       "drop": "Görsel dosyalarını buraya sürükleyin",
       "success": "PDF oluşturuldu ve indirildi!",
       "prog": "Oluşturuluyor...",
-      "btn": "PDF Oluştur"
+      "btn": "PDF Oluştur",
+      "faq": [
+        {
+          "q": "Görüntüleri PDF'ye nasıl dönüştürebilirim?",
+          "a": "Bir veya daha fazla görüntü yükleyin, gerekirse sıralayın ve PDF'ye Dönüştür'e tıklayın."
+        },
+        {
+          "q": "Birden fazla görüntüyü tek bir PDF'de birleştirebilir miyim?",
+          "a": "Evet. Her görüntü çıktı PDF'sinde ayrı bir sayfa olur."
+        },
+        {
+          "q": "Hangi görüntü formatları PDF'ye dönüştürülebilir?",
+          "a": "JPG, PNG ve WebP görüntüleri desteklenmektedir."
+        },
+        {
+          "q": "Görüntü kalitesi PDF'de korunur mu?",
+          "a": "Evet. Görüntüler orijinal çözünürlükleriyle PDF'ye gömülür."
+        },
+        {
+          "q": "Dönüştürebileceğim görüntü sayısında sınır var mı?",
+          "a": "Sabit sınır yoktur. İhtiyacınız kadar görüntü ekleyebilirsiniz."
+        }
+      ]
     },
     "imgHeicToJpg": {
-      "title": "HEIC → JPG", "desc": "iPhone fotoğraflarını JPG'ye dönüştürün.", "badge": null, "icon": "📱",
-      "meta": { "title": "HEIC'den JPG'ye – Ücretsiz Çevrimiçi", "description": "iPhone fotoğraflarını (HEIC/HEIF) JPG formatına dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["heic jpg dönüştürme ücretsiz", "iphone fotoğraf dönüştür"] },
+      "title": "HEIC → JPG",
+      "desc": "iPhone fotoğraflarını JPG'ye dönüştürün.",
+      "badge": null,
+      "icon": "📱",
+      "meta": {
+        "title": "HEIC'den JPG'ye – Ücretsiz Çevrimiçi",
+        "description": "iPhone fotoğraflarını (HEIC/HEIF) JPG formatına dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "heic jpg dönüştürme ücretsiz",
+          "iphone fotoğraf dönüştür"
+        ]
+      },
       "heading": "HEIC → JPG",
       "sub": "iPhone fotoğraflarını (HEIC/HEIF) JPG formatına dönüştürün.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Fotoğraflarınız asla bir sunucuya gönderilmez.",
@@ -421,55 +1209,200 @@
       "prog": "Dönüştürülüyor...",
       "success": "dosya JPG'ye dönüştürüldü ve indirildi!",
       "errFormat": "Bir hata oluştu. Dosyanızın gerçekten HEIC/HEIF formatında olduğundan emin olun.",
-      "btn": "JPG'ye Dönüştür"
+      "btn": "JPG'ye Dönüştür",
+      "faq": [
+        {
+          "q": "iPhone HEIC fotoğraflarını JPG'ye nasıl dönüştürebilirim?",
+          "a": "HEIC dosyanızı yükleyin ve Dönüştür'e tıklayın. JPG sürümü anında indirilir."
+        },
+        {
+          "q": "iPhone fotoğrafları neden HEIC formatında?",
+          "a": "Apple, HEIC formatını kaliteyi korurken daha iyi sıkıştırma sunduğu için kullanır."
+        },
+        {
+          "q": "HEIC'ten JPG'ye dönüşüm kaliteyi düşürür mü?",
+          "a": "Küçük bir kalite kaybı olabilir ancak pratikte fark neredeyse fark edilmez."
+        },
+        {
+          "q": "Birden fazla HEIC dosyasını aynı anda dönüştürebilir miyim?",
+          "a": "Evet. Birden fazla HEIC dosyası yükleyin, her biri ayrı ayrı dönüştürülür."
+        },
+        {
+          "q": "HEIC'ten JPG'ye dönüştürme ücretsiz mi?",
+          "a": "Evet, hesap gerekmeden tamamen ücretsizdir."
+        }
+      ]
     },
     "imgWatermark": {
-      "title": "Filigran Ekle", "desc": "Görselinize özel metin filigranı damgalayın.", "badge": "Yeni", "icon": "🔏",
-      "meta": { "title": "Görsel Filigran – Ücretsiz Çevrimiçi", "description": "Görselinize özel metin filigranı ekleyin. Ücretsiz, tarayıcı içi.", "keywords": ["görsel filigran ücretsiz", "resme filigran ekle"] },
+      "title": "Filigran Ekle",
+      "desc": "Görselinize özel metin filigranı damgalayın.",
+      "badge": "Yeni",
+      "icon": "🔏",
+      "meta": {
+        "title": "Görsel Filigran – Ücretsiz Çevrimiçi",
+        "description": "Görselinize özel metin filigranı ekleyin. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "görsel filigran ücretsiz",
+          "resme filigran ekle"
+        ]
+      },
       "heading": "Filigran Ekle",
       "sub": "Görselinize özel metin filigranı ekleyin.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Görselleriniz asla bir sunucuya gönderilmez.",
       "drop": "Görseli buraya sürükleyin (JPG, PNG, WEBP)",
       "wmText": "Filigran metni",
       "wmPlaceholder": "Filigran metnini girin",
-      "center": "Orta", "tiled": "Döşemeli",
-      "topLeft": "Sol Üst", "topRight": "Sağ Üst", "botLeft": "Sol Alt", "botRight": "Sağ Alt",
-      "colors": { "white": "Beyaz", "black": "Siyah", "gray": "Gri", "red": "Kırmızı", "yellow": "Sarı" },
+      "center": "Orta",
+      "tiled": "Döşemeli",
+      "topLeft": "Sol Üst",
+      "topRight": "Sağ Üst",
+      "botLeft": "Sol Alt",
+      "botRight": "Sağ Alt",
+      "colors": {
+        "white": "Beyaz",
+        "black": "Siyah",
+        "gray": "Gri",
+        "red": "Kırmızı",
+        "yellow": "Sarı"
+      },
       "success": "Görsel filigranlı olarak indirildi!",
-      "btn": "Uygula ve İndir"
+      "btn": "Uygula ve İndir",
+      "faq": [
+        {
+          "q": "Görüntüye filigran nasıl eklenir?",
+          "a": "Görüntünüzü yükleyin, filigran metnini yazın, yazı tipi boyutu, opaklık, renk ve konum seçin, ardından Filigran Ekle'ye tıklayın."
+        },
+        {
+          "q": "Filigranı yarı şeffaf yapabilir miyim?",
+          "a": "Evet. Opaklık kaydırıcısını ayarlayın, düşük değerler filigranı daha şeffaf yapar."
+        },
+        {
+          "q": "Filigranı görüntünün herhangi bir yerine koyabilir miyim?",
+          "a": "Merkez, köşeler veya görüntünün kenarları gibi hazır konumlardan seçim yapabilirsiniz."
+        },
+        {
+          "q": "Filigran kalıcı olacak mı?",
+          "a": "Evet. Filigran görüntü piksellerine birleştirilir. Değişiklik için orijinal dosyanızı saklayın."
+        },
+        {
+          "q": "PNG görüntülerde filigran çalışıyor mu?",
+          "a": "Evet. JPG, PNG ve WebP görüntüleri desteklenmektedir."
+        }
+      ]
     },
     "imgAddText": {
-      "title": "Görsele Metin Ekle", "desc": "Görsel üzerinde herhangi bir yere tıklayarak özel metin yerleştirin.", "badge": "Yeni", "icon": "✏️",
-      "meta": { "title": "Görsele Metin Ekle – Ücretsiz Çevrimiçi", "description": "Metni yazın ve görsel üzerine yerleştirmek için tıklayın. Ücretsiz, tarayıcı içi.", "keywords": ["görsele metin ekle ücretsiz", "fotoğrafa yazı ekle çevrimiçi"] },
+      "title": "Görsele Metin Ekle",
+      "desc": "Görsel üzerinde herhangi bir yere tıklayarak özel metin yerleştirin.",
+      "badge": "Yeni",
+      "icon": "✏️",
+      "meta": {
+        "title": "Görsele Metin Ekle – Ücretsiz Çevrimiçi",
+        "description": "Metni yazın ve görsel üzerine yerleştirmek için tıklayın. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "görsele metin ekle ücretsiz",
+          "fotoğrafa yazı ekle çevrimiçi"
+        ]
+      },
       "heading": "Görsele Metin Ekle",
       "sub": "Metninizi yazın, ardından görsel üzerinde herhangi bir yere tıklayarak yerleştirin.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Görselleriniz asla bir sunucuya gönderilmez.",
       "drop": "Görseli buraya sürükleyin (JPG, PNG, WEBP)",
       "textLabel": "Eklenecek metin",
       "textPlaceholder": "Metninizi yazın...",
-      "bold": "K", "shadow": "G",
-      "colors": { "white": "Beyaz", "black": "Siyah", "yellow": "Sarı", "red": "Kırmızı", "blue": "Mavi" },
+      "bold": "K",
+      "shadow": "G",
+      "colors": {
+        "white": "Beyaz",
+        "black": "Siyah",
+        "yellow": "Sarı",
+        "red": "Kırmızı",
+        "blue": "Mavi"
+      },
       "clickToPlace": "Metni yerleştirmek için aşağıdaki görsele tıklayın",
       "enterFirst": "Önce yukarıya metin girin, ardından yerleştirmek için görsele tıklayın",
       "layers": "metin katmanı",
       "undoLast": "Son işlemi geri al",
       "success": "Görsel başarıyla indirildi!",
       "addFirst": "Önce görsele metin ekleyin",
-      "btn": "Görseli İndir"
+      "btn": "Görseli İndir",
+      "faq": [
+        {
+          "q": "Görüntüye çevrimiçi nasıl metin eklerim?",
+          "a": "Görüntünüzü yükleyin, metninizi yazın, yazı tipi boyutu ve rengi seçin, ardından görüntüye tıklayın."
+        },
+        {
+          "q": "Metin rengini değiştirebilir miyim?",
+          "a": "Evet. Renk seçiciyi kullanarak istediğiniz metin rengini seçin."
+        },
+        {
+          "q": "Aynı görüntüye birden fazla metin etiketi ekleyebilir miyim?",
+          "a": "Evet. Görüntünün farklı bölgelerine tıklayarak birden fazla konuma metin yerleştirin."
+        },
+        {
+          "q": "Metin görüntüye kalıcı olarak işlenir mi?",
+          "a": "Evet. Metin görüntü üzerine işlenir. Daha sonra düzenlemek için orijinalinizi saklayın."
+        },
+        {
+          "q": "Hangi görüntü formatları destekleniyor?",
+          "a": "JPG, PNG ve WebP görüntüleri desteklenmektedir."
+        }
+      ]
     },
     "convWordToPdf": {
-      "title": "Word → PDF", "desc": "Word belgelerini PDF'ye dönüştürün.", "badge": null, "icon": "📋",
-      "meta": { "title": "Word'den PDF'ye – Ücretsiz Çevrimiçi", "description": "Word (.docx) belgelerini PDF'ye dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["word pdf dönüştürme ücretsiz", "docx pdf çevrimiçi"] },
+      "title": "Word → PDF",
+      "desc": "Word belgelerini PDF'ye dönüştürün.",
+      "badge": null,
+      "icon": "📋",
+      "meta": {
+        "title": "Word'den PDF'ye – Ücretsiz Çevrimiçi",
+        "description": "Word (.docx) belgelerini PDF'ye dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "word pdf dönüştürme ücretsiz",
+          "docx pdf çevrimiçi"
+        ]
+      },
       "heading": "Word → PDF",
       "sub": "Word (.docx) belgelerini PDF formatına dönüştürün. Tarayıcınızda çalışır.",
       "drop": "DOCX dosyasını buraya sürükleyin",
       "errGeneric": "Dönüştürme sırasında bir hata oluştu.",
       "success": "PDF başarıyla oluşturuldu ve indirildi!",
-      "btn": "PDF'ye Dönüştür"
+      "btn": "PDF'ye Dönüştür",
+      "faq": [
+        {
+          "q": "Word'ü ücretsiz olarak PDF'ye nasıl dönüştürebilirim?",
+          "a": ".docx dosyanızı yükleyin ve PDF'ye Dönüştür'e tıklayın. PDF biçimlendirme korunarak anında indirilir."
+        },
+        {
+          "q": "Word'den PDF'ye dönüştürme biçimlendirmeyi korur mu?",
+          "a": "Başlıklar, kalın, italik ve paragraf yapısı korunur. Tablolar ve görsellerle karmaşık düzenler de iyi dönüşür."
+        },
+        {
+          "q": "Hangi Word formatları destekleniyor?",
+          "a": ".docx (Word 2007+) tam desteklenmektedir. Eski .doc dosyalarını önce .docx'e dönüştürün."
+        },
+        {
+          "q": "Word belge sunucuya yükleniyor mu?",
+          "a": "Hayır. Dönüştürme mammoth.js kullanılarak tamamen tarayıcınızda gerçekleşir."
+        },
+        {
+          "q": "Word'den PDF'ye dönüştürme ücretsiz mi?",
+          "a": "Evet, hesap gerekmeden tamamen ücretsizdir."
+        }
+      ]
     },
     "convExcelToPdf": {
-      "title": "Excel → PDF", "desc": "XLSX/XLS dosyalarını PDF'ye dönüştürün.", "badge": "Yeni", "icon": "📊",
-      "meta": { "title": "Excel'den PDF'ye – Ücretsiz Çevrimiçi", "description": "Excel dosyalarını PDF'ye dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["excel pdf dönüştürme ücretsiz", "xlsx pdf çevrimiçi"] },
+      "title": "Excel → PDF",
+      "desc": "XLSX/XLS dosyalarını PDF'ye dönüştürün.",
+      "badge": "Yeni",
+      "icon": "📊",
+      "meta": {
+        "title": "Excel'den PDF'ye – Ücretsiz Çevrimiçi",
+        "description": "Excel dosyalarını PDF'ye dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "excel pdf dönüştürme ücretsiz",
+          "xlsx pdf çevrimiçi"
+        ]
+      },
       "heading": "Excel → PDF",
       "sub": "Excel dosyalarını (XLSX/XLS) PDF'ye dönüştürün.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya gönderilmez.",
@@ -478,11 +1411,43 @@
       "rows": "satır",
       "success": "PDF oluşturuldu ve indirildi!",
       "errDefault": "Dosya dönüştürülemedi. Geçerli bir XLSX/XLS dosyası olduğundan emin olun.",
-      "btn": "PDF'ye Dönüştür"
+      "btn": "PDF'ye Dönüştür",
+      "faq": [
+        {
+          "q": "Excel'i çevrimiçi PDF'ye nasıl dönüştürebilirim?",
+          "a": ".xlsx dosyanızı yükleyin ve PDF'ye Dönüştür'e tıklayın. Her sayfa, çıktı PDF'inde bir sayfa olur."
+        },
+        {
+          "q": "Dönüştürme birden fazla sayfayı destekliyor mu?",
+          "a": "Evet. Her çalışma sayfası PDF'de ayrı bir sayfaya dönüştürülür."
+        },
+        {
+          "q": "Dönüştürme Excel formüllerini koruyor mu?",
+          "a": "Araç formüllerin kendisini değil, hücrelerde görünen hesaplanmış değerleri dönüştürür."
+        },
+        {
+          "q": "Excel dosyam sunucuya yükleniyor mu?",
+          "a": "Hayır. Dönüştürme xlsx.js ve jsPDF kullanılarak tamamen tarayıcınızda gerçekleşir."
+        },
+        {
+          "q": "Excel'den PDF'ye dönüştürme ücretsiz mi?",
+          "a": "Evet, hesap gerekmeden tamamen ücretsizdir."
+        }
+      ]
     },
     "convHtmlToPdf": {
-      "title": "HTML → PDF", "desc": "HTML kodunu veya dosyasını PDF'ye dönüştürün.", "badge": "Yeni", "icon": "🌐",
-      "meta": { "title": "HTML'den PDF'ye – Ücretsiz Çevrimiçi", "description": "HTML kodunu veya dosyasını PDF'ye dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["html pdf dönüştürme ücretsiz", "web sayfası pdf çevrimiçi"] },
+      "title": "HTML → PDF",
+      "desc": "HTML kodunu veya dosyasını PDF'ye dönüştürün.",
+      "badge": "Yeni",
+      "icon": "🌐",
+      "meta": {
+        "title": "HTML'den PDF'ye – Ücretsiz Çevrimiçi",
+        "description": "HTML kodunu veya dosyasını PDF'ye dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "html pdf dönüştürme ücretsiz",
+          "web sayfası pdf çevrimiçi"
+        ]
+      },
       "heading": "HTML → PDF",
       "sub": "HTML kodunu veya dosyasını PDF'ye dönüştürün.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya gönderilmez.",
@@ -492,11 +1457,43 @@
       "dropHtml": "HTML dosyasını buraya sürükleyin (.html, .htm)",
       "success": "PDF oluşturuldu ve indirildi!",
       "errGeneric": "Dönüştürme sırasında bir hata oluştu. Lütfen tekrar deneyin.",
-      "btn": "PDF'ye Dönüştür"
+      "btn": "PDF'ye Dönüştür",
+      "faq": [
+        {
+          "q": "HTML'yi çevrimiçi PDF'ye nasıl dönüştürebilirim?",
+          "a": "HTML kodunuzu editöre yapıştırın veya bir HTML dosyası yükleyin, ardından PDF'ye Dönüştür'e tıklayın."
+        },
+        {
+          "q": "HTML'den PDF'ye dönüştürme CSS stillerini koruyor mu?",
+          "a": "Temel satır içi ve gömülü CSS stilleri korunur. URL ile yüklenen harici stiller çalışmayabilir."
+        },
+        {
+          "q": "Bir web sayfasını PDF'ye dönüştürebilir miyim?",
+          "a": "Web sayfasının HTML kaynağını yapıştırabilirsiniz. Tam görüntüleme için tarayıcının PDF'e Yazdır özelliğini kullanın."
+        },
+        {
+          "q": "HTML içeriğim sunucuya yükleniyor mu?",
+          "a": "Hayır. Dönüştürme tarayıcınızda html2canvas ve jsPDF kullanılarak gerçekleşir."
+        },
+        {
+          "q": "HTML'den PDF'ye dönüştürme ücretsiz mi?",
+          "a": "Evet, tamamen ücretsizdir."
+        }
+      ]
     },
     "convMdToPdf": {
-      "title": "Markdown → PDF", "desc": "Markdown metnini PDF'ye dönüştürün.", "badge": "Yeni", "icon": "📝",
-      "meta": { "title": "Markdown'dan PDF'ye – Ücretsiz Çevrimiçi", "description": "Markdown metnini veya dosyasını PDF'ye dönüştürün. Ücretsiz, tarayıcı içi.", "keywords": ["markdown pdf dönüştürme ücretsiz", "md dosyası pdf"] },
+      "title": "Markdown → PDF",
+      "desc": "Markdown metnini PDF'ye dönüştürün.",
+      "badge": "Yeni",
+      "icon": "📝",
+      "meta": {
+        "title": "Markdown'dan PDF'ye – Ücretsiz Çevrimiçi",
+        "description": "Markdown metnini veya dosyasını PDF'ye dönüştürün. Ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "markdown pdf dönüştürme ücretsiz",
+          "md dosyası pdf"
+        ]
+      },
       "heading": "Markdown → PDF",
       "sub": "Markdown metnini veya .md dosyasını PDF'ye dönüştürün.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya gönderilmez.",
@@ -508,59 +1505,196 @@
       "remove": "Kaldır",
       "success": "PDF oluşturuldu ve indirildi!",
       "errGeneric": "Dönüştürme sırasında bir hata oluştu. Lütfen tekrar deneyin.",
-      "btn": "PDF'ye Dönüştür"
+      "btn": "PDF'ye Dönüştür",
+      "faq": [
+        {
+          "q": "Markdown'ı PDF'ye nasıl dönüştürebilirim?",
+          "a": "Markdown metninizi yapıştırın veya bir .md dosyası yükleyin, ardından PDF'ye Dönüştür'e tıklayın."
+        },
+        {
+          "q": "Markdown'dan PDF'ye dönüştürme tüm sözdizimini destekliyor mu?",
+          "a": "Standart Markdown desteklenmektedir: başlıklar, kalın, italik, listeler, kod blokları ve bağlantılar."
+        },
+        {
+          "q": "Çıktı PDF düzgün biçimlendirilmiş mi?",
+          "a": "Evet. PDF uygun başlık boyutları, kod biçimlendirmesi ve paragraf aralığıyla temiz tipografi kullanır."
+        },
+        {
+          "q": "GitHub Markdown dosyalarını dönüştürebilir miyim?",
+          "a": "Evet. .md dosyanızı doğrudan yükleyin veya içeriği yapıştırın."
+        },
+        {
+          "q": "Markdown'dan PDF'ye dönüştürme ücretsiz mi?",
+          "a": "Evet, tamamen ücretsizdir."
+        }
+      ]
     },
     "vidCompress": {
-      "title": "Video Sıkıştır", "desc": "Video dosyalarını kalite kaybı olmadan küçültün.", "badge": "Yeni", "icon": "🗜️",
-      "meta": { "title": "Video Sıkıştır – Ücretsiz Çevrimiçi", "description": "Video dosya boyutunu küçültün. ffmpeg.wasm ile çalışır, ücretsiz, tarayıcı içi.", "keywords": ["video sıkıştırma ücretsiz", "video boyutu küçült"] },
+      "title": "Video Sıkıştır",
+      "desc": "Video dosyalarını kalite kaybı olmadan küçültün.",
+      "badge": "Yeni",
+      "icon": "🗜️",
+      "meta": {
+        "title": "Video Sıkıştır – Ücretsiz Çevrimiçi",
+        "description": "Video dosya boyutunu küçültün. ffmpeg.wasm ile çalışır, ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "video sıkıştırma ücretsiz",
+          "video boyutu küçült"
+        ]
+      },
       "heading": "Video Sıkıştır",
       "sub": "MP4, MOV ve WEBM videoların boyutunu küçültün.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız asla bir sunucuya gönderilmez.",
       "drop": "Video dosyasını buraya sürükleyin",
       "qualityLabel": "Kalite",
-      "high": "Yüksek Kalite", "highSub": "Minimum kayıp",
-      "balanced": "Dengeli", "balancedSub": "Önerilen",
-      "small": "Küçük Boyut", "smallSub": "Daha küçük dosya",
-      "original": "Orijinal", "compressed": "Sıkıştırılmış",
+      "high": "Yüksek Kalite",
+      "highSub": "Minimum kayıp",
+      "balanced": "Dengeli",
+      "balancedSub": "Önerilen",
+      "small": "Küçük Boyut",
+      "smallSub": "Daha küçük dosya",
+      "original": "Orijinal",
+      "compressed": "Sıkıştırılmış",
       "pctSmaller": "daha küçük",
       "loadingFfmpeg": "ffmpeg yükleniyor (ilk seferde ~5 saniye)...",
       "prog": "Video sıkıştırılıyor...",
       "success": "Video sıkıştırıldı ve indirildi!",
-      "btn": "Video Sıkıştır"
+      "btn": "Video Sıkıştır",
+      "faq": [
+        {
+          "q": "Videoyu çevrimiçi ücretsiz nasıl sıkıştırabilirim?",
+          "a": "Videonuzu yükleyin, sıkıştırma seviyesini seçin ve Sıkıştır'a tıklayın. FFmpeg tarayıcınızda çalışarak dosya boyutunu küçültür."
+        },
+        {
+          "q": "Video sıkıştırma dosya boyutunu ne kadar küçültebilir?",
+          "a": "Genellikle yüzde 40 ile 70 arasında küçültme sağlanır."
+        },
+        {
+          "q": "Video sıkıştırma kaliteyi düşürür mü?",
+          "a": "Bazı kalite kayıpları kaçınılmazdır. Daha iyi kalite için düşük, daha küçük boyut için yüksek sıkıştırma seçin."
+        },
+        {
+          "q": "Hangi video formatları destekleniyor?",
+          "a": "MP4, WebM ve MOV dosyaları desteklenmektedir."
+        },
+        {
+          "q": "Videomu sunucuya yükleniyor mu?",
+          "a": "Hayır. Sıkıştırma FFmpeg.wasm kullanılarak tamamen tarayıcınızda çalışır."
+        }
+      ]
     },
     "vidTrim": {
-      "title": "Video Kes", "desc": "Videonuzun istediğiniz bölümünü kesin.", "badge": "Yeni", "icon": "✂️",
-      "meta": { "title": "Video Kes – Ücretsiz Çevrimiçi", "description": "Videonun herhangi bir bölümünü kesin. ffmpeg.wasm ile çalışır, ücretsiz, tarayıcı içi.", "keywords": ["video kesme ücretsiz", "video kırpma çevrimiçi"] },
+      "title": "Video Kes",
+      "desc": "Videonuzun istediğiniz bölümünü kesin.",
+      "badge": "Yeni",
+      "icon": "✂️",
+      "meta": {
+        "title": "Video Kes – Ücretsiz Çevrimiçi",
+        "description": "Videonun herhangi bir bölümünü kesin. ffmpeg.wasm ile çalışır, ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "video kesme ücretsiz",
+          "video kırpma çevrimiçi"
+        ]
+      },
       "heading": "Video Kes",
       "sub": "Videonun herhangi bir bölümünü kesin ve indirin.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız asla bir sunucuya gönderilmez.",
       "drop": "Video dosyasını buraya sürükleyin",
-      "start": "Başlangıç", "end": "Bitiş",
-      "trimmed": "Kesilen süre", "total": "Toplam",
+      "start": "Başlangıç",
+      "end": "Bitiş",
+      "trimmed": "Kesilen süre",
+      "total": "Toplam",
       "loadingFfmpeg": "ffmpeg yükleniyor...",
       "prog": "Video kesiliyor...",
       "success": "Video kesildi ve indirildi!",
-      "btn": "Video Kes"
+      "btn": "Video Kes",
+      "faq": [
+        {
+          "q": "Videoyu çevrimiçi nasıl kırpabilirim?",
+          "a": "Videonuzu yükleyin, kaydırıcıları kullanarak başlangıç ve bitiş zamanını ayarlayın ve Kırp'a tıklayın."
+        },
+        {
+          "q": "Kırpma işlemi kaliteyi düşürür mü?",
+          "a": "Hayır. Araç tam zaman damgalarında yeniden kodlama yapmadan keser, orijinal kaliteyi korur."
+        },
+        {
+          "q": "Hangi video formatları destekleniyor?",
+          "a": "MP4, WebM ve MOV formatları desteklenmektedir."
+        },
+        {
+          "q": "Kırpabileceğim maksimum video uzunluğu nedir?",
+          "a": "Uzunluk sınırı yoktur, ancak uzun videolar daha fazla tarayıcı belleği gerektirir."
+        },
+        {
+          "q": "Videomu sunucuya yükleniyor mu?",
+          "a": "Hayır. Kırpma FFmpeg.wasm ile tamamen tarayıcınızda çalışır."
+        }
+      ]
     },
     "vidToMp3": {
-      "title": "Video → MP3", "desc": "Videodan sesi MP3 olarak çıkarın.", "badge": "Yeni", "icon": "🎵",
-      "meta": { "title": "Videodan MP3'e – Ücretsiz Çevrimiçi", "description": "Videodan ses çıkarın ve MP3 olarak indirin. ffmpeg.wasm ile çalışır.", "keywords": ["videodan mp3 ücretsiz", "videodan ses çıkar"] },
+      "title": "Video → MP3",
+      "desc": "Videodan sesi MP3 olarak çıkarın.",
+      "badge": "Yeni",
+      "icon": "🎵",
+      "meta": {
+        "title": "Videodan MP3'e – Ücretsiz Çevrimiçi",
+        "description": "Videodan ses çıkarın ve MP3 olarak indirin. ffmpeg.wasm ile çalışır.",
+        "keywords": [
+          "videodan mp3 ücretsiz",
+          "videodan ses çıkar"
+        ]
+      },
       "heading": "Video → MP3",
       "sub": "Videodan sesi çıkarın ve MP3 olarak indirin.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız asla bir sunucuya gönderilmez.",
       "drop": "Video dosyasını buraya sürükleyin",
       "mp3Quality": "MP3 Kalitesi",
-      "q320": "320 kbps", "q320Sub": "En yüksek kalite",
-      "q192": "192 kbps", "q192Sub": "Önerilen",
-      "q128": "128 kbps", "q128Sub": "Daha küçük boyut",
+      "q320": "320 kbps",
+      "q320Sub": "En yüksek kalite",
+      "q192": "192 kbps",
+      "q192Sub": "Önerilen",
+      "q128": "128 kbps",
+      "q128Sub": "Daha küçük boyut",
       "loadingFfmpeg": "ffmpeg yükleniyor...",
       "prog": "Ses çıkarılıyor...",
       "success": "MP3 oluşturuldu ve indirildi!",
-      "btn": "MP3'e Dönüştür"
+      "btn": "MP3'e Dönüştür",
+      "faq": [
+        {
+          "q": "Videodan sesi nasıl çıkarabilirim?",
+          "a": "Video dosyanızı yükleyin ve Ses Çıkar'a tıklayın. Ses parçası MP3 dosyası olarak indirilir."
+        },
+        {
+          "q": "Çıkarılan MP3'ün kalitesi nasıl?",
+          "a": "Ses videonun orijinal ses bit hızında çıkarılır, genellikle 128 ile 192 kbps arasında."
+        },
+        {
+          "q": "Hangi video formatlarından ses çıkarabilirim?",
+          "a": "MP4, WebM, MOV ve çoğu yaygın video formatı desteklenmektedir."
+        },
+        {
+          "q": "Ses çıkarma ücretsiz mi?",
+          "a": "Evet, sınırsız ve tamamen ücretsizdir."
+        },
+        {
+          "q": "Videomu sunucuya yükleniyor mu?",
+          "a": "Hayır. Çıkarma tarayıcınızda FFmpeg.wasm ile çalışır."
+        }
+      ]
     },
     "vidConvert": {
-      "title": "Video Dönüştür", "desc": "MP4, WEBM, AVI, MOV arasında format değiştirin.", "badge": "Yeni", "icon": "🔄",
-      "meta": { "title": "Video Dönüştür – Ücretsiz Çevrimiçi", "description": "Video formatları arasında dönüştürme yapın. ffmpeg.wasm ile çalışır, ücretsiz, tarayıcı içi.", "keywords": ["video dönüştürme ücretsiz", "video format dönüştürücü"] },
+      "title": "Video Dönüştür",
+      "desc": "MP4, WEBM, AVI, MOV arasında format değiştirin.",
+      "badge": "Yeni",
+      "icon": "🔄",
+      "meta": {
+        "title": "Video Dönüştür – Ücretsiz Çevrimiçi",
+        "description": "Video formatları arasında dönüştürme yapın. ffmpeg.wasm ile çalışır, ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "video dönüştürme ücretsiz",
+          "video format dönüştürücü"
+        ]
+      },
       "heading": "Video Dönüştür",
       "sub": "Video formatları arasında dönüştürme yapın.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız asla bir sunucuya gönderilmez.",
@@ -569,24 +1703,91 @@
       "loadingFfmpeg": "ffmpeg yükleniyor...",
       "prog": "Video dönüştürülüyor...",
       "success": "Video dönüştürüldü ve indirildi!",
-      "btn": "Şuna dönüştür:"
+      "btn": "Şuna dönüştür:",
+      "faq": [
+        {
+          "q": "Video formatını çevrimiçi ücretsiz nasıl dönüştürebilirim?",
+          "a": "Videonuzu yükleyin, çıktı formatını seçin ve Dönüştür'e tıklayın."
+        },
+        {
+          "q": "Hangi video formatları arasında dönüştürme yapabilirim?",
+          "a": "Hem giriş hem çıkış için MP4, WebM, MOV ve AVI formatları desteklenmektedir."
+        },
+        {
+          "q": "Video dönüştürme kaliteyi düşürür mü?",
+          "a": "Farklı bir formata yeniden kodlama bazı kalite kayıplarını beraberinde getirir."
+        },
+        {
+          "q": "Video dönüştürme ne kadar sürer?",
+          "a": "Video uzunluğuna ve cihazınıza bağlıdır. FFmpeg.wasm tarayıcınızda çalışır."
+        },
+        {
+          "q": "Videomu dönüştürme sırasında yükleniyor mu?",
+          "a": "Hayır. Tüm dönüştürme FFmpeg.wasm kullanılarak tarayıcınızda gerçekleşir."
+        }
+      ]
     },
     "vidToGif": {
-      "title": "Video → GIF", "desc": "Bir videodan animasyonlu GIF oluşturun.", "badge": "Yeni", "icon": "🎞️",
-      "meta": { "title": "Videodan GIF'e – Ücretsiz Çevrimiçi", "description": "Bir videodan animasyonlu GIF oluşturun. ffmpeg.wasm ile çalışır.", "keywords": ["videodan gif ücretsiz", "mp4 gif dönüştürme çevrimiçi"] },
+      "title": "Video → GIF",
+      "desc": "Bir videodan animasyonlu GIF oluşturun.",
+      "badge": "Yeni",
+      "icon": "🎞️",
+      "meta": {
+        "title": "Videodan GIF'e – Ücretsiz Çevrimiçi",
+        "description": "Bir videodan animasyonlu GIF oluşturun. ffmpeg.wasm ile çalışır.",
+        "keywords": [
+          "videodan gif ücretsiz",
+          "mp4 gif dönüştürme çevrimiçi"
+        ]
+      },
       "heading": "Video → GIF",
       "sub": "Bir videodan animasyonlu GIF oluşturun.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız asla bir sunucuya gönderilmez.",
       "drop": "Video dosyasını buraya sürükleyin",
-      "startTime": "Başlangıç zamanı", "duration": "GIF süresi", "fps": "FPS", "width": "Genişlik",
+      "startTime": "Başlangıç zamanı",
+      "duration": "GIF süresi",
+      "fps": "FPS",
+      "width": "Genişlik",
       "loadingFfmpeg": "ffmpeg yükleniyor...",
       "prog": "GIF oluşturuluyor...",
       "success": "GIF oluşturuldu ve indirildi!",
-      "btn": "GIF Oluştur"
+      "btn": "GIF Oluştur",
+      "faq": [
+        {
+          "q": "Videoyu çevrimiçi GIF'e nasıl dönüştürebilirim?",
+          "a": "Videonuzu yükleyin, başlangıç zamanı, süre ve boyutu ayarlayın, ardından GIF'e Dönüştür'e tıklayın."
+        },
+        {
+          "q": "Önerilen GIF süresi nedir?",
+          "a": "GIF dosyaları çok hızlı büyür. Yönetilebilir dosya boyutları için 10 saniyenin altında tutun."
+        },
+        {
+          "q": "GIF'te ses olacak mı?",
+          "a": "Hayır. GIF formatı sesi desteklemez."
+        },
+        {
+          "q": "Hangi video formatlarını GIF'e dönüştürebilirim?",
+          "a": "MP4, WebM ve MOV dosyaları desteklenmektedir."
+        },
+        {
+          "q": "GIF dosyam neden bu kadar büyük?",
+          "a": "GIF video için verimsiz bir formattır. Daha küçük boyut için süreyi veya kare hızını azaltın."
+        }
+      ]
     },
     "vidMerge": {
-      "title": "Video Birleştir", "desc": "Birden fazla video dosyasını tek bir videoda birleştirin.", "badge": "Yeni", "icon": "🔗",
-      "meta": { "title": "Video Birleştir – Ücretsiz Çevrimiçi", "description": "Birden fazla videoyu sırayla birleştirin. ffmpeg.wasm ile çalışır.", "keywords": ["video birleştirme ücretsiz", "video dosyalarını birleştir"] },
+      "title": "Video Birleştir",
+      "desc": "Birden fazla video dosyasını tek bir videoda birleştirin.",
+      "badge": "Yeni",
+      "icon": "🔗",
+      "meta": {
+        "title": "Video Birleştir – Ücretsiz Çevrimiçi",
+        "description": "Birden fazla videoyu sırayla birleştirin. ffmpeg.wasm ile çalışır.",
+        "keywords": [
+          "video birleştirme ücretsiz",
+          "video dosyalarını birleştir"
+        ]
+      },
       "heading": "Video Birleştir",
       "sub": "Birden fazla videoyu sırayla birleştirin.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız asla bir sunucuya gönderilmez.",
@@ -595,11 +1796,43 @@
       "loadingFfmpeg": "ffmpeg yükleniyor...",
       "prog": "Videolar birleştiriliyor...",
       "success": "Videolar birleştirildi ve indirildi!",
-      "btn": "Birleştir"
+      "btn": "Birleştir",
+      "faq": [
+        {
+          "q": "Birden fazla videoyu çevrimiçi nasıl birleştirebilirim?",
+          "a": "Video dosyalarınızı yükleyin, gerekirse sıralayın ve Birleştir'e tıklayın."
+        },
+        {
+          "q": "Tüm videoların aynı formatta olması gerekiyor mu?",
+          "a": "En iyi sonuçlar için aynı format ve çözünürlükte videolar kullanın. Karışık formatlar yeniden kodlanacaktır."
+        },
+        {
+          "q": "Birleştirme kaliteyi düşürür mü?",
+          "a": "Tüm videolar aynı formatta ise kalite kaybı minimumdur. Farklı formatları birleştirmek yeniden kodlama gerektirir."
+        },
+        {
+          "q": "Birleştirebileceğim video sayısında sınır var mı?",
+          "a": "Sabit sınır yoktur, ancak çok büyük dosyalar için tarayıcı bellek limitleri geçerlidir."
+        },
+        {
+          "q": "Video birleştirme ücretsiz mi?",
+          "a": "Evet, tarayıcınızda FFmpeg.wasm kullanılarak tamamen ücretsizdir."
+        }
+      ]
     },
     "vidMute": {
-      "title": "Video Sesini Kapat", "desc": "Video dosyasından tüm sesi kaldırın.", "badge": "Yeni", "icon": "🔇",
-      "meta": { "title": "Video Sesini Kapat – Ücretsiz Çevrimiçi", "description": "Video dosyasından sesi kaldırın. ffmpeg.wasm ile çalışır.", "keywords": ["video ses kaldırma ücretsiz", "videodan ses sil"] },
+      "title": "Video Sesini Kapat",
+      "desc": "Video dosyasından tüm sesi kaldırın.",
+      "badge": "Yeni",
+      "icon": "🔇",
+      "meta": {
+        "title": "Video Sesini Kapat – Ücretsiz Çevrimiçi",
+        "description": "Video dosyasından sesi kaldırın. ffmpeg.wasm ile çalışır.",
+        "keywords": [
+          "video ses kaldırma ücretsiz",
+          "videodan ses sil"
+        ]
+      },
       "heading": "Video Sesini Kapat",
       "sub": "Video dosyasından sesi tamamen kaldırın.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız asla bir sunucuya gönderilmez.",
@@ -608,22 +1841,79 @@
       "loadingFfmpeg": "ffmpeg yükleniyor...",
       "prog": "Ses kaldırılıyor...",
       "success": "Ses kaldırıldı, video indirildi!",
-      "btn": "Sesi Kaldır"
+      "btn": "Sesi Kaldır",
+      "faq": [
+        {
+          "q": "Videodan sesi nasıl kaldırabilirim?",
+          "a": "Videonuzu yükleyin ve Sesi Kaldır'a tıklayın. Video ses parçası olmadan indirilir."
+        },
+        {
+          "q": "Sesi kaldırmak video kalitesini düşürür mü?",
+          "a": "Hayır. Video akışı yeniden kodlanmadan kopyalanır, yalnızca ses parçası çıkarılır."
+        },
+        {
+          "q": "Hangi video formatları destekleniyor?",
+          "a": "MP4, WebM ve MOV formatları desteklenmektedir."
+        },
+        {
+          "q": "Sesi kaldırdıktan sonra farklı bir ses parçası ekleyebilir miyim?",
+          "a": "Bu araç yalnızca sesi kaldırır. Yeni ses eklemek için daha gelişmiş bir video editörüne ihtiyaç duyarsınız."
+        },
+        {
+          "q": "Videomu sunucuya yükleniyor mu?",
+          "a": "Hayır. Her şey tarayıcınızda FFmpeg.wasm ile çalışır."
+        }
+      ]
     },
     "vidRotate": {
-      "title": "Video Döndür", "desc": "Videonuzu döndürün veya çevirin.", "badge": "Yeni", "icon": "🔃",
-      "meta": { "title": "Video Döndür – Ücretsiz Çevrimiçi", "description": "Videoyu döndürün veya çevirin. ffmpeg.wasm ile çalışır, ücretsiz, tarayıcı içi.", "keywords": ["video döndürme ücretsiz", "video çevirme çevrimiçi"] },
+      "title": "Video Döndür",
+      "desc": "Videonuzu döndürün veya çevirin.",
+      "badge": "Yeni",
+      "icon": "🔃",
+      "meta": {
+        "title": "Video Döndür – Ücretsiz Çevrimiçi",
+        "description": "Videoyu döndürün veya çevirin. ffmpeg.wasm ile çalışır, ücretsiz, tarayıcı içi.",
+        "keywords": [
+          "video döndürme ücretsiz",
+          "video çevirme çevrimiçi"
+        ]
+      },
       "heading": "Video Döndür",
       "sub": "Videoyu yatay veya dikey olarak döndürün ya da çevirin.",
       "privacy": "Tüm işlemler tarayıcınızda gerçekleşir. Videolarınız asla bir sunucuya gönderilmez.",
       "drop": "Video dosyasını buraya sürükleyin",
       "rotOption": "Döndürme Seçeneği",
-      "r90": "90° Sağa", "l90": "90° Sola", "r180": "180°",
-      "flipH": "Yatay Çevir", "flipV": "Dikey Çevir",
+      "r90": "90° Sağa",
+      "l90": "90° Sola",
+      "r180": "180°",
+      "flipH": "Yatay Çevir",
+      "flipV": "Dikey Çevir",
       "loadingFfmpeg": "ffmpeg yükleniyor...",
       "prog": "Video döndürülüyor...",
       "success": "Video döndürüldü ve indirildi!",
-      "btn": "Video Döndür"
+      "btn": "Video Döndür",
+      "faq": [
+        {
+          "q": "Videoyu çevrimiçi nasıl döndürebilirim?",
+          "a": "Videonuzu yükleyin, döndürme açısını seçin ve Döndür'e tıklayın."
+        },
+        {
+          "q": "Bazı videolar neden bilgisayarda yan görünüyor?",
+          "a": "Telefonlarda çekilen videolar döndürme meta verisi kullanır. Bazı oynatıcılar bunu görmezden gelir. Videoyu kalıcı döndürmek sorunu çözer."
+        },
+        {
+          "q": "Videoyu döndürmek kaliteyi düşürür mü?",
+          "a": "Döndürme yeniden kodlama gerektirdiğinden minimal kalite kaybı oluşabilir. Çıktı yüksek kalite ayarları kullanır."
+        },
+        {
+          "q": "Hangi formatlar video döndürme için destekleniyor?",
+          "a": "MP4, WebM ve MOV formatları desteklenmektedir."
+        },
+        {
+          "q": "Video döndürme ücretsiz mi?",
+          "a": "Evet, tarayıcınızda FFmpeg.wasm kullanılarak tamamen ücretsizdir."
+        }
+      ]
     }
   }
 }
