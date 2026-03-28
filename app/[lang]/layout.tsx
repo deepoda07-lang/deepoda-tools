@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import { DictionaryProvider } from "@/components/DictionaryProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { getDictionary, hasLocale, locales } from "@/lib/dictionaries";
 
 export async function generateStaticParams() {
@@ -46,12 +47,14 @@ export default async function LocaleLayout({
   const dict = await getDictionary(lang);
 
   return (
-    <DictionaryProvider dict={dict}>
-      <Navbar lang={lang} />
-      <main className="flex-1">{children}</main>
-      <footer className="mt-16 border-t py-8 text-center text-sm text-gray-400">
-        <p>{dict.footer}</p>
-      </footer>
-    </DictionaryProvider>
+    <ThemeProvider>
+      <DictionaryProvider dict={dict}>
+        <Navbar lang={lang} />
+        <main className="flex-1">{children}</main>
+        <footer className="mt-16 border-t border-gray-200 dark:border-gray-800 py-8 text-center text-sm text-gray-400 dark:text-gray-500">
+          <p>{dict.footer}</p>
+        </footer>
+      </DictionaryProvider>
+    </ThemeProvider>
   );
 }

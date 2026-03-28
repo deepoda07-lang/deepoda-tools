@@ -58,8 +58,8 @@ export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-gray-900 mb-3">{d.heading}</h1>
-        <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3">{d.heading}</h1>
+        <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-8">
           {tools.length} {d.description}
         </p>
 
@@ -70,7 +70,7 @@ export default function Home() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder={d.searchPlaceholder}
-            className="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-gray-200 bg-white shadow-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm transition-all"
+            className="w-full pl-12 pr-4 py-3.5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm transition-all"
           />
         </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
                 activeCat === cat
                   ? "bg-blue-600 text-white shadow-md shadow-blue-200"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
             >
               {cat}
@@ -99,22 +99,22 @@ export default function Home() {
       <RecentTools label={d.recentTools} lang={lang} />
 
       {/* Stats bar */}
-      <div className="flex flex-wrap justify-center gap-6 mb-10 py-5 border-y border-gray-100">
+      <div className="flex flex-wrap justify-center gap-6 mb-10 py-5 border-y border-gray-100 dark:border-gray-800">
         <div className="text-center">
-          <div className="text-2xl font-extrabold text-gray-900"><AnimatedCounter end={50000} suffix="+" /></div>
-          <div className="text-xs text-gray-400 mt-0.5">{stats.files}</div>
+          <div className="text-2xl font-extrabold text-gray-900 dark:text-gray-100"><AnimatedCounter end={50000} suffix="+" /></div>
+          <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{stats.files}</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-extrabold text-gray-900">{tools.length}</div>
-          <div className="text-xs text-gray-400 mt-0.5">{stats.tools}</div>
+          <div className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">{tools.length}</div>
+          <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{stats.tools}</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-extrabold text-gray-900">$0</div>
-          <div className="text-xs text-gray-400 mt-0.5">{stats.free}</div>
+          <div className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">$0</div>
+          <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{stats.free}</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-extrabold text-gray-900">100%</div>
-          <div className="text-xs text-gray-400 mt-0.5">{stats.privacy}</div>
+          <div className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">100%</div>
+          <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{stats.privacy}</div>
         </div>
       </div>
 
@@ -125,7 +125,7 @@ export default function Home() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 text-gray-400">
+        <div className="text-center py-20 text-gray-400 dark:text-gray-500">
           <Search className="w-10 h-10 mx-auto mb-3 opacity-40" />
           <p className="text-lg font-medium">{dict.common.noResults} &ldquo;{search}&rdquo;</p>
           <p className="text-sm mt-1">{dict.common.tryDifferent}</p>

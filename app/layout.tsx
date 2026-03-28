@@ -25,7 +25,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="h-full antialiased">
-      <body className={`${geist.className} bg-gray-50 min-h-full flex flex-col`}>
+      <head>
+        {/* Prevent flash of wrong theme */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark'||(t===null&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})()` }} />
+      </head>
+      <body className={`${geist.className} bg-gray-50 dark:bg-gray-950 min-h-full flex flex-col transition-colors`}>
         {children}
       </body>
       <GoogleAnalytics gaId="G-V09GJVW7ZF" />
