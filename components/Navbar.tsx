@@ -1,10 +1,12 @@
 "use client";
+
+import * as React from "react";
 import Link from "next/link";
-import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Globe, Menu, X, Home } from "lucide-react";
 import { useDictionary } from "./DictionaryProvider";
 import ThemeToggle from "./ThemeToggle";
+import { cn } from "@/lib/utils";
 
 const LOCALES = [
   { code: "en", label: "EN", flag: "🇬🇧" },
@@ -13,13 +15,31 @@ const LOCALES = [
 ];
 
 export default function Navbar({ lang }: { lang: string }) {
-  const [open, setOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [langOpen, setLangOpen] = React.useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
   const dict = useDictionary();
   const router = useRouter();
   const pathname = usePathname();
   const prefix = lang === "en" ? "" : `/${lang}`;
   const current = LOCALES.find((l) => l.code === lang) ?? LOCALES[0];
+  const langRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handler);
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
+
+  React.useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   function switchLocale(target: string) {
     let base = pathname;
@@ -31,56 +51,157 @@ export default function Navbar({ lang }: { lang: string }) {
     setLangOpen(false);
   }
 
+  const navLinks = [
+    { href: `${prefix}/pdf`,     label: dict.navbar.pdf },
+    { href: `${prefix}/image`,   label: dict.navbar.image },
+    { href: `${prefix}/convert`, label: dict.navbar.convert },
+    { href: `${prefix}/video`,   label: dict.navbar.video },
+  ];
+
+  const isActive = (href: string) => pathname.startsWith(href);
+
   return (
-    <nav className="border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
-        <Link href={prefix || "/"} className="font-bold text-lg text-blue-600">
-          tools.deepoda
-        </Link>
+    <header className="sticky top-0 z-50">
+      <div className={cn(
+        "transition-all duration-300",
+        scrolled
+          ? "bg-white/80 dark:bg-gray-950/85 backdrop-blur-xl border-b border-gray-200/60 dark:border-white/8 shadow-sm"
+          : "bg-white/95 dark:bg-gray-950/95 border-b border-gray-100 dark:border-gray-900"
+      )}>
+        <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
 
-        <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label={dict.navbar.menu}>
-          <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 mb-1" />
-          <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 mb-1" />
-          <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300" />
-        </button>
+          {/* Logo */}
+          <Link
+            href={prefix || "/"}
+            className="flex items-center gap-2 font-bold text-base shrink-0 group"
+          >
+            <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-md shadow-blue-200 dark:shadow-blue-900 group-hover:scale-105 transition-transform">
+              <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </span>
+            <span className="text-gray-800 dark:text-gray-100">
+              tools.<span className="text-blue-600">deepoda</span>
+            </span>
+          </Link>
 
-        <div className={`${open ? "flex" : "hidden"} md:flex absolute md:static top-14 left-0 w-full md:w-auto bg-white dark:bg-gray-900 md:bg-transparent dark:md:bg-transparent flex-col md:flex-row gap-1 md:gap-4 px-4 md:px-0 pb-4 md:pb-0 border-b md:border-0 border-gray-200 dark:border-gray-800`}>
-          <Link href={`${prefix}/pdf`} className="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-200">{dict.navbar.pdf}</Link>
-          <Link href={`${prefix}/image`} className="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-200">{dict.navbar.image}</Link>
-          <Link href={`${prefix}/convert`} className="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-200">{dict.navbar.convert}</Link>
-          <Link href={`${prefix}/video`} className="px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-200">{dict.navbar.video}</Link>
-
-          <div className="flex gap-2 md:hidden pt-2 border-t border-gray-100 dark:border-gray-800">
-            {LOCALES.map((l) => (
-              <button key={l.code} onClick={() => { switchLocale(l.code); setOpen(false); }}
-                className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm ${l.code === lang ? "bg-blue-600 text-white font-semibold" : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"}`}>
-                {l.flag} {l.label}
-              </button>
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-0.5">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200",
+                  isActive(link.href)
+                    ? "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/80 dark:hover:bg-white/8"
+                )}
+              >
+                {link.label}
+              </Link>
             ))}
-          </div>
-        </div>
+          </nav>
 
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <div className="hidden md:block relative">
-            <button onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1.5 px-3 py-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-              {current.flag} {current.label}
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${langOpen ? "rotate-180" : ""}`} />
+          {/* Right actions */}
+          <div className="flex items-center gap-1.5">
+            {/* deepoda.com link — desktop only */}
+            <a
+              href="https://deepoda.com"
+              className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/8 transition-all"
+            >
+              <Home className="w-3.5 h-3.5" />
+              deepoda.com
+            </a>
+
+            <ThemeToggle />
+
+            {/* Language switcher */}
+            <div className="hidden md:block relative" ref={langRef}>
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1.5 px-2.5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/8 rounded-xl transition-all"
+              >
+                <Globe className="w-4 h-4" />
+                <span>{current.flag} {current.label}</span>
+                <ChevronDown className={cn("w-3.5 h-3.5 transition-transform duration-200", langOpen && "rotate-180")} />
+              </button>
+
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-2 w-36 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl rounded-xl border border-gray-100 dark:border-gray-700/60 shadow-xl py-1 z-50">
+                  {LOCALES.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => switchLocale(l.code)}
+                      className={cn(
+                        "w-full flex items-center gap-2.5 px-3 py-2 text-sm transition-colors",
+                        l.code === lang
+                          ? "text-blue-600 font-semibold bg-blue-50 dark:bg-blue-900/30"
+                          : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5"
+                      )}
+                    >
+                      <span className="text-base">{l.flag}</span>
+                      <span>{l.label}</span>
+                      {l.code === lang && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-blue-600" />}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/8 text-gray-700 dark:text-gray-300 transition-colors"
+              aria-label={dict.navbar.menu}
+            >
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
-            {langOpen && (
-              <div className="absolute right-0 top-full mt-1 w-32 bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 py-1 z-50">
-                {LOCALES.map((l) => (
-                  <button key={l.code} onClick={() => switchLocale(l.code)}
-                    className={`w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800 ${l.code === lang ? "text-blue-600 font-semibold" : "text-gray-700 dark:text-gray-300"}`}>
-                    {l.flag} {l.label}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>
-    </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-white/95 dark:bg-gray-950/95 backdrop-blur-xl border-b border-gray-100 dark:border-gray-800 px-4 py-3 flex flex-col gap-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className={cn(
+                "px-3 py-2.5 rounded-xl text-sm font-medium transition-colors",
+                isActive(link.href)
+                  ? "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/8"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          <div className="mt-2 pt-3 border-t border-gray-100 dark:border-white/8 flex items-center justify-between">
+            <div className="flex gap-1.5">
+              {LOCALES.map((l) => (
+                <button
+                  key={l.code}
+                  onClick={() => { switchLocale(l.code); setMobileOpen(false); }}
+                  className={cn(
+                    "flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
+                    l.code === lang
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-100 dark:bg-white/8 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/15"
+                  )}
+                >
+                  <span>{l.flag}</span>
+                  <span>{l.label}</span>
+                </button>
+              ))}
+            </div>
+            <ThemeToggle />
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
