@@ -11,6 +11,13 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Redirect /en/... to canonical non-prefixed URL (fixes 404 on /en/ paths)
+  if (pathname === "/en" || pathname.startsWith("/en/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.slice(3) || "/";
+    return NextResponse.redirect(url, 301);
+  }
+
   const currentLocale = locales.find(
     (locale) =>
       pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
