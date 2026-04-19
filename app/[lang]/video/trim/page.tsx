@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import FileDropzone from "@/components/FileDropzone";
 import FfmpegStatus from "@/components/FfmpegStatus";
 import { formatTime } from "@/lib/ffmpeg-utils";
@@ -12,7 +12,18 @@ export default function VideoTrimPage() {
   const [endSec, setEndSec] = useState(0);
   const [status, setStatus] = useState<"idle" | "loading" | "processing" | "done" | "error">("idle");
   const [progress, setProgress] = useState(0);
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (!file) {
+      setVideoUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(file);
+    setVideoUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [file]);
 
   const handleFiles = useCallback((files: File[]) => {
     if (!files[0]) return;
@@ -89,6 +100,26 @@ export default function VideoTrimPage() {
             <span className="text-gray-700 truncate">🎬 {file.name}</span>
             <button onClick={() => { setFile(null); setStatus("idle"); }} className="ml-2 text-gray-400 hover:text-red-500"><X className="w-4 h-4" /></button>
           </div>
+
+          {videoUrl && (
+            <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm bg-black">
+              <video
+                ref={videoRef}
+                src={videoUrl}
+                controls
+                className="w-full max-h-64 object-contain"
+                preload="metadata"
+              />
+            </div>
+          )}
+
+          {videoUrl && duration > 0 && (
+            <div className="mt-2 text-xs text-gray-500 flex gap-4">
+              <span>Start: <strong>{startSec.toFixed(1)}s</strong></span>
+              <span>End: <strong>{endSec.toFixed(1)}s</strong></span>
+              <span>Duration: <strong>{(endSec - startSec).toFixed(1)}s</strong></span>
+            </div>
+          )}
 
           <div className="mt-5 space-y-4">
             <div>

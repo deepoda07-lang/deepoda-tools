@@ -5,6 +5,12 @@ import ProgressBar from "@/components/ProgressBar";
 import { downloadBlob } from "@/lib/image-utils";
 import { X } from "lucide-react";
 
+function formatFileSize(bytes: number): string {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
 export default function HeicToJpgPage() {
   const [files, setFiles] = useState<File[]>([]);
   const [progress, setProgress] = useState(0);
@@ -52,9 +58,19 @@ export default function HeicToJpgPage() {
       {files.length > 0 && (
         <div className="mt-4 space-y-2">
           {files.map((f, i) => (
-            <div key={i} className="flex items-center justify-between p-3 bg-white border rounded-lg text-sm">
-              <span className="text-gray-700 truncate">{f.name}</span>
-              <button onClick={() => removeFile(i)} className="ml-2 text-gray-400 hover:text-red-500">
+            <div key={i} className="flex items-center gap-3 p-3 bg-white border rounded-lg text-sm">
+              <div className="shrink-0 w-10 h-10 rounded-md bg-gray-100 border border-gray-200 flex items-center justify-center">
+                <span className="text-xs font-bold text-gray-400 uppercase tracking-tight">HEIC</span>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-gray-800 font-medium truncate">{f.name}</p>
+                <p className="text-xs text-gray-400 mt-0.5">{formatFileSize(f.size)}</p>
+              </div>
+              <button
+                onClick={() => removeFile(i)}
+                className="ml-2 text-gray-400 hover:text-red-500 shrink-0"
+                aria-label="Remove file"
+              >
                 <X className="w-4 h-4" />
               </button>
             </div>
@@ -79,8 +95,11 @@ export default function HeicToJpgPage() {
         </div>
       )}
 
-      <button onClick={handleConvert} disabled={files.length === 0 || status === "processing"}
-        className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
+      <button
+        onClick={handleConvert}
+        disabled={files.length === 0 || status === "processing"}
+        className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
+      >
         {status === "processing" ? "Converting..." : "Convert to JPG"}
       </button>
     </div>

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import FileDropzone from "@/components/FileDropzone";
 import FfmpegStatus from "@/components/FfmpegStatus";
 import { formatBytes } from "@/lib/ffmpeg-utils";
@@ -16,6 +16,17 @@ export default function VideoToMp3Page() {
   const [quality, setQuality] = useState(1);
   const [status, setStatus] = useState<"idle" | "loading" | "processing" | "done" | "error">("idle");
   const [progress, setProgress] = useState(0);
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!file) {
+      setVideoUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(file);
+    setVideoUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [file]);
 
   const handleFiles = useCallback((files: File[]) => {
     if (files[0]) { setFile(files[0]); setStatus("idle"); }
@@ -71,6 +82,17 @@ export default function VideoToMp3Page() {
             <span className="text-gray-700 truncate">🎬 {file.name} <span className="text-gray-400 ml-1">({formatBytes(file.size)})</span></span>
             <button onClick={() => { setFile(null); setStatus("idle"); }} className="ml-2 text-gray-400 hover:text-red-500"><X className="w-4 h-4" /></button>
           </div>
+
+          {videoUrl && (
+            <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm bg-black">
+              <video
+                src={videoUrl}
+                controls
+                className="w-full max-h-64 object-contain"
+                preload="metadata"
+              />
+            </div>
+          )}
 
           <div className="mt-4">
             <p className="text-sm font-medium text-gray-700 mb-2">MP3 Quality</p>

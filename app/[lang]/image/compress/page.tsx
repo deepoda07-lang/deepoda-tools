@@ -95,7 +95,14 @@ export default function ImageCompressPage() {
           {results.map((r, i) => (
             <div key={i} className="bg-white border rounded-lg p-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-medium truncate text-gray-800">{r.name}</span>
+                <div className="flex items-center gap-3 min-w-0">
+                  <img
+                    src={URL.createObjectURL(r.blob)}
+                    alt={r.name}
+                    className="w-12 h-12 object-cover rounded-md border border-gray-200 shrink-0"
+                  />
+                  <span className="text-sm font-medium truncate text-gray-800">{r.name}</span>
+                </div>
                 <button
                   onClick={() => downloadBlob(r.blob, `compressed_${r.name}`)}
                   className="text-xs text-blue-600 hover:underline ml-2 shrink-0"
@@ -103,7 +110,7 @@ export default function ImageCompressPage() {
                   {dict.common.download}
                 </button>
               </div>
-              <div className="flex gap-4 text-xs text-gray-500">
+              <div className="flex gap-4 text-xs text-gray-500 pl-15">
                 <span>{dict.common.before}: {formatBytes(r.original)}</span>
                 <span>→</span>
                 <span className="text-green-600 font-medium">{dict.common.after}: {formatBytes(r.compressed)}</span>

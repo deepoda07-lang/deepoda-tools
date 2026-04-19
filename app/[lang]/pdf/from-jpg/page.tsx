@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import FileDropzone from "@/components/FileDropzone";
 import ProgressBar from "@/components/ProgressBar";
 import { imagesToPDF, downloadBlob } from "@/lib/pdf-utils";
@@ -9,6 +9,7 @@ export default function JPGToPDFPage() {
   const [files, setFiles] = useState<File[]>([]);
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState<"idle" | "processing" | "done" | "error">("idle");
+  const [previewUrls, setPreviewUrls] = useState<string[]>([]);
 
   const handleFiles = useCallback((newFiles: File[]) => {
     setFiles((prev) => [...prev, ...newFiles]);
@@ -18,6 +19,14 @@ export default function JPGToPDFPage() {
   const removeFile = (index: number) => {
     setFiles((prev) => prev.filter((_, i) => i !== index));
   };
+
+  useEffect(() => {
+    const urls = files.map((f) => URL.createObjectURL(f));
+    setPreviewUrls(urls);
+    return () => {
+      urls.forEach((url) => URL.revokeObjectURL(url));
+    };
+  }, [files]);
 
   const handleConvert = async () => {
     if (files.length === 0) return;
@@ -46,16 +55,26 @@ export default function JPGToPDFPage() {
       />
 
       {files.length > 0 && (
-        <div className="mt-4 space-y-2">
-          {files.map((f, i) => (
-            <div key={i} className="flex items-center justify-between p-3 bg-white border rounded-lg text-sm">
-              <span className="text-gray-700 truncate">{f.name}</span>
-              <button onClick={() => removeFile(i)} className="ml-2 text-gray-400 hover:text-red-500">
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-          ))}
-          <p className="text-xs text-gray-400 mt-1">{files.length} image(s) selected</p>
+        <div className="mt-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+            {files.map((f, i) => (
+              <div key={i} className="relative group aspect-square rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+                {previewUrls[i] && (
+                  <img src={previewUrls[i]} alt={f.name} className="w-full h-full object-cover" />
+                )}
+                <button
+                  onClick={() => removeFile(i)}
+                  className="absolute top-1 right-1 bg-black/50 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  <X className="w-3 h-3" />
+                </button>
+                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-[9px] px-1 py-0.5 truncate">
+                  {f.name}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 mt-2">{files.length} image(s) selected</p>
         </div>
       )}
 
@@ -63,12 +82,12 @@ export default function JPGToPDFPage() {
         <div className="mt-4"><ProgressBar value={progress} label="Creating PDF..." /></div>
       )}
       {status === "done" && (
-        <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
+        <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-400 text-sm">
           PDF created and downloaded!
         </div>
       )}
       {status === "error" && (
-        <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+        <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
           An error occurred. Please try again.
         </div>
       )}

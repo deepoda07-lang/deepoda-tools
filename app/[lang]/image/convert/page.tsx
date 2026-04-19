@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import FileDropzone from "@/components/FileDropzone";
 import { convertImageFormat, downloadBlob } from "@/lib/image-utils";
 import { useDictionary } from "@/components/DictionaryProvider";
@@ -17,11 +17,18 @@ export default function ImageConvertPage() {
   const [files, setFiles] = useState<File[]>([]);
   const [targetFormat, setTargetFormat] = useState<Format>("image/webp");
   const [status, setStatus] = useState<"idle" | "processing" | "done">("idle");
+  const [previewUrls, setPreviewUrls] = useState<string[]>([]);
 
   const handleFiles = useCallback((f: File[]) => {
     setFiles(f);
     setStatus("idle");
   }, []);
+
+  useEffect(() => {
+    const urls = files.map((f) => URL.createObjectURL(f));
+    setPreviewUrls(urls);
+    return () => urls.forEach((u) => URL.revokeObjectURL(u));
+  }, [files]);
 
   const handleConvert = async () => {
     setStatus("processing");
@@ -32,6 +39,9 @@ export default function ImageConvertPage() {
     }
     setStatus("done");
   };
+
+  const visiblePreviews = previewUrls.slice(0, 6);
+  const extraCount = files.length > 6 ? files.length - 6 : 0;
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
@@ -64,8 +74,29 @@ export default function ImageConvertPage() {
       />
 
       {files.length > 0 && (
-        <div className="mt-4 text-sm text-gray-600">
-          {files.length} file(s) selected
+        <div className="mt-4">
+          <p className="text-sm text-gray-600 mb-3">{files.length} file(s) selected</p>
+          <div className="grid grid-cols-3 gap-3">
+            {visiblePreviews.map((url, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <div className="w-full aspect-square rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
+                  <img
+                    src={url}
+                    alt={files[i]?.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="mt-1 text-xs text-gray-500 truncate w-full text-center">
+                  {files[i]?.name}
+                </p>
+              </div>
+            ))}
+            {extraCount > 0 && (
+              <div className="flex items-center justify-center aspect-square rounded-lg border-2 border-dashed border-gray-200 bg-gray-50">
+                <span className="text-sm font-medium text-gray-400">+{extraCount} more</span>
+              </div>
+            )}
+          </div>
         </div>
       )}
 
