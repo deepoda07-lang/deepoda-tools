@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { ChevronDown, Globe, Menu, X, Home } from "lucide-react";
+
 import { useDictionary } from "./DictionaryProvider";
 import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
@@ -75,13 +76,13 @@ export default function Navbar({ lang }: { lang: string }) {
             href={prefix || "/"}
             className="flex items-center gap-2 font-bold text-base shrink-0 group"
           >
-            <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-md shadow-blue-200 dark:shadow-blue-900 group-hover:scale-105 transition-transform">
-              <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center shadow-md shadow-indigo-200 dark:shadow-indigo-900 group-hover:scale-105 transition-transform shrink-0">
+              <svg viewBox="0 0 24 24" className="w-4 h-4" fill="white">
+                <path d="M4 3h9c7 0 11 4.5 11 9s-4 9-11 9H4V3zm5 4.5v9h4c3.5 0 6-2.2 6-4.5s-2.5-4.5-6-4.5H9z"/>
               </svg>
             </span>
             <span className="text-gray-800 dark:text-gray-100">
-              tools.<span className="text-blue-600">deepoda</span>
+              tools.<span className="text-indigo-600 dark:text-indigo-400">deepoda</span>
             </span>
           </Link>
 
