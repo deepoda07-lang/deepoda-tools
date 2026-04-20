@@ -47,7 +47,7 @@ export default function VideoRotatePage() {
       ffmpeg.deleteFile(inputName).catch(() => {});
       ffmpeg.deleteFile(outputName).catch(() => {});
 
-      const blob = new Blob([data], { type: "video/mp4" });
+      const blob = new Blob([data as Uint8Array<ArrayBuffer>], { type: "video/mp4" });
       const blobUrl = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = blobUrl;

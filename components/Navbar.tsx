@@ -72,19 +72,16 @@ export default function Navbar({ lang }: { lang: string }) {
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
 
           {/* Logo */}
-          <Link
-            href={prefix || "/"}
-            className="flex items-center gap-2 font-bold text-base shrink-0 group"
+          <a
+            href="https://deepoda.com"
+            className="shrink-0 group hover:opacity-90 transition-opacity"
           >
-            <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center shadow-md shadow-indigo-200 dark:shadow-indigo-900 group-hover:scale-105 transition-transform shrink-0">
-              <svg viewBox="0 0 24 24" className="w-4 h-4" fill="white">
-                <path d="M4 3h9c7 0 11 4.5 11 9s-4 9-11 9H4V3zm5 4.5v9h4c3.5 0 6-2.2 6-4.5s-2.5-4.5-6-4.5H9z"/>
-              </svg>
-            </span>
-            <span className="text-gray-800 dark:text-gray-100">
-              tools.<span className="text-indigo-600 dark:text-indigo-400">deepoda</span>
-            </span>
-          </Link>
+            <img
+              src="/deepoda-logo.png"
+              alt="Deepoda"
+              className="h-8 w-auto group-hover:scale-[1.03] transition-transform"
+            />
+          </a>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-0.5">

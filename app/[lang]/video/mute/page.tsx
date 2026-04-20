@@ -38,7 +38,7 @@ export default function VideoMutePage() {
       ffmpeg.deleteFile(inputName).catch(() => {});
       ffmpeg.deleteFile(outputName).catch(() => {});
 
-      const blob = new Blob([data], { type: file.type || "video/mp4" });
+      const blob = new Blob([data as Uint8Array<ArrayBuffer>], { type: file.type || "video/mp4" });
       const blobUrl = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = blobUrl;

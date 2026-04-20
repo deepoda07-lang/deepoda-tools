@@ -1,32 +1,12 @@
 "use client";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext } from "react";
 
-type Theme = "light" | "dark";
-const ThemeContext = createContext<{ theme: Theme; toggle: () => void } | null>(null);
+const ThemeContext = createContext<{ theme: "light" }>({ theme: "light" });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
-
-  useEffect(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const resolved = stored ?? (prefersDark ? "dark" : "light");
-    setTheme(resolved);
-    document.documentElement.classList.toggle("dark", resolved === "dark");
-  }, []);
-
-  function toggle() {
-    const next: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    document.documentElement.classList.toggle("dark", next === "dark");
-    localStorage.setItem("theme", next);
-  }
-
-  return <ThemeContext.Provider value={{ theme, toggle }}>{children}</ThemeContext.Provider>;
+  return <ThemeContext.Provider value={{ theme: "light" }}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {
-  const ctx = useContext(ThemeContext);
-  if (!ctx) throw new Error("useTheme must be used within ThemeProvider");
-  return ctx;
+  return useContext(ThemeContext);
 }
