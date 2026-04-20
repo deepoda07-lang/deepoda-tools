@@ -69,9 +69,9 @@ export default function VideoConvertPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Convert Video</h1>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Convert Video</h1>
       <p className="text-gray-500 mb-2">Convert between video formats.</p>
-      <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
+      <p className="text-xs text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-2 rounded-lg mb-6">
         All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
@@ -83,8 +83,8 @@ export default function VideoConvertPage() {
 
       {file && (
         <>
-          <div className="mt-4 flex items-center justify-between p-3 bg-white border rounded-lg text-sm">
-            <span className="text-gray-700 truncate">🎬 {file.name} <span className="text-gray-400 ml-1">({formatBytes(file.size)})</span></span>
+          <div className="mt-4 flex items-center justify-between p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm">
+            <span className="text-gray-700 dark:text-gray-300 truncate">🎬 {file.name} <span className="text-gray-400 ml-1">({formatBytes(file.size)})</span></span>
             <button onClick={() => { setFile(null); setStatus("idle"); }} className="ml-2 text-gray-400 hover:text-red-500"><X className="w-4 h-4" /></button>
           </div>
 
@@ -116,7 +116,7 @@ export default function VideoConvertPage() {
       <FfmpegStatus status={status} progress={progress} loadingLabel="Loading ffmpeg..." processingLabel="Converting video..." doneLabel="Video converted and downloaded!" />
 
       <button onClick={handleConvert} disabled={!file || status === "loading" || status === "processing"}
-        className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors">
+        className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-colors">
         {status === "loading" || status === "processing" ? "Processing..." : `Convert to ${FORMATS[targetFormat].label}`}
       </button>
     </div>
