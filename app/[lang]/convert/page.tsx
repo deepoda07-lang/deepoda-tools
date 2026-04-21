@@ -27,10 +27,13 @@ export default async function ConvertPage({
   const t = dict.t;
 
   const tools = [
-    { ...t.convWordToPdf, href: "/convert/word-to-pdf" },
+    { ...t.convWordToPdf,  href: "/convert/word-to-pdf" },
     { ...t.convExcelToPdf, href: "/convert/excel-to-pdf" },
-    { ...t.convHtmlToPdf, href: "/convert/html-to-pdf" },
-    { ...t.convMdToPdf, href: "/convert/markdown-to-pdf" },
+    { ...t.convHtmlToPdf,  href: "/convert/html-to-pdf" },
+    { ...t.convMdToPdf,    href: "/convert/markdown-to-pdf" },
+    { ...t.convBase64,     href: "/convert/base64" },
+    { ...t.convJsonFormat, href: "/convert/json-format" },
+    { ...t.convQrCode,     href: "/convert/qr-code" },
   ];
 
   return <CategoryPageClient catKey="convert" tools={tools} />;
