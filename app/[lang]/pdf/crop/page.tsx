@@ -19,8 +19,8 @@ function MarginInput({
 }) {
   return (
     <div className="flex flex-col items-center gap-1.5">
-      <label className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">{label}</label>
-      <div className="flex items-center border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-blue-500 bg-white dark:bg-gray-800">
+      <label className="text-xs font-medium text-gray-500 uppercase tracking-wide">{label}</label>
+      <div className="flex items-center border border-gray-300 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-blue-500 bg-white">
         <input
           type="number"
           min={0}
@@ -28,7 +28,7 @@ function MarginInput({
           step={1}
           value={value}
           onChange={(e) => onChange(Math.max(0, Math.min(150, Number(e.target.value))))}
-          className="w-16 px-3 py-2 text-sm text-center focus:outline-none bg-transparent text-gray-900 dark:text-white"
+          className="w-16 px-3 py-2 text-sm text-center focus:outline-none bg-transparent text-gray-900"
         />
         <span className="pr-3 text-xs text-gray-400">mm</span>
       </div>
@@ -61,7 +61,7 @@ function PdfPreview({
   const rightPct  = Math.min(45, (right  * MM_TO_PT / pageWidth_pt)  * 100);
 
   return (
-    <div className="relative inline-block shadow-lg rounded overflow-hidden border border-gray-200 dark:border-gray-700">
+    <div className="relative inline-block shadow-lg rounded overflow-hidden border border-gray-200">
       {/* Rendered PDF page */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={previewUrl} alt="PDF preview" className="block max-w-full" draggable={false} />
@@ -209,9 +209,9 @@ export default function PDFCropPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Crop PDF</h1>
-      <p className="text-gray-500 dark:text-gray-400 mb-2">Trim the margins of every page in your PDF.</p>
-      <p className="text-xs text-blue-600 bg-blue-50 dark:bg-blue-900/30 dark:text-blue-400 px-3 py-2 rounded-lg mb-6">
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Crop PDF</h1>
+      <p className="text-gray-500 mb-2">Trim the margins of every page in your PDF.</p>
+      <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
         All processing happens in your browser. Your files are never sent to a server.
       </p>
 
@@ -223,7 +223,7 @@ export default function PDFCropPage() {
       />
 
       {file && (
-        <div className="mt-4 p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+        <div className="mt-4 p-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-700">
           Selected: <span className="font-medium">{file.name}</span>
           {pageCount > 0 && (
             <span className="ml-2 text-gray-400">({pageCount} page{pageCount > 1 ? "s" : ""})</span>
@@ -237,13 +237,13 @@ export default function PDFCropPage() {
           {/* ── Left: controls ── */}
           <div>
             <div className="flex items-center justify-between mb-4">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Crop margins</p>
+              <p className="text-sm font-medium text-gray-700">Crop margins</p>
               <button
                 onClick={() => setLinked((v) => !v)}
                 className={`flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border transition-all ${
                   linked
-                    ? "border-blue-400 bg-blue-50 dark:bg-blue-900/30 text-blue-600"
-                    : "border-gray-300 dark:border-gray-600 text-gray-500 hover:border-gray-400"
+                    ? "border-blue-400 bg-blue-50 text-blue-600"
+                    : "border-gray-300 text-gray-500 hover:border-gray-400"
                 }`}
               >
                 {linked ? <Link2 className="w-3.5 h-3.5" /> : <Link2Off className="w-3.5 h-3.5" />}
@@ -257,9 +257,9 @@ export default function PDFCropPage() {
               <div className="flex items-center gap-4">
                 <MarginInput label="Left"   value={left}   onChange={(v) => linked ? setAll(v) : setLeft(v)} />
                 {/* Schematic mini page */}
-                <div className="w-20 h-24 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-800 flex items-center justify-center">
+                <div className="w-20 h-24 border-2 border-dashed border-gray-300 rounded bg-gray-50 flex items-center justify-center">
                   <div
-                    className="bg-blue-100 dark:bg-blue-900/40 border border-blue-400 rounded transition-all"
+                    className="bg-blue-100 border border-blue-400 rounded transition-all"
                     style={{
                       width:  `${Math.max(20, 100 - (left + right) * 0.8)}%`,
                       height: `${Math.max(20, 100 - (top + bottom) * 0.6)}%`,
@@ -271,7 +271,7 @@ export default function PDFCropPage() {
               <MarginInput label="Bottom" value={bottom} onChange={(v) => linked ? setAll(v) : setBottom(v)} />
             </div>
 
-            <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-xs text-gray-500 dark:text-gray-400 text-center">
+            <div className="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-lg text-xs text-gray-500 text-center">
               Removing {top}mm top · {right}mm right · {bottom}mm bottom · {left}mm left
             </div>
 
@@ -281,12 +281,12 @@ export default function PDFCropPage() {
               </div>
             )}
             {status === "done" && (
-              <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl text-green-700 dark:text-green-400 text-sm font-medium">
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm font-medium">
                 PDF cropped and downloaded!
               </div>
             )}
             {status === "error" && (
-              <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg text-red-700 dark:text-red-400 text-sm">
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
                 An error occurred. Please try again.
               </div>
             )}
@@ -294,7 +294,7 @@ export default function PDFCropPage() {
             <button
               onClick={handleCrop}
               disabled={!file || status === "processing" || noMargins}
-              className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 text-white font-semibold rounded-xl transition-colors"
+              className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white font-semibold rounded-xl transition-colors"
             >
               {status === "processing" ? "Cropping..." : noMargins ? "Set margins above" : "Crop PDF"}
             </button>
@@ -302,7 +302,7 @@ export default function PDFCropPage() {
 
           {/* ── Right: live preview ── */}
           <div className="flex flex-col items-center gap-3">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 self-start">
+            <p className="text-sm font-medium text-gray-700 self-start">
               Live preview
               <span className="ml-2 text-xs text-gray-400 font-normal">(page 1)</span>
             </p>
@@ -318,7 +318,7 @@ export default function PDFCropPage() {
                 left={left}
               />
             ) : (
-              <div className="w-full aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 dark:border-gray-700 flex items-center justify-center">
+              <div className="w-full aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 flex items-center justify-center">
                 <p className="text-sm text-gray-400">Loading preview…</p>
               </div>
             )}

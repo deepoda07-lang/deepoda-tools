@@ -78,30 +78,30 @@ export default function ColorPalettePage() {
   return (
     <div className="py-8">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-1">{d.heading}</h1>
-        <p className="text-gray-500 dark:text-gray-400 text-sm">{d.sub}</p>
+        <h1 className="text-2xl font-bold text-gray-900 mb-1">{d.heading}</h1>
+        <p className="text-gray-500 text-sm">{d.sub}</p>
       </div>
 
       {!preview && (
         <div
           {...getRootProps()}
           className={`border-2 border-dashed rounded-2xl p-12 text-center cursor-pointer transition-colors ${
-            isDragActive ? "border-blue-400 bg-blue-50 dark:bg-blue-950/30" : "border-gray-200 dark:border-gray-700 hover:border-blue-300 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+            isDragActive ? "border-blue-400 bg-blue-50" : "border-gray-200 hover:border-blue-300 hover:bg-gray-50"
           }`}
         >
           <input {...getInputProps()} />
-          <Upload className="w-10 h-10 text-gray-300 dark:text-gray-600 mx-auto mb-3" />
-          <p className="text-gray-500 dark:text-gray-400 font-medium">{d.drop}</p>
-          <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">JPG, PNG, WebP, GIF</p>
+          <Upload className="w-10 h-10 text-gray-300 mx-auto mb-3" />
+          <p className="text-gray-500 font-medium">{d.drop}</p>
+          <p className="text-xs text-gray-400 mt-1">JPG, PNG, WebP, GIF</p>
         </div>
       )}
 
       {preview && (
         <div className="space-y-6">
           <div className="flex gap-6 items-start flex-wrap">
-            <img ref={imgRef} src={preview} alt="Uploaded" className="w-48 h-48 object-cover rounded-2xl border border-gray-200 dark:border-gray-700" />
+            <img ref={imgRef} src={preview} alt="Uploaded" className="w-48 h-48 object-cover rounded-2xl border border-gray-200" />
             <div className="flex-1 min-w-[200px]">
-              <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-3">{d.clickCopy}</p>
+              <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">{d.clickCopy}</p>
               <div className="flex flex-wrap gap-3">
                 {colors.map((hex) => (
                   <button
@@ -115,7 +115,7 @@ export default function ColorPalettePage() {
                       <Check className="w-5 h-5 absolute inset-0 m-auto drop-shadow" style={{ color: luminance(hex) > 128 ? "#000" : "#fff" }} />
                     )}
                     <span
-                      className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-xs font-mono whitespace-nowrap text-gray-600 dark:text-gray-400"
+                      className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-xs font-mono whitespace-nowrap text-gray-600"
                     >
                       {hex}
                     </span>
@@ -126,7 +126,7 @@ export default function ColorPalettePage() {
           </div>
           <button
             onClick={() => { setPreview(null); setColors([]); }}
-            className="text-xs text-gray-400 dark:text-gray-500 hover:text-blue-600 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-2 transition-colors"
+            className="text-xs text-gray-400 hover:text-blue-600 border border-gray-200 rounded-xl px-4 py-2 transition-colors"
           >
             Choose another image
           </button>

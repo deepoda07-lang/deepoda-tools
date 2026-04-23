@@ -122,20 +122,20 @@ export default function PDFMergePage() {
 
       {files.length > 0 && (
         <div className="mt-6 space-y-2">
-          <h2 className="font-semibold text-gray-700 dark:text-gray-300">{d.selFiles} ({files.length})</h2>
+          <h2 className="font-semibold text-gray-700">{d.selFiles} ({files.length})</h2>
           {files.map((f, i) => {
             const key = f.name + f.size;
             const thumb = thumbUrls[key];
             return (
-              <div key={i} className="flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-2">
+              <div key={i} className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-3 py-2">
                 {thumb ? (
-                  <img src={thumb} alt="" className="w-8 h-10 object-cover rounded border border-gray-200 dark:border-gray-600 flex-shrink-0" />
+                  <img src={thumb} alt="" className="w-8 h-10 object-cover rounded border border-gray-200 flex-shrink-0" />
                 ) : (
-                  <div className="w-8 h-10 rounded border border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center">
+                  <div className="w-8 h-10 rounded border border-gray-200 bg-gray-100 flex-shrink-0 flex items-center justify-center">
                     <span className="text-[9px] text-gray-400">PDF</span>
                   </div>
                 )}
-                <span className="text-sm flex-1 truncate text-gray-700 dark:text-gray-300">{f.name}</span>
+                <span className="text-sm flex-1 truncate text-gray-700">{f.name}</span>
                 <span className="text-xs text-gray-400">{(f.size / 1024).toFixed(0)} KB</span>
                 <button onClick={() => moveFile(i, -1)} disabled={i === 0} className="text-gray-400 hover:text-gray-600 disabled:opacity-30 px-1">↑</button>
                 <button onClick={() => moveFile(i, 1)} disabled={i === files.length - 1} className="text-gray-400 hover:text-gray-600 disabled:opacity-30 px-1">↓</button>
@@ -155,7 +155,7 @@ export default function PDFMergePage() {
       )}
 
       {status === "done" && (
-        <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-400 text-sm">
+        <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
           {d.success}
         </div>
       )}

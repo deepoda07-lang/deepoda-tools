@@ -37,7 +37,7 @@ export default async function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Deepoda Tools" />
       </head>
-      <body className={`${geist.className} bg-gray-50 dark:bg-gray-950 min-h-full flex flex-col transition-colors`}>
+      <body className={`${geist.className} bg-gray-50 min-h-full flex flex-col transition-colors`}>
         <ServiceWorkerRegister />
         {children}
       </body>

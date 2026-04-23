@@ -101,7 +101,7 @@ export default function Home() {
         {/* Background blobs */}
         <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
           <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-br from-blue-400/20 via-purple-400/15 to-pink-400/10 rounded-full blur-3xl" />
-          <div className="absolute top-0 right-[-5%] w-72 h-72 bg-blue-300/10 dark:bg-blue-800/15 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-[-5%] w-72 h-72 bg-blue-300/10 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-3xl mx-auto text-center">
@@ -110,7 +110,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/50 text-blue-700 dark:text-blue-300 text-xs font-semibold mb-6"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold mb-6"
           >
             <Sparkles className="w-3.5 h-3.5" />
             {tools.length} {d.description}
@@ -121,7 +121,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4 leading-tight"
+            className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4 leading-tight"
           >
             {d.heading}
           </motion.h1>
@@ -139,7 +139,7 @@ export default function Home() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={d.searchPlaceholder}
-              className="w-full pl-11 pr-4 py-3.5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg shadow-gray-100/60 dark:shadow-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 text-sm transition-all"
+              className="w-full pl-11 pr-4 py-3.5 rounded-2xl border border-gray-200 bg-white shadow-lg shadow-gray-100/60 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-400 text-sm transition-all"
             />
           </motion.div>
 
@@ -157,8 +157,8 @@ export default function Home() {
                 className={cn(
                   "flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200",
                   activeCat === cat
-                    ? "bg-blue-600 text-white shadow-md shadow-blue-200 dark:shadow-blue-900/50"
-                    : "bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    ? "bg-blue-600 text-white shadow-md shadow-blue-200"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 )}
               >
                 {CAT_ICONS[catKeys[i]]}
@@ -189,14 +189,14 @@ export default function Home() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + i * 0.07, duration: 0.4 }}
-                className="flex flex-col items-center gap-0.5 px-3 py-4 rounded-2xl bg-white dark:bg-gray-900/70 border border-gray-100 dark:border-gray-800"
+                className="flex flex-col items-center gap-0.5 px-3 py-4 rounded-2xl bg-white border border-gray-100"
               >
-                <div className="text-xl font-extrabold text-gray-900 dark:text-white">
+                <div className="text-xl font-extrabold text-gray-900">
                   {s.animated
                     ? <AnimatedCounter end={s.end!} suffix={s.suffix!} />
                     : s.value}
                 </div>
-                <div className="text-xs text-gray-500 dark:text-gray-400 font-medium">{s.label}</div>
+                <div className="text-xs text-gray-500 font-medium">{s.label}</div>
               </motion.div>
             ))}
           </div>
@@ -230,7 +230,7 @@ export default function Home() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-24 text-gray-400 dark:text-gray-500">
+          <div className="text-center py-24 text-gray-400">
             <Search className="w-10 h-10 mx-auto mb-3 opacity-30" />
             <p className="text-base font-medium">{dict.common.noResults} &ldquo;{search}&rdquo;</p>
             <p className="text-sm mt-1 text-gray-400">{dict.common.tryDifferent}</p>

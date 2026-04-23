@@ -66,8 +66,8 @@ export default function Navbar({ lang }: { lang: string }) {
       <div className={cn(
         "transition-all duration-300",
         scrolled
-          ? "bg-white/80 dark:bg-gray-950/85 backdrop-blur-xl border-b border-gray-200/60 dark:border-white/8 shadow-sm"
-          : "bg-white/95 dark:bg-gray-950/95 border-b border-gray-100 dark:border-gray-900"
+          ? "bg-white/80 backdrop-blur-xl border-b border-gray-200/60 shadow-sm"
+          : "bg-white/95 border-b border-gray-100"
       )}>
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
 
@@ -92,8 +92,8 @@ export default function Navbar({ lang }: { lang: string }) {
                 className={cn(
                   "px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200",
                   isActive(link.href)
-                    ? "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
-                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100/80 dark:hover:bg-white/8"
+                    ? "bg-blue-50 text-blue-600"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-100/80"
                 )}
               >
                 {link.label}
@@ -106,7 +106,7 @@ export default function Navbar({ lang }: { lang: string }) {
             {/* deepoda.com link — desktop only */}
             <a
               href="https://deepoda.com"
-              className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/8 transition-all"
+              className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-all"
             >
               <Home className="w-3.5 h-3.5" />
               deepoda.com
@@ -118,7 +118,7 @@ export default function Navbar({ lang }: { lang: string }) {
             <div className="hidden md:block relative" ref={langRef}>
               <button
                 onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-1.5 px-2.5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/8 rounded-xl transition-all"
+                className="flex items-center gap-1.5 px-2.5 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-xl transition-all"
               >
                 <Globe className="w-4 h-4" />
                 <span>{current.flag} {current.label}</span>
@@ -126,7 +126,7 @@ export default function Navbar({ lang }: { lang: string }) {
               </button>
 
               {langOpen && (
-                <div className="absolute right-0 top-full mt-2 w-36 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl rounded-xl border border-gray-100 dark:border-gray-700/60 shadow-xl py-1 z-50">
+                <div className="absolute right-0 top-full mt-2 w-36 bg-white/95 backdrop-blur-xl rounded-xl border border-gray-100 shadow-xl py-1 z-50">
                   {LOCALES.map((l) => (
                     <button
                       key={l.code}
@@ -134,8 +134,8 @@ export default function Navbar({ lang }: { lang: string }) {
                       className={cn(
                         "w-full flex items-center gap-2.5 px-3 py-2 text-sm transition-colors",
                         l.code === lang
-                          ? "text-blue-600 font-semibold bg-blue-50 dark:bg-blue-900/30"
-                          : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5"
+                          ? "text-blue-600 font-semibold bg-blue-50"
+                          : "text-gray-700 hover:bg-gray-50"
                       )}
                     >
                       <span className="text-base">{l.flag}</span>
@@ -150,7 +150,7 @@ export default function Navbar({ lang }: { lang: string }) {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-white/8 text-gray-700 dark:text-gray-300 transition-colors"
+              className="md:hidden p-2 rounded-xl hover:bg-gray-100 text-gray-700 transition-colors"
               aria-label={dict.navbar.menu}
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -161,7 +161,7 @@ export default function Navbar({ lang }: { lang: string }) {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white/95 dark:bg-gray-950/95 backdrop-blur-xl border-b border-gray-100 dark:border-gray-800 px-4 py-3 flex flex-col gap-1">
+        <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-gray-100 px-4 py-3 flex flex-col gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -170,15 +170,15 @@ export default function Navbar({ lang }: { lang: string }) {
               className={cn(
                 "px-3 py-2.5 rounded-xl text-sm font-medium transition-colors",
                 isActive(link.href)
-                  ? "bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/8"
+                  ? "bg-blue-50 text-blue-600"
+                  : "text-gray-700 hover:bg-gray-100"
               )}
             >
               {link.label}
             </Link>
           ))}
 
-          <div className="mt-2 pt-3 border-t border-gray-100 dark:border-white/8 flex items-center justify-between">
+          <div className="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between">
             <div className="flex gap-1.5">
               {LOCALES.map((l) => (
                 <button
@@ -188,7 +188,7 @@ export default function Navbar({ lang }: { lang: string }) {
                     "flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors",
                     l.code === lang
                       ? "bg-blue-600 text-white"
-                      : "bg-gray-100 dark:bg-white/8 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/15"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   )}
                 >
                   <span>{l.flag}</span>

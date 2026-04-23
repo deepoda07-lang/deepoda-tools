@@ -53,12 +53,12 @@ export default function PDFPageNumberPage() {
       {file ? (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div>
-            <div className="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+            <div className="p-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-700">
               Selected: <span className="font-medium">{file.name}</span>
             </div>
 
             <div className="mt-6">
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Number position</label>
+              <label className="block text-sm font-medium text-gray-700 mb-3">Number position</label>
               <div className="grid grid-cols-3 gap-3">
                 {POSITIONS.map(({ label, value }) => (
                   <button
@@ -66,8 +66,8 @@ export default function PDFPageNumberPage() {
                     onClick={() => setPosition(value)}
                     className={`py-3 rounded-xl border-2 text-sm font-medium transition-all ${
                       position === value
-                        ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400"
-                        : "border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 text-gray-600 dark:text-gray-400"
+                        ? "border-blue-500 bg-blue-50 text-blue-700"
+                        : "border-gray-200 hover:border-gray-300 text-gray-600"
                     }`}
                   >
                     {label}
@@ -80,12 +80,12 @@ export default function PDFPageNumberPage() {
               <div className="mt-4"><ProgressBar value={progress} label="Adding numbers..." /></div>
             )}
             {status === "done" && (
-              <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-400 text-sm">
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
                 Page numbers added and downloaded!
               </div>
             )}
             {status === "error" && (
-              <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
                 An error occurred. Please try again.
               </div>
             )}
@@ -100,11 +100,11 @@ export default function PDFPageNumberPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-medium text-gray-700">
               Preview <span className="text-xs text-gray-400 font-normal">(page 1{pageCount > 1 ? ` of ${pageCount}` : ""})</span>
             </p>
             {previewUrl ? (
-              <div className="relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md">
+              <div className="relative rounded-lg overflow-hidden border border-gray-200 shadow-md">
                 <img src={previewUrl} alt="PDF preview" className="block w-full" draggable={false} />
                 {/* page number position indicator */}
                 <div className={`absolute text-xs font-bold bg-blue-600 text-white px-2 py-0.5 rounded shadow ${
@@ -114,7 +114,7 @@ export default function PDFPageNumberPage() {
                 }`}>1</div>
               </div>
             ) : (
-              <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 dark:border-gray-700 flex items-center justify-center">
+              <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 flex items-center justify-center">
                 <p className="text-sm text-gray-400">{loading ? "Loading preview…" : ""}</p>
               </div>
             )}

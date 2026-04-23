@@ -57,13 +57,13 @@ export default function PDFLockPage() {
       {file ? (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div>
-            <div className="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+            <div className="p-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-700">
               Selected: <span className="font-medium">{file.name}</span>
             </div>
 
             <div className="mt-6 space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Password <span className="text-gray-400 font-normal">(min. 4 characters)</span>
                 </label>
                 <div className="relative">
@@ -72,7 +72,7 @@ export default function PDFLockPage() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Enter password"
-                    className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 pr-16 dark:bg-gray-800 dark:text-gray-200"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 pr-16"
                   />
                   <button
                     type="button"
@@ -85,16 +85,16 @@ export default function PDFLockPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Confirm password</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Confirm password</label>
                 <input
                   type={showPass ? "text" : "password"}
                   value={confirm}
                   onChange={(e) => setConfirm(e.target.value)}
                   placeholder="Re-enter password"
-                  className={`w-full px-4 py-2.5 border rounded-xl text-sm focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-gray-200 ${
+                  className={`w-full px-4 py-2.5 border rounded-xl text-sm focus:outline-none focus:ring-2 ${
                     mismatch
                       ? "border-red-400 focus:ring-red-400"
-                      : "border-gray-300 dark:border-gray-600 focus:ring-blue-500"
+                      : "border-gray-300 focus:ring-blue-500"
                   }`}
                 />
                 {mismatch && (
@@ -103,7 +103,7 @@ export default function PDFLockPage() {
               </div>
             </div>
 
-            <div className="mt-4 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg text-amber-700 dark:text-amber-400 text-sm">
+            <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg text-amber-700 text-sm">
               <Lock className="inline w-4 h-4 mr-1 mb-0.5" />
               The PDF will require this password to open. Keep it safe — it cannot be recovered.
             </div>
@@ -115,13 +115,13 @@ export default function PDFLockPage() {
             )}
 
             {status === "done" && (
-              <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-green-700 dark:text-green-400 text-sm font-medium">
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm font-medium">
                 PDF locked and downloaded!
               </div>
             )}
 
             {status === "error" && (
-              <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
                 An error occurred. Please try again.
               </div>
             )}
@@ -136,11 +136,11 @@ export default function PDFLockPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-medium text-gray-700">
               Preview <span className="text-xs text-gray-400 font-normal">(page 1{pageCount > 1 ? ` of ${pageCount}` : ""})</span>
             </p>
             {previewUrl ? (
-              <div className="relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md">
+              <div className="relative rounded-lg overflow-hidden border border-gray-200 shadow-md">
                 <img src={previewUrl} alt="PDF preview" className="block w-full" draggable={false} />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10">
                   <div className="bg-white/90 rounded-full p-3 shadow-lg">
@@ -149,7 +149,7 @@ export default function PDFLockPage() {
                 </div>
               </div>
             ) : (
-              <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 dark:border-gray-700 flex items-center justify-center">
+              <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 flex items-center justify-center">
                 <p className="text-sm text-gray-400">{loading ? "Loading preview…" : ""}</p>
               </div>
             )}

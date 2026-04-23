@@ -58,7 +58,7 @@ export default function JPGToPDFPage() {
         <div className="mt-4">
           <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
             {files.map((f, i) => (
-              <div key={i} className="relative group aspect-square rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+              <div key={i} className="relative group aspect-square rounded-lg overflow-hidden border border-gray-200">
                 {previewUrls[i] && (
                   <img src={previewUrls[i]} alt={f.name} className="w-full h-full object-cover" />
                 )}
@@ -82,12 +82,12 @@ export default function JPGToPDFPage() {
         <div className="mt-4"><ProgressBar value={progress} label="Creating PDF..." /></div>
       )}
       {status === "done" && (
-        <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-400 text-sm">
+        <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
           PDF created and downloaded!
         </div>
       )}
       {status === "error" && (
-        <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
+        <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
           An error occurred. Please try again.
         </div>
       )}

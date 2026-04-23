@@ -65,9 +65,9 @@ export default function VideoRotatePage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Rotate Video</h1>
-      <p className="text-gray-500 dark:text-gray-400 mb-2">Rotate or flip a video horizontally or vertically.</p>
-      <p className="text-xs text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-2 rounded-lg mb-6">
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Rotate Video</h1>
+      <p className="text-gray-500 mb-2">Rotate or flip a video horizontally or vertically.</p>
+      <p className="text-xs text-blue-600 bg-blue-50 px-3 py-2 rounded-lg mb-6">
         All processing happens in your browser. Your videos are never sent to a server.
       </p>
 
@@ -79,8 +79,8 @@ export default function VideoRotatePage() {
 
       {file && (
         <>
-          <div className="mt-4 flex items-center justify-between p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm">
-            <span className="text-gray-700 dark:text-gray-300 truncate">
+          <div className="mt-4 flex items-center justify-between p-3 bg-white border border-gray-200 rounded-lg text-sm">
+            <span className="text-gray-700 truncate">
               🎬 {file.name} <span className="text-gray-400 ml-1">({formatBytes(file.size)})</span>
             </span>
             <button
@@ -92,13 +92,13 @@ export default function VideoRotatePage() {
           </div>
 
           {videoUrl && (
-            <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm bg-black">
+            <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 shadow-sm bg-black">
               <video src={videoUrl} controls className="w-full max-h-64 object-contain" preload="metadata" />
             </div>
           )}
 
           <div className="mt-6">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Rotation Option</p>
+            <p className="text-sm font-medium text-gray-700 mb-3">Rotation Option</p>
             <div className="grid grid-cols-5 gap-2">
               {ROTATIONS.map((r, i) => (
                 <button
@@ -106,8 +106,8 @@ export default function VideoRotatePage() {
                   onClick={() => setRotation(i)}
                   className={`p-3 rounded-xl border text-center transition-all ${
                     rotation === i
-                      ? "border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
-                      : "border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-600 bg-white dark:bg-gray-800"
+                      ? "border-blue-500 bg-blue-50 text-blue-700"
+                      : "border-gray-200 text-gray-600 hover:border-gray-300 bg-white"
                   }`}
                 >
                   <div className="text-xl mb-1">{r.icon}</div>
@@ -130,7 +130,7 @@ export default function VideoRotatePage() {
       <button
         onClick={handleRotate}
         disabled={!file || isProcessing}
-        className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-colors"
+        className="mt-6 w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-colors"
       >
         {isProcessing ? "Processing..." : "Rotate Video"}
       </button>

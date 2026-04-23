@@ -60,7 +60,7 @@ export default function PDFCompressPage() {
       {file ? (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div>
-            <div className="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+            <div className="p-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-700">
               Selected: <span className="font-medium">{file.name}</span>
               <span className="ml-2 text-gray-400">({formatSize(file.size)})</span>
             </div>
@@ -72,16 +72,16 @@ export default function PDFCompressPage() {
             )}
 
             {status === "done" && result && (
-              <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-                <p className="text-green-700 dark:text-green-400 font-semibold text-sm mb-3">Compression complete!</p>
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl">
+                <p className="text-green-700 font-semibold text-sm mb-3">Compression complete!</p>
                 <div className="grid grid-cols-3 gap-3 text-center">
-                  <div className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700">
+                  <div className="bg-white rounded-lg p-3 border border-gray-200">
                     <p className="text-xs text-gray-500 mb-1">Before</p>
-                    <p className="font-bold text-gray-900 dark:text-gray-100">{formatSize(result.original)}</p>
+                    <p className="font-bold text-gray-900">{formatSize(result.original)}</p>
                   </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700">
+                  <div className="bg-white rounded-lg p-3 border border-gray-200">
                     <p className="text-xs text-gray-500 mb-1">After</p>
-                    <p className="font-bold text-gray-900 dark:text-gray-100">{formatSize(result.compressed)}</p>
+                    <p className="font-bold text-gray-900">{formatSize(result.compressed)}</p>
                   </div>
                   <div className="bg-blue-600 rounded-lg p-3">
                     <p className="text-xs text-blue-200 mb-1">Saved</p>
@@ -92,7 +92,7 @@ export default function PDFCompressPage() {
             )}
 
             {status === "error" && (
-              <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
                 An error occurred. Please try again.
               </div>
             )}
@@ -107,15 +107,15 @@ export default function PDFCompressPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-medium text-gray-700">
               Preview <span className="text-xs text-gray-400 font-normal">(page 1{pageCount > 1 ? ` of ${pageCount}` : ""})</span>
             </p>
             {previewUrl ? (
-              <div className="relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md">
+              <div className="relative rounded-lg overflow-hidden border border-gray-200 shadow-md">
                 <img src={previewUrl} alt="PDF preview" className="block w-full" draggable={false} />
               </div>
             ) : (
-              <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 dark:border-gray-700 flex items-center justify-center">
+              <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 flex items-center justify-center">
                 <p className="text-sm text-gray-400">{loading ? "Loading preview…" : ""}</p>
               </div>
             )}

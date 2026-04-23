@@ -32,14 +32,14 @@ export default function QrCodePage() {
   return (
     <div className="py-8">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-1">{d.heading}</h1>
-        <p className="text-gray-500 dark:text-gray-400 text-sm">{d.sub}</p>
+        <h1 className="text-2xl font-bold text-gray-900 mb-1">{d.heading}</h1>
+        <p className="text-gray-500 text-sm">{d.sub}</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 items-start">
         {/* Input */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             URL or text
           </label>
           <textarea
@@ -47,13 +47,13 @@ export default function QrCodePage() {
             onChange={(e) => setText(e.target.value)}
             placeholder={d.placeholder}
             rows={5}
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm resize-none"
+            className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm resize-none"
           />
         </div>
 
         {/* QR preview */}
         <div className="flex flex-col items-center gap-4">
-          <div className="p-4 bg-white rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="p-4 bg-white rounded-2xl shadow-sm border border-gray-200">
             <canvas ref={canvasRef} />
           </div>
           <button

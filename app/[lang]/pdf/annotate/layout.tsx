@@ -5,6 +5,7 @@ import ToolFAQ from "@/components/ToolFAQ";
 import RecordVisit from "@/components/RecordVisit";
 import RelatedTools from "@/components/RelatedTools";
 import { RELATED, TOOL_HREF } from "@/lib/related-tools";
+import ToolSEOSection from "@/components/ToolSEOSection";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -54,6 +55,7 @@ export default async function Layout({
       <Breadcrumb crumbs={[{ label: catTitle, href: `${prefix}/pdf` }, { label: toolTitle }]} />
       {children}
       <RecordVisit href="/pdf/annotate" title={dict.t.pdfAnnotate.title} icon={dict.t.pdfAnnotate.icon} />
+      <ToolSEOSection title={dict.t.pdfAnnotate.title} desc={dict.t.pdfAnnotate.meta.description} keywords={dict.t.pdfAnnotate.meta.keywords} />
       <ToolFAQ items={faq} />
       <RelatedTools label={dict.home.relatedTools} items={relatedItems} lang={lang} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />

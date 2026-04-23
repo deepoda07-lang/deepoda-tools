@@ -64,29 +64,29 @@ export default function PDFSplitPage() {
       {file ? (
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div>
-            <div className="p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+            <div className="p-3 bg-white border border-gray-200 rounded-lg text-sm text-gray-700">
               Selected: <span className="font-medium">{file.name}</span>
             </div>
 
             <div className="mt-6 flex gap-4">
               <div className="flex-1">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{d.startPage}</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{d.startPage}</label>
                 <input
                   type="number"
                   min={1}
                   value={fromPage}
                   onChange={(e) => setFromPage(e.target.value)}
-                  className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-200"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">{d.endPage}</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{d.endPage}</label>
                 <input
                   type="number"
                   min={1}
                   value={toPage}
                   onChange={(e) => setToPage(e.target.value)}
-                  className="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-200"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function PDFSplitPage() {
             )}
 
             {status === "done" && (
-              <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-400 text-sm">
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
                 {d.success}
               </div>
             )}
@@ -115,18 +115,18 @@ export default function PDFSplitPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-medium text-gray-700">
               Preview <span className="text-xs text-gray-400 font-normal">(page 1{pageCount > 1 ? ` of ${pageCount}` : ""})</span>
             </p>
             {previewUrl ? (
-              <div className="relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md">
+              <div className="relative rounded-lg overflow-hidden border border-gray-200 shadow-md">
                 <img src={previewUrl} alt="PDF preview" className="block w-full" draggable={false} />
                 <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap shadow">
                   Pages {fromPage}–{toPage}{pageCount > 0 ? ` of ${pageCount}` : ""}
                 </div>
               </div>
             ) : (
-              <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 dark:border-gray-700 flex items-center justify-center">
+              <div className="aspect-[3/4] rounded-lg border-2 border-dashed border-gray-200 flex items-center justify-center">
                 <p className="text-sm text-gray-400">{loading ? "Loading preview…" : ""}</p>
               </div>
             )}

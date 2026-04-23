@@ -5,6 +5,7 @@ import ToolFAQ from "@/components/ToolFAQ";
 import RecordVisit from "@/components/RecordVisit";
 import RelatedTools from "@/components/RelatedTools";
 import { RELATED, TOOL_HREF } from "@/lib/related-tools";
+import ToolSEOSection from "@/components/ToolSEOSection";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -41,6 +42,7 @@ export default async function Layout({ children, params }: { children: React.Rea
       <Breadcrumb crumbs={[{ label: dict.catPages.video.title, href: `${prefix}/video` }, { label: dict.t.vidConvert.title }]} />
       {children}
       <RecordVisit href="/video/convert" title={dict.t.vidConvert.title} icon={dict.t.vidConvert.icon} />
+      <ToolSEOSection title={dict.t.vidConvert.title} desc={dict.t.vidConvert.meta.description} keywords={dict.t.vidConvert.meta.keywords} />
       <ToolFAQ items={faq} />
       <RelatedTools label={dict.home.relatedTools} items={relatedItems} lang={lang} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
