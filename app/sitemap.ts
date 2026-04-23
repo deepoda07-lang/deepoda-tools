@@ -60,7 +60,7 @@ const paths = [
 ];
 
 function pageUrl(lang: string, path: string) {
-  return lang === "en" ? `${BASE_URL}${path}` : `${BASE_URL}/${lang}${path}`;
+  return `${BASE_URL}/${lang}${path}`;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
