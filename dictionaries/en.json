@@ -883,6 +883,43 @@
         }
       ]
     },
+    "pdfOrganize": {
+      "title": "Organize PDF Pages",
+      "desc": "Reorder, rotate, delete and extract PDF pages.",
+      "badge": null,
+      "icon": "📋",
+      "meta": {
+        "title": "Organize PDF Pages – Free Online",
+        "description": "Reorder, rotate, delete and extract PDF pages online. Free, no account required.",
+        "keywords": ["organize pdf pages", "reorder pdf pages", "rotate pdf pages", "extract pdf pages", "pdf page manager"]
+      },
+      "heading": "Organize PDF Pages",
+      "sub": "Drag to reorder, rotate individual pages, delete or extract selections.",
+      "drop": "Drag PDF file here",
+      "loadingPages": "Loading pages…",
+      "nPages": "{n} pages",
+      "selectNew": "Select new file",
+      "selectAll": "Select all",
+      "deselectAll": "Deselect all",
+      "selected": "{n} selected",
+      "deleteSelected": "Delete selected",
+      "extractSelected": "Extract pages",
+      "rotatePage": "Rotate 90°",
+      "downloaded": "✓ Downloaded",
+      "downloadPdf": "Download PDF",
+      "saving": "Saving…",
+      "pageLbl": "Page",
+      "moveLeft": "Move left",
+      "moveRight": "Move right",
+      "allDeleted": "All pages deleted. Select a new file.",
+      "faq": [
+        {"q": "How do I reorder PDF pages?", "a": "Upload your PDF, then drag and drop the page thumbnails to reorder them. Click Download PDF to save the result."},
+        {"q": "Can I delete specific pages?", "a": "Yes. Check the pages you want to remove, then click Delete Selected. The remaining pages keep their order."},
+        {"q": "What does Extract Pages do?", "a": "Selecting pages and clicking Extract Pages creates a new PDF containing only those pages."},
+        {"q": "How do I rotate a single page?", "a": "Click the rotation icon on the page thumbnail. Each click rotates 90° clockwise."},
+        {"q": "Is organizing PDFs free?", "a": "Yes, completely free with no account required."}
+      ]
+    },
     "imgCompress": {
       "title": "Compress Image",
       "desc": "Shrink JPG, PNG, and WEBP files without quality loss.",

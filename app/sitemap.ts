@@ -20,6 +20,7 @@ const paths = [
   { path: "/pdf/unlock",              freq: "monthly" as const, prio: 0.8 },
   { path: "/pdf/sign",                freq: "monthly" as const, prio: 0.8 },
   { path: "/pdf/edit",                freq: "monthly" as const, prio: 0.8 },
+  { path: "/pdf/organize",            freq: "monthly" as const, prio: 0.8 },
   { path: "/pdf/to-word",             freq: "monthly" as const, prio: 0.7 },
   { path: "/pdf/form-fill",           freq: "monthly" as const, prio: 0.8 },
   { path: "/pdf/annotate",            freq: "monthly" as const, prio: 0.8 },

@@ -17,6 +17,7 @@ export const RELATED: Record<string, [string, string, string]> = {
   pdfCrop:       ["pdfRotate",    "pdfEdit",      "pdfCompress"],
   pdfFormFill:   ["pdfSign",      "pdfEdit",      "pdfAnnotate"],
   pdfAnnotate:   ["pdfEdit",      "pdfSign",      "pdfFormFill"],
+  pdfOrganize:   ["pdfEdit",      "pdfSplit",     "pdfMerge"],
   // Image
   imgCompress:   ["imgResize",    "imgConvert",   "imgCrop"],
   imgConvert:    ["imgCompress",  "imgResize",    "imgHeicToJpg"],
@@ -69,6 +70,7 @@ export const TOOL_HREF: Record<string, string> = {
   pdfCrop:       "/pdf/crop",
   pdfFormFill:   "/pdf/form-fill",
   pdfAnnotate:   "/pdf/annotate",
+  pdfOrganize:   "/pdf/organize",
   imgCompress:   "/image/compress",
   imgConvert:    "/image/convert",
   imgRemoveBg:   "/image/remove-bg",

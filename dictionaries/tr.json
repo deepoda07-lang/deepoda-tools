@@ -883,6 +883,43 @@
         }
       ]
     },
+    "pdfOrganize": {
+      "title": "PDF Sayfaları Düzenle",
+      "desc": "PDF sayfalarını yeniden sırala, döndür, sil ve çıkar.",
+      "badge": null,
+      "icon": "📋",
+      "meta": {
+        "title": "PDF Sayfaları Düzenle – Ücretsiz Online",
+        "description": "PDF sayfalarını sürükleyip bırakarak yeniden sırala, döndür veya sil. Ücretsiz.",
+        "keywords": ["pdf sayfaları düzenle", "pdf sayfa sırala", "pdf sayfa döndür", "pdf sayfa çıkar"]
+      },
+      "heading": "PDF Sayfaları Düzenle",
+      "sub": "Sürükleyerek sırala, sayfaları döndür, seç ve sil veya çıkar.",
+      "drop": "PDF dosyasını buraya sürükle",
+      "loadingPages": "Sayfalar yükleniyor…",
+      "nPages": "{n} sayfa",
+      "selectNew": "Yeni dosya seç",
+      "selectAll": "Tümünü seç",
+      "deselectAll": "Seçimi kaldır",
+      "selected": "{n} seçili",
+      "deleteSelected": "Seçilenleri sil",
+      "extractSelected": "Sayfaları çıkar",
+      "rotatePage": "90° döndür",
+      "downloaded": "✓ İndirildi",
+      "downloadPdf": "PDF İndir",
+      "saving": "Kaydediliyor…",
+      "pageLbl": "Sayfa",
+      "moveLeft": "Sola taşı",
+      "moveRight": "Sağa taşı",
+      "allDeleted": "Tüm sayfalar silindi. Yeni dosya seçin.",
+      "faq": [
+        {"q": "PDF sayfalarını nasıl yeniden sıralayabilirim?", "a": "PDF'i yükleyin, sayfa küçük resimlerini sürükleyerek istediğiniz sıraya getirin ve PDF İndir'e tıklayın."},
+        {"q": "Belirli sayfaları silebilir miyim?", "a": "Evet. Silmek istediğiniz sayfaları işaretleyin ve Seçilenleri Sil'e tıklayın."},
+        {"q": "Sayfa Çıkar ne işe yarar?", "a": "Sayfaları seçip Sayfaları Çıkar'a tıkladığınızda yalnızca seçili sayfaları içeren yeni bir PDF oluşturulur."},
+        {"q": "Tek sayfayı nasıl döndürürüm?", "a": "Sayfa küçük resmindeki döndürme simgesine tıklayın. Her tıklamada sayfa 90° saat yönünde döner."},
+        {"q": "PDF düzenleme ücretsiz mi?", "a": "Evet, hesap gerekmeksizin tamamen ücretsiz."}
+      ]
+    },
     "imgCompress": {
       "title": "Görsel Sıkıştır",
       "desc": "JPG, PNG ve WEBP dosyalarını kalite kaybı olmadan küçültün.",

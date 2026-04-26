@@ -883,6 +883,43 @@
         }
       ]
     },
+    "pdfOrganize": {
+      "title": "Organizar Páginas PDF",
+      "desc": "Reordena, gira, elimina y extrae páginas de PDF.",
+      "badge": null,
+      "icon": "📋",
+      "meta": {
+        "title": "Organizar Páginas PDF – Gratis Online",
+        "description": "Reordena, gira, elimina y extrae páginas de tu PDF. Gratis, sin registro.",
+        "keywords": ["organizar pdf", "reordenar páginas pdf", "rotar páginas pdf", "extraer páginas pdf"]
+      },
+      "heading": "Organizar Páginas PDF",
+      "sub": "Arrastra para reordenar, gira páginas individuales, elimina o extrae selecciones.",
+      "drop": "Arrastra el archivo PDF aquí",
+      "loadingPages": "Cargando páginas…",
+      "nPages": "{n} páginas",
+      "selectNew": "Seleccionar nuevo archivo",
+      "selectAll": "Seleccionar todo",
+      "deselectAll": "Deseleccionar todo",
+      "selected": "{n} seleccionadas",
+      "deleteSelected": "Eliminar seleccionadas",
+      "extractSelected": "Extraer páginas",
+      "rotatePage": "Rotar 90°",
+      "downloaded": "✓ Descargado",
+      "downloadPdf": "Descargar PDF",
+      "saving": "Guardando…",
+      "pageLbl": "Página",
+      "moveLeft": "Mover izquierda",
+      "moveRight": "Mover derecha",
+      "allDeleted": "Todas las páginas eliminadas. Selecciona un nuevo archivo.",
+      "faq": [
+        {"q": "¿Cómo reordeno páginas de un PDF?", "a": "Sube tu PDF y arrastra las miniaturas de páginas para reordenarlas. Haz clic en Descargar PDF para guardar."},
+        {"q": "¿Puedo eliminar páginas específicas?", "a": "Sí. Marca las páginas que quieres eliminar y haz clic en Eliminar seleccionadas."},
+        {"q": "¿Qué hace Extraer páginas?", "a": "Al seleccionar páginas y hacer clic en Extraer páginas, se crea un nuevo PDF con solo esas páginas."},
+        {"q": "¿Cómo giro una sola página?", "a": "Haz clic en el icono de rotación en la miniatura. Cada clic gira 90° en sentido horario."},
+        {"q": "¿Es gratis organizar PDFs?", "a": "Sí, completamente gratis sin necesidad de cuenta."}
+      ]
+    },
     "imgCompress": {
       "title": "Comprimir Imagen",
       "desc": "Reduce el tamaño de archivos JPG, PNG y WEBP sin perder calidad.",
